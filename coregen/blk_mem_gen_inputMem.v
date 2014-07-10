@@ -48,17 +48,17 @@ module blk_mem_gen_inputMem(
 
 input clka;
 input [0 : 0] wea;
-input [17 : 0] addra;
+input [16 : 0] addra;
 input [7 : 0] dina;
 input clkb;
-input [17 : 0] addrb;
+input [16 : 0] addrb;
 output [7 : 0] doutb;
 
 // synthesis translate_off
 
   BLK_MEM_GEN_V7_3 #(
-    .C_ADDRA_WIDTH(18),
-    .C_ADDRB_WIDTH(18),
+    .C_ADDRA_WIDTH(17),
+    .C_ADDRB_WIDTH(17),
     .C_ALGORITHM(1),
     .C_AXI_ID_WIDTH(4),
     .C_AXI_SLAVE_TYPE(0),
@@ -66,8 +66,8 @@ output [7 : 0] doutb;
     .C_BYTE_SIZE(9),
     .C_COMMON_CLK(0),
     .C_DEFAULT_DATA("0"),
-    .C_DISABLE_WARN_BHV_COLL(0),
-    .C_DISABLE_WARN_BHV_RANGE(0),
+    .C_DISABLE_WARN_BHV_COLL(1),
+    .C_DISABLE_WARN_BHV_RANGE(1),
     .C_ENABLE_32BIT_ADDRESS(0),
     .C_FAMILY("virtex5"),
     .C_HAS_AXI_ID(0),
@@ -93,8 +93,8 @@ output [7 : 0] doutb;
     .C_MEM_TYPE(1),
     .C_MUX_PIPELINE_STAGES(0),
     .C_PRIM_TYPE(1),
-    .C_READ_DEPTH_A(262144),
-    .C_READ_DEPTH_B(262144),
+    .C_READ_DEPTH_A(131072),
+    .C_READ_DEPTH_B(131072),
     .C_READ_WIDTH_A(8),
     .C_READ_WIDTH_B(8),
     .C_RST_PRIORITY_A("CE"),
@@ -111,10 +111,10 @@ output [7 : 0] doutb;
     .C_USE_SOFTECC(0),
     .C_WEA_WIDTH(1),
     .C_WEB_WIDTH(1),
-    .C_WRITE_DEPTH_A(262144),
-    .C_WRITE_DEPTH_B(262144),
-    .C_WRITE_MODE_A("READ_FIRST"),
-    .C_WRITE_MODE_B("READ_FIRST"),
+    .C_WRITE_DEPTH_A(131072),
+    .C_WRITE_DEPTH_B(131072),
+    .C_WRITE_MODE_A("WRITE_FIRST"),
+    .C_WRITE_MODE_B("WRITE_FIRST"),
     .C_WRITE_WIDTH_A(8),
     .C_WRITE_WIDTH_B(8),
     .C_XDEVICEFAMILY("virtex5")

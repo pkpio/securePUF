@@ -50,10 +50,10 @@
 blk_mem_gen_inputMem your_instance_name (
   .clka(clka), // input clka
   .wea(wea), // input [0 : 0] wea
-  .addra(addra), // input [17 : 0] addra
+  .addra(addra), // input [16 : 0] addra
   .dina(dina), // input [7 : 0] dina
   .clkb(clkb), // input clkb
-  .addrb(addrb), // input [17 : 0] addrb
+  .addrb(addrb), // input [16 : 0] addrb
   .doutb(doutb) // output [7 : 0] doutb
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------

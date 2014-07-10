@@ -98,12 +98,12 @@
 --    C_HAS_REGCEA                :  0 
 --    C_USE_BYTE_WEA              :  0 
 --    C_WEA_WIDTH                 :  1 
---    C_WRITE_MODE_A              :  READ_FIRST 
+--    C_WRITE_MODE_A              :  WRITE_FIRST 
 --    C_WRITE_WIDTH_A             :  8 
 --    C_READ_WIDTH_A              :  8 
---    C_WRITE_DEPTH_A             :  262144 
---    C_READ_DEPTH_A              :  262144 
---    C_ADDRA_WIDTH               :  18 
+--    C_WRITE_DEPTH_A             :  131072 
+--    C_READ_DEPTH_A              :  131072 
+--    C_ADDRA_WIDTH               :  17 
 --    C_HAS_RSTB                  :  0 
 --    C_RST_PRIORITY_B            :  CE 
 --    C_RSTRAM_B                  :  0 
@@ -112,12 +112,12 @@
 --    C_HAS_REGCEB                :  0 
 --    C_USE_BYTE_WEB              :  0 
 --    C_WEB_WIDTH                 :  1 
---    C_WRITE_MODE_B              :  READ_FIRST 
+--    C_WRITE_MODE_B              :  WRITE_FIRST 
 --    C_WRITE_WIDTH_B             :  8 
 --    C_READ_WIDTH_B              :  8 
---    C_WRITE_DEPTH_B             :  262144 
---    C_READ_DEPTH_B              :  262144 
---    C_ADDRB_WIDTH               :  18 
+--    C_WRITE_DEPTH_B             :  131072 
+--    C_READ_DEPTH_B              :  131072 
+--    C_ADDRB_WIDTH               :  17 
 --    C_HAS_MEM_OUTPUT_REGS_A     :  0 
 --    C_HAS_MEM_OUTPUT_REGS_B     :  0 
 --    C_HAS_MUX_OUTPUT_REGS_A     :  0 
@@ -130,8 +130,8 @@
 --    C_HAS_INJECTERR             :  0 
 --    C_SIM_COLLISION_CHECK       :  ALL 
 --    C_COMMON_CLK                :  0 
---    C_DISABLE_WARN_BHV_COLL     :  0 
---    C_DISABLE_WARN_BHV_RANGE    :  0 
+--    C_DISABLE_WARN_BHV_COLL     :  1 
+--    C_DISABLE_WARN_BHV_RANGE    :  1 
 
 --------------------------------------------------------------------------------
 -- Library Declarations
@@ -156,7 +156,7 @@ ENTITY blk_mem_gen_inputMem_prod IS
     ENA        : IN STD_LOGIC;  --optional port
     REGCEA     : IN STD_LOGIC;  --optional port
     WEA        : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    ADDRA      : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
+    ADDRA      : IN STD_LOGIC_VECTOR(16 DOWNTO 0);
     DINA       : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     DOUTA      : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 
@@ -166,7 +166,7 @@ ENTITY blk_mem_gen_inputMem_prod IS
     ENB        : IN STD_LOGIC;  --optional port
     REGCEB     : IN STD_LOGIC;  --optional port
     WEB        : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    ADDRB      : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
+    ADDRB      : IN STD_LOGIC_VECTOR(16 DOWNTO 0);
     DINB       : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     DOUTB      : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 
@@ -175,7 +175,7 @@ ENTITY blk_mem_gen_inputMem_prod IS
     INJECTDBITERR  : IN STD_LOGIC; --optional port
     SBITERR        : OUT STD_LOGIC; --optional port
     DBITERR        : OUT STD_LOGIC; --optional port
-    RDADDRECC      : OUT STD_LOGIC_VECTOR(17 DOWNTO 0); --optional port
+    RDADDRECC      : OUT STD_LOGIC_VECTOR(16 DOWNTO 0); --optional port
  -- AXI BMG Input and Output Port Declarations
 
     -- AXI Global Signals
@@ -217,7 +217,7 @@ ENTITY blk_mem_gen_inputMem_prod IS
     S_AXI_INJECTDBITERR            : IN  STD_LOGIC;
     S_AXI_SBITERR                  : OUT STD_LOGIC;
     S_AXI_DBITERR                  : OUT STD_LOGIC;
-    S_AXI_RDADDRECC                : OUT STD_LOGIC_VECTOR(17  DOWNTO 0);
+    S_AXI_RDADDRECC                : OUT STD_LOGIC_VECTOR(16  DOWNTO 0);
     S_ARESETN                      : IN  STD_LOGIC
 
 
@@ -233,7 +233,7 @@ ARCHITECTURE xilinx OF blk_mem_gen_inputMem_prod IS
       --Port A
   
     WEA            : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    ADDRA          : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
+    ADDRA          : IN STD_LOGIC_VECTOR(16 DOWNTO 0);
   
     DINA           : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
 
@@ -242,7 +242,7 @@ ARCHITECTURE xilinx OF blk_mem_gen_inputMem_prod IS
 
   
       --Port B
-    ADDRB          : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
+    ADDRB          : IN STD_LOGIC_VECTOR(16 DOWNTO 0);
     DOUTB          : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
     CLKB           : IN STD_LOGIC
 
