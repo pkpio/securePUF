@@ -46,6 +46,9 @@ module system #(
 //****
 
 wire clk_1, clk_2, clk_RNG, sysACE_CLK;
+
+wire clk_user_interface;		//Buffered version of user clock
+
 CLOCK_TRNG CLOCK_TRNG1(
     .CLK_IN1(sysACE_CLK1),      // IN
     .CLK_OUT1(clk_1),     // OUT
@@ -78,7 +81,7 @@ RMEM rmem1 (
 
 parameter N_CB = 64;
 wire [7:0] test_result;
-testPUF #(N_CB)(
+testPUF #(N_CB) test(
     .clk_1(clk_1), // main clock for FSM
     .clk_2(clk_2), // its freq is half that of clk_1, for the test 1.2 and 1.3 testing block will receive one input bit for two resonse bits from PUF
     .clk_RNG(clk_RNG), // its freq is 8 times that of clk_1, challenge bits are generated at a higher rate
@@ -121,7 +124,7 @@ assign LED[12:9] = 0;
 	//************USER CLOCK
 	//This is the clock for the user's interface to which the input/output buffers, register file and soft reset are synchronized.
 	wire clk_user_interface_i;	//User clock directly from PLL
-	wire clk_user_interface;		//Buffered version of user clock
+//	wire clk_user_interface;		//Buffered version of user clock
 	
 	IBUFGDS bufCLK_DS ( .I(CLK_200P), .IB(CLK_200N), .O(clk_200) );
 

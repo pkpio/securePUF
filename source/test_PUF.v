@@ -38,7 +38,7 @@ module testPUF #(parameter N_CB = 64)(
 	 
 	 reg [N_CB-1:0] challenge;
 	 wire response;
-	 PUF_dummy #(N_CB)(
+	 PUF_dummy #(N_CB) PUF_dummy(
     .clk(clk_1),
     .challenge(challenge),
     .response(response)

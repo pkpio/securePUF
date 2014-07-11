@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/system.v&quot; line 53 </arg>Module &apos;<arg fmt="%s" index="2">CLOCK_TRNG</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">CLK_IN1</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/system.v&quot; line 54 </arg>Module &apos;<arg fmt="%s" index="2">CLOCK_TRNG</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">CLK_OUT1</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/system.v&quot; line 55 </arg>Module &apos;<arg fmt="%s" index="2">CLOCK_TRNG</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">CLK_OUT2</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/system.v&quot; line 56 </arg>Module &apos;<arg fmt="%s" index="2">CLOCK_TRNG</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">CLK_OUT3</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/system.v&quot; line 57 </arg>Module &apos;<arg fmt="%s" index="2">CLOCK_TRNG</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">CLK_OUT4</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/ethernet2BlockMem.v&quot; line 174 </arg>Module &apos;<arg fmt="%s" index="2">v5_emac_single_locallink</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">TX_CLK</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/ethernet2BlockMem.v&quot; line 177 </arg>Module &apos;<arg fmt="%s" index="2">v5_emac_single_locallink</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">RX_LL_CLOCK</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/ethernet2BlockMem.v&quot; line 178 </arg>Module &apos;<arg fmt="%s" index="2">v5_emac_single_locallink</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">RX_LL_RESET</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/ethernet2BlockMem.v&quot; line 179 </arg>Module &apos;<arg fmt="%s" index="2">v5_emac_single_locallink</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">RX_LL_DATA</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/ethernet2BlockMem.v&quot; line 180 </arg>Module &apos;<arg fmt="%s" index="2">v5_emac_single_locallink</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">RX_LL_SOF_N</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/ethernet2BlockMem.v&quot; line 181 </arg>Module &apos;<arg fmt="%s" index="2">v5_emac_single_locallink</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">RX_LL_EOF_N</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/ethernet2BlockMem.v&quot; line 182 </arg>Module &apos;<arg fmt="%s" index="2">v5_emac_single_locallink</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">RX_LL_SRC_RDY_N</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/ethernet2BlockMem.v&quot; line 183 </arg>Module &apos;<arg fmt="%s" index="2">v5_emac_single_locallink</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">RX_LL_DST_RDY_N</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/ethernet2BlockMem.v&quot; line 184 </arg>Module &apos;<arg fmt="%s" index="2">v5_emac_single_locallink</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">RX_LL_FIFO_STATUS</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/ethernet2BlockMem.v&quot; line 194 </arg>Module &apos;<arg fmt="%s" index="2">v5_emac_single_locallink</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">TX_LL_CLOCK</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/ethernet2BlockMem.v&quot; line 195 </arg>Module &apos;<arg fmt="%s" index="2">v5_emac_single_locallink</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">TX_LL_RESET</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/ethernet2BlockMem.v&quot; line 196 </arg>Module &apos;<arg fmt="%s" index="2">v5_emac_single_locallink</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">TX_LL_DATA</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/ethernet2BlockMem.v&quot; line 197 </arg>Module &apos;<arg fmt="%s" index="2">v5_emac_single_locallink</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">TX_LL_SOF_N</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/ethernet2BlockMem.v&quot; line 198 </arg>Module &apos;<arg fmt="%s" index="2">v5_emac_single_locallink</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">TX_LL_EOF_N</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/ethernet2BlockMem.v&quot; line 199 </arg>Module &apos;<arg fmt="%s" index="2">v5_emac_single_locallink</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">TX_LL_SRC_RDY_N</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/ethernet2BlockMem.v&quot; line 200 </arg>Module &apos;<arg fmt="%s" index="2">v5_emac_single_locallink</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">TX_LL_DST_RDY_N</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/ethernet2BlockMem.v&quot; line 207 </arg>Module &apos;<arg fmt="%s" index="2">v5_emac_single_locallink</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">CLIENTEMACTXIFGDELAY</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/ethernet2BlockMem.v&quot; line 213 </arg>Module &apos;<arg fmt="%s" index="2">v5_emac_single_locallink</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">CLIENTEMACPAUSEREQ</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/ethernet2BlockMem.v&quot; line 214 </arg>Module &apos;<arg fmt="%s" index="2">v5_emac_single_locallink</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">CLIENTEMACPAUSEVAL</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/ethernet2BlockMem.v&quot; line 217 </arg>Module &apos;<arg fmt="%s" index="2">v5_emac_single_locallink</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">PHY_RX_CLK</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/ethernet2BlockMem.v&quot; line 219 </arg>Module &apos;<arg fmt="%s" index="2">v5_emac_single_locallink</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">GTX_CLK</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/ethernet2BlockMem.v&quot; line 222 </arg>Module &apos;<arg fmt="%s" index="2">v5_emac_single_locallink</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">GMII_TXD</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/ethernet2BlockMem.v&quot; line 223 </arg>Module &apos;<arg fmt="%s" index="2">v5_emac_single_locallink</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">GMII_TX_EN</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/ethernet2BlockMem.v&quot; line 224 </arg>Module &apos;<arg fmt="%s" index="2">v5_emac_single_locallink</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">GMII_TX_ER</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/ethernet2BlockMem.v&quot; line 225 </arg>Module &apos;<arg fmt="%s" index="2">v5_emac_single_locallink</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">GMII_TX_CLK</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/ethernet2BlockMem.v&quot; line 226 </arg>Module &apos;<arg fmt="%s" index="2">v5_emac_single_locallink</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">GMII_RXD</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/ethernet2BlockMem.v&quot; line 227 </arg>Module &apos;<arg fmt="%s" index="2">v5_emac_single_locallink</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">GMII_RX_DV</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/ethernet2BlockMem.v&quot; line 228 </arg>Module &apos;<arg fmt="%s" index="2">v5_emac_single_locallink</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">GMII_RX_ER</arg>&apos;
+</msg>
+
+<msg type="error" file="HDLCompilers" num="91" delta="new" ><arg fmt="%s" index="1">&quot;source/ethernet2BlockMem.v&quot; line 229 </arg>Module &apos;<arg fmt="%s" index="2">v5_emac_single_locallink</arg>&apos; does not have a port named &apos;<arg fmt="%s" index="3">GMII_RX_CLK</arg>&apos;
+</msg>
+
+</messages>
+

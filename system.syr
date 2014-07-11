@@ -1,0 +1,230 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.28 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.28 secs
+ 
+--> Reading design: system.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "system.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "system"
+Output Format                      : NGC
+Target Device                      : xc5vlx110t-1-ff1136
+
+---- Source Options
+Top Module Name                    : system
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"coregen"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "source/XOR_tree.v" in library work
+Compiling verilog file "source/Osc_Ring.v" in library work
+Module <XOR_tree> compiled
+Compiling verilog file "coregen/v5_emac_single/example_design/v5_emac_single.v" in library work
+Module <Osc_Ring> compiled
+Compiling verilog file "coregen/v5_emac_single/example_design/physical/gmii_if.v" in library work
+Module <v5_emac_single> compiled
+Compiling verilog file "coregen/v5_emac_single/example_design/client/fifo/tx_client_fifo_8.v" in library work
+Module <gmii_if> compiled
+Compiling verilog file "coregen/v5_emac_single/example_design/client/fifo/rx_client_fifo_8.v" in library work
+Module <tx_client_fifo_8> compiled
+Compiling verilog file "source/TRNG_RO.v" in library work
+Module <rx_client_fifo_8> compiled
+Compiling verilog file "source/Runs.v" in library work
+Module <TRNG_RO> compiled
+Module <Runs> compiled
+Compiling verilog file "source/Overlapping_Template.v" in library work
+Module <decision> compiled
+Module <Overlapping_template> compiled
+Compiling verilog file "source/Nonoverlapping_Template.v" in library work
+Module <calculate_chi_sqr_8> compiled
+Compiling verilog file "source/Longest_Run_of_Ones.v" in library work
+Module <Nonoverlapping_template> compiled
+Module <Longest_Run_of_Ones> compiled
+Compiling verilog file "source/iobuf.v" in library work
+Module <calculate_chi_sqr> compiled
+Compiling verilog file "source/Frequency_Block.v" in library work
+Module <iobuf16> compiled
+Compiling verilog file "source/Frequency.v" in library work
+Module <Frequency_Block> compiled
+Compiling verilog file "source/fifo36Wrapper.v" in library work
+Module <Frequency> compiled
+Compiling verilog file "source/Cumulative_Sums.v" in library work
+Module <fifo36Wrapper> compiled
+Compiling verilog file "coregen/v5_emac_single/example_design/v5_emac_single_block.v" in library work
+Module <Cumulative_Sums> compiled
+Compiling verilog file "coregen/v5_emac_single/example_design/client/fifo/eth_fifo_8.v" in library work
+Module <v5_emac_single_block> compiled
+Compiling verilog file "coregen/blk_mem_gen_paramReg.v" in library work
+Module <eth_fifo_8> compiled
+Compiling verilog file "coregen/blk_mem_gen_outputMem.v" in library work
+Module <blk_mem_gen_paramReg> compiled
+Compiling verilog file "coregen/blk_mem_gen_inputMem.v" in library work
+Module <blk_mem_gen_outputMem> compiled
+Compiling verilog file "source/Test_module.v" in library work
+Module <blk_mem_gen_inputMem> compiled
+Compiling verilog file "source/PUF_dummy.v" in library work
+Module <NIST> compiled
+Compiling verilog file "source/ethernetController.v" in library work
+Module <PUF_dummy> compiled
+Compiling verilog file "source/challenge_gen.v" in library work
+Module <ethernetController> compiled
+Compiling verilog file "coregen/v5_emac_single/example_design/v5_emac_single_locallink.v" in library work
+Module <challenge_gen> compiled
+Compiling verilog file "source/test_PUF.v" in library work
+Module <v5_emac_single_locallink> compiled
+Compiling verilog file "source/simpleTestModuleOne.v" in library work
+Module <testPUF> compiled
+Module <simpleTestModuleOne> compiled
+Compiling verilog file "source/ethernet2BlockMem.v" in library work
+Module <FIFO> compiled
+Compiling verilog file "coregen/RMEM.v" in library work
+Module <ethernet2BlockMem> compiled
+Compiling verilog file "CLOCK_TRNG.v" in library work
+Module <RMEM> compiled
+Compiling verilog file "source/system.v" in library work
+Module <CLOCK_TRNG> compiled
+Module <system> compiled
+No errors in compilation
+Analysis of file <"system.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+ERROR:HDLCompilers:91 - "source/system.v" line 53 Module 'CLOCK_TRNG' does not have a port named 'CLK_IN1'
+ERROR:HDLCompilers:91 - "source/system.v" line 54 Module 'CLOCK_TRNG' does not have a port named 'CLK_OUT1'
+ERROR:HDLCompilers:91 - "source/system.v" line 55 Module 'CLOCK_TRNG' does not have a port named 'CLK_OUT2'
+ERROR:HDLCompilers:91 - "source/system.v" line 56 Module 'CLOCK_TRNG' does not have a port named 'CLK_OUT3'
+ERROR:HDLCompilers:91 - "source/system.v" line 57 Module 'CLOCK_TRNG' does not have a port named 'CLK_OUT4'
+ERROR:HDLCompilers:91 - "source/ethernet2BlockMem.v" line 174 Module 'v5_emac_single_locallink' does not have a port named 'TX_CLK'
+ERROR:HDLCompilers:91 - "source/ethernet2BlockMem.v" line 177 Module 'v5_emac_single_locallink' does not have a port named 'RX_LL_CLOCK'
+ERROR:HDLCompilers:91 - "source/ethernet2BlockMem.v" line 178 Module 'v5_emac_single_locallink' does not have a port named 'RX_LL_RESET'
+ERROR:HDLCompilers:91 - "source/ethernet2BlockMem.v" line 179 Module 'v5_emac_single_locallink' does not have a port named 'RX_LL_DATA'
+ERROR:HDLCompilers:91 - "source/ethernet2BlockMem.v" line 180 Module 'v5_emac_single_locallink' does not have a port named 'RX_LL_SOF_N'
+ERROR:HDLCompilers:91 - "source/ethernet2BlockMem.v" line 181 Module 'v5_emac_single_locallink' does not have a port named 'RX_LL_EOF_N'
+ERROR:HDLCompilers:91 - "source/ethernet2BlockMem.v" line 182 Module 'v5_emac_single_locallink' does not have a port named 'RX_LL_SRC_RDY_N'
+ERROR:HDLCompilers:91 - "source/ethernet2BlockMem.v" line 183 Module 'v5_emac_single_locallink' does not have a port named 'RX_LL_DST_RDY_N'
+ERROR:HDLCompilers:91 - "source/ethernet2BlockMem.v" line 184 Module 'v5_emac_single_locallink' does not have a port named 'RX_LL_FIFO_STATUS'
+ERROR:HDLCompilers:91 - "source/ethernet2BlockMem.v" line 194 Module 'v5_emac_single_locallink' does not have a port named 'TX_LL_CLOCK'
+ERROR:HDLCompilers:91 - "source/ethernet2BlockMem.v" line 195 Module 'v5_emac_single_locallink' does not have a port named 'TX_LL_RESET'
+ERROR:HDLCompilers:91 - "source/ethernet2BlockMem.v" line 196 Module 'v5_emac_single_locallink' does not have a port named 'TX_LL_DATA'
+ERROR:HDLCompilers:91 - "source/ethernet2BlockMem.v" line 197 Module 'v5_emac_single_locallink' does not have a port named 'TX_LL_SOF_N'
+ERROR:HDLCompilers:91 - "source/ethernet2BlockMem.v" line 198 Module 'v5_emac_single_locallink' does not have a port named 'TX_LL_EOF_N'
+ERROR:HDLCompilers:91 - "source/ethernet2BlockMem.v" line 199 Module 'v5_emac_single_locallink' does not have a port named 'TX_LL_SRC_RDY_N'
+ERROR:HDLCompilers:91 - "source/ethernet2BlockMem.v" line 200 Module 'v5_emac_single_locallink' does not have a port named 'TX_LL_DST_RDY_N'
+ERROR:HDLCompilers:91 - "source/ethernet2BlockMem.v" line 207 Module 'v5_emac_single_locallink' does not have a port named 'CLIENTEMACTXIFGDELAY'
+ERROR:HDLCompilers:91 - "source/ethernet2BlockMem.v" line 213 Module 'v5_emac_single_locallink' does not have a port named 'CLIENTEMACPAUSEREQ'
+ERROR:HDLCompilers:91 - "source/ethernet2BlockMem.v" line 214 Module 'v5_emac_single_locallink' does not have a port named 'CLIENTEMACPAUSEVAL'
+ERROR:HDLCompilers:91 - "source/ethernet2BlockMem.v" line 217 Module 'v5_emac_single_locallink' does not have a port named 'PHY_RX_CLK'
+ERROR:HDLCompilers:91 - "source/ethernet2BlockMem.v" line 219 Module 'v5_emac_single_locallink' does not have a port named 'GTX_CLK'
+ERROR:HDLCompilers:91 - "source/ethernet2BlockMem.v" line 222 Module 'v5_emac_single_locallink' does not have a port named 'GMII_TXD'
+ERROR:HDLCompilers:91 - "source/ethernet2BlockMem.v" line 223 Module 'v5_emac_single_locallink' does not have a port named 'GMII_TX_EN'
+ERROR:HDLCompilers:91 - "source/ethernet2BlockMem.v" line 224 Module 'v5_emac_single_locallink' does not have a port named 'GMII_TX_ER'
+ERROR:HDLCompilers:91 - "source/ethernet2BlockMem.v" line 225 Module 'v5_emac_single_locallink' does not have a port named 'GMII_TX_CLK'
+ERROR:HDLCompilers:91 - "source/ethernet2BlockMem.v" line 226 Module 'v5_emac_single_locallink' does not have a port named 'GMII_RXD'
+ERROR:HDLCompilers:91 - "source/ethernet2BlockMem.v" line 227 Module 'v5_emac_single_locallink' does not have a port named 'GMII_RX_DV'
+ERROR:HDLCompilers:91 - "source/ethernet2BlockMem.v" line 228 Module 'v5_emac_single_locallink' does not have a port named 'GMII_RX_ER'
+ERROR:HDLCompilers:91 - "source/ethernet2BlockMem.v" line 229 Module 'v5_emac_single_locallink' does not have a port named 'GMII_RX_CLK'
+--> 
+
+Total memory usage is 285192 kilobytes
+
+Number of errors   :   34 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -166,7 +166,7 @@ module ethernet2BlockMem #(
 	wire        	rx_ll_src_rdy_in;
 	wire        	rx_ll_dst_rdy_out;
 
-	v5_emac_single_locallink emac_ll(							//Praveen modified from emac_single_locallink
+	v5_emac_single_locallink emac_ll(							//Praveen modified from original name emac_single_locallink
 		// TX Clock output from EMAC
  		.TX_CLK_OUT                         (),				//We only pay attention to this signal when we are in 10/100 mode
 																			//	(which the Xilinx logic doens't seem to support correctly)
