@@ -19,16 +19,18 @@
 `default_nettype none
 
 module mapping #(
-	parameter IN_WIDTH = 128,
-	parameter OUT_WIDTH = 16
+	parameter CHALLENGE_WIDTH = 64,
+	parameter PDL_CONFIG_WIDTH = 64,
+	parameter RESPONSE_WIDTH = 6
 )(
 	input wire clk,
 	input wire reset,
 	input wire trigger,
-	input wire [IN_WIDTH-1:0] dataIn,
+	input wire [CHALLENGE_WIDTH-1:0] challenge,
+	input wire [PDL_CONFIG_WIDTH-1:0] pdl_config,
 	output reg done,
-	output reg [OUT_WIDTH-1:0] dataOut,
-	output reg xorOut	// Will use this later after output network is implemented.
+	output reg [RESPONSE_WIDTH-1:0] raw_response,
+	output reg xor_response
 	);
 	
 	// Input network also has to be implemented.
