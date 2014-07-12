@@ -1,8 +1,0 @@
-run
--ifn xst.prj
--ifmt mixed
--ofn v5_emac_single_example_design
--top v5_emac_single_example_design
--p virtex5
--iobuf yes
--keep_hierarchy no
