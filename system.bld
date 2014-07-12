@@ -1,0 +1,149 @@
+Release 14.7 ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc
+constraints/XUPV5system.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd
+
+Reading NGO file "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.ngc"
+...
+Loading design module "ipcore_dir/blk_mem_gen_inputMem.ngc"...
+Loading design module "ipcore_dir/blk_mem_gen_outputMem.ngc"...
+Loading design module "ipcore_dir/blk_mem_gen_paramReg.ngc"...
+Loading design module "ipcore_dir/RMEM.ngc"...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "constraints/XUPV5system.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:178 - TNM 'clk_user_interface', used in period
+   specification 'TS_CLK_USER_INTERFACE', was traced into PLL_ADV instance
+   sh/CLOCK_TRNG1/PLL_ADV_INST. The following new TNM groups and period
+   specifications were generated at the PLL_ADV output(s): 
+   CLKOUT0: <TIMESPEC TS_sh_CLOCK_TRNG1_CLKOUT0_BUF = PERIOD
+   "sh_CLOCK_TRNG1_CLKOUT0_BUF" TS_CLK_USER_INTERFACE / 0.09375 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'clk_user_interface', used in period
+   specification 'TS_CLK_USER_INTERFACE', was traced into PLL_ADV instance
+   sh/CLOCK_TRNG1/PLL_ADV_INST. The following new TNM groups and period
+   specifications were generated at the PLL_ADV output(s): 
+   CLKOUT1: <TIMESPEC TS_sh_CLOCK_TRNG1_CLKOUT1_BUF = PERIOD
+   "sh_CLOCK_TRNG1_CLKOUT1_BUF" TS_CLK_USER_INTERFACE / 0.046875 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'clk_user_interface', used in period
+   specification 'TS_CLK_USER_INTERFACE', was traced into PLL_ADV instance
+   sh/CLOCK_TRNG1/PLL_ADV_INST. The following new TNM groups and period
+   specifications were generated at the PLL_ADV output(s): 
+   CLKOUT2: <TIMESPEC TS_sh_CLOCK_TRNG1_CLKOUT2_BUF = PERIOD
+   "sh_CLOCK_TRNG1_CLKOUT2_BUF" TS_CLK_USER_INTERFACE / 0.75 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'clk_user_interface', used in period
+   specification 'TS_CLK_USER_INTERFACE', was traced into PLL_ADV instance
+   sh/CLOCK_TRNG1/PLL_ADV_INST. The following new TNM groups and period
+   specifications were generated at the PLL_ADV output(s): 
+   CLKOUT3: <TIMESPEC TS_sh_CLOCK_TRNG1_CLKOUT3_BUF = PERIOD
+   "sh_CLOCK_TRNG1_CLKOUT3_BUF" TS_CLK_USER_INTERFACE HIGH 50%>
+
+WARNING:NgdBuild:1012 - The constraint <INST
+   /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TX_EN
+   IOB = true> is overridden on the design object
+   E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TX_EN by the constraint <INST
+   "E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TX_EN" IOB =TRUE;>
+   [constraints/XUPV5system.ucf(273)].
+WARNING:NgdBuild:1012 - The constraint <INST
+   /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TX_ER
+   IOB = true> is overridden on the design object
+   E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TX_ER by the constraint <INST
+   "E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TX_ER" IOB =TRUE;>
+   [constraints/XUPV5system.ucf(274)].
+WARNING:NgdBuild:1012 - The constraint <INST
+   /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TXD_0
+   IOB = true> is overridden on the design object
+   E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_0 by the constraint <INST
+   "E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_0" IOB =TRUE;>
+   [constraints/XUPV5system.ucf(271)].
+WARNING:NgdBuild:1012 - The constraint <INST
+   /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TXD_1
+   IOB = true> is overridden on the design object
+   E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_1 by the constraint <INST
+   "E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_1" IOB =TRUE;>
+   [constraints/XUPV5system.ucf(270)].
+WARNING:NgdBuild:1012 - The constraint <INST
+   /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TXD_2
+   IOB = true> is overridden on the design object
+   E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_2 by the constraint <INST
+   "E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_2" IOB =TRUE;>
+   [constraints/XUPV5system.ucf(269)].
+WARNING:NgdBuild:1012 - The constraint <INST
+   /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TXD_3
+   IOB = true> is overridden on the design object
+   E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_3 by the constraint <INST
+   "E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_3" IOB =TRUE;>
+   [constraints/XUPV5system.ucf(268)].
+WARNING:NgdBuild:1012 - The constraint <INST
+   /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TXD_4
+   IOB = true> is overridden on the design object
+   E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_4 by the constraint <INST
+   "E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_4" IOB =TRUE;>
+   [constraints/XUPV5system.ucf(267)].
+WARNING:NgdBuild:1012 - The constraint <INST
+   /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TXD_5
+   IOB = true> is overridden on the design object
+   E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_5 by the constraint <INST
+   "E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_5" IOB =TRUE;>
+   [constraints/XUPV5system.ucf(266)].
+WARNING:NgdBuild:1012 - The constraint <INST
+   /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TXD_6
+   IOB = true> is overridden on the design object
+   E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_6 by the constraint <INST
+   "E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_6" IOB =TRUE;>
+   [constraints/XUPV5system.ucf(265)].
+WARNING:NgdBuild:1012 - The constraint <INST
+   /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TXD_7
+   IOB = true> is overridden on the design object
+   E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_7 by the constraint <INST
+   "E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_7" IOB =TRUE;>
+   [constraints/XUPV5system.ucf(272)].
+WARNING:NgdBuild:1345 - The constraint <TIMESPEC TS_userRunClearToggle = FROM
+   "userRunSetTogCS" TO "userRunSetTogUS" 8000 ps DATAPATHONLY;>
+   [constraints/XUPV5system.ucf(337)] is overridden by the constraint <TIMESPEC
+   TS_userRunClearToggle = FROM "userRunSetTogCS" TO "userRunSetTogUS" 8000 ps
+   DATAPATHONLY;> [constraints/XUPV5system.ucf(338)]. The overriden constraint
+   usually comes from the input netlist or ncf files. Please set
+   XIL_NGDBUILD_CONSTR_OVERRIDE_ERROR to promote this message to an error.
+WARNING:NgdBuild:1345 - The constraint <TIMESPEC TS_userRunClearToggle = FROM
+   "userRunSetTogCS" TO "userRunSetTogUS" 8000 ps DATAPATHONLY;>
+   [constraints/XUPV5system.ucf(338)] is overridden by the constraint <TIMESPEC
+   TS_userRunClearToggle = FROM "userRunSetTogCS" TO "userRunSetTogUS" 8000 ps
+   DATAPATHONLY;> [constraints/XUPV5system.ucf(339)]. The overriden constraint
+   usually comes from the input netlist or ncf files. Please set
+   XIL_NGDBUILD_CONSTR_OVERRIDE_ERROR to promote this message to an error.
+Done...
+
+WARNING:NgdBuild:1440 - User specified non-default attribute value (6.000000)
+   was detected for the CLKIN1_PERIOD attribute on PLL
+   "sh/CLOCK_TRNG1/PLL_ADV_INST".  This does not match the PERIOD constraint
+   value (5888 ps.).  The uncertainty calculation will use the PERIOD constraint
+   value.  This could result in incorrect uncertainty calculated for PLL output
+   clocks.
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:  13
+
+Total memory usage is 210380 kilobytes
+
+Writing NGD file "system.ngd" ...
+Total REAL time to NGDBUILD completion:  13 sec
+Total CPU time to NGDBUILD completion:   13 sec
+
+Writing NGDBUILD log file "system.bld"...

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">clk_user_interface</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_CLK_USER_INTERFACE</arg>&apos;, was traced into <arg fmt="%s" index="4">PLL_ADV</arg> instance <arg fmt="%s" index="5">sh/CLOCK_TRNG1/PLL_ADV_INST</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">PLL_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_sh_CLOCK_TRNG1_CLKOUT0_BUF = PERIOD &quot;sh_CLOCK_TRNG1_CLKOUT0_BUF&quot; TS_CLK_USER_INTERFACE / 0.09375 HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">clk_user_interface</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_CLK_USER_INTERFACE</arg>&apos;, was traced into <arg fmt="%s" index="4">PLL_ADV</arg> instance <arg fmt="%s" index="5">sh/CLOCK_TRNG1/PLL_ADV_INST</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">PLL_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT1</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_sh_CLOCK_TRNG1_CLKOUT1_BUF = PERIOD &quot;sh_CLOCK_TRNG1_CLKOUT1_BUF&quot; TS_CLK_USER_INTERFACE / 0.046875 HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">clk_user_interface</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_CLK_USER_INTERFACE</arg>&apos;, was traced into <arg fmt="%s" index="4">PLL_ADV</arg> instance <arg fmt="%s" index="5">sh/CLOCK_TRNG1/PLL_ADV_INST</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">PLL_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT2</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_sh_CLOCK_TRNG1_CLKOUT2_BUF = PERIOD &quot;sh_CLOCK_TRNG1_CLKOUT2_BUF&quot; TS_CLK_USER_INTERFACE / 0.75 HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">clk_user_interface</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_CLK_USER_INTERFACE</arg>&apos;, was traced into <arg fmt="%s" index="4">PLL_ADV</arg> instance <arg fmt="%s" index="5">sh/CLOCK_TRNG1/PLL_ADV_INST</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">PLL_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT3</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_sh_CLOCK_TRNG1_CLKOUT3_BUF = PERIOD &quot;sh_CLOCK_TRNG1_CLKOUT3_BUF&quot; TS_CLK_USER_INTERFACE HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;INST /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TX_EN IOB = true&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TX_EN</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TX_EN&quot; IOB =TRUE;&gt; [constraints/XUPV5system.ucf(273)]</arg>.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;INST /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TX_ER IOB = true&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TX_ER</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TX_ER&quot; IOB =TRUE;&gt; [constraints/XUPV5system.ucf(274)]</arg>.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;INST /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TXD_0 IOB = true&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_0</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_0&quot; IOB =TRUE;&gt; [constraints/XUPV5system.ucf(271)]</arg>.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;INST /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TXD_1 IOB = true&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_1</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_1&quot; IOB =TRUE;&gt; [constraints/XUPV5system.ucf(270)]</arg>.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;INST /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TXD_2 IOB = true&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_2</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_2&quot; IOB =TRUE;&gt; [constraints/XUPV5system.ucf(269)]</arg>.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;INST /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TXD_3 IOB = true&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_3</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_3&quot; IOB =TRUE;&gt; [constraints/XUPV5system.ucf(268)]</arg>.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;INST /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TXD_4 IOB = true&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_4</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_4&quot; IOB =TRUE;&gt; [constraints/XUPV5system.ucf(267)]</arg>.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;INST /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TXD_5 IOB = true&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_5</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_5&quot; IOB =TRUE;&gt; [constraints/XUPV5system.ucf(266)]</arg>.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;INST /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TXD_6 IOB = true&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_6</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_6&quot; IOB =TRUE;&gt; [constraints/XUPV5system.ucf(265)]</arg>.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;INST /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TXD_7 IOB = true&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_7</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_7&quot; IOB =TRUE;&gt; [constraints/XUPV5system.ucf(272)]</arg>.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1345" delta="old" >The constraint <arg fmt="%s" index="1">&lt;TIMESPEC TS_userRunClearToggle = FROM &quot;userRunSetTogCS&quot; TO &quot;userRunSetTogUS&quot; 8000 ps DATAPATHONLY;&gt; [constraints/XUPV5system.ucf(337)]</arg> is overridden by the constraint <arg fmt="%s" index="2">&lt;TIMESPEC TS_userRunClearToggle = FROM &quot;userRunSetTogCS&quot; TO &quot;userRunSetTogUS&quot; 8000 ps DATAPATHONLY;&gt; [constraints/XUPV5system.ucf(338)]</arg>. The overriden constraint usually comes from the input netlist or ncf files. Please set XIL_NGDBUILD_CONSTR_OVERRIDE_ERROR to promote this message to an error.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1345" delta="old" >The constraint <arg fmt="%s" index="1">&lt;TIMESPEC TS_userRunClearToggle = FROM &quot;userRunSetTogCS&quot; TO &quot;userRunSetTogUS&quot; 8000 ps DATAPATHONLY;&gt; [constraints/XUPV5system.ucf(338)]</arg> is overridden by the constraint <arg fmt="%s" index="2">&lt;TIMESPEC TS_userRunClearToggle = FROM &quot;userRunSetTogCS&quot; TO &quot;userRunSetTogUS&quot; 8000 ps DATAPATHONLY;&gt; [constraints/XUPV5system.ucf(339)]</arg>. The overriden constraint usually comes from the input netlist or ncf files. Please set XIL_NGDBUILD_CONSTR_OVERRIDE_ERROR to promote this message to an error.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1440" delta="old" >User specified non-default attribute value (<arg fmt="%s" index="1">6.000000</arg>) was detected for the <arg fmt="%s" index="2">CLKIN1_PERIOD</arg> attribute on <arg fmt="%s" index="3">PLL</arg> &quot;<arg fmt="%s" index="4">sh/CLOCK_TRNG1/PLL_ADV_INST</arg>&quot;.  This does not match the PERIOD constraint value (<arg fmt="%s" index="5">5888 ps.</arg>).  The uncertainty calculation will use the PERIOD constraint value.  This could result in incorrect uncertainty calculated for <arg fmt="%s" index="6">PLL</arg> output clocks.
+</msg>
+
+</messages>
+

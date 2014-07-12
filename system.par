@@ -1,0 +1,228 @@
+Release 14.6 par P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+PRAVEEN-PC::  Sat Jul 12 00:21:31 2014
+
+par -w -intstyle ise -ol high -mt off system_map.ncd system.ncd system.pcf 
+
+
+Constraints file: system.pcf.
+Loading device for application Rf_Device from file '5vlx110t.nph' in environment C:\Xilinx\14.6\ISE_DS\ISE\.
+   "system" is an NCD, version 3.2, device xc5vlx110t, package ff1136, speed -1
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 0.950 Volts. (default - Range: 0.950 to 1.050 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.73 2013-06-08".
+
+
+
+Device Utilization Summary:
+
+   Number of BUFGs                           5 out of 32     15%
+   Number of IDELAYCTRLs                     2 out of 22      9%
+   Number of ILOGICs                        10 out of 800     1%
+   Number of External IOBs                  60 out of 640     9%
+      Number of LOCed IOBs                  60 out of 60    100%
+
+   Number of IODELAYs                       11 out of 800     1%
+   Number of OLOGICs                        11 out of 800     1%
+   Number of PLL_ADVs                        2 out of 6      33%
+   Number of RAMB18X2s                       3 out of 148     2%
+   Number of RAMB36_EXPs                     3 out of 148     2%
+   Number of RAMBFIFO18_36s                  2 out of 148     1%
+   Number of TEMACs                          1 out of 2      50%
+   Number of Slices                       1000 out of 17280   5%
+   Number of Slice Registers              1229 out of 69120   1%
+      Number used as Flip Flops           1229
+      Number used as Latches                 0
+      Number used as LatchThrus              0
+
+   Number of Slice LUTS                   2374 out of 69120   3%
+   Number of Slice LUT-Flip Flop pairs    2706 out of 69120   3%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+WARNING:Timing:3223 - Timing constraint TS_rx_fifo_rd_to_wr_0 = MAXDELAY FROM TIMEGRP "rx_fifo_rd_to_wr_0" TO TIMEGRP   
+       "clk_125_eth" 8 ns DATAPATHONLY; ignored during timing analysis.
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please
+   consult the Xilinx Command Line Tools User Guide for information on generating a TSI report.
+Starting initial Timing Analysis.  REAL time: 12 secs 
+Finished initial Timing Analysis.  REAL time: 12 secs 
+
+Starting Router
+
+
+Phase  1  : 13751 unrouted;      REAL time: 14 secs 
+
+Phase  2  : 12488 unrouted;      REAL time: 15 secs 
+
+Phase  3  : 5629 unrouted;      REAL time: 20 secs 
+
+Phase  4  : 5622 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 27 secs 
+
+Updating file: system.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 33 secs 
+
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 33 secs 
+
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 33 secs 
+
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 33 secs 
+
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 33 secs 
+
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 34 secs 
+Total REAL time to Router completion: 34 secs 
+Total CPU time to Router completion: 35 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|         clk_125_eth | BUFGCTRL_X0Y1| No   |  394 |  0.552     |  2.138      |
++---------------------+--------------+------+------+------------+-------------+
+|E2M/gmii_rx_clk_dela |              |      |      |            |             |
+|                   y |BUFGCTRL_X0Y31| No   |   48 |  0.419     |  2.090      |
++---------------------+--------------+------+------+------------+-------------+
+| E2M/EC/sysACE_clk_o | BUFGCTRL_X0Y3| No   |   19 |  0.148     |  1.859      |
++---------------------+--------------+------+------+------------+-------------+
+|             clk_200 | BUFGCTRL_X0Y0| No   |    6 |  0.172     |  1.723      |
++---------------------+--------------+------+------+------------+-------------+
+|  clk_user_interface | BUFGCTRL_X0Y2| No   |   49 |  0.372     |  2.048      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
+
+Number of Timing Constraints that were not applied: 1
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  TS_CLK_125 = PERIOD TIMEGRP "clk_125_eth" | SETUP       |     0.051ns|     7.849ns|       0|           0
+   7.9 ns HIGH 50%                          | HOLD        |     0.253ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_tx_max_output_1 = MAXDELAY FROM TIMEGR | SETUP       |     0.154ns|     7.846ns|       0|           0
+  P "tx_max_output" TO TIMEGRP         "tx_ | HOLD        |     0.494ns|            |       0|           0
+  max_output_target" 8 ns DATAPATHONLY      |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_hard_reset_IG = MAXDELAY FROM TIMEGRP  | SETUP       |     0.361ns|     7.639ns|       0|           0
+  "hard_reset" TO TIMEGRP "FFS" 8 ns        | HOLD        |     0.453ns|            |       0|           0
+    DATAPATHONLY                            |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_CLK_USER_INTERFACE = PERIOD TIMEGRP "c | SETUP       |     0.388ns|     5.500ns|       0|           0
+  lk_user_interface" 5.888 ns HIGH 50%      | HOLD        |     0.465ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_sysACE_MPDATAIN = MAXDELAY FROM TIMEGR | SETUP       |     0.457ns|     2.703ns|       0|           0
+  P "sysACE_MPDATA" TO TIMEGRP         "sys | HOLD        |     1.543ns|            |       0|           0
+  ACE_clk_o" 3.16 ns DATAPATHONLY           |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_Emac0_clk_phy_rx0 = PERIOD TIMEGRP "Em | SETUP       |     0.564ns|     7.336ns|       0|           0
+  ac0_clk_phy_rx0" 7.9 ns HIGH 50%          | HOLD        |     0.376ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  ts_tx_meta_protect_0 = MAXDELAY FROM TIME | SETUP       |     1.269ns|     3.731ns|       0|           0
+  GRP "tx_metastable_0" 5 ns         DATAPA | HOLD        |     0.633ns|            |       0|           0
+  THONLY                                    |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  ts_rx_meta_protect_0 = MAXDELAY FROM TIME | SETUP       |     3.705ns|     1.295ns|       0|           0
+  GRP "rx_metastable_0" 5 ns                | HOLD        |     0.448ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_CLK_200 = PERIOD TIMEGRP "clk_200" 4.9 | SETUP       |     4.061ns|     0.839ns|       0|           0
+   ns HIGH 50%                              | HOLD        |     0.476ns|            |       0|           0
+                                            | MINLOWPULSE |     3.846ns|     1.054ns|       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_tx_fifo_wr_to_rd_0 = MAXDELAY FROM TIM | SETUP       |     4.822ns|     3.178ns|       0|           0
+  EGRP "tx_fifo_wr_to_rd_0" TO TIMEGRP      | HOLD        |     0.794ns|            |       0|           0
+      "clk_125_eth" 8 ns DATAPATHONLY       |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_userRunClearToggle = MAXDELAY FROM TIM | SETUP       |     6.206ns|     1.794ns|       0|           0
+  EGRP "userRunSetTogCS" TO TIMEGRP         | HOLD        |     1.316ns|            |       0|           0
+   "userRunSetTogUS" 8 ns DATAPATHONLY      |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_tx_fifo_rd_to_wr_0 = MAXDELAY FROM TIM | SETUP       |     6.756ns|     1.244ns|       0|           0
+  EGRP "tx_fifo_rd_to_wr_0" TO TIMEGRP      | HOLD        |     0.550ns|            |       0|           0
+      "clk_125_eth" 8 ns DATAPATHONLY       |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_rx_fifo_wr_to_rd_0 = MAXDELAY FROM TIM | SETUP       |     6.897ns|     1.103ns|       0|           0
+  EGRP "rx_fifo_wr_to_rd_0" TO TIMEGRP      | HOLD        |     0.793ns|            |       0|           0
+      "clk_125_eth" 8 ns DATAPATHONLY       |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_tx_fifo_addr_0 = MAXDELAY FROM TIMEGRP | SETUP       |     8.808ns|     1.192ns|       0|           0
+   "tx_addr_rd_0" TO TIMEGRP         "tx_ad | HOLD        |     0.305ns|            |       0|           0
+  dr_wr_0" 10 ns                            |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_sysACE_OE = MAXDELAY FROM TIMEGRP "sys | MAXDELAY    |    19.328ns|     4.112ns|       0|           0
+  ACE_clk_o" TO TIMEGRP "sysACE_MPOE"       |             |            |            |        |            
+     23.44 ns DATAPATHONLY                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_sysACE_WE = MAXDELAY FROM TIMEGRP "sys | MAXDELAY    |    19.723ns|     3.717ns|       0|           0
+  ACE_clk_o" TO TIMEGRP "sysACE_MPWE"       |             |            |            |        |            
+     23.44 ns DATAPATHONLY                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_sysACE_clk_o = PERIOD TIMEGRP "sysACE_ | SETUP       |    27.496ns|     2.704ns|       0|           0
+  clk_o" 30.2 ns HIGH 50%                   | HOLD        |     0.406ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_rx_fifo_rd_to_wr_0 = MAXDELAY FROM TIM | N/A         |         N/A|         N/A|     N/A|         N/A
+  EGRP "rx_fifo_rd_to_wr_0" TO TIMEGRP      |             |            |            |        |            
+      "clk_125_eth" 8 ns DATAPATHONLY       |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 39 secs 
+Total CPU time to PAR completion: 40 secs 
+
+Peak Memory Usage:  579 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 1
+Number of info messages: 1
+
+Writing design to file system.ncd
+
+
+
+PAR done!

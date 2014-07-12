@@ -1,0 +1,9 @@
+verilog work ../example_design/emac_single.v
+verilog work ../example_design/physical/gmii_if.v
+verilog work ../example_design/emac_single_block.v
+verilog work ../example_design/client/fifo/tx_client_fifo_8.v
+verilog work ../example_design/client/fifo/rx_client_fifo_8.v
+verilog work ../example_design/client/fifo/eth_fifo_8.v
+verilog work ../example_design/emac_single_locallink.v
+verilog work ../example_design/client/address_swap_module_8.v
+verilog work ../example_design/emac_single_example_design.v

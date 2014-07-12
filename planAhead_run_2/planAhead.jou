@@ -1,0 +1,90 @@
+#-----------------------------------------------------------
+# PlanAhead v13.3 (64-bit)
+# Build 147507 by hdbuild on Tue Oct  4 19:13:50 MDT 2011
+# Start of session at: Sun Jan 12 21:54:12 2014
+# Process ID: 6328
+# Log file: E:/Dropbox/Works and collections/Elec/Rice/PDL/planAhead_run_2/planAhead.log
+# Journal file: E:/Dropbox/Works and collections/Elec/Rice/PDL/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source {E:/Dropbox/Works and collections/Elec/Rice/PDL/pa.fromNetlist.tcl}
+startgroup
+set_property loc SLICE_X0Y144 [get_cells {puf1/sarray[0]/pdl_bottom/LUT6_inst_0}]
+set_property bel D6LUT [get_cells {puf1/sarray[0]/pdl_bottom/LUT6_inst_0}]
+endgroup
+startgroup 
+set_property loc "" [get_cells [list  {puf1/sarray[0]/pdl_bottom/LUT6_inst_0}] -filter {((is_primitive==true && primitive_level!="INTERNAL")  && (loc!=""))}]
+set_property bel "" [get_cells [list  {puf1/sarray[0]/pdl_bottom/LUT6_inst_0}] -filter {((is_primitive==true && primitive_level!="INTERNAL")  && (bel!=""))}]
+endgroup
+startgroup
+set_property loc SLICE_X0Y149 [get_cells {puf1/sarray[0]/pdl_bottom/LUT6_inst_0}]
+set_property bel D6LUT [get_cells {puf1/sarray[0]/pdl_bottom/LUT6_inst_0}]
+endgroup
+startgroup
+set_property loc SLICE_X0Y148 [get_cells {puf1/sarray[0]/pdl_bottom/LUT6_inst_1}]
+set_property bel D6LUT [get_cells {puf1/sarray[0]/pdl_bottom/LUT6_inst_1}]
+endgroup
+startgroup
+set_property loc SLICE_X2Y149 [get_cells {puf1/sarray[0]/pdl_top/LUT6_inst_0}]
+set_property bel D6LUT [get_cells {puf1/sarray[0]/pdl_top/LUT6_inst_0}]
+endgroup
+startgroup
+set_property loc SLICE_X2Y148 [get_cells {puf1/sarray[0]/pdl_top/LUT6_inst_1}]
+set_property bel D6LUT [get_cells {puf1/sarray[0]/pdl_top/LUT6_inst_1}]
+endgroup
+startgroup
+set_property loc SLICE_X0Y147 [get_cells {puf1/sarray[1]/pdl_bottom/LUT6_inst_0}]
+set_property bel D6LUT [get_cells {puf1/sarray[1]/pdl_bottom/LUT6_inst_0}]
+endgroup
+startgroup
+set_property loc SLICE_X0Y146 [get_cells {puf1/sarray[1]/pdl_bottom/LUT6_inst_1}]
+set_property bel D6LUT [get_cells {puf1/sarray[1]/pdl_bottom/LUT6_inst_1}]
+endgroup
+startgroup
+set_property loc SLICE_X4Y149 [get_cells {puf2/sarray[0]/pdl_top/LUT6_inst_0}]
+set_property bel D6LUT [get_cells {puf2/sarray[0]/pdl_top/LUT6_inst_0}]
+endgroup
+startgroup
+set_property loc SLICE_X4Y148 [get_cells {puf2/sarray[0]/pdl_top/LUT6_inst_1}]
+set_property bel D6LUT [get_cells {puf2/sarray[0]/pdl_top/LUT6_inst_1}]
+endgroup
+startgroup
+set_property loc "" [get_cells [list  {puf2/sarray[0]/pdl_top/LUT6_inst_1}] -filter {((is_primitive==true && primitive_level!="INTERNAL")  && (loc!=""))}]
+set_property bel "" [get_cells [list  {puf2/sarray[0]/pdl_top/LUT6_inst_1}] -filter {((is_primitive==true && primitive_level!="INTERNAL")  && (bel!=""))}]
+place_cell {puf2/sarray[0]/pdl_top/LUT6_inst_0} SLICE_X6Y148/D6LUT
+set_property loc SLICE_X6Y147 [get_cells {puf2/sarray[0]/pdl_top/LUT6_inst_1}]
+set_property bel D6LUT [get_cells {puf2/sarray[0]/pdl_top/LUT6_inst_1}]
+endgroup
+startgroup
+set_property loc "" [get_cells [list  {puf2/sarray[0]/pdl_top/LUT6_inst_1}] -filter {((is_primitive==true && primitive_level!="INTERNAL")  && (loc!=""))}]
+set_property bel "" [get_cells [list  {puf2/sarray[0]/pdl_top/LUT6_inst_1}] -filter {((is_primitive==true && primitive_level!="INTERNAL")  && (bel!=""))}]
+place_cell {puf2/sarray[0]/pdl_top/LUT6_inst_0} SLICE_X6Y149/D6LUT
+set_property loc SLICE_X6Y148 [get_cells {puf2/sarray[0]/pdl_top/LUT6_inst_1}]
+set_property bel D6LUT [get_cells {puf2/sarray[0]/pdl_top/LUT6_inst_1}]
+endgroup
+startgroup
+set_property loc SLICE_X4Y149 [get_cells {puf2/sarray[0]/pdl_bottom/LUT6_inst_0}]
+set_property bel D6LUT [get_cells {puf2/sarray[0]/pdl_bottom/LUT6_inst_0}]
+endgroup
+startgroup
+set_property loc SLICE_X4Y148 [get_cells {puf2/sarray[0]/pdl_bottom/LUT6_inst_1}]
+set_property bel D6LUT [get_cells {puf2/sarray[0]/pdl_bottom/LUT6_inst_1}]
+endgroup
+save_design
+refresh_design
+startgroup
+set_property loc SLICE_X5Y149 [get_cells c1<0>1]
+set_property bel A6LUT [get_cells c1<0>1]
+endgroup
+startgroup
+set_property loc SLICE_X4Y149 [get_cells sig_0]
+set_property bel DFF [get_cells sig_0]
+endgroup
+undo
+undo
+save_design -force
+refresh_design
+refresh_design
+refresh_design
+exit
+stop_gui

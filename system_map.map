@@ -1,0 +1,58 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Map Application Log File for Design 'system'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol
+high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr
+off -lc off -power off -o system_map.ncd system.ngd system.pcf 
+Target Device  : xc5vlx110t
+Target Package : ff1136
+Target Speed   : -1
+Mapper Version : virtex5 -- $Revision: 1.55 $
+Mapped Date    : Sat Jul 12 02:08:13 2014
+
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+INFO:Security:56 - Part 'xc5vlx110t' is not a WebPack part.
+INFO:Security:7a - A feature for ISE was found but is for an older version.
+INFO:Security:60 - The XILINXD_LICENSE_FILE environment variable is set to
+'Libraries\Documents\Xilinx.lic'.
+INFO:Security:62 - The LM_LICENSE_FILE environment variable is set to
+'1717@winlicense.rice.edu;2100@winlicense.rice.edu'.
+INFO:Security:68 - For more information or for assistance in obtaining 
+ a license, please run the Xilinx License Configuration Manager
+       (xlcm or "Manage Xilinx Licenses".)
+INFO:Security:68a - user is Siam, on host SIAM-THINK.
+WARNING:Security:9b - No 'ISE' feature version 2013.10 was available for part
+'xc5vlx110t'.
+ERROR:Security:12 - No 'xc5vlx110t' feature version 2013.10 was available (-5),
+     so 'WebPack' may not be used.
+----------------------------------------------------------------------
+License file does not support this version.
+Feature:       ISE
+Application version > License version: 2013.10 > 2013.09
+License path: 
+Libraries\Documents\Xilinx.lic;1717@winlicense.rice.edu;2100@winlicense.rice.edu
+;C:/.Xilinx\Xilinx.lic;C:\Xilinx\14.7\ISE_DS\ISE\/coregen/core_licenses\Xilinx.l
+ic;C:\Xilinx\14.7\ISE_DS\ISE\/coregen/core_licenses\XilinxFree.lic;C:\Xilinx\14.
+7\ISE_DS\EDK/data/core_licenses\Xilinx.lic;
+FLEXnet Licensing error:-21,126
+For further information, refer to the FLEXnet Licensing documentation,
+available at "www.flexerasoftware.com".No such feature exists.
+Feature:       xc5vlx110t
+License path: 
+Libraries\Documents\Xilinx.lic;1717@winlicense.rice.edu;2100@winlicense.rice.edu
+;C:/.Xilinx\Xilinx.lic;C:\Xilinx\14.7\ISE_DS\ISE\/coregen/core_licenses\Xilinx.l
+ic;C:\Xilinx\14.7\ISE_DS\ISE\/coregen/core_licenses\XilinxFree.lic;C:\Xilinx\14.
+7\ISE_DS\EDK/data/core_licenses\Xilinx.lic;
+FLEXnet Licensing error:-5,412
+For further information, refer to the FLEXnet Licensing documentation,
+available at "www.flexerasoftware.com".
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR:Map:258 - A problem was encountered attempting to get the license for this
+   architecture. 
+
+Design Summary
+--------------
+Number of errors   :   1
+Number of warnings :   0

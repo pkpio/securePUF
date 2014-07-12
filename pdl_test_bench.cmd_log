@@ -1,0 +1,87 @@
+xst -intstyle ise -ifn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.xst" -ofn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.syr" 
+xst -intstyle ise -ifn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.xst" -ofn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.syr" 
+xst -intstyle ise -ifn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.xst" -ofn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.syr" 
+xst -intstyle ise -ifn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.xst" -ofn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.syr" 
+xst -intstyle ise -ifn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.xst" -ofn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.syr" 
+xst -intstyle ise -ifn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.xst" -ofn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.syr" 
+xst -intstyle ise -ifn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.xst" -ofn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.syr" 
+xst -intstyle ise -ifn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.xst" -ofn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.syr" 
+xst -intstyle ise -ifn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.xst" -ofn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.syr" 
+xst -intstyle ise -ifn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.xst" -ofn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.syr" 
+xst -intstyle ise -ifn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.xst" -ofn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.syr" 
+xst -intstyle ise -ifn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.xst" -ofn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.syr" 
+xst -intstyle ise -ifn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.xst" -ofn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "constraints/XUPV5system.ucf" -p xc5vlx110t-ff1136-1 "pdl_test_bench.ngc" pdl_test_bench.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "constraints/XUPV5system.ucf" -p xc5vlx110t-ff1136-1 "pdl_test_bench.ngc" pdl_test_bench.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "constraints/XUPV5system.ucf" -p xc5vlx110t-ff1136-1 "pdl_test_bench.ngc" pdl_test_bench.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "constraints/XUPV5system.ucf" -p xc5vlx110t-ff1136-1 "pdl_test_bench.ngc" pdl_test_bench.ngd  
+xst -intstyle ise -ifn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.xst" -ofn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.syr" 
+xst -intstyle ise -ifn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.xst" -ofn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "constraints/XUPV5system.ucf" -p xc5vlx110t-ff1136-1 "pdl_test_bench.ngc" pdl_test_bench.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o pdl_test_bench_map.ncd pdl_test_bench.ngd pdl_test_bench.pcf 
+par -w -intstyle ise -ol high -mt off pdl_test_bench_map.ncd pdl_test_bench.ncd pdl_test_bench.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml pdl_test_bench.twx pdl_test_bench.ncd -o pdl_test_bench.twr pdl_test_bench.pcf 
+bitgen -intstyle ise -f pdl_test_bench.ut pdl_test_bench.ncd 
+xst -intstyle ise -ifn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.xst" -ofn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "constraints/XUPV5system.ucf" -p xc5vlx110t-ff1136-1 "pdl_test_bench.ngc" pdl_test_bench.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o pdl_test_bench_map.ncd pdl_test_bench.ngd pdl_test_bench.pcf 
+par -w -intstyle ise -ol high -mt off pdl_test_bench_map.ncd pdl_test_bench.ncd pdl_test_bench.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml pdl_test_bench.twx pdl_test_bench.ncd -o pdl_test_bench.twr pdl_test_bench.pcf 
+bitgen -intstyle ise -f pdl_test_bench.ut pdl_test_bench.ncd 
+xst -intstyle ise -ifn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.xst" -ofn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "constraints/XUPV5system.ucf" -p xc5vlx110t-ff1136-1 "pdl_test_bench.ngc" pdl_test_bench.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o pdl_test_bench_map.ncd pdl_test_bench.ngd pdl_test_bench.pcf 
+xst -intstyle ise -ifn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.xst" -ofn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "constraints/XUPV5system.ucf" -p xc5vlx110t-ff1136-1 "pdl_test_bench.ngc" pdl_test_bench.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o pdl_test_bench_map.ncd pdl_test_bench.ngd pdl_test_bench.pcf 
+par -w -intstyle ise -ol high -mt off pdl_test_bench_map.ncd pdl_test_bench.ncd pdl_test_bench.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml pdl_test_bench.twx pdl_test_bench.ncd -o pdl_test_bench.twr pdl_test_bench.pcf 
+bitgen -intstyle ise -f pdl_test_bench.ut pdl_test_bench.ncd 
+xst -intstyle ise -ifn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.xst" -ofn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.syr" 
+xst -intstyle ise -ifn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.xst" -ofn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "constraints/XUPV5system.ucf" -uc "constraints/pdl_constraints.ucf" -p xc5vlx110t-ff1136-1 "pdl_test_bench.ngc" pdl_test_bench.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o pdl_test_bench_map.ncd pdl_test_bench.ngd pdl_test_bench.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "constraints/XUPV5system.ucf" -uc "constraints/pdl_constraints.ucf" -p xc5vlx110t-ff1136-1 "pdl_test_bench.ngc" pdl_test_bench.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o pdl_test_bench_map.ncd pdl_test_bench.ngd pdl_test_bench.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "constraints/XUPV5system.ucf" -uc "constraints/pdl_constraints.ucf" -p xc5vlx110t-ff1136-1 "pdl_test_bench.ngc" pdl_test_bench.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o pdl_test_bench_map.ncd pdl_test_bench.ngd pdl_test_bench.pcf 
+xst -intstyle ise -ifn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.xst" -ofn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "constraints/XUPV5system.ucf" -uc "constraints/pdl_constraints.ucf" -p xc5vlx110t-ff1136-1 "pdl_test_bench.ngc" pdl_test_bench.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o pdl_test_bench_map.ncd pdl_test_bench.ngd pdl_test_bench.pcf 
+par -w -intstyle ise -ol high -mt off pdl_test_bench_map.ncd pdl_test_bench.ncd pdl_test_bench.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml pdl_test_bench.twx pdl_test_bench.ncd -o pdl_test_bench.twr pdl_test_bench.pcf 
+bitgen -intstyle ise -f pdl_test_bench.ut pdl_test_bench.ncd 
+xst -intstyle ise -ifn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.xst" -ofn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "constraints/XUPV5system.ucf" -uc "constraints/pdl_constraints.ucf" -p xc5vlx110t-ff1136-1 "pdl_test_bench.ngc" pdl_test_bench.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o pdl_test_bench_map.ncd pdl_test_bench.ngd pdl_test_bench.pcf 
+par -w -intstyle ise -ol high -mt off pdl_test_bench_map.ncd pdl_test_bench.ncd pdl_test_bench.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml pdl_test_bench.twx pdl_test_bench.ncd -o pdl_test_bench.twr pdl_test_bench.pcf 
+bitgen -intstyle ise -f pdl_test_bench.ut pdl_test_bench.ncd 
+xst -intstyle ise -ifn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.xst" -ofn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "constraints/pdl_constraints.ucf" -uc "constraints/XUPV5system.ucf" -p xc5vlx110t-ff1136-1 "pdl_test_bench.ngc" pdl_test_bench.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o pdl_test_bench_map.ncd pdl_test_bench.ngd pdl_test_bench.pcf 
+par -w -intstyle ise -ol high -mt off pdl_test_bench_map.ncd pdl_test_bench.ncd pdl_test_bench.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml pdl_test_bench.twx pdl_test_bench.ncd -o pdl_test_bench.twr pdl_test_bench.pcf 
+bitgen -intstyle ise -f pdl_test_bench.ut pdl_test_bench.ncd 
+xst -intstyle ise -ifn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.xst" -ofn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "constraints/pdl_constraints.ucf" -uc "constraints/XUPV5system.ucf" -p xc5vlx110t-ff1136-1 "pdl_test_bench.ngc" pdl_test_bench.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o pdl_test_bench_map.ncd pdl_test_bench.ngd pdl_test_bench.pcf 
+par -w -intstyle ise -ol high -mt off pdl_test_bench_map.ncd pdl_test_bench.ncd pdl_test_bench.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml pdl_test_bench.twx pdl_test_bench.ncd -o pdl_test_bench.twr pdl_test_bench.pcf 
+bitgen -intstyle ise -f pdl_test_bench.ut pdl_test_bench.ncd 
+xst -intstyle ise -ifn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.xst" -ofn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "constraints/pdl_constraints.ucf" -uc "constraints/XUPV5system.ucf" -p xc5vlx110t-ff1136-1 "pdl_test_bench.ngc" pdl_test_bench.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o pdl_test_bench_map.ncd pdl_test_bench.ngd pdl_test_bench.pcf 
+par -w -intstyle ise -ol high -mt off pdl_test_bench_map.ncd pdl_test_bench.ncd pdl_test_bench.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml pdl_test_bench.twx pdl_test_bench.ncd -o pdl_test_bench.twr pdl_test_bench.pcf 
+bitgen -intstyle ise -f pdl_test_bench.ut pdl_test_bench.ncd 
+xst -intstyle ise -ifn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.xst" -ofn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "constraints/pdl_constraints.ucf" -uc "constraints/XUPV5system.ucf" -p xc5vlx110t-ff1136-1 "pdl_test_bench.ngc" pdl_test_bench.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "constraints/pdl_constraints.ucf" -uc "constraints/XUPV5system.ucf" -p xc5vlx110t-ff1136-1 "pdl_test_bench.ngc" pdl_test_bench.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o pdl_test_bench_map.ncd pdl_test_bench.ngd pdl_test_bench.pcf 
+xst -intstyle ise -ifn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.xst" -ofn "E:/Dropbox/Works and collections/Elec/Rice/PDL/pdl_test_bench.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "constraints/pdl_constraints.ucf" -uc "constraints/XUPV5system.ucf" -p xc5vlx110t-ff1136-1 "pdl_test_bench.ngc" pdl_test_bench.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o pdl_test_bench_map.ncd pdl_test_bench.ngd pdl_test_bench.pcf 
+par -w -intstyle ise -ol high -mt off pdl_test_bench_map.ncd pdl_test_bench.ncd pdl_test_bench.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml pdl_test_bench.twx pdl_test_bench.ncd -o pdl_test_bench.twr pdl_test_bench.pcf 
+bitgen -intstyle ise -f pdl_test_bench.ut pdl_test_bench.ncd 

@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "E:/Dropbox/Works and collections/Elec/Rice/PDL/mapping.xst" -ofn "E:/Dropbox/Works and collections/Elec/Rice/PDL/mapping.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "constraints/XUPV5system.ucf" -p xc5vlx110t-ff1136-1 "mapping.ngc" mapping.ngd  

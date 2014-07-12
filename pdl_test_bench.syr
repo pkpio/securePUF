@@ -1,0 +1,1762 @@
+Release 13.3 - xst O.76xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.27 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.27 secs
+ 
+--> Reading design: pdl_test_bench.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "pdl_test_bench.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "pdl_test_bench"
+Output Format                      : NGC
+Target Device                      : xc5vlx110t-1-ff1136
+
+---- Source Options
+Top Module Name                    : pdl_test_bench
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Off
+Reduce Control Sets                : Off
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : NO
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "source/pdl_block.v" in library work
+Compiling verilog file "source/pdl_based_switch.v" in library work
+Module <pdl_block> compiled
+Compiling verilog file "source/PDL_PUF.v" in library work
+Module <pdl_based_switch> compiled
+Compiling verilog file "source/pdl_test_bench.v" in library work
+Module <pdl_puf> compiled
+Module <pdl_test_bench> compiled
+No errors in compilation
+Analysis of file <"pdl_test_bench.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <pdl_test_bench> in library <work> with parameters.
+	PDL_SWITCH_LENGTH = "00000000000000000000000000111111"
+
+Analyzing hierarchy for module <pdl_puf> in library <work> with parameters.
+	PDL_SWITCH_LENGTH = "00000000000000000000000000111111"
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_based_switch> in library <work>.
+
+Analyzing hierarchy for module <pdl_block> in library <work>.
+
+Analyzing hierarchy for module <pdl_block> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <pdl_test_bench>.
+	PDL_SWITCH_LENGTH = 32'sb00000000000000000000000000111111
+Module <pdl_test_bench> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <puf1> in unit <pdl_test_bench>.
+    Set user-defined property "KEEP =  TRUE" for signal <c1>.
+    Set user-defined property "KEEP =  TRUE" for signal <c2>.
+    Set user-defined property "KEEP =  TRUE" for signal <signal>.
+Analyzing module <pdl_puf> in library <work>.
+	PDL_SWITCH_LENGTH = 32'sb00000000000000000000000000111111
+Module <pdl_puf> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <FDC1> in unit <pdl_puf>.
+    Set user-defined property "BEL =  D6LUT" for instance <LUT1_inst_2> in unit <pdl_puf>.
+    Set user-defined property "INIT =  2" for instance <LUT1_inst_2> in unit <pdl_puf>.
+    Set user-defined property "LOCK_PINS =  all" for instance <LUT1_inst_2> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[0]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[10]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[11]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[12]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[13]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[14]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[15]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[16]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[17]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[18]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[19]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[1]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[20]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[21]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[22]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[23]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[24]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[25]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[26]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[27]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[28]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[29]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[2]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[30]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[31]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[32]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[33]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[34]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[35]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[36]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[37]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[38]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[39]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[3]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[40]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[41]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[42]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[43]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[44]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[45]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[46]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[47]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[48]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[49]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[4]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[50]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[51]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[52]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[53]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[54]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[55]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[56]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[57]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[58]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[59]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[5]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[60]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[61]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[62]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[63]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[6]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[7]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[8]> in unit <pdl_puf>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <sarray[9]> in unit <pdl_puf>.
+Analyzing module <pdl_based_switch.1> in library <work>.
+Module <pdl_based_switch.1> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.1>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.1>.
+Analyzing module <pdl_block.1> in library <work>.
+Module <pdl_block.1> is correct for synthesis.
+ 
+    Set user-defined property "BEL =  D6LUT" for instance <LUT6_inst_1> in unit <pdl_block.1>.
+    Set user-defined property "INIT =  5655555555555555" for instance <LUT6_inst_1> in unit <pdl_block.1>.
+    Set user-defined property "LOCK_PINS =  all" for instance <LUT6_inst_1> in unit <pdl_block.1>.
+    Set user-defined property "BEL =  D6LUT" for instance <LUT6_inst_0> in unit <pdl_block.1>.
+    Set user-defined property "INIT =  5655555555555555" for instance <LUT6_inst_0> in unit <pdl_block.1>.
+    Set user-defined property "LOCK_PINS =  all" for instance <LUT6_inst_0> in unit <pdl_block.1>.
+    Set user-defined property "S =  TRUE" for unit <pdl_block.1>.
+    Set user-defined property "KEEP =  TRUE" for signal <w>.
+    Set user-defined property "S =  TRUE" for signal <w>.
+Analyzing module <pdl_block.2> in library <work>.
+Module <pdl_block.2> is correct for synthesis.
+ 
+    Set user-defined property "BEL =  D6LUT" for instance <LUT6_inst_1> in unit <pdl_block.2>.
+    Set user-defined property "INIT =  5655555555555555" for instance <LUT6_inst_1> in unit <pdl_block.2>.
+    Set user-defined property "LOCK_PINS =  all" for instance <LUT6_inst_1> in unit <pdl_block.2>.
+    Set user-defined property "BEL =  D6LUT" for instance <LUT6_inst_0> in unit <pdl_block.2>.
+    Set user-defined property "INIT =  5655555555555555" for instance <LUT6_inst_0> in unit <pdl_block.2>.
+    Set user-defined property "LOCK_PINS =  all" for instance <LUT6_inst_0> in unit <pdl_block.2>.
+    Set user-defined property "S =  TRUE" for unit <pdl_block.2>.
+    Set user-defined property "KEEP =  TRUE" for signal <w>.
+    Set user-defined property "S =  TRUE" for signal <w>.
+Analyzing module <pdl_based_switch.2> in library <work>.
+Module <pdl_based_switch.2> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.2>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.2>.
+Analyzing module <pdl_based_switch.3> in library <work>.
+Module <pdl_based_switch.3> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.3>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.3>.
+Analyzing module <pdl_based_switch.4> in library <work>.
+Module <pdl_based_switch.4> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.4>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.4>.
+Analyzing module <pdl_based_switch.5> in library <work>.
+Module <pdl_based_switch.5> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.5>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.5>.
+Analyzing module <pdl_based_switch.6> in library <work>.
+Module <pdl_based_switch.6> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.6>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.6>.
+Analyzing module <pdl_based_switch.7> in library <work>.
+Module <pdl_based_switch.7> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.7>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.7>.
+Analyzing module <pdl_based_switch.8> in library <work>.
+Module <pdl_based_switch.8> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.8>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.8>.
+Analyzing module <pdl_based_switch.9> in library <work>.
+Module <pdl_based_switch.9> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.9>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.9>.
+Analyzing module <pdl_based_switch.10> in library <work>.
+Module <pdl_based_switch.10> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.10>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.10>.
+Analyzing module <pdl_based_switch.11> in library <work>.
+Module <pdl_based_switch.11> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.11>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.11>.
+Analyzing module <pdl_based_switch.12> in library <work>.
+Module <pdl_based_switch.12> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.12>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.12>.
+Analyzing module <pdl_based_switch.13> in library <work>.
+Module <pdl_based_switch.13> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.13>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.13>.
+Analyzing module <pdl_based_switch.14> in library <work>.
+Module <pdl_based_switch.14> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.14>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.14>.
+Analyzing module <pdl_based_switch.15> in library <work>.
+Module <pdl_based_switch.15> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.15>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.15>.
+Analyzing module <pdl_based_switch.16> in library <work>.
+Module <pdl_based_switch.16> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.16>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.16>.
+Analyzing module <pdl_based_switch.17> in library <work>.
+Module <pdl_based_switch.17> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.17>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.17>.
+Analyzing module <pdl_based_switch.18> in library <work>.
+Module <pdl_based_switch.18> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.18>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.18>.
+Analyzing module <pdl_based_switch.19> in library <work>.
+Module <pdl_based_switch.19> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.19>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.19>.
+Analyzing module <pdl_based_switch.20> in library <work>.
+Module <pdl_based_switch.20> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.20>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.20>.
+Analyzing module <pdl_based_switch.21> in library <work>.
+Module <pdl_based_switch.21> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.21>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.21>.
+Analyzing module <pdl_based_switch.22> in library <work>.
+Module <pdl_based_switch.22> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.22>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.22>.
+Analyzing module <pdl_based_switch.23> in library <work>.
+Module <pdl_based_switch.23> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.23>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.23>.
+Analyzing module <pdl_based_switch.24> in library <work>.
+Module <pdl_based_switch.24> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.24>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.24>.
+Analyzing module <pdl_based_switch.25> in library <work>.
+Module <pdl_based_switch.25> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.25>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.25>.
+Analyzing module <pdl_based_switch.26> in library <work>.
+Module <pdl_based_switch.26> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.26>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.26>.
+Analyzing module <pdl_based_switch.27> in library <work>.
+Module <pdl_based_switch.27> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.27>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.27>.
+Analyzing module <pdl_based_switch.28> in library <work>.
+Module <pdl_based_switch.28> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.28>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.28>.
+Analyzing module <pdl_based_switch.29> in library <work>.
+Module <pdl_based_switch.29> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.29>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.29>.
+Analyzing module <pdl_based_switch.30> in library <work>.
+Module <pdl_based_switch.30> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.30>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.30>.
+Analyzing module <pdl_based_switch.31> in library <work>.
+Module <pdl_based_switch.31> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.31>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.31>.
+Analyzing module <pdl_based_switch.32> in library <work>.
+Module <pdl_based_switch.32> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.32>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.32>.
+Analyzing module <pdl_based_switch.33> in library <work>.
+Module <pdl_based_switch.33> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.33>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.33>.
+Analyzing module <pdl_based_switch.34> in library <work>.
+Module <pdl_based_switch.34> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.34>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.34>.
+Analyzing module <pdl_based_switch.35> in library <work>.
+Module <pdl_based_switch.35> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.35>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.35>.
+Analyzing module <pdl_based_switch.36> in library <work>.
+Module <pdl_based_switch.36> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.36>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.36>.
+Analyzing module <pdl_based_switch.37> in library <work>.
+Module <pdl_based_switch.37> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.37>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.37>.
+Analyzing module <pdl_based_switch.38> in library <work>.
+Module <pdl_based_switch.38> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.38>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.38>.
+Analyzing module <pdl_based_switch.39> in library <work>.
+Module <pdl_based_switch.39> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.39>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.39>.
+Analyzing module <pdl_based_switch.40> in library <work>.
+Module <pdl_based_switch.40> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.40>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.40>.
+Analyzing module <pdl_based_switch.41> in library <work>.
+Module <pdl_based_switch.41> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.41>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.41>.
+Analyzing module <pdl_based_switch.42> in library <work>.
+Module <pdl_based_switch.42> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.42>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.42>.
+Analyzing module <pdl_based_switch.43> in library <work>.
+Module <pdl_based_switch.43> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.43>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.43>.
+Analyzing module <pdl_based_switch.44> in library <work>.
+Module <pdl_based_switch.44> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.44>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.44>.
+Analyzing module <pdl_based_switch.45> in library <work>.
+Module <pdl_based_switch.45> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.45>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.45>.
+Analyzing module <pdl_based_switch.46> in library <work>.
+Module <pdl_based_switch.46> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.46>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.46>.
+Analyzing module <pdl_based_switch.47> in library <work>.
+Module <pdl_based_switch.47> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.47>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.47>.
+Analyzing module <pdl_based_switch.48> in library <work>.
+Module <pdl_based_switch.48> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.48>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.48>.
+Analyzing module <pdl_based_switch.49> in library <work>.
+Module <pdl_based_switch.49> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.49>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.49>.
+Analyzing module <pdl_based_switch.50> in library <work>.
+Module <pdl_based_switch.50> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.50>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.50>.
+Analyzing module <pdl_based_switch.51> in library <work>.
+Module <pdl_based_switch.51> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.51>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.51>.
+Analyzing module <pdl_based_switch.52> in library <work>.
+Module <pdl_based_switch.52> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.52>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.52>.
+Analyzing module <pdl_based_switch.53> in library <work>.
+Module <pdl_based_switch.53> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.53>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.53>.
+Analyzing module <pdl_based_switch.54> in library <work>.
+Module <pdl_based_switch.54> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.54>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.54>.
+Analyzing module <pdl_based_switch.55> in library <work>.
+Module <pdl_based_switch.55> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.55>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.55>.
+Analyzing module <pdl_based_switch.56> in library <work>.
+Module <pdl_based_switch.56> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.56>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.56>.
+Analyzing module <pdl_based_switch.57> in library <work>.
+Module <pdl_based_switch.57> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.57>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.57>.
+Analyzing module <pdl_based_switch.58> in library <work>.
+Module <pdl_based_switch.58> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.58>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.58>.
+Analyzing module <pdl_based_switch.59> in library <work>.
+Module <pdl_based_switch.59> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.59>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.59>.
+Analyzing module <pdl_based_switch.60> in library <work>.
+Module <pdl_based_switch.60> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.60>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.60>.
+Analyzing module <pdl_based_switch.61> in library <work>.
+Module <pdl_based_switch.61> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.61>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.61>.
+Analyzing module <pdl_based_switch.62> in library <work>.
+Module <pdl_based_switch.62> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.62>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.62>.
+Analyzing module <pdl_based_switch.63> in library <work>.
+Module <pdl_based_switch.63> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.63>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.63>.
+Analyzing module <pdl_based_switch.64> in library <work>.
+Module <pdl_based_switch.64> is correct for synthesis.
+ 
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_bottom> in unit <pdl_based_switch.64>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pdl_top> in unit <pdl_based_switch.64>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <pdl_block_1>.
+    Related source file is "source/pdl_block.v".
+Unit <pdl_block_1> synthesized.
+
+
+Synthesizing Unit <pdl_block_2>.
+    Related source file is "source/pdl_block.v".
+Unit <pdl_block_2> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_1>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_1> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_2>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_2> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_3>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_3> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_4>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_4> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_5>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_5> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_6>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_6> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_7>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_7> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_8>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_8> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_9>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_9> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_10>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_10> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_11>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_11> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_12>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_12> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_13>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_13> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_14>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_14> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_15>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_15> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_16>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_16> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_17>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_17> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_18>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_18> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_19>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_19> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_20>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_20> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_21>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_21> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_22>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_22> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_23>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_23> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_24>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_24> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_25>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_25> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_26>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_26> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_27>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_27> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_28>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_28> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_29>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_29> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_30>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_30> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_31>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_31> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_32>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_32> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_33>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_33> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_34>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_34> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_35>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_35> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_36>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_36> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_37>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_37> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_38>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_38> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_39>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_39> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_40>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_40> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_41>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_41> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_42>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_42> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_43>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_43> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_44>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_44> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_45>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_45> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_46>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_46> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_47>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_47> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_48>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_48> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_49>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_49> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_50>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_50> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_51>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_51> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_52>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_52> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_53>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_53> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_54>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_54> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_55>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_55> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_56>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_56> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_57>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_57> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_58>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_58> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_59>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_59> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_60>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_60> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_61>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_61> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_62>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_62> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_63>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_63> synthesized.
+
+
+Synthesizing Unit <pdl_based_switch_64>.
+    Related source file is "source/pdl_based_switch.v".
+Unit <pdl_based_switch_64> synthesized.
+
+
+Synthesizing Unit <pdl_puf>.
+    Related source file is "source/PDL_PUF.v".
+Unit <pdl_puf> synthesized.
+
+
+Synthesizing Unit <pdl_test_bench>.
+    Related source file is "source/pdl_test_bench.v".
+Unit <pdl_test_bench> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:638 - in unit pdl_test_bench Conflict on KEEP property on signal c1 and c2 c2 signal will be lost.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 1
+ Flip-Flops                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <pdl_test_bench> ...
+
+Optimizing unit <pdl_block_1> ...
+
+Optimizing unit <pdl_block_2> ...
+
+Optimizing unit <pdl_based_switch_1> ...
+
+Optimizing unit <pdl_based_switch_2> ...
+
+Optimizing unit <pdl_based_switch_3> ...
+
+Optimizing unit <pdl_based_switch_4> ...
+
+Optimizing unit <pdl_based_switch_5> ...
+
+Optimizing unit <pdl_based_switch_6> ...
+
+Optimizing unit <pdl_based_switch_7> ...
+
+Optimizing unit <pdl_based_switch_8> ...
+
+Optimizing unit <pdl_based_switch_9> ...
+
+Optimizing unit <pdl_based_switch_10> ...
+
+Optimizing unit <pdl_based_switch_11> ...
+
+Optimizing unit <pdl_based_switch_12> ...
+
+Optimizing unit <pdl_based_switch_13> ...
+
+Optimizing unit <pdl_based_switch_14> ...
+
+Optimizing unit <pdl_based_switch_15> ...
+
+Optimizing unit <pdl_based_switch_16> ...
+
+Optimizing unit <pdl_based_switch_17> ...
+
+Optimizing unit <pdl_based_switch_18> ...
+
+Optimizing unit <pdl_based_switch_19> ...
+
+Optimizing unit <pdl_based_switch_20> ...
+
+Optimizing unit <pdl_based_switch_21> ...
+
+Optimizing unit <pdl_based_switch_22> ...
+
+Optimizing unit <pdl_based_switch_23> ...
+
+Optimizing unit <pdl_based_switch_24> ...
+
+Optimizing unit <pdl_based_switch_25> ...
+
+Optimizing unit <pdl_based_switch_26> ...
+
+Optimizing unit <pdl_based_switch_27> ...
+
+Optimizing unit <pdl_based_switch_28> ...
+
+Optimizing unit <pdl_based_switch_29> ...
+
+Optimizing unit <pdl_based_switch_30> ...
+
+Optimizing unit <pdl_based_switch_31> ...
+
+Optimizing unit <pdl_based_switch_32> ...
+
+Optimizing unit <pdl_based_switch_33> ...
+
+Optimizing unit <pdl_based_switch_34> ...
+
+Optimizing unit <pdl_based_switch_35> ...
+
+Optimizing unit <pdl_based_switch_36> ...
+
+Optimizing unit <pdl_based_switch_37> ...
+
+Optimizing unit <pdl_based_switch_38> ...
+
+Optimizing unit <pdl_based_switch_39> ...
+
+Optimizing unit <pdl_based_switch_40> ...
+
+Optimizing unit <pdl_based_switch_41> ...
+
+Optimizing unit <pdl_based_switch_42> ...
+
+Optimizing unit <pdl_based_switch_43> ...
+
+Optimizing unit <pdl_based_switch_44> ...
+
+Optimizing unit <pdl_based_switch_45> ...
+
+Optimizing unit <pdl_based_switch_46> ...
+
+Optimizing unit <pdl_based_switch_47> ...
+
+Optimizing unit <pdl_based_switch_48> ...
+
+Optimizing unit <pdl_based_switch_49> ...
+
+Optimizing unit <pdl_based_switch_50> ...
+
+Optimizing unit <pdl_based_switch_51> ...
+
+Optimizing unit <pdl_based_switch_52> ...
+
+Optimizing unit <pdl_based_switch_53> ...
+
+Optimizing unit <pdl_based_switch_54> ...
+
+Optimizing unit <pdl_based_switch_55> ...
+
+Optimizing unit <pdl_based_switch_56> ...
+
+Optimizing unit <pdl_based_switch_57> ...
+
+Optimizing unit <pdl_based_switch_58> ...
+
+Optimizing unit <pdl_based_switch_59> ...
+
+Optimizing unit <pdl_based_switch_60> ...
+
+Optimizing unit <pdl_based_switch_61> ...
+
+Optimizing unit <pdl_based_switch_62> ...
+
+Optimizing unit <pdl_based_switch_63> ...
+
+Optimizing unit <pdl_based_switch_64> ...
+
+Optimizing unit <pdl_puf> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block pdl_test_bench, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1
+ Flip-Flops                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : pdl_test_bench.ngr
+Top Level Output File Name         : pdl_test_bench
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 5
+
+Cell Usage :
+# BELS                             : 258
+#      GND                         : 1
+#      LUT1                        : 1
+#      LUT6                        : 256
+# FlipFlops/Latches                : 1
+#      FDC                         : 1
+# IO Buffers                       : 5
+#      IBUF                        : 4
+#      OBUF                        : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 5vlx110tff1136-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:               1  out of  69120     0%  
+ Number of Slice LUTs:                  257  out of  69120     0%  
+    Number used as Logic:               257  out of  69120     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    258
+   Number with an unused Flip Flop:     257  out of    258    99%  
+   Number with an unused LUT:             1  out of    258     0%  
+   Number of fully used LUT-FF pairs:     0  out of    258     0%  
+   Number of unique control sets:         1
+
+IO Utilization: 
+ Number of IOs:                           5
+ Number of bonded IOBs:                   5  out of    640     0%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------------------------------------+------------------------+-------+
+Clock Signal                                                        | Clock buffer(FF name)  | Load  |
+--------------------------------------------------------------------+------------------------+-------+
+puf1/sarray[0]/pdl_bottom/o(puf1/sarray[0]/pdl_bottom/LUT6_inst_0:O)| NONE(*)(puf1/FDC1)     | 1     |
+--------------------------------------------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 1     |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 149.687ns
+   Maximum output required time after clock: 3.833ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'puf1/sarray[0]/pdl_bottom/o'
+  Total number of paths / destination ports: 161 / 1
+-------------------------------------------------------------------------
+Offset:              149.687ns (Levels of Logic = 258)
+  Source:            trigger (PAD)
+  Destination:       puf1/FDC1 (FF)
+  Destination Clock: puf1/sarray[0]/pdl_bottom/o rising
+
+  Data Path: trigger to puf1/FDC1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.818   1.074  trigger_IBUF (c1)
+     begin scope: 'puf1'
+     begin scope: 'sarray[63]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[63]'
+     begin scope: 'sarray[62]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[62]'
+     begin scope: 'sarray[61]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[61]'
+     begin scope: 'sarray[60]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[60]'
+     begin scope: 'sarray[59]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[59]'
+     begin scope: 'sarray[58]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[58]'
+     begin scope: 'sarray[57]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[57]'
+     begin scope: 'sarray[56]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[56]'
+     begin scope: 'sarray[55]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[55]'
+     begin scope: 'sarray[54]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[54]'
+     begin scope: 'sarray[53]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[53]'
+     begin scope: 'sarray[52]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[52]'
+     begin scope: 'sarray[51]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[51]'
+     begin scope: 'sarray[50]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[50]'
+     begin scope: 'sarray[49]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[49]'
+     begin scope: 'sarray[48]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[48]'
+     begin scope: 'sarray[47]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[47]'
+     begin scope: 'sarray[46]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[46]'
+     begin scope: 'sarray[45]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[45]'
+     begin scope: 'sarray[44]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[44]'
+     begin scope: 'sarray[43]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[43]'
+     begin scope: 'sarray[42]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[42]'
+     begin scope: 'sarray[41]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[41]'
+     begin scope: 'sarray[40]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[40]'
+     begin scope: 'sarray[39]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[39]'
+     begin scope: 'sarray[38]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[38]'
+     begin scope: 'sarray[37]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[37]'
+     begin scope: 'sarray[36]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[36]'
+     begin scope: 'sarray[35]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[35]'
+     begin scope: 'sarray[34]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[34]'
+     begin scope: 'sarray[33]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[33]'
+     begin scope: 'sarray[32]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[32]'
+     begin scope: 'sarray[31]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[31]'
+     begin scope: 'sarray[30]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[30]'
+     begin scope: 'sarray[29]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[29]'
+     begin scope: 'sarray[28]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[28]'
+     begin scope: 'sarray[27]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[27]'
+     begin scope: 'sarray[26]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[26]'
+     begin scope: 'sarray[25]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[25]'
+     begin scope: 'sarray[24]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[24]'
+     begin scope: 'sarray[23]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[23]'
+     begin scope: 'sarray[22]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[22]'
+     begin scope: 'sarray[21]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[21]'
+     begin scope: 'sarray[20]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[20]'
+     begin scope: 'sarray[19]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[19]'
+     begin scope: 'sarray[18]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[18]'
+     begin scope: 'sarray[17]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[17]'
+     begin scope: 'sarray[16]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[16]'
+     begin scope: 'sarray[15]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[15]'
+     begin scope: 'sarray[14]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[14]'
+     begin scope: 'sarray[13]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[13]'
+     begin scope: 'sarray[12]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[12]'
+     begin scope: 'sarray[11]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[11]'
+     begin scope: 'sarray[10]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[10]'
+     begin scope: 'sarray[9]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[9]'
+     begin scope: 'sarray[8]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[8]'
+     begin scope: 'sarray[7]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[7]'
+     begin scope: 'sarray[6]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[6]'
+     begin scope: 'sarray[5]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[5]'
+     begin scope: 'sarray[4]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[4]'
+     begin scope: 'sarray[3]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[3]'
+     begin scope: 'sarray[2]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[2]'
+     begin scope: 'sarray[1]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[1]'
+     begin scope: 'sarray[0]'
+     begin scope: 'pdl_top'
+     LUT6:I0->O            1   0.094   1.069  LUT6_inst_1 (w)
+     LUT6:I0->O            1   0.094   0.000  LUT6_inst_0 (o)
+     end scope: 'pdl_top'
+     end scope: 'sarray[0]'
+     FDC:D                    -0.018          FDC1
+    ----------------------------------------
+    Total                    149.687ns (12.850ns logic, 136.837ns route)
+                                       (8.6% logic, 91.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'puf1/sarray[0]/pdl_bottom/o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.833ns (Levels of Logic = 3)
+  Source:            puf1/FDC1 (FF)
+  Destination:       response_bit (PAD)
+  Source Clock:      puf1/sarray[0]/pdl_bottom/o rising
+
+  Data Path: puf1/FDC1 to response_bit
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.471   0.480  FDC1 (puf_out)
+     LUT1:I0->O            1   0.094   0.336  LUT1_inst_2 (o)
+     end scope: 'puf1'
+     OBUF:I->O                 2.452          response_bit_OBUF (response_bit)
+    ----------------------------------------
+    Total                      3.833ns (3.017ns logic, 0.816ns route)
+                                       (78.7% logic, 21.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 18.00 secs
+ 
+--> 
+
+Total memory usage is 302908 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
