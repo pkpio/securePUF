@@ -1,21 +1,17 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    11:06:00 06/14/2010 
-// Design Name: 
-// Module Name:    system 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
 //
-// Dependencies: 
+// Author 			:	Praveen Kumar Pendyala
+// Create Date		:  07/13/14
+// Modify Date		:	16/01/13
+// Module Name		:  pufInterconNetwork
+// Project Name   :  PDL
+// Target Devices	: 	Xilinx Vertix 5, XUPV5 110T
+// Tool versions	: 	14.4 ISE
 //
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
+// Description:
+// This module maps the data received by to parallel PUF instances following
+// the interconnect network criteria. Read comments.
 //
 //////////////////////////////////////////////////////////////////////////////////
 module pufInterconNetwork(CHALLENGE, RESPONSE, trigger, reset);
