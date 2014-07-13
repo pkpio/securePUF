@@ -1,7 +1,7 @@
 
 # PlanAhead Launch Script for Post-Synthesis floorplanning, created by Project Navigator
 
-create_project -name PDL -dir "C:/Users/praveen/Downloads/securePUF/planAhead_run_1" -part xc5vlx110tff1136-1
+create_project -name PDL -dir "C:/Users/praveen/Downloads/securePUF/planAhead_run_2" -part xc5vlx110tff1136-1
 set_property design_mode GateLvl [get_property srcset [current_run -impl]]
 set_property edif_top_file "C:/Users/praveen/Downloads/securePUF/system.ngc" [ get_property srcset [ current_run ] ]
 add_files -norecurse { {C:/Users/praveen/Downloads/securePUF} {ipcore_dir} }

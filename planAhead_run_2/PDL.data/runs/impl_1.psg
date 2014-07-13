@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Strategy Version="1" Minor="2">
-	<StratHandle Name="ISE Defaults" Flow="ISE13">
+	<StratHandle Name="ISE Defaults" Flow="ISE14">
 		<Desc>ISE Defaults, including packing registers in IOs off</Desc>
 	</StratHandle>
 	<Step Id="ngdbuild">
@@ -13,6 +13,8 @@
 	<Step Id="trce">
 	</Step>
 	<Step Id="xdl">
+	</Step>
+	<Step Id="bitgen">
 	</Step>
 </Strategy>
 

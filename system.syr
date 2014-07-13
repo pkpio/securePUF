@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.18 secs
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 2.75 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.18 secs
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 2.75 secs
  
 --> Reading design: system.prj
 
@@ -1613,10 +1613,8 @@ Module <pdl_block.1> is correct for synthesis.
  
     Set user-defined property "BEL =  D6LUT" for instance <LUT6_inst_1> in unit <pdl_block.1>.
     Set user-defined property "INIT =  5655555555555555" for instance <LUT6_inst_1> in unit <pdl_block.1>.
-    Set user-defined property "LOCK_PINS =  all" for instance <LUT6_inst_1> in unit <pdl_block.1>.
     Set user-defined property "BEL =  D6LUT" for instance <LUT6_inst_0> in unit <pdl_block.1>.
     Set user-defined property "INIT =  5655555555555555" for instance <LUT6_inst_0> in unit <pdl_block.1>.
-    Set user-defined property "LOCK_PINS =  all" for instance <LUT6_inst_0> in unit <pdl_block.1>.
     Set user-defined property "S =  TRUE" for unit <pdl_block.1>.
     Set user-defined property "KEEP =  TRUE" for signal <w>.
     Set user-defined property "S =  TRUE" for signal <w>.
@@ -1625,10 +1623,8 @@ Module <pdl_block.2> is correct for synthesis.
  
     Set user-defined property "BEL =  D6LUT" for instance <LUT6_inst_1> in unit <pdl_block.2>.
     Set user-defined property "INIT =  5655555555555555" for instance <LUT6_inst_1> in unit <pdl_block.2>.
-    Set user-defined property "LOCK_PINS =  all" for instance <LUT6_inst_1> in unit <pdl_block.2>.
     Set user-defined property "BEL =  D6LUT" for instance <LUT6_inst_0> in unit <pdl_block.2>.
     Set user-defined property "INIT =  5655555555555555" for instance <LUT6_inst_0> in unit <pdl_block.2>.
-    Set user-defined property "LOCK_PINS =  all" for instance <LUT6_inst_0> in unit <pdl_block.2>.
     Set user-defined property "S =  TRUE" for unit <pdl_block.2>.
     Set user-defined property "KEEP =  TRUE" for signal <w>.
     Set user-defined property "S =  TRUE" for signal <w>.
@@ -3773,7 +3769,7 @@ WARNING:Xst:1710 - FF/Latch <NIST/test4/calculate_chi_sqr1/v1_sqr_1> (without in
 WARNING:Xst:2677 - Node <NIST/test4/calculate_chi_sqr1/v2_sqr_1> of sequential type is unconnected in block <testPUF>.
 WARNING:Xst:2677 - Node <NIST/test4/calculate_chi_sqr1/v1_sqr_1> of sequential type is unconnected in block <testPUF>.
 WARNING:Xst:2677 - Node <challenge_0> of sequential type is unconnected in block <testPUF>.
-WARNING:Xst:2170 - Unit Osc_Ring : the following signal(s) form a combinatorial loop: c<3>, c<2>, c<1>, c<0>.
+WARNING:Xst:2170 - Unit Osc_Ring : the following signal(s) form a combinatorial loop: c<0>, c<3>, c<2>, c<1>.
 
 Optimizing unit <system> ...
 
@@ -4028,10 +4024,10 @@ Cell Usage :
 #      GND                         : 5
 #      INV                         : 211
 #      LUT1                        : 788
-#      LUT2                        : 728
-#      LUT3                        : 681
-#      LUT4                        : 673
-#      LUT5                        : 903
+#      LUT2                        : 729
+#      LUT3                        : 683
+#      LUT4                        : 676
+#      LUT5                        : 897
 #      LUT6                        : 3045
 #      MUXCY                       : 1429
 #      MUXF7                       : 45
@@ -4830,12 +4826,12 @@ Delay:               3.617ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 212.00 secs
-Total CPU time to Xst completion: 212.42 secs
+Total REAL time to Xst completion: 221.00 secs
+Total CPU time to Xst completion: 220.56 secs
  
 --> 
 
-Total memory usage is 543944 kilobytes
+Total memory usage is 543312 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  215 (   0 filtered)
