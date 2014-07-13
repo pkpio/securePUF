@@ -32,30 +32,45 @@ module mapping #(
 	output reg [RESPONSE_WIDTH-1:0] raw_response,
 	output reg xor_response
 	);
-	
-	// Input network also has to be implemented.
-
-	wire [15:0] response;
-	reg startPUF;
-	reg PUFreset;
-	reg [4:0] countWait;
-	integer ind;
-	reg [15:0] sum;
 
 	//FSM States
 	localparam IDLE = 0;
 	localparam COMPUTE = 1;
-
+	
 	//State Register
 	reg mp_state;
+	
+	//Actual challenge after transformation
+	wire [CHALLENGE_WIDTH-1:0] actual_challenge;
 
-	//reg [IN_WIDTH-1:0] buffer;
+	
+/////////////  			 Input network			/////////////
+	pufInputNetwork #(CHALLENGE_WIDTH)
+					pin(
+						.dataIn(challenge),
+						.dataOut(actual_challenge)
+					);
+					
+////////////	Interconnect network & PUF		///////////////
+	pufInterconNetwork picn (
+						.CHALLENGE( {actual_challenge[63:0], pdl_config[63:0]} ),
+						.RESPONSE(raw_response),
+						.trigger(trigger),
+						.reset(reset)
+						);
+						
+////////////		Output network				///////////////
+	pufOutputNetwork pon (
+						.response(raw_response),
+						.xor_response(xor_response)
+						);
+						
+ 
 
 	always @ (posedge clk) begin
-	/*
+
 		if (reset) begin
 			done <= 0;
-			dataOut <= 0;
 			mp_state <= IDLE;
 			startPUF <= 0;
 			countWait <= 0;
@@ -88,7 +103,7 @@ module mapping #(
 				end
 			endcase
 		end
-		*/
+		
 	end
 
 endmodule
