@@ -68,7 +68,8 @@ module mapping #(
  
 
 	always @ (posedge clk) begin
-
+		
+		/*
 		if (reset) begin
 			done <= 0;
 			mp_state <= IDLE;
@@ -103,6 +104,7 @@ module mapping #(
 				end
 			endcase
 		end
+		*/
 		
 	end
 
