@@ -20,13 +20,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 module pufMapping(CHALLENGE, RESPONSE, trigger, reset);
 
-output [15:0] RESPONSE;
+output [5:0] RESPONSE;
 input [127:0] CHALLENGE;
 input trigger;
 input reset;
 
 wire [127:0] CHALLENGE;
-wire [15:0] RESPONSE;
+wire [5:0] RESPONSE;
 
 /////////////////////////////////////////////////////////////////////////////
 //	Note: 
@@ -50,21 +50,41 @@ wire [15:0] RESPONSE;
 /////////////////////////////////////////////////////////////////////////////
 
 (* KEEP_HIERARCHY="TRUE" *)
-PDL_PUF puf1 (	.s_tp({CHALLENGE[63:0]}),
-					.s_btm(CHALLENGE[127:64]),
+PDL_PUF puf1 (	.s_tp( {CHALLENGE[31:0], CHALLENGE[127:96]} ),
+					.s_btm( {CHALLENGE[63:32], CHALLENGE[95:63] } ),
 					.q(trigger), 
 					.reset(reset), 
 					.o(RESPONSE[0]));
-
-PDL_PUF puf2 (.s_tp(CHALLENGE[63:0]), .s_btm(CHALLENGE[127:64]), .q(trigger), .reset(reset), .o(RESPONSE[1]));
-
-PDL_PUF puf3 (.s_tp(CHALLENGE[63:0]), .s_btm(CHALLENGE[127:64]), .q(trigger), .reset(reset), .o(RESPONSE[2]));
-
-PDL_PUF puf4 (.s_tp(CHALLENGE[63:0]), .s_btm(CHALLENGE[127:64]), .q(trigger), .reset(reset), .o(RESPONSE[3]));
-
-PDL_PUF puf5 (.s_tp(CHALLENGE[63:0]), .s_btm(CHALLENGE[127:64]), .q(trigger), .reset(reset), .o(RESPONSE[4]));
-
-PDL_PUF puf6 (.s_tp(CHALLENGE[63:0]), .s_btm(CHALLENGE[127:64]), .q(trigger), .reset(reset), .o(RESPONSE[5]));
+					
+PDL_PUF puf2 (	.s_tp( {CHALLENGE[0], CHALLENGE[31:1], CHALLENGE[127:96]} ),
+					.s_btm( {CHALLENGE[32], CHALLENGE[63:33], CHALLENGE[95:63] } ),
+					.q(trigger), 
+					.reset(reset), 
+					.o(RESPONSE[1]));
+					
+PDL_PUF puf3 (	.s_tp( {CHALLENGE[1:0], CHALLENGE[31:2], CHALLENGE[127:96]} ),
+					.s_btm( {CHALLENGE[33:32], CHALLENGE[63:34], CHALLENGE[95:63] } ),
+					.q(trigger), 
+					.reset(reset), 
+					.o(RESPONSE[2]));
+					
+PDL_PUF puf4 (	.s_tp( {CHALLENGE[2:0], CHALLENGE[31:3], CHALLENGE[127:96]} ),
+					.s_btm( {CHALLENGE[34:32], CHALLENGE[63:35], CHALLENGE[95:63] } ),
+					.q(trigger), 
+					.reset(reset), 
+					.o(RESPONSE[3]));
+					
+PDL_PUF puf5 (	.s_tp( {CHALLENGE[3:0], CHALLENGE[31:4], CHALLENGE[127:96]} ),
+					.s_btm( {CHALLENGE[35:32], CHALLENGE[63:36], CHALLENGE[95:63] } ),
+					.q(trigger), 
+					.reset(reset), 
+					.o(RESPONSE[4]));
+					
+PDL_PUF puf6 (	.s_tp( {CHALLENGE[4:0], CHALLENGE[31:5], CHALLENGE[127:96]} ),
+					.s_btm( {CHALLENGE[36:32], CHALLENGE[63:37], CHALLENGE[95:63] } ),
+					.q(trigger), 
+					.reset(reset), 
+					.o(RESPONSE[5]));
 
 /*		We shall be only 6 structures currently
 PDL_PUF puf7 (.s_tp(CHALLENGE[63:0]), .s_btm(CHALLENGE[127:64]), .q(trigger), .reset(reset), .o(RESPONSE[6]));
