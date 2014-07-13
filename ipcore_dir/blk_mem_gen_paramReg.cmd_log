@@ -1,0 +1,2 @@
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc5vlx110t-ff1136-1 blk_mem_gen_paramReg.ngc blk_mem_gen_paramReg.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o blk_mem_gen_paramReg_map.ncd blk_mem_gen_paramReg.ngd blk_mem_gen_paramReg.pcf 
