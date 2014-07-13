@@ -9,19 +9,19 @@
     <!-- along with the project source files, is sufficient to open and    -->
     <!-- implement in ISE Project Navigator.                               -->
     <!--                                                                   -->
-    <!-- Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved. -->
+    <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
   </header>
 
-  <version xil_pn:ise_version="13.3" xil_pn:schema_version="2"/>
+  <version xil_pn:ise_version="14.6" xil_pn:schema_version="2"/>
 
   <files>
     <file xil_pn:name="blk_mem_gen_outputMem.ngc" xil_pn:type="FILE_NGC">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="2"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="2"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="1"/>
     </file>
     <file xil_pn:name="blk_mem_gen_outputMem.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="3"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="3"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
       <association xil_pn:name="PostMapSimulation" xil_pn:seqID="3"/>
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="3"/>
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="3"/>
