@@ -1,24 +1,10 @@
 #-----------------------------------------------------------
-# PlanAhead v13.3 (64-bit)
-# Build 147507 by hdbuild on Tue Oct  4 19:13:50 MDT 2011
-# Start of session at: Thu Jan 16 22:02:53 2014
-# Process ID: 6772
-# Log file: E:/Dropbox/Works and collections/Elec/Rice/PDL/Hardware/code/planAhead_run_1/planAhead.log
-# Journal file: E:/Dropbox/Works and collections/Elec/Rice/PDL/Hardware/code/planAhead_run_1/planAhead.jou
+# PlanAhead v14.6 (64-bit)
+# Build 269223 by xbuild on Wed Jun  5 11:14:03 MDT 2013
+# Start of session at: Sun Jul 13 22:54:03 2014
+# Process ID: 680
+# Log file: C:/Users/praveen/Downloads/securePUF/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/praveen/Downloads/securePUF/planAhead_run_1/planAhead.jou
 #-----------------------------------------------------------
 start_gui
-source {E:/Dropbox/Works and collections/Elec/Rice/PDL/Hardware/code/pa.fromNetlist.tcl}
-startgroup 
-create_pblock PDL_switchs_Bit_1
-endgroup
-delete_pblock [get_pblocks  PDL_switchs_Bit_1]
-startgroup 
-create_pblock PDL_switchs_Bit_1
-resize_pblock PDL_switchs_Bit_1 -add SLICE_X8Y143:SLICE_X11Y148
-endgroup
-startgroup 
-create_pblock PDL_switchs_Bit_2
-resize_pblock PDL_switchs_Bit_2 -add SLICE_X12Y143:SLICE_X15Y148
-endgroup
-exit
-stop_gui
+source C:/Users/praveen/Downloads/securePUF/pa.fromNetlist.tcl

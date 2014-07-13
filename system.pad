@@ -1,7 +1,7 @@
 Release 14.6 - par P.68d (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sat Jul 12 00:22:10 2014
+Sun Jul 13 22:52:19 2014
 
 
 # NOTE: This file is designed to be imported into a spreadsheet program
@@ -90,7 +90,7 @@ AB5||IOBS|IO_L2N_18|UNUSED||18|||||||||
 AB6||IOBM|IO_L1P_18|UNUSED||18|||||||||
 AB7||IOBS|IO_L1N_18|UNUSED||18|||||||||
 AB8||IOBS|IO_L5N_22|UNUSED||22|||||||||
-AB9|||VCCO_18|||18|||||any******||||
+AB9|||VCCO_18|||18|||||2.50||||
 AB10||IOBM|IO_L1P_22|UNUSED||22|||||||||
 AB11|||VCCAUX||||||||2.5||||
 AB12|||GND||||||||||||
@@ -120,7 +120,7 @@ AC2||OPAD|MGTTXP1_114|UNUSED|||||||||||
 AC3|||MGTAVTTTX_114||||||||||||
 AC4||IOBM|IO_L0P_18|UNUSED||18|||||||||
 AC5||IOBS|IO_L0N_18|UNUSED||18|||||||||
-AC6|||VCCO_18|||18|||||any******||||
+AC6|||VCCO_18|||18|||||2.50||||
 AC7||IOBM|IO_L3P_18|UNUSED||18|||||||||
 AC8||IOBM|IO_L5P_22|UNUSED||22|||||||||
 AC9||IOBS|IO_L7N_22|UNUSED||22|||||||||
@@ -322,7 +322,7 @@ AJ2||OPAD|MGTTXP1_118|UNUSED|||||||||||
 AJ3|||MGTAVTTTX_118||||||||||||
 AJ4|||MGTAVCC_122||||||||||||
 AJ5|||GND||||||||||||
-AJ6||IOBS|IO_L16N_18|UNUSED||18|||||||||
+AJ6|RST|IOB|IO_L16N_18|INPUT|LVCMOS25*|18||||NONE||LOCATED|NO|NONE|
 AJ7||IOBM|IO_L16P_18|UNUSED||18|||||||||
 AJ8|||VCCO_22|||22|||||3.30||||
 AJ9|GMII_TX_ER_0|IOB|IO_L15P_22|OUTPUT|LVDCI_33|22||||||LOCATED|YES|DRIVER|
@@ -1094,7 +1094,7 @@ W4|||GND||||||||||||
 W5|||GND||||||||||||
 W6||IOBM|IO_L8P_CC_18|UNUSED||18|||||||||
 W7||IOBM|IO_L11P_CC_18|UNUSED||18|||||||||
-W8|||VCCO_18|||18|||||any******||||
+W8|||VCCO_18|||18|||||2.50||||
 W9||IOBS|IO_L15N_18|UNUSED||18|||||||||
 W10||IOBM|IO_L15P_18|UNUSED||18|||||||||
 W11||IOBS|IO_L13N_18|UNUSED||18|||||||||
