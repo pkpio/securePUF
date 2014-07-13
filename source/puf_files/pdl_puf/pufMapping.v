@@ -28,6 +28,27 @@ input reset;
 wire [127:0] CHALLENGE;
 wire [15:0] RESPONSE;
 
+/////////////////////////////////////////////////////////////////////////////
+//	Note: 
+// 			Regarding the PUF instantiation
+// The 1st 64 bits (63-0) are PUF challeges.
+// The 2nd 64 bits (127-64) are PDL configuration bits
+// PDL and PUF is essential made of same basic element - LUT6
+// Within 63-0, (circularly rotated)
+//			31-0 is for top row
+//			63-32 is for bottom row
+//	Within 127-64, (no rotation)
+//			127-96 is for top row
+//			95-63 is for bottom row
+//
+//				Regarding the interconnect network
+// The PUF model also implements an interconnect network as described in the
+// Light Weight Secure PUFs paper. However, the interconnect network is only
+// on the core PUF and not on the PDL section. So, as per the interconnect
+// network we will circularly shift only the inputs to the PUF network. PDL
+// Challenge bits are given as is without any circular rotation
+/////////////////////////////////////////////////////////////////////////////
+
 (* KEEP_HIERARCHY="TRUE" *)
 PDL_PUF puf1 (	.s_tp({CHALLENGE[63:0]}),
 					.s_btm(CHALLENGE[127:64]),
