@@ -14,11 +14,11 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module pufOutputNetwork(
-			input wire reponse[5:0],
+			input wire [5:0] response,
 			output wire xor_response
     );
 	 
 	 // xor is equivalent to add w/o carry for 1-bit case.
-	 assign xor_response = reponse[5] + reponse[4] + reponse[3] + reponse[2] + reponse[1] + reponse[0];
+	 assign xor_response = response[5] + response[4] + response[3] + response[2] + response[1] + response[0];
 
 endmodule

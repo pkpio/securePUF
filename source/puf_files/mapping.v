@@ -29,8 +29,8 @@ module mapping #(
 	input wire [CHALLENGE_WIDTH-1:0] challenge,
 	input wire [PDL_CONFIG_WIDTH-1:0] pdl_config,
 	output reg done,
-	output reg [RESPONSE_WIDTH-1:0] raw_response,
-	output reg xor_response
+	output wire [RESPONSE_WIDTH-1:0] raw_response,
+	output wire xor_response
 	);
 
 	//FSM States
