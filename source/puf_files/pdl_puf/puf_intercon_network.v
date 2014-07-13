@@ -24,6 +24,10 @@ input reset;
 wire [127:0] CHALLENGE;
 wire [5:0] RESPONSE;
 
+// -TODO-
+// Same config bits for both top and bottom switch for PUF part.
+// Check the available space in PlanAHead and decide lengths.
+
 /////////////////////////////////////////////////////////////////////////////
 //	Note: 
 // 			Regarding the PUF instantiation
