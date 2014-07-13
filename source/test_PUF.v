@@ -43,13 +43,26 @@ module testPUF #(parameter N_CB = 64)(
 	 reg [63:0] pdl_config;
 	 reg [5:0] raw_response;
 	 wire response;
+	 wire puf_start;
+	 wire puf_done;
 	 
 ///////////				PUF				////////////
-	 PUF_dummy #(N_CB) PUF_dummy(
-    .clk(clk_1),
-    .challenge(challenge),
-    .response(response)
-    );
+	mapping mp(
+		.clk(clk_1),
+		.reset(rst),
+		.trigger(puf_start),
+		.challenge(challenge),
+		.pdl_config(pdl_config),
+		.done(puf_done),
+		.raw_response(raw_response),
+		.xor_response(response)
+		);
+
+//	 PUF_dummy #(N_CB) PUF_dummy(
+//    .clk(clk_1),
+//    .challenge(challenge),
+//    .response(response)
+//    );
 	 
 	wire clk_test;
 	reg sel_clk_test;

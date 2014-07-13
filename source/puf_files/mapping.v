@@ -49,9 +49,10 @@ module mapping #(
 	//State Register
 	reg mp_state;
 
-	reg [IN_WIDTH-1:0] buffer;
+	//reg [IN_WIDTH-1:0] buffer;
 
 	always @ (posedge clk) begin
+	/*
 		if (reset) begin
 			done <= 0;
 			dataOut <= 0;
@@ -87,6 +88,7 @@ module mapping #(
 				end
 			endcase
 		end
+		*/
 	end
 
 endmodule
