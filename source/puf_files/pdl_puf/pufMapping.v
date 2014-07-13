@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module pufMapping(CHALLENGE, RESPONSE, trigger, reset);
+module pufInterconNetwork(CHALLENGE, RESPONSE, trigger, reset);
 
 output [5:0] RESPONSE;
 input [127:0] CHALLENGE;
