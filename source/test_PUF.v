@@ -41,7 +41,7 @@ module testPUF #(parameter N_CB = 64)(
 	 
 	 reg [N_CB-1:0] challenge;
 	 reg [63:0] pdl_config;
-	 reg [5:0] raw_response;
+	 wire [5:0] raw_response;
 	 wire response;
 	 wire puf_start;
 	 wire puf_done;
