@@ -28,7 +28,7 @@ module pdl_block(i,o,t);
 (* KEEP = "TRUE" *) (* S = "TRUE" *) wire  t;
 
 
-(* BEL ="D6LUT" *) (* LOCK_PINS = "all" *)
+(* BEL ="D6LUT" *) //(* LOCK_PINS = "all" *)
 LUT6 #(
 	.INIT(64'h5655555555555555) // Specify LUT Contents
 ) LUT6_inst_1 (
@@ -42,7 +42,7 @@ LUT6 #(
 );
 // End of LUT6_inst instantiation
 
-(* BEL ="D6LUT" *) (* LOCK_PINS = "all" *)
+(* BEL ="D6LUT" *) //(* LOCK_PINS = "all" *)
 LUT6 #(
 	.INIT(64'h5655555555555555) // Specify LUT Contents
 ) LUT6_inst_0 (
