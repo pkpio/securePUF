@@ -22,77 +22,11 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="blk_mem_gen_paramReg.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
-    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
-    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
-    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     <file xil_pn:fileType="FILE_ASY" xil_pn:name="blk_mem_gen_paramReg.asy" xil_pn:origination="imported"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="blk_mem_gen_paramReg.bld"/>
-    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="blk_mem_gen_paramReg.cmd_log"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="blk_mem_gen_paramReg.ngd"/>
     <file xil_pn:fileType="FILE_VEO" xil_pn:name="blk_mem_gen_paramReg.veo" xil_pn:origination="imported"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="blk_mem_gen_paramReg_map.map" xil_pn:subbranch="Map"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="blk_mem_gen_paramReg_map.mrp" xil_pn:subbranch="Map"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="blk_mem_gen_paramReg_map.ngm" xil_pn:subbranch="Map"/>
-    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="blk_mem_gen_paramReg_ngdbuild.xrpt"/>
     <file xil_pn:fileType="FILE_USERDOC" xil_pn:name="blk_mem_gen_v6_2_readme.txt" xil_pn:origination="imported"/>
-    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
   </files>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1405245368" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1405245368">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1405245368" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="705894831575726595" xil_pn:start_ts="1405245368">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1405245368" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="5145104686269177642" xil_pn:start_ts="1405245368">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1405245368" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1405245368">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1405245368" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-456206918020441515" xil_pn:start_ts="1405245368">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1405245368" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-8458126479482839362" xil_pn:start_ts="1405245368">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1405245368" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="930640464931003508" xil_pn:start_ts="1405245368">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1405245368" xil_pn:in_ck="-7697921694276592926" xil_pn:name="TRANEXT_xstsynthesize_virtex5" xil_pn:prop_ck="5029741409581984400" xil_pn:start_ts="1405245368">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1405245368" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="4032846734661044608" xil_pn:start_ts="1405245368">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1405245381" xil_pn:in_ck="-8214915603073267964" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-1148714389288839949" xil_pn:start_ts="1405245368">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="_ngo"/>
-      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
-      <outfile xil_pn:name="blk_mem_gen_paramReg.bld"/>
-      <outfile xil_pn:name="blk_mem_gen_paramReg.ngd"/>
-      <outfile xil_pn:name="blk_mem_gen_paramReg_ngdbuild.xrpt"/>
-    </transform>
-    <transform xil_pn:end_ts="1405245396" xil_pn:in_ck="-8214915603073267963" xil_pn:name="TRANEXT_map_virtex5" xil_pn:prop_ck="6733564432430981316" xil_pn:start_ts="1405245381">
-      <status xil_pn:value="AbortedRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
-      <outfile xil_pn:name="blk_mem_gen_paramReg_map.map"/>
-      <outfile xil_pn:name="blk_mem_gen_paramReg_map.mrp"/>
-      <outfile xil_pn:name="blk_mem_gen_paramReg_map.ngm"/>
-    </transform>
-  </transforms>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
 
 </generated_project>
