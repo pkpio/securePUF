@@ -10,35 +10,35 @@ Target Device  : xc5vlx110t
 Target Package : ff1136
 Target Speed   : -1
 Mapper Version : virtex5 -- $Revision: 1.55 $
-Mapped Date    : Tue Jul 15 23:38:12 2014
+Mapped Date    : Wed Jul 16 00:00:47 2014
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:  166
 Slice Logic Utilization:
-  Number of Slice Registers:                 1,377 out of  69,120    1%
-    Number used as Flip Flops:               1,377
-  Number of Slice LUTs:                      4,001 out of  69,120    5%
-    Number used as logic:                    3,982 out of  69,120    5%
-      Number using O6 output only:           3,648
+  Number of Slice Registers:                 1,345 out of  69,120    1%
+    Number used as Flip Flops:               1,345
+  Number of Slice LUTs:                      4,027 out of  69,120    5%
+    Number used as logic:                    4,008 out of  69,120    5%
+      Number using O6 output only:           3,674
       Number using O5 output only:             133
       Number using O5 and O6:                  201
     Number used as Memory:                      11 out of  17,920    1%
       Number used as Shift Register:            11
         Number using O6 output only:            11
     Number used as exclusive route-thru:         8
-  Number of route-thrus:                       143
+  Number of route-thrus:                       144
     Number using O6 output only:               140
-    Number using O5 output only:                 3
+    Number using O5 output only:                 4
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 2,667 out of  17,280   15%
-  Number of LUT Flip Flop pairs used:        4,501
-    Number with an unused Flip Flop:         3,124 out of   4,501   69%
-    Number with an unused LUT:                 500 out of   4,501   11%
-    Number of fully used LUT-FF pairs:         877 out of   4,501   19%
-    Number of unique control sets:              93
+  Number of occupied Slices:                 2,673 out of  17,280   15%
+  Number of LUT Flip Flop pairs used:        4,505
+    Number with an unused Flip Flop:         3,160 out of   4,505   70%
+    Number with an unused LUT:                 478 out of   4,505   10%
+    Number of fully used LUT-FF pairs:         867 out of   4,505   19%
+    Number of unique control sets:              86
     Number of slice register sites lost
       to control set restrictions:             172 out of  69,120    1%
 
@@ -56,8 +56,8 @@ IO Utilization:
     IOB Flip Flops:                             22
 
 Specific Feature Utilization:
-  Number of BlockRAM/FIFO:                      40 out of     148   27%
-    Number using BlockRAM only:                 38
+  Number of BlockRAM/FIFO:                      39 out of     148   26%
+    Number using BlockRAM only:                 37
     Number using FIFO only:                      2
     Total primitives used:
       Number of 36k BlockRAM used:              35
@@ -70,11 +70,11 @@ Specific Feature Utilization:
   Number of PLL_ADVs:                            2 out of       6   33%
   Number of TEMACs:                              1 out of       2   50%
 
-Average Fanout of Non-Clock Nets:                5.27
+Average Fanout of Non-Clock Nets:                5.25
 
-Peak Memory Usage:  669 MB
-Total REAL time to MAP completion:  4 mins 28 secs 
-Total CPU time to MAP completion:   4 mins 16 secs 
+Peak Memory Usage:  670 MB
+Total REAL time to MAP completion:  3 mins 48 secs 
+Total CPU time to MAP completion:   3 mins 45 secs 
 
 Table of Contents
 -----------------
@@ -1187,7 +1187,7 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net sh/mp/picn/puf6/i2<0> is
 Section 3 - Informational
 -------------------------
 INFO:LIT:243 - Logical network N17 has no load.
-INFO:LIT:395 - The above info message is repeated 194 more times for the
+INFO:LIT:395 - The above info message is repeated 162 more times for the
    following (max. 5 shown):
    N18,
    N19,
@@ -1985,7 +1985,7 @@ INFO:Pack:1650 - Map created a placed design.
 Section 4 - Removed Logic Summary
 ---------------------------------
   24 block(s) optimized away
- 118 signal(s) removed
+  54 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -2049,38 +2049,6 @@ removed.
 The signal "E2M/EC/EthToSysACEFifo/readData<35>" is sourceless and has been
 removed.
 The signal "E2M/EC/memInputData/N1" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<31>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<30>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<29>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<28>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<27>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<26>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<25>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<24>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<23>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<22>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<21>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<20>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<19>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<18>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<17>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<16>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<15>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<14>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<13>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<12>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<11>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<10>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<9>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<8>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<7>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<6>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<5>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<4>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<3>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<2>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<1>" is sourceless and has been removed.
-The signal "E2M/EC/register32File/doutb<0>" is sourceless and has been removed.
 The signal "E2M/emac_ll/EMAC0CLIENTRXFRAMEDROP" is sourceless and has been
 removed.
 The signal "E2M/emac_ll/EMAC0CLIENTRXSTATS<0>" is sourceless and has been
@@ -2144,38 +2112,6 @@ The trimmed logic reported below is either:
 
 The signal "LED_1_OBUF" is unused and has been removed.
 The signal "outputMemoryWriteByteMask" is unused and has been removed.
-The signal "register32ReadData<0>" is unused and has been removed.
-The signal "register32ReadData<10>" is unused and has been removed.
-The signal "register32ReadData<11>" is unused and has been removed.
-The signal "register32ReadData<12>" is unused and has been removed.
-The signal "register32ReadData<13>" is unused and has been removed.
-The signal "register32ReadData<14>" is unused and has been removed.
-The signal "register32ReadData<15>" is unused and has been removed.
-The signal "register32ReadData<16>" is unused and has been removed.
-The signal "register32ReadData<17>" is unused and has been removed.
-The signal "register32ReadData<18>" is unused and has been removed.
-The signal "register32ReadData<19>" is unused and has been removed.
-The signal "register32ReadData<1>" is unused and has been removed.
-The signal "register32ReadData<20>" is unused and has been removed.
-The signal "register32ReadData<21>" is unused and has been removed.
-The signal "register32ReadData<22>" is unused and has been removed.
-The signal "register32ReadData<23>" is unused and has been removed.
-The signal "register32ReadData<24>" is unused and has been removed.
-The signal "register32ReadData<25>" is unused and has been removed.
-The signal "register32ReadData<26>" is unused and has been removed.
-The signal "register32ReadData<27>" is unused and has been removed.
-The signal "register32ReadData<28>" is unused and has been removed.
-The signal "register32ReadData<29>" is unused and has been removed.
-The signal "register32ReadData<2>" is unused and has been removed.
-The signal "register32ReadData<30>" is unused and has been removed.
-The signal "register32ReadData<31>" is unused and has been removed.
-The signal "register32ReadData<3>" is unused and has been removed.
-The signal "register32ReadData<4>" is unused and has been removed.
-The signal "register32ReadData<5>" is unused and has been removed.
-The signal "register32ReadData<6>" is unused and has been removed.
-The signal "register32ReadData<7>" is unused and has been removed.
-The signal "register32ReadData<8>" is unused and has been removed.
-The signal "register32ReadData<9>" is unused and has been removed.
 
 Optimized Block(s):
 TYPE 		BLOCK

@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.68d on Tue Jul 15 23:42:33 2014
+// Written by: Map P.68d on Wed Jul 16 00:04:29 2014
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -2424,14 +2424,14 @@ PIN E2M/emac_ll/client_side_FIFO_emac0/tx_fifo_i/ramgen_u_pins<110> = BEL
 PIN E2M/emac_ll/client_side_FIFO_emac0/tx_fifo_i/ramgen_u_pins<111> = BEL
         "E2M/emac_ll/client_side_FIFO_emac0/tx_fifo_i/ramgen_u" PINNAME
         REGCLKBL;
-PIN E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_l_pins<25> = BEL
-        "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_l" PINNAME CLKBL;
-PIN E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_l_pins<58> = BEL
+PIN E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_l_pins<31> = BEL
+        "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_l" PINNAME CLKBU;
+PIN E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_l_pins<109> = BEL
         "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_l" PINNAME
-        REGCLKBL;
-PIN E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_u_pins<25> = BEL
+        REGCLKBU;
+PIN E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_u_pins<33> = BEL
         "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_u" PINNAME CLKBL;
-PIN E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_u_pins<58> = BEL
+PIN E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_u_pins<111> = BEL
         "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_u" PINNAME
         REGCLKBL;
 TIMEGRP hard_reset = BEL "E2M/delayCtrl0Reset_1" BEL "E2M/delayCtrl0Reset_2"
@@ -2637,10 +2637,10 @@ TIMEGRP hard_reset = BEL "E2M/delayCtrl0Reset_1" BEL "E2M/delayCtrl0Reset_2"
         "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/rd_state_FSM_FFd6" BEL
         "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/rd_state_FSM_FFd5" BEL
         "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/rd_state_FSM_FFd4" PIN
-        "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_l_pins<25>" PIN
-        "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_l_pins<58>" PIN
-        "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_u_pins<25>" PIN
-        "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_u_pins<58>" BEL
+        "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_l_pins<31>" PIN
+        "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_l_pins<109>" PIN
+        "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_u_pins<33>" PIN
+        "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_u_pins<111>" BEL
         "E2M/delayCtrl0_MapLib_replicate13" BEL
         "E2M/delayCtrl0_MapLib_replicate1";
 PIN E2M/EC/EthToSysACEFifo/FIFO18_inst_pins<73> = BEL
@@ -4104,10 +4104,10 @@ TIMEGRP clk_125_eth = BEL "E2M/EC/rx_SA_reg_value_0" BEL
         "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/rd_state_FSM_FFd4" BEL
         "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/Mshreg_rd_valid_pipe_1"
         BEL "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/rd_valid_pipe_1" PIN
-        "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_l_pins<25>" PIN
-        "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_l_pins<58>" PIN
-        "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_u_pins<25>" PIN
-        "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_u_pins<58>";
+        "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_l_pins<31>" PIN
+        "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_l_pins<109>" PIN
+        "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_u_pins<33>" PIN
+        "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_u_pins<111>";
 PIN
         E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_pins<68>
         = BEL
@@ -4802,56 +4802,39 @@ TIMEGRP clk_user_interface = BEL "E2M/EC/resetUserClockDomain" BEL
         "sh/outputMemoryWriteAdd_12" BEL "sh/paramCount" BEL "sh/inputDone"
         BEL "sh/register32CmdReq" BEL "sh/challenge_ready" BEL "sh/LED_0" BEL
         "sh/memCount_0" BEL "sh/memCount_1" BEL "sh/memCount_2" BEL
-        "sh/memCount_3" BEL "sh/memCount_4" BEL "sh/memCount_5" BEL
-        "sh/challenge_0_0" BEL "sh/challenge_0_1" BEL "sh/challenge_0_2" BEL
-        "sh/challenge_0_3" BEL "sh/challenge_0_4" BEL "sh/challenge_0_5" BEL
-        "sh/challenge_0_6" BEL "sh/challenge_0_7" BEL "sh/regCount_0" BEL
-        "sh/resp_wait_count_0" BEL "sh/resp_wait_count_1" BEL
-        "sh/resp_wait_count_2" BEL "sh/resp_wait_count_3" BEL
+        "sh/memCount_3" BEL "sh/memCount_4" BEL "sh/memCount_5" BEL "sh/B_0"
+        BEL "sh/B_1" BEL "sh/B_2" BEL "sh/B_3" BEL "sh/B_4" BEL "sh/B_5" BEL
+        "sh/B_6" BEL "sh/B_7" BEL "sh/B_8" BEL "sh/B_9" BEL "sh/B_10" BEL
+        "sh/B_11" BEL "sh/B_12" BEL "sh/B_13" BEL "sh/B_14" BEL "sh/B_15" BEL
+        "sh/B_16" BEL "sh/B_17" BEL "sh/B_18" BEL "sh/B_19" BEL "sh/B_20" BEL
+        "sh/B_21" BEL "sh/B_22" BEL "sh/B_23" BEL "sh/B_24" BEL "sh/B_25" BEL
+        "sh/B_26" BEL "sh/B_27" BEL "sh/B_28" BEL "sh/B_29" BEL "sh/B_30" BEL
+        "sh/B_31" BEL "sh/challenge_0_0" BEL "sh/challenge_0_1" BEL
+        "sh/challenge_0_2" BEL "sh/challenge_0_3" BEL "sh/challenge_0_4" BEL
+        "sh/challenge_0_5" BEL "sh/challenge_0_6" BEL "sh/challenge_0_7" BEL
+        "sh/regCount_0" BEL "sh/resp_wait_count_0" BEL "sh/resp_wait_count_1"
+        BEL "sh/resp_wait_count_2" BEL "sh/resp_wait_count_3" BEL
         "sh/resp_wait_count_4" BEL "sh/resp_wait_count_5" BEL
         "sh/challenge_1_0" BEL "sh/challenge_1_1" BEL "sh/challenge_1_2" BEL
         "sh/challenge_1_3" BEL "sh/challenge_1_4" BEL "sh/challenge_1_5" BEL
         "sh/challenge_1_6" BEL "sh/challenge_1_7" BEL "sh/challenge_2_0" BEL
         "sh/challenge_2_1" BEL "sh/challenge_2_2" BEL "sh/challenge_2_3" BEL
         "sh/challenge_2_4" BEL "sh/challenge_2_5" BEL "sh/challenge_2_6" BEL
-        "sh/challenge_2_7" BEL "sh/challenge_5_0" BEL "sh/challenge_5_1" BEL
-        "sh/challenge_5_2" BEL "sh/challenge_5_3" BEL "sh/challenge_5_4" BEL
-        "sh/challenge_5_5" BEL "sh/challenge_5_6" BEL "sh/challenge_5_7" BEL
-        "sh/challenge_3_0" BEL "sh/challenge_3_1" BEL "sh/challenge_3_2" BEL
-        "sh/challenge_3_3" BEL "sh/challenge_3_4" BEL "sh/challenge_3_5" BEL
-        "sh/challenge_3_6" BEL "sh/challenge_3_7" BEL "sh/challenge_4_0" BEL
-        "sh/challenge_4_1" BEL "sh/challenge_4_2" BEL "sh/challenge_4_3" BEL
-        "sh/challenge_4_4" BEL "sh/challenge_4_5" BEL "sh/challenge_4_6" BEL
-        "sh/challenge_4_7" BEL "sh/challenge_8_0" BEL "sh/challenge_8_1" BEL
-        "sh/challenge_8_2" BEL "sh/challenge_8_3" BEL "sh/challenge_8_4" BEL
-        "sh/challenge_8_5" BEL "sh/challenge_8_6" BEL "sh/challenge_8_7" BEL
-        "sh/challenge_6_0" BEL "sh/challenge_6_1" BEL "sh/challenge_6_2" BEL
-        "sh/challenge_6_3" BEL "sh/challenge_6_4" BEL "sh/challenge_6_5" BEL
-        "sh/challenge_6_6" BEL "sh/challenge_6_7" BEL "sh/challenge_7_0" BEL
-        "sh/challenge_7_1" BEL "sh/challenge_7_2" BEL "sh/challenge_7_3" BEL
-        "sh/challenge_7_4" BEL "sh/challenge_7_5" BEL "sh/challenge_7_6" BEL
-        "sh/challenge_7_7" BEL "sh/challenge_11_0" BEL "sh/challenge_11_1" BEL
-        "sh/challenge_11_2" BEL "sh/challenge_11_3" BEL "sh/challenge_11_4"
-        BEL "sh/challenge_11_5" BEL "sh/challenge_11_6" BEL
-        "sh/challenge_11_7" BEL "sh/challenge_9_0" BEL "sh/challenge_9_1" BEL
-        "sh/challenge_9_2" BEL "sh/challenge_9_3" BEL "sh/challenge_9_4" BEL
-        "sh/challenge_9_5" BEL "sh/challenge_9_6" BEL "sh/challenge_9_7" BEL
-        "sh/challenge_10_0" BEL "sh/challenge_10_1" BEL "sh/challenge_10_2"
-        BEL "sh/challenge_10_3" BEL "sh/challenge_10_4" BEL
-        "sh/challenge_10_5" BEL "sh/challenge_10_6" BEL "sh/challenge_10_7"
-        BEL "sh/challenge_12_0" BEL "sh/challenge_12_1" BEL
-        "sh/challenge_12_2" BEL "sh/challenge_12_3" BEL "sh/challenge_12_4"
-        BEL "sh/challenge_12_5" BEL "sh/challenge_12_6" BEL
-        "sh/challenge_12_7" BEL "sh/challenge_13_0" BEL "sh/challenge_13_1"
-        BEL "sh/challenge_13_2" BEL "sh/challenge_13_3" BEL
-        "sh/challenge_13_4" BEL "sh/challenge_13_5" BEL "sh/challenge_13_6"
-        BEL "sh/challenge_13_7" BEL "sh/challenge_14_0" BEL
-        "sh/challenge_14_1" BEL "sh/challenge_14_2" BEL "sh/challenge_14_3"
-        BEL "sh/challenge_14_4" BEL "sh/challenge_14_5" BEL
-        "sh/challenge_14_6" BEL "sh/challenge_14_7" BEL "sh/challenge_15_0"
-        BEL "sh/challenge_15_1" BEL "sh/challenge_15_2" BEL
-        "sh/challenge_15_3" BEL "sh/challenge_15_4" BEL "sh/challenge_15_5"
-        BEL "sh/challenge_15_6" BEL "sh/challenge_15_7";
+        "sh/challenge_2_7" BEL "sh/challenge_3_0" BEL "sh/challenge_3_1" BEL
+        "sh/challenge_3_2" BEL "sh/challenge_3_3" BEL "sh/challenge_3_4" BEL
+        "sh/challenge_3_5" BEL "sh/challenge_3_6" BEL "sh/challenge_3_7" BEL
+        "sh/challenge_8_0" BEL "sh/challenge_8_1" BEL "sh/challenge_8_2" BEL
+        "sh/challenge_8_3" BEL "sh/challenge_8_4" BEL "sh/challenge_8_5" BEL
+        "sh/challenge_8_6" BEL "sh/challenge_8_7" BEL "sh/challenge_11_0" BEL
+        "sh/challenge_11_1" BEL "sh/challenge_11_2" BEL "sh/challenge_11_3"
+        BEL "sh/challenge_11_4" BEL "sh/challenge_11_5" BEL
+        "sh/challenge_11_6" BEL "sh/challenge_11_7" BEL "sh/challenge_9_0" BEL
+        "sh/challenge_9_1" BEL "sh/challenge_9_2" BEL "sh/challenge_9_3" BEL
+        "sh/challenge_9_4" BEL "sh/challenge_9_5" BEL "sh/challenge_9_6" BEL
+        "sh/challenge_9_7" BEL "sh/challenge_10_0" BEL "sh/challenge_10_1" BEL
+        "sh/challenge_10_2" BEL "sh/challenge_10_3" BEL "sh/challenge_10_4"
+        BEL "sh/challenge_10_5" BEL "sh/challenge_10_6" BEL
+        "sh/challenge_10_7";
 TIMEGRP userRunClearTogUS = BEL "E2M/EC/userRunClearToggle" BEL
         "E2M/EC/userRunClearToggleControllerSide_0";
 TIMEGRP userRunClearTogCS = BEL "E2M/EC/userRunRegisterControllerSide";
@@ -5143,14 +5126,14 @@ PIN E2M/emac_ll/v5_emac_block_inst/v5_emac_wrapper_inst/v5_emac_pins<18> = BEL
 PIN E2M/emac_ll/v5_emac_block_inst/v5_emac_wrapper_inst/v5_emac_pins<231> =
         BEL "E2M/emac_ll/v5_emac_block_inst/v5_emac_wrapper_inst/v5_emac"
         PINNAME PHYEMAC0RXCLK;
-PIN E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_l_pins<24> = BEL
-        "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_l" PINNAME CLKAL;
-PIN E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_l_pins<57> = BEL
+PIN E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_l_pins<30> = BEL
+        "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_l" PINNAME CLKAU;
+PIN E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_l_pins<108> = BEL
         "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_l" PINNAME
-        REGCLKAL;
-PIN E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_u_pins<24> = BEL
+        REGCLKAU;
+PIN E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_u_pins<32> = BEL
         "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_u" PINNAME CLKAL;
-PIN E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_u_pins<57> = BEL
+PIN E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_u_pins<110> = BEL
         "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_u" PINNAME
         REGCLKAL;
 TIMEGRP phy_clk_rx0 = BEL "E2M/emac_ll/rx_pre_reset_0_i_0" BEL
@@ -5278,10 +5261,10 @@ TIMEGRP phy_clk_rx0 = BEL "E2M/emac_ll/rx_pre_reset_0_i_0" BEL
         BEL "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/wr_data_bram_6" BEL
         "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/Mshreg_wr_data_bram_7"
         BEL "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/wr_data_bram_7" PIN
-        "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_l_pins<24>" PIN
-        "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_l_pins<57>" PIN
-        "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_u_pins<24>" PIN
-        "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_u_pins<57>" BEL
+        "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_l_pins<30>" PIN
+        "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_l_pins<108>" PIN
+        "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_u_pins<32>" PIN
+        "E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/ramgen_u_pins<110>" BEL
         "E2M/gmii_rx_clk_delay_BUFG";
 TIMEGRP tx_fifo_rd_to_wr_0 = BEL
         "E2M/emac_ll/client_side_FIFO_emac0/tx_fifo_i/rd_tran_frame_tog" BEL

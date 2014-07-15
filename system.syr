@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.42 secs
+Total CPU time to Xst completion: 0.47 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.42 secs
+Total CPU time to Xst completion: 0.47 secs
  
 --> Reading design: system.prj
 
@@ -2880,7 +2880,9 @@ Unit <ethernet2BlockMem> synthesized.
 
 Synthesizing Unit <pufInterconNetwork>.
     Related source file is "source/pdl_puf/puf_intercon_network.v".
-WARNING:Xst:647 - Input <CHALLENGE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <CHALLENGE<63:32>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PDL_CONFIG<127:96>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PDL_CONFIG<63:32>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 Unit <pufInterconNetwork> synthesized.
 
 
@@ -3358,38 +3360,70 @@ WARNING:Xst:2677 - Node <wr_fifo_status_1> of sequential type is unconnected in 
 WARNING:Xst:2677 - Node <wr_fifo_status_0> of sequential type is unconnected in block <rx_fifo_i>.
 WARNING:Xst:2677 - Node <wr_addr_diff_0> of sequential type is unconnected in block <rx_fifo_i>.
 WARNING:Xst:2677 - Node <wr_addr_diff_1> of sequential type is unconnected in block <rx_fifo_i>.
-WARNING:Xst:2677 - Node <B_0> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_1> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_2> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_3> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_4> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_5> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_6> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_7> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_8> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_9> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_10> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_11> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_12> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_13> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_14> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_15> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_16> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_17> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_18> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_19> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_20> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_21> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_22> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_23> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_24> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_25> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_26> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_27> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_28> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_29> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_30> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <B_31> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_5_0> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_5_1> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_5_2> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_5_3> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_5_4> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_5_5> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_5_6> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_5_7> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_4_0> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_4_1> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_4_2> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_4_3> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_4_4> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_4_5> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_4_6> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_4_7> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_6_0> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_6_1> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_6_2> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_6_3> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_6_4> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_6_5> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_6_6> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_6_7> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_7_0> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_7_1> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_7_2> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_7_3> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_7_4> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_7_5> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_7_6> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_7_7> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_12_0> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_12_1> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_12_2> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_12_3> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_12_4> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_12_5> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_12_6> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_12_7> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_13_0> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_13_1> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_13_2> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_13_3> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_13_4> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_13_5> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_13_6> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_13_7> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_14_0> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_14_1> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_14_2> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_14_3> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_14_4> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_14_5> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_14_6> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_14_7> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_15_0> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_15_1> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_15_2> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_15_3> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_15_4> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_15_5> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_15_6> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <challenge_15_7> of sequential type is unconnected in block <sh>.
 WARNING:Xst:2677 - Node <A_0> of sequential type is unconnected in block <sh>.
 WARNING:Xst:2677 - Node <A_1> of sequential type is unconnected in block <sh>.
 WARNING:Xst:2677 - Node <A_2> of sequential type is unconnected in block <sh>.
@@ -3453,8 +3487,8 @@ Unit <rx_fifo_i> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1378
- Flip-Flops                                            : 1378
+# Registers                                            : 1346
+ Flip-Flops                                            : 1346
 # Shift Registers                                      : 11
  2-bit shift register                                  : 3
  3-bit shift register                                  : 8
@@ -3486,24 +3520,24 @@ Design Statistics
 # IOs                              : 62
 
 Cell Usage :
-# BELS                             : 4842
+# BELS                             : 4872
 #      GND                         : 13
 #      INV                         : 151
 #      LUT1                        : 152
-#      LUT2                        : 103
-#      LUT3                        : 192
-#      LUT4                        : 291
-#      LUT5                        : 475
-#      LUT6                        : 2646
+#      LUT2                        : 101
+#      LUT3                        : 221
+#      LUT4                        : 290
+#      LUT5                        : 471
+#      LUT6                        : 2650
 #      MUXCY                       : 406
-#      MUXF7                       : 29
+#      MUXF7                       : 33
 #      VCC                         : 11
 #      XORCY                       : 373
-# FlipFlops/Latches                : 1399
+# FlipFlops/Latches                : 1367
 #      FD                          : 48
 #      FDC                         : 37
 #      FDCE                        : 13
-#      FDE                         : 898
+#      FDE                         : 866
 #      FDP                         : 27
 #      FDR                         : 181
 #      FDRE                        : 184
@@ -3537,18 +3571,18 @@ Selected Device : 5vlx110tff1136-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1398  out of  69120     2%  
- Number of Slice LUTs:                 4021  out of  69120     5%  
-    Number used as Logic:              4010  out of  69120     5%  
+ Number of Slice Registers:            1366  out of  69120     1%  
+ Number of Slice LUTs:                 4047  out of  69120     5%  
+    Number used as Logic:              4036  out of  69120     5%  
     Number used as Memory:               11  out of  17920     0%  
        Number used as SRL:               11
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   5419
-   Number with an unused Flip Flop:    4021  out of   5419    74%  
-   Number with an unused LUT:          1398  out of   5419    25%  
-   Number of fully used LUT-FF pairs:     0  out of   5419     0%  
-   Number of unique control sets:       102
+ Number of LUT Flip Flop pairs used:   5413
+   Number with an unused Flip Flop:    4047  out of   5413    74%  
+   Number with an unused LUT:          1366  out of   5413    25%  
+   Number of fully used LUT-FF pairs:     0  out of   5413     0%  
+   Number of unique control sets:        95
 
 IO Utilization: 
  Number of IOs:                          62
@@ -3585,7 +3619,7 @@ Clock Signal                                                                    
 ------------------------------------------------------------------------------------------+------------------------------+-------+
 CLK_100                                                                                   | BUFGP                        | 1     |
 clk_200_i                                                                                 | BUFG                         | 13    |
-clk_user_interface_i                                                                      | BUFG                         | 265   |
+clk_user_interface_i                                                                      | BUFG                         | 233   |
 clk_125_eth_i                                                                             | BUFG                         | 1055  |
 E2M/EC/sysACE_delay_clk                                                                   | BUFG                         | 34    |
 GMII_RX_CLK_0                                                                             | IBUF+IODELAY+BUFG            | 116   |
@@ -3683,7 +3717,7 @@ Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 5.579ns (Maximum Frequency: 179.230MHz)
+   Minimum period: 5.858ns (Maximum Frequency: 170.707MHz)
    Minimum input arrival time before clock: 2.856ns
    Maximum output required time after clock: 3.920ns
    Maximum combinational path delay: 3.617ns
@@ -3716,7 +3750,7 @@ Delay:               0.807ns (Levels of Logic = 0)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_user_interface_i'
   Clock period: 4.374ns (frequency: 228.624MHz)
-  Total number of paths / destination ports: 6288 / 1592
+  Total number of paths / destination ports: 5648 / 1528
 -------------------------------------------------------------------------
 Delay:               4.374ns (Levels of Logic = 6)
   Source:            sh/outputMemoryWriteAdd_7 (FF)
@@ -3742,30 +3776,58 @@ Delay:               4.374ns (Levels of Logic = 6)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_125_eth_i'
-  Clock period: 5.579ns (frequency: 179.230MHz)
-  Total number of paths / destination ports: 181830 / 3550
+  Clock period: 5.858ns (frequency: 170.707MHz)
+  Total number of paths / destination ports: 183564 / 3550
 -------------------------------------------------------------------------
-Delay:               5.579ns (Levels of Logic = 6)
-  Source:            E2M/EC/rx_mem_length_16 (FF)
-  Destination:       E2M/EC/tx_header_buffer_src_add_1 (FF)
+Delay:               5.858ns (Levels of Logic = 34)
+  Source:            E2M/EC/tx_curr_bytes_left_0 (FF)
+  Destination:       E2M/EC/tx_read_len_1 (FF)
   Source Clock:      clk_125_eth_i rising
   Destination Clock: clk_125_eth_i rising
 
-  Data Path: E2M/EC/rx_mem_length_16 to E2M/EC/tx_header_buffer_src_add_1
+  Data Path: E2M/EC/tx_curr_bytes_left_0 to E2M/EC/tx_read_len_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              9   0.471   1.113  rx_mem_length_16 (rx_mem_length_16)
-     LUT6:I0->O            5   0.094   0.995  rx_state_cmp_eq0032163 (rx_state_cmp_eq0032163)
-     LUT6:I1->O           38   0.094   0.608  tx_header_buffer_dest_add_mux0000<0>1121 (N259)
-     LUT4:I3->O            1   0.094   1.069  tx_header_buffer_src_add_mux0000<11>523 (tx_header_buffer_src_add_mux0000<11>523)
-     LUT6:I0->O            1   0.094   0.000  tx_header_buffer_src_add_mux0000<11>536_F (N1014)
-     MUXF7:I0->O          24   0.251   0.602  tx_header_buffer_src_add_mux0000<11>536 (N13)
-     LUT5:I4->O            1   0.094   0.000  tx_header_buffer_src_add_mux0000<9>1 (tx_header_buffer_src_add_mux0000<9>)
-     FDE:D                    -0.018          tx_header_buffer_src_add_9
+     FDE:C->Q              6   0.471   0.507  tx_curr_bytes_left_0 (tx_curr_bytes_left_0)
+     LUT1:I0->O            1   0.094   0.000  Msub__sub0001_cy<0>_rt (Msub__sub0001_cy<0>_rt)
+     MUXCY:S->O            1   0.372   0.000  Msub__sub0001_cy<0> (Msub__sub0001_cy<0>)
+     MUXCY:CI->O           1   0.026   0.000  Msub__sub0001_cy<1> (Msub__sub0001_cy<1>)
+     MUXCY:CI->O           1   0.026   0.000  Msub__sub0001_cy<2> (Msub__sub0001_cy<2>)
+     MUXCY:CI->O           1   0.026   0.000  Msub__sub0001_cy<3> (Msub__sub0001_cy<3>)
+     MUXCY:CI->O           1   0.026   0.000  Msub__sub0001_cy<4> (Msub__sub0001_cy<4>)
+     MUXCY:CI->O           1   0.026   0.000  Msub__sub0001_cy<5> (Msub__sub0001_cy<5>)
+     MUXCY:CI->O           1   0.026   0.000  Msub__sub0001_cy<6> (Msub__sub0001_cy<6>)
+     MUXCY:CI->O           1   0.026   0.000  Msub__sub0001_cy<7> (Msub__sub0001_cy<7>)
+     MUXCY:CI->O           1   0.026   0.000  Msub__sub0001_cy<8> (Msub__sub0001_cy<8>)
+     MUXCY:CI->O           1   0.026   0.000  Msub__sub0001_cy<9> (Msub__sub0001_cy<9>)
+     MUXCY:CI->O           1   0.026   0.000  Msub__sub0001_cy<10> (Msub__sub0001_cy<10>)
+     MUXCY:CI->O           1   0.026   0.000  Msub__sub0001_cy<11> (Msub__sub0001_cy<11>)
+     MUXCY:CI->O           1   0.026   0.000  Msub__sub0001_cy<12> (Msub__sub0001_cy<12>)
+     MUXCY:CI->O           1   0.026   0.000  Msub__sub0001_cy<13> (Msub__sub0001_cy<13>)
+     MUXCY:CI->O           1   0.026   0.000  Msub__sub0001_cy<14> (Msub__sub0001_cy<14>)
+     MUXCY:CI->O           1   0.026   0.000  Msub__sub0001_cy<15> (Msub__sub0001_cy<15>)
+     MUXCY:CI->O           1   0.026   0.000  Msub__sub0001_cy<16> (Msub__sub0001_cy<16>)
+     MUXCY:CI->O           1   0.026   0.000  Msub__sub0001_cy<17> (Msub__sub0001_cy<17>)
+     MUXCY:CI->O           1   0.026   0.000  Msub__sub0001_cy<18> (Msub__sub0001_cy<18>)
+     MUXCY:CI->O           1   0.026   0.000  Msub__sub0001_cy<19> (Msub__sub0001_cy<19>)
+     MUXCY:CI->O           1   0.026   0.000  Msub__sub0001_cy<20> (Msub__sub0001_cy<20>)
+     MUXCY:CI->O           1   0.026   0.000  Msub__sub0001_cy<21> (Msub__sub0001_cy<21>)
+     MUXCY:CI->O           1   0.026   0.000  Msub__sub0001_cy<22> (Msub__sub0001_cy<22>)
+     MUXCY:CI->O           1   0.026   0.000  Msub__sub0001_cy<23> (Msub__sub0001_cy<23>)
+     MUXCY:CI->O           1   0.026   0.000  Msub__sub0001_cy<24> (Msub__sub0001_cy<24>)
+     MUXCY:CI->O           1   0.026   0.000  Msub__sub0001_cy<25> (Msub__sub0001_cy<25>)
+     XORCY:CI->O           2   0.357   0.978  Msub__sub0001_xor<26> (_sub0001<26>)
+     LUT5:I0->O            1   0.094   0.000  Mcompar_tx_header_buffer_len_cmp_gt0000_lut<5>1 (Mcompar_tx_header_buffer_len_cmp_gt0000_lut<5>1)
+     MUXCY:S->O            1   0.372   0.000  Mcompar_tx_header_buffer_len_cmp_gt0000_cy<5>_0 (Mcompar_tx_header_buffer_len_cmp_gt0000_cy<5>1)
+     MUXCY:CI->O          15   0.254   0.787  Mcompar_tx_header_buffer_len_cmp_gt0000_cy<6>_0 (Mcompar_tx_header_buffer_len_cmp_gt0000_cy<6>1)
+     LUT6:I3->O            1   0.094   0.000  tx_read_len_mux0000<14>69_G (N1019)
+     MUXF7:I1->O           1   0.254   0.480  tx_read_len_mux0000<14>69 (tx_read_len_mux0000<14>69)
+     LUT6:I5->O            1   0.094   0.000  tx_read_len_mux0000<14>100 (tx_read_len_mux0000<14>)
+     FDE:D                    -0.018          tx_read_len_1
     ----------------------------------------
-    Total                      5.579ns (1.192ns logic, 4.387ns route)
-                                       (21.4% logic, 78.6% route)
+    Total                      5.858ns (3.106ns logic, 2.752ns route)
+                                       (53.0% logic, 47.0% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'E2M/EC/sysACE_delay_clk'
@@ -4066,14 +4128,14 @@ Delay:               3.617ns (Levels of Logic = 3)
 =========================================================================
 
 
-Total REAL time to Xst completion: 273.00 secs
-Total CPU time to Xst completion: 273.31 secs
+Total REAL time to Xst completion: 270.00 secs
+Total CPU time to Xst completion: 270.65 secs
  
 --> 
 
-Total memory usage is 496584 kilobytes
+Total memory usage is 495624 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  187 (   0 filtered)
+Number of warnings :  221 (   0 filtered)
 Number of infos    :   33 (   0 filtered)
 
