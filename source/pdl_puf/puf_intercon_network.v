@@ -62,77 +62,40 @@ PDL_PUF puf1 (	.s_tp( {CHALLENGE[31:0], PDL_CONFIG[31:0]} ),
 					.o(RESPONSE[0]));
 					
 (* KEEP_HIERARCHY="TRUE" *)
-PDL_PUF puf2 (	.s_tp( {CHALLENGE[31:0], PDL_CONFIG[31:0]} ),
-					.s_btm( {CHALLENGE[31:0], PDL_CONFIG[95:64]} ),
+PDL_PUF puf2 (	.s_tp( {CHALLENGE[0], CHALLENGE[31:1], PDL_CONFIG[31:0]} ),
+					.s_btm( {CHALLENGE[0], CHALLENGE[31:1], PDL_CONFIG[95:64]} ),
 					.q(trigger), 
 					.reset(reset), 
 					.o(RESPONSE[1]));
 					
 (* KEEP_HIERARCHY="TRUE" *)
-PDL_PUF puf3 (	.s_tp( {CHALLENGE[31:0], PDL_CONFIG[31:0]}),
-					.s_btm( {CHALLENGE[31:0], PDL_CONFIG[95:64]} ),
+PDL_PUF puf3 (	.s_tp( {CHALLENGE[1:0], CHALLENGE[31:2], PDL_CONFIG[31:0]}),
+					.s_btm( {CHALLENGE[1:0], CHALLENGE[31:2], PDL_CONFIG[95:64]} ),
 					.q(trigger), 
 					.reset(reset), 
 					.o(RESPONSE[2]));
 					
 (* KEEP_HIERARCHY="TRUE" *)
-PDL_PUF puf4 (	.s_tp( {CHALLENGE[31:0], PDL_CONFIG[31:0]} ),
-					.s_btm( {CHALLENGE[31:0], PDL_CONFIG[95:64]} ),
+PDL_PUF puf4 (	.s_tp( {CHALLENGE[2:0], CHALLENGE[31:3], PDL_CONFIG[31:0]} ),
+					.s_btm( {CHALLENGE[2:0], CHALLENGE[31:3], PDL_CONFIG[95:64]} ),
 					.q(trigger), 
 					.reset(reset), 
 					.o(RESPONSE[3]));
 					
 (* KEEP_HIERARCHY="TRUE" *)
-PDL_PUF puf5 (	.s_tp( {CHALLENGE[31:0], PDL_CONFIG[31:0]} ),
-					.s_btm( {CHALLENGE[31:0], PDL_CONFIG[95:64]} ),
+PDL_PUF puf5 (	.s_tp( {CHALLENGE[3:0], CHALLENGE[31:4], PDL_CONFIG[31:0]} ),
+					.s_btm( {CHALLENGE[3:0], CHALLENGE[31:4], PDL_CONFIG[95:64]} ),
 					.q(trigger), 
 					.reset(reset), 
 					.o(RESPONSE[4]));
 					
 (* KEEP_HIERARCHY="TRUE" *)
-PDL_PUF puf6 (	.s_tp( {CHALLENGE[31:0], PDL_CONFIG[31:0]} ),
-					.s_btm( {CHALLENGE[31:0], PDL_CONFIG[95:64]} ),
+PDL_PUF puf6 (	.s_tp( {CHALLENGE[4:0], CHALLENGE[31:5], PDL_CONFIG[31:0]} ),
+					.s_btm( {CHALLENGE[4:0], CHALLENGE[31:5], PDL_CONFIG[95:64]} ),
 					.q(trigger), 
 					.reset(reset), 
 					.o(RESPONSE[5]));
-					
-/*
-(* KEEP_HIERARCHY="TRUE" *)
-PDL_PUF puf1 (	.s_tp( {CHALLENGE[31:0], PDL_CONFIG[31:0]} ),
-					.s_btm( {CHALLENGE[31:0], PDL_CONFIG[95:64]} ),
-					.q(trigger), 
-					.reset(reset), 
-					.o(RESPONSE[0]));
-					
-PDL_PUF puf2 (	.s_tp( {CHALLENGE[31:0], PDL_CONFIG[31:0]} ),
-					.s_btm( {CHALLENGE[31:0], PDL_CONFIG[95:64]} ),
-					.q(trigger), 
-					.reset(reset), 
-					.o(RESPONSE[1]));
-					
-PDL_PUF puf3 (	.s_tp( {CHALLENGE[31:0], PDL_CONFIG[31:0]} ),
-					.s_btm( {CHALLENGE[31:0], PDL_CONFIG[95:64]} ),
-					.q(trigger), 
-					.reset(reset), 
-					.o(RESPONSE[2]));
-					
-PDL_PUF puf4 (	.s_tp( {CHALLENGE[31:0], PDL_CONFIG[31:0]} ),
-					.s_btm( {CHALLENGE[31:0], PDL_CONFIG[95:64]} ),
-					.q(trigger), 
-					.reset(reset), 
-					.o(RESPONSE[3]));
-					
-PDL_PUF puf5 (	.s_tp( {CHALLENGE[31:0], PDL_CONFIG[31:0]} ),
-					.s_btm( {CHALLENGE[31:0], PDL_CONFIG[95:64]} ),
-					.q(trigger), 
-					.reset(reset), 
-					.o(RESPONSE[4]));
-					
-PDL_PUF puf6 (	.s_tp( {CHALLENGE[31:0], PDL_CONFIG[31:0]} ),
-					.s_btm( {CHALLENGE[31:0], PDL_CONFIG[95:64]} ),
-					.q(trigger), 
-					.reset(reset), 
-					.o(RESPONSE[5]));*/
+	
 
 /*					
 PDL_PUF puf2 (	.s_tp( {CHALLENGE[0], CHALLENGE[63:1], PDL_CONFIG[63:0]} ),
