@@ -51,17 +51,17 @@ module mapping #(
 
 	
 /////////////  			 Input network			/////////////
-	/*
-	pufInputNetwork #(CHALLENGE_WIDTH)
+	
+	pufInputNetwork #(.Width(32))
 					pin(
-						.dataIn(challenge),
-						.dataOut(actual_challenge)
+						.dataIn(challenge[31:0]),
+						.dataOut(actual_challenge[31:0])
 					);
-	*/
+					
 					
 ////////////	Interconnect network & PUF		///////////////
 	pufInterconNetwork picn (
-						.CHALLENGE(challenge[63:0]),
+						.CHALLENGE(actual_challenge[63:0]),
 						.PDL_CONFIG(pdl_config[127:0]),
 						.RESPONSE(raw_response),
 						.trigger(trigger),

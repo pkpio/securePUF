@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.41 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.36 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.42 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.36 secs
  
 --> Reading design: system.prj
 
@@ -134,8 +134,10 @@ Compiling verilog file "source/pdl_puf/puf_intercon_network.v" in library work
 Module <fifo36Wrapper> compiled
 Compiling verilog file "source/pdl_puf/pufOutputNetwork.v" in library work
 Module <pufInterconNetwork> compiled
-Compiling verilog file "source/ipcore_dependencies/eth_fifo_8.v" in library work
+Compiling verilog file "source/pdl_puf/pufInputNetwork.v" in library work
 Module <pufOutputNetwork> compiled
+Compiling verilog file "source/ipcore_dependencies/eth_fifo_8.v" in library work
+Module <pufInputNetwork> compiled
 Compiling verilog file "source/ipcore_dependencies/emac_single_block.v" in library work
 Module <eth_fifo_8> compiled
 Compiling verilog file "ipcore_dir/blk_mem_gen_paramReg.v" in library work
@@ -279,6 +281,10 @@ Analyzing hierarchy for module <eth_fifo_8> in library <work> with parameters.
 Analyzing hierarchy for module <iobuf16> in library <work>.
 
 Analyzing hierarchy for module <fifo36Wrapper> in library <work>.
+
+Analyzing hierarchy for module <pufInputNetwork> in library <work> with parameters.
+	N = "00000000000000000000000000100000"
+	Width = "00000000000000000000000000100000"
 
 Analyzing hierarchy for module <pufInterconNetwork> in library <work>.
 
@@ -1328,6 +1334,11 @@ Analyzing module <mapping> in library <work>.
 	RESPONSE_WIDTH = 32'sb00000000000000000000000000000110
 Module <mapping> is correct for synthesis.
  
+Analyzing module <pufInputNetwork> in library <work>.
+	N = 32'sb00000000000000000000000000100000
+	Width = 32'sb00000000000000000000000000100000
+Module <pufInputNetwork> is correct for synthesis.
+ 
 Analyzing module <pufInterconNetwork> in library <work>.
 Module <pufInterconNetwork> is correct for synthesis.
  
@@ -2133,6 +2144,16 @@ INFO:Xst:2679 - Register <LED<2>> in unit <SircHandler> has a constant value of 
 INFO:Xst:2679 - Register <LED<1>> in unit <SircHandler> has a constant value of 0 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <bitCount> in unit <SircHandler> has a constant value of 00000000 during circuit operation. The register is replaced by logic.
 
+Synthesizing Unit <pufInputNetwork>.
+    Related source file is "source/pdl_puf/pufInputNetwork.v".
+WARNING:Xst:653 - Signal <os_dataOut<1>> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+    Found 1-bit adder for signal <os_dataOut<32:18>>.
+    Found 1-bit adder for signal <os_dataOut<16:2>>.
+    Summary:
+	inferred  30 Adder/Subtractor(s).
+Unit <pufInputNetwork> synthesized.
+
+
 Synthesizing Unit <pufOutputNetwork>.
     Related source file is "source/pdl_puf/pufOutputNetwork.v".
     Found 1-bit adder for signal <xor_response>.
@@ -2889,9 +2910,10 @@ Unit <pufInterconNetwork> synthesized.
 Synthesizing Unit <mapping>.
     Related source file is "source/mapping.v".
 WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <challenge<63:32>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:1305 - Output <done> is never assigned. Tied to value 0.
 WARNING:Xst:1780 - Signal <mp_state> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <actual_challenge> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <actual_challenge<63:32>> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000000.
 Unit <mapping> synthesized.
 
 
@@ -2950,8 +2972,8 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 30
- 1-bit adder                                           : 5
+# Adders/Subtractors                                   : 60
+ 1-bit adder                                           : 35
  12-bit adder                                          : 2
  12-bit subtractor                                     : 4
  13-bit adder                                          : 1
@@ -3105,8 +3127,8 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # FSMs                                                 : 5
-# Adders/Subtractors                                   : 28
- 1-bit adder                                           : 1
+# Adders/Subtractors                                   : 58
+ 1-bit adder                                           : 31
  1-bit adder carry in                                  : 2
  12-bit adder                                          : 2
  12-bit subtractor                                     : 4
@@ -3174,6 +3196,8 @@ INFO:Xst:1901 - Instance delayRXClk in unit ethernet2BlockMem of type IDELAY has
 INFO:Xst:1901 - Instance clkBPLL in unit system of type PLL_BASE has been replaced by PLL_ADV
 
 Optimizing unit <system> ...
+
+Optimizing unit <pufInputNetwork> ...
 
 Optimizing unit <pufOutputNetwork> ...
 
@@ -3520,15 +3544,15 @@ Design Statistics
 # IOs                              : 62
 
 Cell Usage :
-# BELS                             : 4872
-#      GND                         : 13
+# BELS                             : 4906
+#      GND                         : 14
 #      INV                         : 151
 #      LUT1                        : 152
-#      LUT2                        : 101
-#      LUT3                        : 221
-#      LUT4                        : 290
-#      LUT5                        : 471
-#      LUT6                        : 2650
+#      LUT2                        : 133
+#      LUT3                        : 217
+#      LUT4                        : 287
+#      LUT5                        : 473
+#      LUT6                        : 2656
 #      MUXCY                       : 406
 #      MUXF7                       : 33
 #      VCC                         : 11
@@ -3572,16 +3596,16 @@ Selected Device : 5vlx110tff1136-1
 
 Slice Logic Utilization: 
  Number of Slice Registers:            1366  out of  69120     1%  
- Number of Slice LUTs:                 4047  out of  69120     5%  
-    Number used as Logic:              4036  out of  69120     5%  
+ Number of Slice LUTs:                 4080  out of  69120     5%  
+    Number used as Logic:              4069  out of  69120     5%  
     Number used as Memory:               11  out of  17920     0%  
        Number used as SRL:               11
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   5413
-   Number with an unused Flip Flop:    4047  out of   5413    74%  
-   Number with an unused LUT:          1366  out of   5413    25%  
-   Number of fully used LUT-FF pairs:     0  out of   5413     0%  
+ Number of LUT Flip Flop pairs used:   5446
+   Number with an unused Flip Flop:    4080  out of   5446    74%  
+   Number with an unused LUT:          1366  out of   5446    25%  
+   Number of fully used LUT-FF pairs:     0  out of   5446     0%  
    Number of unique control sets:        95
 
 IO Utilization: 
@@ -3777,7 +3801,7 @@ Delay:               4.374ns (Levels of Logic = 6)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_125_eth_i'
   Clock period: 5.858ns (frequency: 170.707MHz)
-  Total number of paths / destination ports: 183564 / 3550
+  Total number of paths / destination ports: 183511 / 3550
 -------------------------------------------------------------------------
 Delay:               5.858ns (Levels of Logic = 34)
   Source:            E2M/EC/tx_curr_bytes_left_0 (FF)
@@ -3821,7 +3845,7 @@ Delay:               5.858ns (Levels of Logic = 34)
      LUT5:I0->O            1   0.094   0.000  Mcompar_tx_header_buffer_len_cmp_gt0000_lut<5>1 (Mcompar_tx_header_buffer_len_cmp_gt0000_lut<5>1)
      MUXCY:S->O            1   0.372   0.000  Mcompar_tx_header_buffer_len_cmp_gt0000_cy<5>_0 (Mcompar_tx_header_buffer_len_cmp_gt0000_cy<5>1)
      MUXCY:CI->O          15   0.254   0.787  Mcompar_tx_header_buffer_len_cmp_gt0000_cy<6>_0 (Mcompar_tx_header_buffer_len_cmp_gt0000_cy<6>1)
-     LUT6:I3->O            1   0.094   0.000  tx_read_len_mux0000<14>69_G (N1019)
+     LUT6:I3->O            1   0.094   0.000  tx_read_len_mux0000<14>69_G (N1038)
      MUXF7:I1->O           1   0.254   0.480  tx_read_len_mux0000<14>69 (tx_read_len_mux0000<14>69)
      LUT6:I5->O            1   0.094   0.000  tx_read_len_mux0000<14>100 (tx_read_len_mux0000<14>)
      FDE:D                    -0.018          tx_read_len_1
@@ -4128,14 +4152,14 @@ Delay:               3.617ns (Levels of Logic = 3)
 =========================================================================
 
 
-Total REAL time to Xst completion: 272.00 secs
-Total CPU time to Xst completion: 272.52 secs
+Total REAL time to Xst completion: 291.00 secs
+Total CPU time to Xst completion: 290.87 secs
  
 --> 
 
-Total memory usage is 496392 kilobytes
+Total memory usage is 497096 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  221 (   0 filtered)
+Number of warnings :  223 (   0 filtered)
 Number of infos    :   33 (   0 filtered)
 

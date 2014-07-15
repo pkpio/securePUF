@@ -8,7 +8,7 @@
 <msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">N17</arg> has no load.
 </msg>
 
-<msg type="info" file="LIT" num="395" delta="old" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">162</arg> more times for the following (max. 5 shown):
+<msg type="info" file="LIT" num="395" delta="new" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">130</arg> more times for the following (max. 5 shown):
 <arg fmt="%s" index="3">N18,
 N19,
 N20,
@@ -2324,7 +2324,7 @@ To see the details of these <arg fmt="%s" index="4">info</arg> messages, please 
 <msg type="info" file="MapLib" num="950" delta="old" >SAVE has been detected on block &quot;<arg fmt="%s" index="1">pdl_bottom</arg>&quot;
 </msg>
 
-<msg type="warning" file="MapLib" num="1073" delta="old" >This design has <arg fmt="%i" index="1">1173</arg> KEEP_HIERARCHY constraints specified and therefore, may take a very long time to process. If your design has unexpectedly long run times, please consider minimizing the number of KEEP_HIERARCHY constraints in your design or use the -ignore_keep_hierarchy command line switch to have them ignored by MAP.
+<msg type="warning" file="MapLib" num="1073" delta="new" >This design has <arg fmt="%i" index="1">1174</arg> KEEP_HIERARCHY constraints specified and therefore, may take a very long time to process. If your design has unexpectedly long run times, please consider minimizing the number of KEEP_HIERARCHY constraints in your design or use the -ignore_keep_hierarchy command line switch to have them ignored by MAP.
 </msg>
 
 <msg type="info" file="MapLib" num="841" delta="old" >Changing COMPENSATION attribute from <arg fmt="%s" index="1">SYSTEM_SYNCHRONOUS</arg> to <arg fmt="%s" index="2">INTERNAL</arg> for PLL_ADV <arg fmt="%s" index="3">clkBPLL</arg>.

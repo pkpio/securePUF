@@ -10,7 +10,7 @@ Target Device  : xc5vlx110t
 Target Package : ff1136
 Target Speed   : -1
 Mapper Version : virtex5 -- $Revision: 1.55 $
-Mapped Date    : Wed Jul 16 00:24:23 2014
+Mapped Date    : Wed Jul 16 01:00:11 2014
 
 Design Summary
 --------------
@@ -19,9 +19,9 @@ Number of warnings:  166
 Slice Logic Utilization:
   Number of Slice Registers:                 1,345 out of  69,120    1%
     Number used as Flip Flops:               1,345
-  Number of Slice LUTs:                      4,027 out of  69,120    5%
-    Number used as logic:                    4,008 out of  69,120    5%
-      Number using O6 output only:           3,674
+  Number of Slice LUTs:                      4,060 out of  69,120    5%
+    Number used as logic:                    4,041 out of  69,120    5%
+      Number using O6 output only:           3,707
       Number using O5 output only:             133
       Number using O5 and O6:                  201
     Number used as Memory:                      11 out of  17,920    1%
@@ -33,11 +33,11 @@ Slice Logic Utilization:
     Number using O5 output only:                 3
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 2,707 out of  17,280   15%
-  Number of LUT Flip Flop pairs used:        4,488
-    Number with an unused Flip Flop:         3,143 out of   4,488   70%
-    Number with an unused LUT:                 461 out of   4,488   10%
-    Number of fully used LUT-FF pairs:         884 out of   4,488   19%
+  Number of occupied Slices:                 2,695 out of  17,280   15%
+  Number of LUT Flip Flop pairs used:        4,519
+    Number with an unused Flip Flop:         3,174 out of   4,519   70%
+    Number with an unused LUT:                 459 out of   4,519   10%
+    Number of fully used LUT-FF pairs:         886 out of   4,519   19%
     Number of unique control sets:              86
     Number of slice register sites lost
       to control set restrictions:             172 out of  69,120    1%
@@ -56,8 +56,8 @@ IO Utilization:
     IOB Flip Flops:                             22
 
 Specific Feature Utilization:
-  Number of BlockRAM/FIFO:                      41 out of     148   27%
-    Number using BlockRAM only:                 39
+  Number of BlockRAM/FIFO:                      39 out of     148   26%
+    Number using BlockRAM only:                 37
     Number using FIFO only:                      2
     Total primitives used:
       Number of 36k BlockRAM used:              35
@@ -70,11 +70,11 @@ Specific Feature Utilization:
   Number of PLL_ADVs:                            2 out of       6   33%
   Number of TEMACs:                              1 out of       2   50%
 
-Average Fanout of Non-Clock Nets:                5.25
+Average Fanout of Non-Clock Nets:                5.21
 
 Peak Memory Usage:  670 MB
-Total REAL time to MAP completion:  3 mins 39 secs 
-Total CPU time to MAP completion:   3 mins 37 secs 
+Total REAL time to MAP completion:  3 mins 53 secs 
+Total CPU time to MAP completion:   3 mins 49 secs 
 
 Table of Contents
 -----------------
@@ -97,7 +97,7 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:MapLib:1073 - This design has 1173 KEEP_HIERARCHY constraints specified
+WARNING:MapLib:1073 - This design has 1174 KEEP_HIERARCHY constraints specified
    and therefore, may take a very long time to process. If your design has
    unexpectedly long run times, please consider minimizing the number of
    KEEP_HIERARCHY constraints in your design or use the -ignore_keep_hierarchy
@@ -1187,7 +1187,7 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net sh/mp/picn/puf6/i2<0> is
 Section 3 - Informational
 -------------------------
 INFO:LIT:243 - Logical network N17 has no load.
-INFO:LIT:395 - The above info message is repeated 162 more times for the
+INFO:LIT:395 - The above info message is repeated 130 more times for the
    following (max. 5 shown):
    N18,
    N19,
@@ -1984,7 +1984,7 @@ INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-  24 block(s) optimized away
+  25 block(s) optimized away
   54 signal(s) removed
 
 Section 5 - Removed Logic
@@ -2139,6 +2139,7 @@ GND 		E2M/emac_ll/v5_emac_block_inst/v5_emac_wrapper_inst/XST_GND
 VCC 		E2M/emac_ll/v5_emac_block_inst/v5_emac_wrapper_inst/XST_VCC
 GND 		sh/XST_GND
 VCC 		sh/XST_VCC
+GND 		sh/mp/pin/XST_GND
 
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.
