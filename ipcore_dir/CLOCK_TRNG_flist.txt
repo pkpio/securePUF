@@ -1,2 +1,0 @@
-# Output products list for <CLOCK_TRNG>
-CLOCK_TRNG_flist.txt

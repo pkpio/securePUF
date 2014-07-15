@@ -1,5 +1,0 @@
-verilog work "source/pdl_block.v"
-verilog work "source/pdl_based_switch.v"
-verilog work "source/PDL_PUF.v"
-verilog work "source/pufMapping.v"
-verilog work "source/mapping3.v"
