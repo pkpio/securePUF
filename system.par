@@ -1,7 +1,7 @@
 Release 14.6 par P.68d (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-PRAVEEN-PC::  Wed Jul 16 01:04:14 2014
+PRAVEEN-PC::  Wed Jul 16 02:27:50 2014
 
 par -w -intstyle ise -ol high -mt off system_map.ncd system.ncd system.pcf 
 
@@ -50,35 +50,35 @@ WARNING:Timing:3223 - Timing constraint TS_rx_fifo_rd_to_wr_0 = MAXDELAY FROM TI
        "clk_125_eth" 8 ns DATAPATHONLY; ignored during timing analysis.
 INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please
    consult the Xilinx Command Line Tools User Guide for information on generating a TSI report.
-Starting initial Timing Analysis.  REAL time: 33 secs 
-Finished initial Timing Analysis.  REAL time: 34 secs 
+Starting initial Timing Analysis.  REAL time: 36 secs 
+Finished initial Timing Analysis.  REAL time: 36 secs 
 
 Starting Router
 
 
-Phase  1  : 27387 unrouted;      REAL time: 38 secs 
+Phase  1  : 27387 unrouted;      REAL time: 40 secs 
 
-Phase  2  : 24896 unrouted;      REAL time: 40 secs 
+Phase  2  : 24896 unrouted;      REAL time: 43 secs 
 
-Phase  3  : 6237 unrouted;      REAL time: 1 mins 1 secs 
+Phase  3  : 6237 unrouted;      REAL time: 1 mins 5 secs 
 
-Phase  4  : 6219 unrouted; (Setup:0, Hold:1768, Component Switching Limit:0)     REAL time: 1 mins 17 secs 
+Phase  4  : 6219 unrouted; (Setup:0, Hold:1768, Component Switching Limit:0)     REAL time: 1 mins 21 secs 
 
 Updating file: system.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:1790, Component Switching Limit:0)     REAL time: 1 mins 30 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:1790, Component Switching Limit:0)     REAL time: 1 mins 35 secs 
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:1790, Component Switching Limit:0)     REAL time: 1 mins 30 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:1790, Component Switching Limit:0)     REAL time: 1 mins 35 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:1790, Component Switching Limit:0)     REAL time: 1 mins 30 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:1790, Component Switching Limit:0)     REAL time: 1 mins 35 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:1790, Component Switching Limit:0)     REAL time: 1 mins 30 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:1790, Component Switching Limit:0)     REAL time: 1 mins 35 secs 
 
-Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 31 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 36 secs 
 
-Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 33 secs 
-Total REAL time to Router completion: 1 mins 33 secs 
-Total CPU time to Router completion: 1 mins 36 secs 
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 38 secs 
+Total REAL time to Router completion: 1 mins 38 secs 
+Total CPU time to Router completion: 1 mins 40 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -229,10 +229,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 1 mins 47 secs 
-Total CPU time to PAR completion: 1 mins 49 secs 
+Total REAL time to PAR completion: 1 mins 52 secs 
+Total CPU time to PAR completion: 1 mins 53 secs 
 
-Peak Memory Usage:  619 MB
+Peak Memory Usage:  609 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
