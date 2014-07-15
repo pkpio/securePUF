@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.6 (64-bit)
+# Build 269223 by xbuild on Wed Jun  5 11:14:03 MDT 2013
+# Start of session at: Tue Jul 15 22:12:16 2014
+# Process ID: 4632
+# Log file: C:/Users/praveen/Downloads/code-secure/planAhead_run_3/planAhead.log
+# Journal file: C:/Users/praveen/Downloads/code-secure/planAhead_run_3/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/praveen/Downloads/code-secure/pa.fromNetlist.tcl

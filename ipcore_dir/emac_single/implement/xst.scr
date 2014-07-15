@@ -1,0 +1,8 @@
+run
+-ifn xst.prj
+-ifmt mixed
+-ofn emac_single_example_design
+-top emac_single_example_design
+-p virtex5
+-iobuf yes
+-keep_hierarchy no

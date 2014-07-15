@@ -1,0 +1,90 @@
+#-----------------------------------------------------------
+# PlanAhead v14.6 (64-bit)
+# Build 269223 by xbuild on Wed Jun  5 11:14:03 MDT 2013
+# Start of session at: Mon Jul 14 07:25:28 2014
+# Process ID: 5768
+# Log file: C:/Users/praveen/Downloads/code-secure/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/praveen/Downloads/code-secure/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/praveen/Downloads/code-secure/pa.fromNetlist.tcl
+startgroup
+place_cell sh/mp/picn/puf1/LUT1_inst_1 SLICE_X11Y29/D6LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf1/FDC1 SLICE_X10Y158/DFF
+endgroup
+startgroup
+place_cell sh/mp/picn/puf1/LUT1_inst_2 SLICE_X10Y159/A6LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf1/FDC1 SLICE_X10Y158/CFF
+endgroup
+undo
+startgroup
+place_cell sh/mp/picn/puf2/LUT1_inst_2 SLICE_X12Y159/A6LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf2/FDC1 SLICE_X14Y158/DFF
+endgroup
+startgroup
+place_cell sh/mp/picn/puf2/LUT1_inst_2 SLICE_X14Y159/A6LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf3/FDC1 SLICE_X18Y158/DFF
+endgroup
+startgroup
+place_cell sh/mp/picn/puf3/LUT1_inst_2 SLICE_X18Y159/A6LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf4/FDC1 SLICE_X22Y158/DFF
+endgroup
+startgroup
+place_cell sh/mp/picn/puf4/LUT1_inst_2 SLICE_X22Y159/A6LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf5/FDC1 SLICE_X28Y158/DFF
+endgroup
+startgroup
+place_cell sh/mp/picn/puf5/LUT1_inst_2 SLICE_X28Y159/A6LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf6/FDC1 SLICE_X32Y158/DFF
+endgroup
+startgroup
+place_cell sh/mp/picn/puf6/LUT1_inst_2 SLICE_X32Y159/A6LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf6/LUT1_inst_1 SLICE_X33Y29/D6LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf5/LUT1_inst_1 SLICE_X29Y29/D6LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf4/LUT1_inst_1 SLICE_X23Y29/D5LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf4/LUT1_inst_1 SLICE_X23Y29/C5LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf4/LUT1_inst_1 SLICE_X23Y29/D5LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf4/LUT1_inst_1 SLICE_X23Y29/C5LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf4/LUT1_inst_1 SLICE_X23Y29/D5LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf3/LUT1_inst_1 SLICE_X19Y29/D6LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf4/LUT1_inst_1 SLICE_X23Y29/C5LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf4/LUT1_inst_1 SLICE_X23Y29/D5LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf2/LUT1_inst_1 SLICE_X15Y29/D6LUT
+endgroup
+save_constraints

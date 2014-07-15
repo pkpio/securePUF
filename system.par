@@ -1,0 +1,61 @@
+Release 14.6 par P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+PRAVEEN-PC::  Tue Jul 15 23:42:52 2014
+
+par -w -intstyle ise -ol high -mt off system_map.ncd system.ncd system.pcf 
+
+
+Constraints file: system.pcf.
+Loading device for application Rf_Device from file '5vlx110t.nph' in environment C:\Xilinx\14.6\ISE_DS\ISE\.
+   "system" is an NCD, version 3.2, device xc5vlx110t, package ff1136, speed -1
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 0.950 Volts. (default - Range: 0.950 to 1.050 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.73 2013-06-08".
+
+
+
+Device Utilization Summary:
+
+   Number of BUFGs                           6 out of 32     18%
+   Number of IDELAYCTRLs                     2 out of 22      9%
+   Number of ILOGICs                        10 out of 800     1%
+   Number of External IOBs                  62 out of 640     9%
+      Number of LOCed IOBs                  62 out of 62    100%
+
+   Number of IODELAYs                       11 out of 800     1%
+   Number of OLOGICs                        12 out of 800     1%
+   Number of PLL_ADVs                        2 out of 6      33%
+   Number of RAMB18X2s                       3 out of 148     2%
+   Number of RAMB36_EXPs                    35 out of 148    23%
+   Number of RAMBFIFO18_36s                  2 out of 148     1%
+   Number of TEMACs                          1 out of 2      50%
+   Number of Slices                       2667 out of 17280  15%
+   Number of Slice Registers              1377 out of 69120   1%
+      Number used as Flip Flops           1377
+      Number used as Latches                 0
+      Number used as LatchThrus              0
+
+   Number of Slice LUTS                   4001 out of 69120   5%
+   Number of Slice LUT-Flip Flop pairs    4501 out of 69120   6%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+WARNING:Timing:3223 - Timing constraint TS_rx_fifo_rd_to_wr_0 = MAXDELAY FROM TIMEGRP "rx_fifo_rd_to_wr_0" TO TIMEGRP   
+       "clk_125_eth" 8 ns DATAPATHONLY; ignored during timing analysis.
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please
+   consult the Xilinx Command Line Tools User Guide for information on generating a TSI report.
+Starting initial Timing Analysis.  REAL time: 38 secs 
+Finished initial Timing Analysis.  REAL time: 39 secs 
+
+Starting Router
+
+
+Phase  1  : 27265 unrouted;      REAL time: 44 secs 
+
+Phase  2  : 24882 unrouted;      REAL time: 46 secs 

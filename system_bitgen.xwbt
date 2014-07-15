@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\praveen\Downloads\code-secure\system.ncd
+OUTFILE=C:\Users\praveen\Downloads\code-secure\system.bit
+FAMILY=Virtex5
+PART=xc5vlx110t-1ff1136
+WORKINGDIR=C:\Users\praveen\Downloads\code-secure
+LICENSE=ISE
+USER_INFO=__0_0_0

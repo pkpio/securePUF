@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\Dropbox\Works and collections\Elec\Rice\PDL\pdl_test_bench.ncd
+OUTFILE=E:\Dropbox\Works and collections\Elec\Rice\PDL\pdl_test_bench.bit
+FAMILY=Virtex5
+PART=xc5vlx110t-1ff1136
+WORKINGDIR=E:\Dropbox\Works and collections\Elec\Rice\PDL
+LICENSE=ISE
+USER_INFO=__0_0_0

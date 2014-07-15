@@ -1,0 +1,4 @@
+verilog work "source/pdl_block.v"
+verilog work "source/pdl_based_switch.v"
+verilog work "source/PDL_PUF.v"
+verilog work "source/pdl_test_bench.v"

@@ -1,0 +1,1241 @@
+Release 14.6 Map P.68d (nt64)
+Xilinx Map Application Log File for Design 'system'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol
+high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr
+off -lc off -power off -o system_map.ncd system.ngd system.pcf 
+Target Device  : xc5vlx110t
+Target Package : ff1136
+Target Speed   : -1
+Mapper Version : virtex5 -- $Revision: 1.55 $
+Mapped Date    : Tue Jul 15 23:38:12 2014
+
+Mapping design into LUTs...
+WARNING:MapLib:1073 - This design has 1173 KEEP_HIERARCHY constraints specified
+   and therefore, may take a very long time to process. If your design has
+   unexpectedly long run times, please consider minimizing the number of
+   KEEP_HIERARCHY constraints in your design or use the -ignore_keep_hierarchy
+   command line switch to have them ignored by MAP.
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[10].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[10].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAU_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[10].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[10].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAL_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[10].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[10].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBU_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[10].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[10].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBL_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[10].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[10].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAU_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[10].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[10].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAL_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[10].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[10].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBU_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[10].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[10].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBL_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAU_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAL_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBU_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBL_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAU_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAL_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBU_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBL_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[12].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[12].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAU_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[12].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[12].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAL_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[12].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[12].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBU_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[12].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[12].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBL_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[12].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[12].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAU_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[12].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[12].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAL_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[12].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[12].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBU_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[12].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[12].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBL_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[13].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[13].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAU_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[13].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[13].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAL_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[13].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[13].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBU_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[13].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[13].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBL_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[13].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[13].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAU_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[13].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[13].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAL_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[13].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[13].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBU_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[13].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[13].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBL_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[14].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[14].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAU_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[14].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[14].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAL_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[14].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[14].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBU_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[14].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[14].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBL_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[14].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[14].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAU_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[14].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[14].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAL_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[14].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[14].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBU_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[14].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[14].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBL_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[15].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[15].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAU_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[15].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[15].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAL_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[15].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[15].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBU_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[15].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[15].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBL_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[15].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[15].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAU_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[15].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[15].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAL_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[15].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[15].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBU_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[15].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[15].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBL_t
+   iesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[8].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[8].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[8].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[8].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[8].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[8].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[8].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[8].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[8].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[8].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[8].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[8].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[8].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[8].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[8].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[8].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[9].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[9].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[9].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[9].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKAL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[9].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[9].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[9].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[9].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B_REGCLKBL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[9].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[9].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[9].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[9].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKAL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[9].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[9].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBU_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[9].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[9].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T_REGCLKBL_ti
+   esig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memOutputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/v
+   alid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memOutputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/v
+   alid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKAU_tiesi
+   g
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memOutputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/v
+   alid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memOutputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/v
+   alid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKAL_tiesi
+   g
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memOutputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/v
+   alid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memOutputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/v
+   alid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKBU_tiesi
+   g
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memOutputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/v
+   alid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memOutputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/v
+   alid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKBL_tiesi
+   g
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memOutputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/v
+   alid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/memOutputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/v
+   alid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKAU_tiesi
+   g
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memOutputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/v
+   alid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/memOutputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/v
+   alid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKAL_tiesi
+   g
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memOutputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/v
+   alid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/memOutputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/v
+   alid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKBU_tiesi
+   g
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/memOutputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/v
+   alid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/memOutputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/v
+   alid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP_REGCLKBL_tiesi
+   g
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/register32File/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/
+   valid.cstr/ramloop[0].ram.r/v5_noinit.ram/TRUE_DP.SINGLE_PRIM36.TDP
+   of frag REGCLKAU connected to power/ground net
+   E2M/EC/register32File/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/
+   valid.cstr/ramloop[0].ram.r/v5_noinit.ram/TRUE_DP.SINGLE_PRIM36.TDP_REGCLKAU_
+   tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/register32File/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/
+   valid.cstr/ramloop[0].ram.r/v5_noinit.ram/TRUE_DP.SINGLE_PRIM36.TDP
+   of frag REGCLKAL connected to power/ground net
+   E2M/EC/register32File/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/
+   valid.cstr/ramloop[0].ram.r/v5_noinit.ram/TRUE_DP.SINGLE_PRIM36.TDP_REGCLKAL_
+   tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/register32File/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/
+   valid.cstr/ramloop[0].ram.r/v5_noinit.ram/TRUE_DP.SINGLE_PRIM36.TDP
+   of frag REGCLKBU connected to power/ground net
+   E2M/EC/register32File/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/
+   valid.cstr/ramloop[0].ram.r/v5_noinit.ram/TRUE_DP.SINGLE_PRIM36.TDP_REGCLKBU_
+   tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/EC/register32File/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/
+   valid.cstr/ramloop[0].ram.r/v5_noinit.ram/TRUE_DP.SINGLE_PRIM36.TDP
+   of frag REGCLKBL connected to power/ground net
+   E2M/EC/register32File/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/
+   valid.cstr/ramloop[0].ram.r/v5_noinit.ram/TRUE_DP.SINGLE_PRIM36.TDP_REGCLKBL_
+   tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/emac_ll/v5_emac_block_inst/v5_emac_wrapper_inst/v5_emac
+   of frag HOSTCLK connected to power/ground net
+   E2M/emac_ll/v5_emac_block_inst/v5_emac_wrapper_inst/client_tx_data_0_i<10>
+Running directed packing...
+WARNING:Pack:2515 - The LUT-1 inverter "E2M/EC/sysACEIO_not00001_INV_0" failed
+   to join the OLOGIC comp matched to output buffer
+   "E2M/EC/sysACEIO/IOBUF_B10/OBUFT".  This may result in suboptimal timing. 
+   The LUT-1 inverter E2M/EC/sysACEIO_not00001_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter "E2M/EC/sysACEIO_not00001_INV_0" failed
+   to join the OLOGIC comp matched to output buffer
+   "E2M/EC/sysACEIO/IOBUF_B11/OBUFT".  This may result in suboptimal timing. 
+   The LUT-1 inverter E2M/EC/sysACEIO_not00001_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter "E2M/EC/sysACEIO_not00001_INV_0" failed
+   to join the OLOGIC comp matched to output buffer
+   "E2M/EC/sysACEIO/IOBUF_B12/OBUFT".  This may result in suboptimal timing. 
+   The LUT-1 inverter E2M/EC/sysACEIO_not00001_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter "E2M/EC/sysACEIO_not00001_INV_0" failed
+   to join the OLOGIC comp matched to output buffer
+   "E2M/EC/sysACEIO/IOBUF_B13/OBUFT".  This may result in suboptimal timing. 
+   The LUT-1 inverter E2M/EC/sysACEIO_not00001_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter "E2M/EC/sysACEIO_not00001_INV_0" failed
+   to join the OLOGIC comp matched to output buffer
+   "E2M/EC/sysACEIO/IOBUF_B14/OBUFT".  This may result in suboptimal timing. 
+   The LUT-1 inverter E2M/EC/sysACEIO_not00001_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter "E2M/EC/sysACEIO_not00001_INV_0" failed
+   to join the OLOGIC comp matched to output buffer
+   "E2M/EC/sysACEIO/IOBUF_B15/OBUFT".  This may result in suboptimal timing. 
+   The LUT-1 inverter E2M/EC/sysACEIO_not00001_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter "E2M/EC/sysACEIO_not00001_INV_0" failed
+   to join the OLOGIC comp matched to output buffer
+   "E2M/EC/sysACEIO/IOBUF_B0/OBUFT".  This may result in suboptimal timing.  The
+   LUT-1 inverter E2M/EC/sysACEIO_not00001_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter "E2M/EC/sysACEIO_not00001_INV_0" failed
+   to join the OLOGIC comp matched to output buffer
+   "E2M/EC/sysACEIO/IOBUF_B1/OBUFT".  This may result in suboptimal timing.  The
+   LUT-1 inverter E2M/EC/sysACEIO_not00001_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter "E2M/EC/sysACEIO_not00001_INV_0" failed
+   to join the OLOGIC comp matched to output buffer
+   "E2M/EC/sysACEIO/IOBUF_B2/OBUFT".  This may result in suboptimal timing.  The
+   LUT-1 inverter E2M/EC/sysACEIO_not00001_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter "E2M/EC/sysACEIO_not00001_INV_0" failed
+   to join the OLOGIC comp matched to output buffer
+   "E2M/EC/sysACEIO/IOBUF_B3/OBUFT".  This may result in suboptimal timing.  The
+   LUT-1 inverter E2M/EC/sysACEIO_not00001_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter "E2M/EC/sysACEIO_not00001_INV_0" failed
+   to join the OLOGIC comp matched to output buffer
+   "E2M/EC/sysACEIO/IOBUF_B4/OBUFT".  This may result in suboptimal timing.  The
+   LUT-1 inverter E2M/EC/sysACEIO_not00001_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter "E2M/EC/sysACEIO_not00001_INV_0" failed
+   to join the OLOGIC comp matched to output buffer
+   "E2M/EC/sysACEIO/IOBUF_B5/OBUFT".  This may result in suboptimal timing.  The
+   LUT-1 inverter E2M/EC/sysACEIO_not00001_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter "E2M/EC/sysACEIO_not00001_INV_0" failed
+   to join the OLOGIC comp matched to output buffer
+   "E2M/EC/sysACEIO/IOBUF_B6/OBUFT".  This may result in suboptimal timing.  The
+   LUT-1 inverter E2M/EC/sysACEIO_not00001_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter "E2M/EC/sysACEIO_not00001_INV_0" failed
+   to join the OLOGIC comp matched to output buffer
+   "E2M/EC/sysACEIO/IOBUF_B7/OBUFT".  This may result in suboptimal timing.  The
+   LUT-1 inverter E2M/EC/sysACEIO_not00001_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter "E2M/EC/sysACEIO_not00001_INV_0" failed
+   to join the OLOGIC comp matched to output buffer
+   "E2M/EC/sysACEIO/IOBUF_B8/OBUFT".  This may result in suboptimal timing.  The
+   LUT-1 inverter E2M/EC/sysACEIO_not00001_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter "E2M/EC/sysACEIO_not00001_INV_0" failed
+   to join the OLOGIC comp matched to output buffer
+   "E2M/EC/sysACEIO/IOBUF_B9/OBUFT".  This may result in suboptimal timing.  The
+   LUT-1 inverter E2M/EC/sysACEIO_not00001_INV_0 drives multiple loads.
+Running delay-based LUT packing...
+Updating timing models...
+WARNING:Timing:3223 - Timing constraint TS_rx_fifo_rd_to_wr_0 = MAXDELAY FROM
+   TIMEGRP "rx_fifo_rd_to_wr_0" TO TIMEGRP "clk_125_eth" 8 ns DATAPATHONLY
+   ignored during timing analysis.
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+Running timing-driven placement...
+Total REAL time at the beginning of Placer: 1 mins 8 secs 
+Total CPU  time at the beginning of Placer: 1 mins 3 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:9c719a27) REAL time: 1 mins 16 secs 
+
+Phase 2.7  Design Feasibility Check
+WARNING:Place:838 - An IO Bus with more than one IO standard is found.
+   Components associated with this bus are as follows: 
+   	 Comp: LED<0>   IOSTANDARD = LVDCI_18
+   	 Comp: LED<1>   IOSTANDARD = LVDCI_18
+   	 Comp: LED<2>   IOSTANDARD = LVDCI_18
+   	 Comp: LED<3>   IOSTANDARD = LVCMOS12
+   	 Comp: LED<4>   IOSTANDARD = LVDCI_18
+   	 Comp: LED<5>   IOSTANDARD = LVCMOS12
+   	 Comp: LED<6>   IOSTANDARD = LVCMOS12
+   	 Comp: LED<7>   IOSTANDARD = LVCMOS12
+
+
+Phase 2.7  Design Feasibility Check (Checksum:9c719a27) REAL time: 1 mins 16 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:edc993df) REAL time: 1 mins 16 secs 
+
+Phase 4.37  Local Placement Optimization
+Phase 4.37  Local Placement Optimization (Checksum:edc993df) REAL time: 1 mins 16 secs 
+
+Phase 5.33  Local Placement Optimization
+Phase 5.33  Local Placement Optimization (Checksum:edc993df) REAL time: 2 mins 22 secs 
+
+Phase 6.32  Local Placement Optimization
+Phase 6.32  Local Placement Optimization (Checksum:edc993df) REAL time: 2 mins 23 secs 
+
+Phase 7.2  Initial Clock and IO Placement
+
+Phase 7.2  Initial Clock and IO Placement (Checksum:79b1a901) REAL time: 2 mins 25 secs 
+
+Phase 8.36  Local Placement Optimization
+Phase 8.36  Local Placement Optimization (Checksum:79b1a901) REAL time: 2 mins 25 secs 
+
+Phase 9.30  Global Clock Region Assignment
+Phase 9.30  Global Clock Region Assignment (Checksum:79b1a901) REAL time: 2 mins 25 secs 
+
+Phase 10.3  Local Placement Optimization
+Phase 10.3  Local Placement Optimization (Checksum:79b1a901) REAL time: 2 mins 25 secs 
+
+Phase 11.5  Local Placement Optimization
+Phase 11.5  Local Placement Optimization (Checksum:79b1a901) REAL time: 2 mins 26 secs 
+
+Phase 12.8  Global Placement
+.................................
+.......
+............................................
+................
+................
+................
+Phase 12.8  Global Placement (Checksum:93b543e8) REAL time: 2 mins 49 secs 
+
+Phase 13.29  Local Placement Optimization
+Phase 13.29  Local Placement Optimization (Checksum:93b543e8) REAL time: 2 mins 49 secs 
+
+Phase 14.5  Local Placement Optimization
+Phase 14.5  Local Placement Optimization (Checksum:93b543e8) REAL time: 2 mins 50 secs 
+
+Phase 15.18  Placement Optimization
+Phase 15.18  Placement Optimization (Checksum:2ed277be) REAL time: 4 mins 13 secs 
+
+Phase 16.5  Local Placement Optimization
+Phase 16.5  Local Placement Optimization (Checksum:2ed277be) REAL time: 4 mins 14 secs 
+
+Phase 17.34  Placement Validation
+Phase 17.34  Placement Validation (Checksum:2ed277be) REAL time: 4 mins 14 secs 
+
+Total REAL time to Placer completion: 4 mins 15 secs 
+Total CPU  time to Placer completion: 4 mins 4 secs 
+Running post-placement packing...
+Writing output files...
+WARNING:PhysDesignRules:372 - Gated clock. Clock net sh/mp/picn/puf1/i2<0> is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net sh/mp/picn/puf2/i2<0> is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net sh/mp/picn/puf3/i2<0> is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net sh/mp/picn/puf4/i2<0> is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net sh/mp/picn/puf5/i2<0> is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net sh/mp/picn/puf6/i2<0> is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:  166
+Slice Logic Utilization:
+  Number of Slice Registers:                 1,377 out of  69,120    1%
+    Number used as Flip Flops:               1,377
+  Number of Slice LUTs:                      4,001 out of  69,120    5%
+    Number used as logic:                    3,982 out of  69,120    5%
+      Number using O6 output only:           3,648
+      Number using O5 output only:             133
+      Number using O5 and O6:                  201
+    Number used as Memory:                      11 out of  17,920    1%
+      Number used as Shift Register:            11
+        Number using O6 output only:            11
+    Number used as exclusive route-thru:         8
+  Number of route-thrus:                       143
+    Number using O6 output only:               140
+    Number using O5 output only:                 3
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 2,667 out of  17,280   15%
+  Number of LUT Flip Flop pairs used:        4,501
+    Number with an unused Flip Flop:         3,124 out of   4,501   69%
+    Number with an unused LUT:                 500 out of   4,501   11%
+    Number of fully used LUT-FF pairs:         877 out of   4,501   19%
+    Number of unique control sets:              93
+    Number of slice register sites lost
+      to control set restrictions:             172 out of  69,120    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+  OVERMAPPING of BRAM resources should be ignored if the design is
+  over-mapped for a non-BRAM resource or if placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        62 out of     640    9%
+    Number of LOCed IOBs:                       62 out of      62  100%
+    IOB Flip Flops:                             22
+
+Specific Feature Utilization:
+  Number of BlockRAM/FIFO:                      40 out of     148   27%
+    Number using BlockRAM only:                 38
+    Number using FIFO only:                      2
+    Total primitives used:
+      Number of 36k BlockRAM used:              35
+      Number of 18k BlockRAM used:               4
+      Number of 18k FIFO used:                   2
+    Total Memory used (KB):                  1,368 out of   5,328   25%
+  Number of BUFG/BUFGCTRLs:                      6 out of      32   18%
+    Number used as BUFGs:                        6
+  Number of IDELAYCTRLs:                         2 out of      22    9%
+  Number of PLL_ADVs:                            2 out of       6   33%
+  Number of TEMACs:                              1 out of       2   50%
+
+Average Fanout of Non-Clock Nets:                5.27
+
+Peak Memory Usage:  669 MB
+Total REAL time to MAP completion:  4 mins 28 secs 
+Total CPU time to MAP completion:   4 mins 16 secs 
+
+Mapping completed.
+See MAP report file "system_map.mrp" for details.

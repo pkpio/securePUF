@@ -1,0 +1,131 @@
+#-----------------------------------------------------------
+# PlanAhead v14.6 (64-bit)
+# Build 269223 by xbuild on Wed Jun  5 11:14:03 MDT 2013
+# Start of session at: Tue Jul 15 22:30:31 2014
+# Process ID: 5812
+# Log file: C:/Users/praveen/Downloads/code-secure/planAhead_run_4/planAhead.log
+# Journal file: C:/Users/praveen/Downloads/code-secure/planAhead_run_4/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/praveen/Downloads/code-secure/pa.fromNetlist.tcl
+startgroup
+place_cell sh/mp/picn/puf1/FDC1 SLICE_X5Y20/DFF
+endgroup
+startgroup
+place_cell sh/mp/picn/puf1/LUT1_inst_2 SLICE_X5Y19/D6LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf2/FDC1 SLICE_X9Y20/DFF
+endgroup
+startgroup
+place_cell sh/mp/picn/puf2/LUT1_inst_2 SLICE_X9Y19/D6LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf3/FDC1 SLICE_X13Y20/DFF
+endgroup
+startgroup
+place_cell sh/mp/picn/puf3/LUT1_inst_2 SLICE_X13Y19/D6LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf1/LUT1_inst_1 SLICE_X6Y114/D6LUT
+endgroup
+unplace_cell  [get_cells [list  {sh/mp/picn/puf2/sarray[0]/pdl_top/LUT6_inst_0} {sh/mp/picn/puf2/sarray[0]/pdl_bottom/LUT6_inst_1} {sh/mp/picn/puf2/sarray[0]/pdl_bottom/LUT6_inst_0} {sh/mp/picn/puf2/sarray[0]/pdl_top/LUT6_inst_1} sh/mp/picn/puf1/LUT1_inst_1] -filter {((is_primitive==true && primitive_level!="INTERNAL")  && (loc!=""))}]
+startgroup
+place_cell sh/mp/picn/puf1/LUT1_inst_1 SLICE_X6Y150/A6LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf3/LUT1_inst_1 SLICE_X14Y150/A6LUT
+endgroup
+startgroup
+place_cell {sh/mp/picn/puf2/sarray[0]/pdl_bottom/LUT6_inst_1} SLICE_X11Y22/D6LUT
+endgroup
+startgroup
+place_cell {sh/mp/picn/puf2/sarray[0]/pdl_bottom/LUT6_inst_0} SLICE_X11Y21/D6LUT
+endgroup
+startgroup
+place_cell {sh/mp/picn/puf2/sarray[0]/pdl_top/LUT6_inst_1} SLICE_X9Y22/D6LUT
+endgroup
+startgroup
+place_cell {sh/mp/picn/puf2/sarray[0]/pdl_top/LUT6_inst_0} SLICE_X9Y21/C6LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf2/FDC1 SLICE_X9Y20/CFF
+endgroup
+undo
+startgroup
+place_cell {sh/mp/picn/puf2/sarray[0]/pdl_top/LUT6_inst_0} SLICE_X9Y21/D6LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf2/LUT1_inst_1 SLICE_X9Y150/A6LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf2/LUT1_inst_1 SLICE_X10Y150/A6LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf4/LUT1_inst_1 SLICE_X18Y150/A5LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf5/LUT1_inst_1 SLICE_X22Y150/A6LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf6/LUT1_inst_1 SLICE_X26Y150/A6LUT
+endgroup
+unplace_cell  [get_cells [list  {sh/mp/picn/puf4/sarray[0]/pdl_top/LUT6_inst_0}] -filter {((is_primitive==true && primitive_level!="INTERNAL")  && (loc!=""))}]
+unplace_cell  [get_cells [list  {sh/mp/picn/puf4/sarray[0]/pdl_bottom/LUT6_inst_0}] -filter {((is_primitive==true && primitive_level!="INTERNAL")  && (loc!=""))}]
+startgroup
+place_cell {sh/mp/picn/puf4/sarray[0]/pdl_top/LUT6_inst_0} SLICE_X17Y21/D6LUT
+endgroup
+startgroup
+place_cell {sh/mp/picn/puf4/sarray[0]/pdl_bottom/LUT6_inst_0} SLICE_X19Y21/D6LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf4/FDC1 SLICE_X17Y20/DFF
+endgroup
+unplace_cell  [get_cells [list  {sh/mp/picn/puf4/sarray[1]/pdl_top/LUT6_inst_0}] -filter {((is_primitive==true && primitive_level!="INTERNAL")  && (loc!=""))}]
+startgroup
+place_cell sh/mp/picn/puf4/LUT1_inst_2 SLICE_X17Y19/D6LUT
+endgroup
+unplace_cell  [get_cells [list  {sh/mp/picn/puf4/sarray[1]/pdl_bottom/LUT6_inst_0}] -filter {((is_primitive==true && primitive_level!="INTERNAL")  && (loc!=""))}]
+startgroup
+place_cell {sh/mp/picn/puf4/sarray[1]/pdl_bottom/LUT6_inst_0} SLICE_X19Y23/D6LUT
+endgroup
+startgroup
+place_cell {sh/mp/picn/puf4/sarray[1]/pdl_top/LUT6_inst_0} SLICE_X17Y23/D6LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf5/FDC1 SLICE_X21Y20/DFF
+endgroup
+startgroup
+place_cell sh/mp/picn/puf5/LUT1_inst_2 SLICE_X21Y19/D6LUT
+endgroup
+startgroup
+place_cell sh/mp/picn/puf6/FDC1 SLICE_X25Y20/DFF
+endgroup
+startgroup
+place_cell sh/mp/picn/puf6/LUT1_inst_2 SLICE_X25Y19/D6LUT
+endgroup
+startgroup
+place_cell {sh/mp/picn/puf4/sarray[23]/pdl_bottom/LUT6_inst_0} SLICE_X19Y67/D6LUT
+endgroup
+startgroup
+place_cell {sh/mp/picn/puf4/sarray[23]/pdl_top/LUT6_inst_0} SLICE_X17Y67/D6LUT
+endgroup
+startgroup
+place_cell {sh/mp/picn/puf4/sarray[23]/pdl_bottom/LUT6_inst_1} SLICE_X19Y68/D6LUT
+endgroup
+startgroup
+place_cell {sh/mp/picn/puf4/sarray[23]/pdl_top/LUT6_inst_1} SLICE_X17Y68/C6LUT
+endgroup
+startgroup
+place_cell {sh/mp/picn/puf4/sarray[21]/pdl_top/LUT6_inst_1} SLICE_X17Y64/D6LUT
+endgroup
+startgroup
+place_cell {sh/mp/picn/puf4/sarray[21]/pdl_bottom/LUT6_inst_1} SLICE_X19Y64/D6LUT
+endgroup
+startgroup
+place_cell {sh/mp/picn/puf4/sarray[21]/pdl_top/LUT6_inst_0} SLICE_X17Y63/D6LUT
+endgroup
+startgroup
+place_cell {sh/mp/picn/puf4/sarray[21]/pdl_bottom/LUT6_inst_0} SLICE_X19Y63/D6LUT
+endgroup
+save_constraints

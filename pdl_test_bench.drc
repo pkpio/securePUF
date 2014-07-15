@@ -1,0 +1,12 @@
+Release 13.3 Drc O.76xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Wed Jan 15 03:35:53 2014
+
+drc -z pdl_test_bench.ncd pdl_test_bench.pcf
+
+WARNING:PhysDesignRules:372 - Gated clock. Clock net puf1/i2<0> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+DRC detected 0 errors and 1 warnings.  Please see the previously displayed
+individual error or warning messages for more details.
