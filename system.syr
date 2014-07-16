@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.46 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.39 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.46 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.39 secs
  
 --> Reading design: system.prj
 
@@ -323,7 +323,7 @@ Analyzing hierarchy for module <challenge_gen> in library <work> with parameters
 	n = "00000000000000000000000000000011"
 
 Analyzing hierarchy for module <mapping> in library <work> with parameters.
-	CHALLENGE_WIDTH = "00000000000000000000000001000000"
+	CHALLENGE_WIDTH = "00000000000000000000000000100000"
 	COMPUTE = "00000000000000000000000000000001"
 	IDLE = "00000000000000000000000000000000"
 	PDL_CONFIG_WIDTH = "00000000000000000000000010000000"
@@ -1534,7 +1534,7 @@ Module <Osc_Ring> is correct for synthesis.
     Set user-defined property "INIT =  1" for instance <inverter[2].inverter> in unit <Osc_Ring>.
     Set user-defined property "S =  YES" for signal <c>.
 Analyzing module <mapping> in library <work>.
-	CHALLENGE_WIDTH = 32'sb00000000000000000000000001000000
+	CHALLENGE_WIDTH = 32'sb00000000000000000000000000100000
 	COMPUTE = 32'sb00000000000000000000000000000001
 	IDLE = 32'sb00000000000000000000000000000000
 	PDL_CONFIG_WIDTH = 32'sb00000000000000000000000010000000
@@ -2404,7 +2404,6 @@ Module <Cumulative_Sums> is correct for synthesis.
 =========================================================================
 
 Performing bidirectional port resolution...
-INFO:Xst:2679 - Register <LED> in unit <SircHandler> has a constant value of 11111111 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <bitCount> in unit <SircHandler> has a constant value of 00000000 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <sel_clk_test> in unit <testPUF> has a constant value of 0 during circuit operation. The register is replaced by logic.
 
@@ -2901,7 +2900,7 @@ Unit <pdl_block_2> synthesized.
 
 Synthesizing Unit <Runs>.
     Related source file is "source/Runs.v".
-    Found 1-bit adder carry out for signal <COND_24$addsub0000>.
+    Found 1-bit adder carry out for signal <COND_25$addsub0000>.
     Found 15-bit up counter for signal <count_bits0>.
     Found 15-bit register for signal <count_bits1>.
     Found 15-bit up counter for signal <count_ones>.
@@ -2946,7 +2945,7 @@ Synthesizing Unit <Overlapping_template>.
     Related source file is "source/Overlapping_Template.v".
     Found 1-bit register for signal <pass>.
     Found 9-bit register for signal <cap>.
-    Found 11-bit adder carry out for signal <COND_26$addsub0000>.
+    Found 11-bit adder carry out for signal <COND_27$addsub0000>.
     Found 11-bit up counter for signal <count_bits0>.
     Found 11-bit register for signal <count_bits1>.
     Found 10-bit up counter for signal <count_blocks>.
@@ -3484,7 +3483,6 @@ Unit <ethernet2BlockMem> synthesized.
 
 Synthesizing Unit <pufInterconNetwork>.
     Related source file is "source/puf_files/puf_intercon_network.v".
-WARNING:Xst:647 - Input <CHALLENGE<63:32>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <PDL_CONFIG<127:96>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <PDL_CONFIG<63:32>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 Unit <pufInterconNetwork> synthesized.
@@ -3493,15 +3491,15 @@ Unit <pufInterconNetwork> synthesized.
 Synthesizing Unit <mapping>.
     Related source file is "source/puf_files/mapping.v".
 WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <challenge<63:32>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:1305 - Output <done> is never assigned. Tied to value 0.
 WARNING:Xst:1780 - Signal <mp_state> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:653 - Signal <actual_challenge<63:32>> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000000.
 Unit <mapping> synthesized.
 
 
 Synthesizing Unit <testPUF>.
     Related source file is "source/test_PUF.v".
+WARNING:Xst:647 - Input <mp_challenge<63:32>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <calibrate> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:653 - Signal <response> is used but never assigned. This sourceless signal will be automatically connected to value 0.
 WARNING:Xst:646 - Signal <challenge> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found finite state machine <FSM_5> for signal <state>.
@@ -3520,9 +3518,9 @@ WARNING:Xst:646 - Signal <challenge> is assigned but never used. This unconnecte
     Found 8-bit register for signal <mem_din>.
     Found 13-bit register for signal <mem_waddr>.
     Found 1-bit register for signal <mem_we>.
-    Found 13-bit adder for signal <mem_waddr$addsub0000> created at line 179.
+    Found 13-bit adder for signal <mem_waddr$addsub0000> created at line 182.
     Found 15-bit register for signal <resp_bit_count>.
-    Found 15-bit adder for signal <resp_bit_count$addsub0000> created at line 149.
+    Found 15-bit adder for signal <resp_bit_count$addsub0000> created at line 152.
     Found 8-bit register for signal <test1>.
     Found 8-bit adder for signal <test1$addsub0000>.
     Found 8-bit register for signal <test2>.
@@ -3540,10 +3538,10 @@ WARNING:Xst:646 - Signal <challenge> is assigned but never used. This unconnecte
     Found 8-bit register for signal <test8>.
     Found 8-bit adder for signal <test8$addsub0000>.
     Found 8-bit register for signal <test_count>.
-    Found 8-bit adder for signal <test_count$addsub0000> created at line 170.
+    Found 8-bit adder for signal <test_count$addsub0000> created at line 173.
     Found 1-bit register for signal <test_data>.
     Found 4-bit register for signal <test_index>.
-    Found 4-bit adder for signal <test_index$addsub0000> created at line 180.
+    Found 4-bit adder for signal <test_index$addsub0000> created at line 183.
     Summary:
 	inferred   1 Finite State Machine(s).
 	inferred 114 D-type flip-flop(s).
@@ -3558,8 +3556,6 @@ WARNING:Xst:646 - Signal <test_result> is assigned but never used. This unconnec
 WARNING:Xst:646 - Signal <response_ready> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <responseRegBuffer> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:653 - Signal <responseReg<15:6>> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000.
-WARNING:Xst:653 - Signal <raddr> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000.
-WARNING:Xst:646 - Signal <douta> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <bitCount> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Using one-hot encoding for signal <regCount>.
     Found 1-bit register for signal <userRunClear>.
@@ -3570,26 +3566,30 @@ WARNING:Xst:646 - Signal <bitCount> is assigned but never used. This unconnected
     Found 1-bit register for signal <inputMemoryReadReq>.
     Found 8-bit register for signal <register32Address>.
     Found 8-bit register for signal <outputMemoryWriteData>.
-    Found 32-bit register for signal <A>.
-    Found 32-bit register for signal <B>.
+    Found 8-bit register for signal <LED>.
+    Found 1-bit register for signal <calibrate>.
     Found 128-bit register for signal <challenge>.
-    Found 6-bit comparator greater for signal <challenge_0$cmp_gt0000> created at line 306.
+    Found 6-bit comparator greater for signal <challenge_0$cmp_gt0000> created at line 319.
     Found 1-bit register for signal <challenge_ready>.
     Found 3-bit register for signal <currState>.
-    Found 6-bit comparator lessequal for signal <currState$cmp_le0001> created at line 306.
+    Found 6-bit comparator lessequal for signal <currState$cmp_le0001> created at line 319.
     Found 1-bit register for signal <inputDone>.
-    Found 17-bit adder for signal <inputMemoryReadAdd$addsub0000> created at line 293.
+    Found 17-bit adder for signal <inputMemoryReadAdd$addsub0000> created at line 306.
+    Found 32-bit register for signal <is_calibrate_mode>.
     Found 6-bit register for signal <memCount>.
-    Found 6-bit adder for signal <memCount$share0000> created at line 235.
-    Found 13-bit adder for signal <outputMemoryWriteAdd$addsub0000> created at line 354.
-    Found 13-bit comparator greater for signal <outputMemoryWriteData$cmp_gt0000> created at line 344.
+    Found 6-bit adder for signal <memCount$share0000> created at line 237.
+    Found 13-bit adder for signal <outputMemoryWriteAdd$addsub0000> created at line 375.
+    Found 13-bit comparator greater for signal <outputMemoryWriteData$cmp_gt0000> created at line 357.
     Found 1-bit register for signal <paramCount>.
+    Found 32-bit register for signal <pc_challenge>.
+    Found 13-bit up counter for signal <raddr>.
     Found 2-bit register for signal <regCount>.
-    Found 8-bit adder for signal <register32Address$addsub0000> created at line 256.
+    Found 8-bit adder for signal <register32Address$addsub0000> created at line 257.
     Found 6-bit register for signal <resp_wait_count>.
-    Found 6-bit adder for signal <resp_wait_count$addsub0000> created at line 337.
+    Found 6-bit adder for signal <resp_wait_count$addsub0000> created at line 350.
     Summary:
-	inferred 262 D-type flip-flop(s).
+	inferred   1 Counter(s).
+	inferred 271 D-type flip-flop(s).
 	inferred   5 Adder/Subtractor(s).
 	inferred   3 Comparator(s).
 Unit <SircHandler> synthesized.
@@ -3639,10 +3639,11 @@ Macro Statistics
  8-bit adder                                           : 10
  9-bit adder                                           : 1
  9-bit subtractor                                      : 1
-# Counters                                             : 27
+# Counters                                             : 28
  10-bit up counter                                     : 2
  11-bit up counter                                     : 2
  12-bit up counter                                     : 2
+ 13-bit up counter                                     : 1
  15-bit up counter                                     : 6
  16-bit updown counter                                 : 1
  3-bit up counter                                      : 2
@@ -3656,8 +3657,8 @@ Macro Statistics
  12-bit updown accumulator                             : 1
  20-bit up accumulator                                 : 1
  22-bit up accumulator                                 : 1
-# Registers                                            : 354
- 1-bit register                                        : 229
+# Registers                                            : 356
+ 1-bit register                                        : 230
  11-bit register                                       : 7
  12-bit register                                       : 12
  13-bit register                                       : 5
@@ -3674,7 +3675,7 @@ Macro Statistics
  6-bit register                                        : 2
  64-bit register                                       : 1
  7-bit register                                        : 3
- 8-bit register                                        : 50
+ 8-bit register                                        : 51
  9-bit register                                        : 1
 # Latches                                              : 10
  10-bit latch                                          : 4
@@ -3794,8 +3795,10 @@ Loading core <blk_mem_gen_paramReg> for timing and area information for instance
 Loading core <RMEM> for timing and area information for instance <rmem1>.
 WARNING:Xst:1290 - Hierarchical block <pon> is unconnected in block <puf_map>.
    It will be removed from the design.
-WARNING:Xst:1293 - FF/Latch <outputMemoryWriteData_7> has a constant value of 0 in block <sh>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <outputMemoryWriteData_6> has a constant value of 0 in block <sh>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LED_7> (without init value) has a constant value of 1 in block <sh>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LED_5> (without init value) has a constant value of 1 in block <sh>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LED_3> (without init value) has a constant value of 1 in block <sh>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LED_1> (without init value) has a constant value of 1 in block <sh>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <test_data> (without init value) has a constant value of 0 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <test8_7> (without init value) has a constant value of 0 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <test8_6> (without init value) has a constant value of 0 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
@@ -3852,8 +3855,10 @@ WARNING:Xst:2677 - Node <test8_5> of sequential type is unconnected in block <te
 WARNING:Xst:2677 - Node <test8_6> of sequential type is unconnected in block <testPUF>.
 WARNING:Xst:2677 - Node <test8_7> of sequential type is unconnected in block <testPUF>.
 WARNING:Xst:2677 - Node <test_data> of sequential type is unconnected in block <testPUF>.
-WARNING:Xst:2677 - Node <outputMemoryWriteData_6> of sequential type is unconnected in block <sh>.
-WARNING:Xst:2677 - Node <outputMemoryWriteData_7> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <LED_1> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <LED_3> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <LED_5> of sequential type is unconnected in block <sh>.
+WARNING:Xst:2677 - Node <LED_7> of sequential type is unconnected in block <sh>.
 
 Synthesizing (advanced) Unit <Frequency_Block>.
 	Multiplier <Mmult_chi_sqr_mult0000> in block <Frequency_Block> and accumulator <chi_sqr> in block <Frequency_Block> are combined into a MAC<Mmac_chi_sqr_mult0000>.
@@ -3972,10 +3977,11 @@ Macro Statistics
  8-bit adder                                           : 10
  9-bit adder                                           : 1
  9-bit subtractor                                      : 1
-# Counters                                             : 27
+# Counters                                             : 28
  10-bit up counter                                     : 2
  11-bit up counter                                     : 2
  12-bit up counter                                     : 2
+ 13-bit up counter                                     : 1
  15-bit up counter                                     : 6
  16-bit updown counter                                 : 1
  3-bit up counter                                      : 2
@@ -3987,8 +3993,8 @@ Macro Statistics
  9-bit updown counter                                  : 2
 # Accumulators                                         : 1
  12-bit updown accumulator                             : 1
-# Registers                                            : 1958
- Flip-Flops                                            : 1958
+# Registers                                            : 1967
+ Flip-Flops                                            : 1967
 # Latches                                              : 10
  10-bit latch                                          : 4
  22-bit latch                                          : 6
@@ -4026,8 +4032,10 @@ Macro Statistics
 WARNING:Xst:1710 - FF/Latch <rd_enable_delay> (without init value) has a constant value of 1 in block <tx_client_fifo_8>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rd_enable_delay2> (without init value) has a constant value of 1 in block <tx_client_fifo_8>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <test_data> (without init value) has a constant value of 0 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <outputMemoryWriteData_6> has a constant value of 0 in block <SircHandler>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <outputMemoryWriteData_7> has a constant value of 0 in block <SircHandler>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LED_1> (without init value) has a constant value of 1 in block <SircHandler>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_3> (without init value) has a constant value of 1 in block <SircHandler>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_5> (without init value) has a constant value of 1 in block <SircHandler>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_7> (without init value) has a constant value of 1 in block <SircHandler>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cap_0> (without init value) has a constant value of 0 in block <Nonoverlapping_template>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cap_1> (without init value) has a constant value of 0 in block <Nonoverlapping_template>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cap_2> (without init value) has a constant value of 0 in block <Nonoverlapping_template>. This FF/Latch will be trimmed during the optimization process.
@@ -4112,7 +4120,7 @@ WARNING:Xst:1710 - FF/Latch <NIST/test4/calculate_chi_sqr1/v2_sqr_1> (without in
 WARNING:Xst:1710 - FF/Latch <NIST/test4/calculate_chi_sqr1/v1_sqr_1> (without init value) has a constant value of 0 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <NIST/test4/calculate_chi_sqr1/v2_sqr_1> of sequential type is unconnected in block <testPUF>.
 WARNING:Xst:2677 - Node <NIST/test4/calculate_chi_sqr1/v1_sqr_1> of sequential type is unconnected in block <testPUF>.
-WARNING:Xst:2170 - Unit Osc_Ring : the following signal(s) form a combinatorial loop: c<0>, c<3>, c<2>, c<1>.
+WARNING:Xst:2170 - Unit Osc_Ring : the following signal(s) form a combinatorial loop: c<1>, c<0>, c<3>, c<2>.
 
 Optimizing unit <system> ...
 
@@ -4367,38 +4375,6 @@ WARNING:Xst:2677 - Node <sh/testPUF/challenge_gen/C_3> of sequential type is unc
 WARNING:Xst:2677 - Node <sh/testPUF/challenge_gen/C_2> of sequential type is unconnected in block <system>.
 WARNING:Xst:2677 - Node <sh/testPUF/challenge_gen/C_1> of sequential type is unconnected in block <system>.
 WARNING:Xst:2677 - Node <sh/testPUF/challenge_gen/C_0> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_31> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_30> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_29> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_28> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_27> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_26> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_25> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_24> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_23> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_22> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_21> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_20> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_19> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_18> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_17> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_16> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_15> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_14> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_13> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_12> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_11> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_10> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_9> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_8> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_7> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_6> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_5> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_4> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_3> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_2> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_1> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/A_0> of sequential type is unconnected in block <system>.
 WARNING:Xst:2677 - Node <sh/challenge_14_7> of sequential type is unconnected in block <system>.
 WARNING:Xst:2677 - Node <sh/challenge_14_6> of sequential type is unconnected in block <system>.
 WARNING:Xst:2677 - Node <sh/challenge_14_5> of sequential type is unconnected in block <system>.
@@ -4431,22 +4407,6 @@ WARNING:Xst:2677 - Node <sh/challenge_12_3> of sequential type is unconnected in
 WARNING:Xst:2677 - Node <sh/challenge_12_2> of sequential type is unconnected in block <system>.
 WARNING:Xst:2677 - Node <sh/challenge_12_1> of sequential type is unconnected in block <system>.
 WARNING:Xst:2677 - Node <sh/challenge_12_0> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/challenge_6_7> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/challenge_6_6> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/challenge_6_5> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/challenge_6_4> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/challenge_6_3> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/challenge_6_2> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/challenge_6_1> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/challenge_6_0> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/challenge_5_7> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/challenge_5_6> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/challenge_5_5> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/challenge_5_4> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/challenge_5_3> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/challenge_5_2> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/challenge_5_1> of sequential type is unconnected in block <system>.
-WARNING:Xst:2677 - Node <sh/challenge_5_0> of sequential type is unconnected in block <system>.
 WARNING:Xst:2677 - Node <sh/challenge_7_7> of sequential type is unconnected in block <system>.
 WARNING:Xst:2677 - Node <sh/challenge_7_6> of sequential type is unconnected in block <system>.
 WARNING:Xst:2677 - Node <sh/challenge_7_5> of sequential type is unconnected in block <system>.
@@ -4455,6 +4415,14 @@ WARNING:Xst:2677 - Node <sh/challenge_7_3> of sequential type is unconnected in 
 WARNING:Xst:2677 - Node <sh/challenge_7_2> of sequential type is unconnected in block <system>.
 WARNING:Xst:2677 - Node <sh/challenge_7_1> of sequential type is unconnected in block <system>.
 WARNING:Xst:2677 - Node <sh/challenge_7_0> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_5_7> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_5_6> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_5_5> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_5_4> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_5_3> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_5_2> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_5_1> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_5_0> of sequential type is unconnected in block <system>.
 WARNING:Xst:2677 - Node <sh/challenge_4_7> of sequential type is unconnected in block <system>.
 WARNING:Xst:2677 - Node <sh/challenge_4_6> of sequential type is unconnected in block <system>.
 WARNING:Xst:2677 - Node <sh/challenge_4_5> of sequential type is unconnected in block <system>.
@@ -4463,10 +4431,19 @@ WARNING:Xst:2677 - Node <sh/challenge_4_3> of sequential type is unconnected in 
 WARNING:Xst:2677 - Node <sh/challenge_4_2> of sequential type is unconnected in block <system>.
 WARNING:Xst:2677 - Node <sh/challenge_4_1> of sequential type is unconnected in block <system>.
 WARNING:Xst:2677 - Node <sh/challenge_4_0> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_6_7> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_6_6> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_6_5> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_6_4> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_6_3> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_6_2> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_6_1> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_6_0> of sequential type is unconnected in block <system>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block system, actual ratio is 10.
+INFO:Xst:2260 - The FF/Latch <sh/LED_6> in Unit <system> is equivalent to the following 4 FFs/Latches : <sh/LED_4> <sh/LED_2> <sh/LED_0> <sh/calibrate> 
 
 Final Macro Processing ...
 
@@ -4489,8 +4466,8 @@ Unit <system> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1984
- Flip-Flops                                            : 1984
+# Registers                                            : 2036
+ Flip-Flops                                            : 2036
 # Shift Registers                                      : 11
  2-bit shift register                                  : 3
  3-bit shift register                                  : 8
@@ -4522,27 +4499,27 @@ Design Statistics
 # IOs                              : 63
 
 Cell Usage :
-# BELS                             : 9657
+# BELS                             : 9706
 #      GND                         : 5
-#      INV                         : 205
-#      LUT1                        : 766
-#      LUT2                        : 692
-#      LUT3                        : 716
-#      LUT4                        : 669
-#      LUT5                        : 876
-#      LUT6                        : 2924
-#      MUXCY                       : 1380
+#      INV                         : 206
+#      LUT1                        : 778
+#      LUT2                        : 672
+#      LUT3                        : 725
+#      LUT4                        : 675
+#      LUT5                        : 885
+#      LUT6                        : 2931
+#      MUXCY                       : 1392
 #      MUXF7                       : 47
 #      VCC                         : 5
-#      XORCY                       : 1372
-# FlipFlops/Latches                : 2175
+#      XORCY                       : 1385
+# FlipFlops/Latches                : 2227
 #      FD                          : 198
 #      FDC                         : 37
 #      FDCE                        : 13
-#      FDE                         : 970
+#      FDE                         : 1020
 #      FDP                         : 27
 #      FDR                         : 278
-#      FDRE                        : 368
+#      FDRE                        : 370
 #      FDRS                        : 97
 #      FDRSE                       : 4
 #      FDS                         : 8
@@ -4578,18 +4555,18 @@ Selected Device : 5vlx110tff1136-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            2165  out of  69120     3%  
- Number of Slice LUTs:                 6859  out of  69120     9%  
-    Number used as Logic:              6848  out of  69120     9%  
+ Number of Slice Registers:            2217  out of  69120     3%  
+ Number of Slice LUTs:                 6883  out of  69120     9%  
+    Number used as Logic:              6872  out of  69120     9%  
     Number used as Memory:               11  out of  17920     0%  
        Number used as SRL:               11
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   9024
-   Number with an unused Flip Flop:    6859  out of   9024    76%  
-   Number with an unused LUT:          2165  out of   9024    23%  
-   Number of fully used LUT-FF pairs:     0  out of   9024     0%  
-   Number of unique control sets:       133
+ Number of LUT Flip Flop pairs used:   9100
+   Number with an unused Flip Flop:    6883  out of   9100    75%  
+   Number with an unused LUT:          2217  out of   9100    24%  
+   Number of fully used LUT-FF pairs:     0  out of   9100     0%  
+   Number of unique control sets:       135
 
 IO Utilization: 
  Number of IOs:                          63
@@ -4627,7 +4604,7 @@ Clock Signal                                                                    
 --------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
 clk_125_eth_i                                                                                                       | BUFG                                                                                                                               | 1055  |
 GMII_RX_CLK_0                                                                                                       | IBUF+IODELAY+BUFG                                                                                                                  | 116   |
-clk_user_interface_i                                                                                                | BUFG                                                                                                                               | 232   |
+clk_user_interface_i                                                                                                | BUFG                                                                                                                               | 284   |
 E2M/EC/sysACE_delay_clk                                                                                             | BUFG                                                                                                                               | 34    |
 clk_200_i                                                                                                           | BUFG                                                                                                                               | 13    |
 sh/CLOCK_TRNG1/CLKOUT0_BUF                                                                                          | BUFG                                                                                                                               | 111   |
@@ -4808,7 +4785,7 @@ Delay:               3.663ns (Levels of Logic = 15)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_user_interface_i'
   Clock period: 4.471ns (frequency: 223.664MHz)
-  Total number of paths / destination ports: 5610 / 1526
+  Total number of paths / destination ports: 6346 / 1634
 -------------------------------------------------------------------------
 Delay:               4.471ns (Levels of Logic = 6)
   Source:            sh/outputMemoryWriteAdd_1 (FF)
@@ -5134,6 +5111,25 @@ Offset:              3.395ns (Levels of Logic = 1)
                                        (90.1% logic, 9.9% route)
 
 =========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_user_interface_i'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              3.259ns (Levels of Logic = 1)
+  Source:            sh/LED_6 (FF)
+  Destination:       LED<6> (PAD)
+  Source Clock:      clk_user_interface_i rising
+
+  Data Path: sh/LED_6 to LED<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.471   0.336  sh/LED_6 (sh/LED_6)
+     OBUF:I->O                 2.452          LED_6_OBUF (LED<6>)
+    ----------------------------------------
+    Total                      3.259ns (2.923ns logic, 0.336ns route)
+                                       (89.7% logic, 10.3% route)
+
+=========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'GMII_RX_CLK_0'
   Total number of paths / destination ports: 10 / 10
 -------------------------------------------------------------------------
@@ -5192,14 +5188,14 @@ Delay:               3.617ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 400.00 secs
-Total CPU time to Xst completion: 400.16 secs
+Total REAL time to Xst completion: 389.00 secs
+Total CPU time to Xst completion: 388.95 secs
  
 --> 
 
-Total memory usage is 554120 kilobytes
+Total memory usage is 552904 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  419 (   0 filtered)
+Number of warnings :  392 (   0 filtered)
 Number of infos    :   38 (   0 filtered)
 

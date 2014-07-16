@@ -10,7 +10,7 @@ Target Device  : xc5vlx110t
 Target Package : ff1136
 Target Speed   : -1
 Mapper Version : virtex5 -- $Revision: 1.55 $
-Mapped Date    : Wed Jul 16 05:22:25 2014
+Mapped Date    : Wed Jul 16 08:11:13 2014
 
 Mapping design into LUTs...
 WARNING:MapLib:1073 - This design has 1166 KEEP_HIERARCHY constraints specified
@@ -18,24 +18,6 @@ WARNING:MapLib:1073 - This design has 1166 KEEP_HIERARCHY constraints specified
    unexpectedly long run times, please consider minimizing the number of
    KEEP_HIERARCHY constraints in your design or use the -ignore_keep_hierarchy
    command line switch to have them ignored by MAP.
-WARNING:MapLib:701 - Signal start connected to top level port start has been
-   removed.
-WARNING:MapLib:701 - Signal sw connected to top level port sw has been removed.
-WARNING:MapLib:41 - All members of TNM group "sh_CLOCK_TRNG1_CLKOUT0_BUF" have
-   been optimized out of the design.
-WARNING:MapLib:41 - All members of TNM group "sh_CLOCK_TRNG1_CLKOUT1_BUF" have
-   been optimized out of the design.
-WARNING:MapLib:41 - All members of TNM group "sh_CLOCK_TRNG1_CLKOUT3_BUF" have
-   been optimized out of the design.
-WARNING:MapLib:50 - The period specification "TS_sh_CLOCK_TRNG1_CLKOUT0_BUF" has
-   been discarded because the group "sh_CLOCK_TRNG1_CLKOUT0_BUF" has been
-   optimized away.
-WARNING:MapLib:50 - The period specification "TS_sh_CLOCK_TRNG1_CLKOUT1_BUF" has
-   been discarded because the group "sh_CLOCK_TRNG1_CLKOUT1_BUF" has been
-   optimized away.
-WARNING:MapLib:50 - The period specification "TS_sh_CLOCK_TRNG1_CLKOUT3_BUF" has
-   been discarded because the group "sh_CLOCK_TRNG1_CLKOUT3_BUF" has been
-   optimized away.
 WARNING:Pack:2874 - Trimming timing constraints from pin
    E2M/emac_ll/v5_emac_block_inst/v5_emac_wrapper_inst/v5_emac
    of frag HOSTCLK connected to power/ground net E2M/EC/_mux0003
@@ -1019,6 +1001,30 @@ WARNING:Pack:2874 - Trimming timing constraints from pin
    E2M/EC/register32File/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/
    valid.cstr/ramloop[0].ram.r/v5_noinit.ram/TRUE_DP.SINGLE_PRIM36.TDP_REGCLKBL_
    tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   sh/rmem1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ra
+   mloop[0].ram.r/v5_noinit.ram/SP.SINGLE_PRIM36.SP
+   of frag REGCLKAU connected to power/ground net
+   sh/rmem1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ra
+   mloop[0].ram.r/v5_noinit.ram/SP.SINGLE_PRIM36.SP_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   sh/rmem1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ra
+   mloop[0].ram.r/v5_noinit.ram/SP.SINGLE_PRIM36.SP
+   of frag REGCLKAL connected to power/ground net
+   sh/rmem1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ra
+   mloop[0].ram.r/v5_noinit.ram/SP.SINGLE_PRIM36.SP_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   sh/rmem1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ra
+   mloop[1].ram.r/v5_noinit.ram/SP.SINGLE_PRIM36.SP
+   of frag REGCLKAU connected to power/ground net
+   sh/rmem1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ra
+   mloop[1].ram.r/v5_noinit.ram/SP.SINGLE_PRIM36.SP_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   sh/rmem1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ra
+   mloop[1].ram.r/v5_noinit.ram/SP.SINGLE_PRIM36.SP
+   of frag REGCLKAL connected to power/ground net
+   sh/rmem1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ra
+   mloop[1].ram.r/v5_noinit.ram/SP.SINGLE_PRIM36.SP_REGCLKAL_tiesig
 Running directed packing...
 WARNING:Pack:2515 - The LUT-1 inverter "E2M/EC/sysACEIO_not00001_INV_0" failed
    to join the OLOGIC comp matched to output buffer
@@ -1089,14 +1095,169 @@ Updating timing models...
 WARNING:Timing:3223 - Timing constraint TS_rx_fifo_rd_to_wr_0 = MAXDELAY FROM
    TIMEGRP "rx_fifo_rd_to_wr_0" TO TIMEGRP "clk_125_eth" 8 ns DATAPATHONLY
    ignored during timing analysis.
+WARNING:Pack:1653 - At least one timing constraint is impossible to meet because
+   component delays alone exceed the constraint. A timing constraint summary
+   below shows the failing constraints (preceded with an Asterisk (*)). Please
+   use the Timing Analyzer (GUI) or TRCE (command line) with the Mapped NCD and
+   PCF files to identify which constraints and paths are failing because of the
+   component delays alone. If the failing path(s) is mapped to Xilinx components
+   as expected, consider relaxing the constraint. If it is not mapped to
+   components as expected, re-evaluate your HDL and how synthesis is optimizing
+   the path. To allow the tools to bypass this error, set the environment
+   variable XIL_TIMING_ALLOW_IMPOSSIBLE to 1.
+
+
+   For more information about the Timing Analyzer, consult the Xilinx Timing
+   Analyzer Reference manual; for more information on TRCE, consult the Xilinx
+   Command Line Tools User Guide "TRACE" chapter.
+WARNING:Timing:3223 - Timing constraint TS_rx_fifo_rd_to_wr_0 = MAXDELAY FROM 
+   TIMEGRP "rx_fifo_rd_to_wr_0" TO TIMEGRP "clk_125_eth" 8 ns DATAPATHONLY 
+   ignored during timing analysis.
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more 
+   information, see the TSI report.  Please consult the Xilinx Command Line 
+   Tools User Guide for information on generating a TSI report.
+INFO:Timing:3284 - This timing report was generated using estimated delay 
+   information.  For accurate numbers, please refer to the post Place and Route 
+   timing report.
+Number of Timing Constraints that were not applied: 2
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+* TS_CLK_125 = PERIOD TIMEGRP "clk_125_eth" | SETUP       |     5.184ns|     2.716ns|       0|           0
+   7.9 ns HIGH 50%                          | HOLD        |    -0.626ns|            |       9|        5544
+----------------------------------------------------------------------------------------------------------
+* TS_sh_CLOCK_TRNG1_CLKOUT3_BUF = PERIOD TI | SETUP       |    -0.018ns|     5.995ns|       1|          18
+  MEGRP "sh_CLOCK_TRNG1_CLKOUT3_BUF" TS_CLK | HOLD        |    -0.571ns|            |      52|       29692
+  _USER_INTERFACE HIGH 50%                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* TS_Emac0_clk_phy_rx0 = PERIOD TIMEGRP "Em | SETUP       |     6.243ns|     1.657ns|       0|           0
+  ac0_clk_phy_rx0" 7.9 ns HIGH 50%          | HOLD        |    -0.544ns|            |      10|        5280
+                                            | MINPERIOD   |     5.678ns|     2.222ns|       0|           0
+----------------------------------------------------------------------------------------------------------
+* TS_sh_CLOCK_TRNG1_CLKOUT1_BUF = PERIOD TI | SETUP       |   121.578ns|     4.032ns|       0|           0
+  MEGRP "sh_CLOCK_TRNG1_CLKOUT1_BUF" TS_CLK | HOLD        |    -0.005ns|            |       4|          20
+  _USER_INTERFACE / 0.046875 HIGH 50%       |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_sysACE_MPDATAIN = MAXDELAY FROM TIMEGR | SETUP       |     2.000ns|     1.160ns|       0|           0
+  P "sysACE_MPDATA" TO TIMEGRP "sysACE_clk_ | HOLD        |     0.507ns|            |       0|           0
+  o" 3.16 ns DATAPATHONLY                   |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_CLK_USER_INTERFACE = PERIOD TIMEGRP "c | SETUP       |     2.843ns|     3.045ns|       0|           0
+  lk_user_interface" 5.888 ns HIGH 50%      | HOLD        |     0.059ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  ts_tx_meta_protect_0 = MAXDELAY FROM TIME | SETUP       |     3.758ns|     1.242ns|       0|           0
+  GRP "tx_metastable_0" 5 ns DATAPATHONLY   | HOLD        |     0.195ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_CLK_200 = PERIOD TIMEGRP "clk_200" 4.9 | SETUP       |     4.372ns|     0.528ns|       0|           0
+   ns HIGH 50%                              | HOLD        |     0.195ns|            |       0|           0
+                                            | MINLOWPULSE |     3.846ns|     1.054ns|       0|           0
+----------------------------------------------------------------------------------------------------------
+  ts_rx_meta_protect_0 = MAXDELAY FROM TIME | SETUP       |     4.466ns|     0.534ns|       0|           0
+  GRP "rx_metastable_0" 5 ns                | HOLD        |     0.195ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_tx_max_output_1 = MAXDELAY FROM TIMEGR | SETUP       |     5.261ns|     2.739ns|       0|           0
+  P "tx_max_output" TO TIMEGRP "tx_max_outp | HOLD        |     0.219ns|            |       0|           0
+  ut_target" 8 ns DATAPATHONLY              |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_hard_reset_IG = MAXDELAY FROM TIMEGRP  | SETUP       |     5.792ns|     2.208ns|       0|           0
+  "hard_reset" TO TIMEGRP "FFS" 8 ns DATAPA | HOLD        |     0.161ns|            |       0|           0
+  THONLY                                    |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_sh_CLOCK_TRNG1_CLKOUT2_BUF = PERIOD TI | MINPERIOD   |     6.184ns|     1.666ns|       0|           0
+  MEGRP "sh_CLOCK_TRNG1_CLKOUT2_BUF" TS_CLK |             |            |            |        |            
+  _USER_INTERFACE / 0.75 HIGH 50%           |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_tx_fifo_wr_to_rd_0 = MAXDELAY FROM TIM | SETUP       |     6.611ns|     1.389ns|       0|           0
+  EGRP "tx_fifo_wr_to_rd_0" TO TIMEGRP "clk | HOLD        |     0.195ns|            |       0|           0
+  _125_eth" 8 ns DATAPATHONLY               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_userRunClearToggle = MAXDELAY FROM TIM | SETUP       |     7.227ns|     0.773ns|       0|           0
+  EGRP "userRunSetTogCS" TO TIMEGRP "userRu | HOLD        |     0.547ns|            |       0|           0
+  nSetTogUS" 8 ns DATAPATHONLY              |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_tx_fifo_rd_to_wr_0 = MAXDELAY FROM TIM | SETUP       |     7.522ns|     0.478ns|       0|           0
+  EGRP "tx_fifo_rd_to_wr_0" TO TIMEGRP "clk | HOLD        |     0.195ns|            |       0|           0
+  _125_eth" 8 ns DATAPATHONLY               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_rx_fifo_wr_to_rd_0 = MAXDELAY FROM TIM | SETUP       |     7.548ns|     0.452ns|       0|           0
+  EGRP "rx_fifo_wr_to_rd_0" TO TIMEGRP "clk | HOLD        |     0.195ns|            |       0|           0
+  _125_eth" 8 ns DATAPATHONLY               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_tx_fifo_addr_0 = MAXDELAY FROM TIMEGRP | SETUP       |     9.466ns|     0.534ns|       0|           0
+   "tx_addr_rd_0" TO TIMEGRP "tx_addr_wr_0" | HOLD        |     0.195ns|            |       0|           0
+   10 ns                                    |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_sysACE_OE = MAXDELAY FROM TIMEGRP "sys | MAXDELAY    |    21.094ns|     2.346ns|       0|           0
+  ACE_clk_o" TO TIMEGRP "sysACE_MPOE" 23.44 |             |            |            |        |            
+   ns DATAPATHONLY                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_sysACE_WE = MAXDELAY FROM TIMEGRP "sys | MAXDELAY    |    21.094ns|     2.346ns|       0|           0
+  ACE_clk_o" TO TIMEGRP "sysACE_MPWE" 23.44 |             |            |            |        |            
+   ns DATAPATHONLY                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_sysACE_clk_o = PERIOD TIMEGRP "sysACE_ | SETUP       |    29.126ns|     1.074ns|       0|           0
+  clk_o" 30.2 ns HIGH 50%                   | HOLD        |     0.019ns|            |       0|           0
+                                            | MINPERIOD   |    27.978ns|     2.222ns|       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_sh_CLOCK_TRNG1_CLKOUT0_BUF = PERIOD TI | SETUP       |    61.167ns|     1.638ns|       0|           0
+  MEGRP "sh_CLOCK_TRNG1_CLKOUT0_BUF" TS_CLK | HOLD        |     0.219ns|            |       0|           0
+  _USER_INTERFACE / 0.09375 HIGH 50%        | MINPERIOD   |    60.583ns|     2.222ns|       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_rx_fifo_rd_to_wr_0 = MAXDELAY FROM TIM | N/A         |         N/A|         N/A|     N/A|         N/A
+  EGRP "rx_fifo_rd_to_wr_0" TO TIMEGRP "clk |             |            |            |        |            
+  _125_eth" 8 ns DATAPATHONLY               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Review Timing Report for more details on the following derived constraints.
+To create a Timing Report, run "trce -v 12 -fastpaths -o design_timing_report design.ncd design.pcf"
+or "Run Timing Analysis" from Timing Analyzer (timingan).
+Derived Constraints for TS_CLK_USER_INTERFACE
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+---
+----------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths
+Analyzed       |
+|           Constraint          | Requirement
+|-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    |
+Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+---
+----------+
+|TS_CLK_USER_INTERFACE          |      5.888ns|      3.045ns|      5.995ns|            0|           57|         6398|   
+    22100|
+| TS_sh_CLOCK_TRNG1_CLKOUT0_BUF |     62.805ns|      2.222ns|          N/A|            0|            0|         1085|   
+        0|
+| TS_sh_CLOCK_TRNG1_CLKOUT1_BUF |    125.611ns|      4.032ns|          N/A|            4|            0|        20833|   
+        0|
+| TS_sh_CLOCK_TRNG1_CLKOUT2_BUF |      7.851ns|      1.666ns|          N/A|            0|            0|            0|   
+        0|
+| TS_sh_CLOCK_TRNG1_CLKOUT3_BUF |      5.888ns|      5.995ns|          N/A|           53|            0|          182|   
+        0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+---
+----------+
+
+4 constraints not met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 1 mins 2 secs 
-Total CPU  time at the beginning of Placer: 1 mins 
+Total REAL time at the beginning of Placer: 1 mins 10 secs 
+Total CPU  time at the beginning of Placer: 1 mins 9 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:60727454) REAL time: 1 mins 12 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:2399afe3) REAL time: 1 mins 19 secs 
 
 Phase 2.7  Design Feasibility Check
 WARNING:Place:838 - An IO Bus with more than one IO standard is found.
@@ -1111,504 +1272,790 @@ WARNING:Place:838 - An IO Bus with more than one IO standard is found.
    	 Comp: LED<7>   IOSTANDARD = LVCMOS12
 
 
-Phase 2.7  Design Feasibility Check (Checksum:60727454) REAL time: 1 mins 12 secs 
+Phase 2.7  Design Feasibility Check (Checksum:2399afe3) REAL time: 1 mins 19 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:98499784) REAL time: 1 mins 12 secs 
+Phase 3.31  Local Placement Optimization (Checksum:4c145b03) REAL time: 1 mins 19 secs 
 
 Phase 4.37  Local Placement Optimization
-Phase 4.37  Local Placement Optimization (Checksum:98499784) REAL time: 1 mins 12 secs 
+Phase 4.37  Local Placement Optimization (Checksum:4c145b03) REAL time: 1 mins 19 secs 
 
 Phase 5.33  Local Placement Optimization
-Phase 5.33  Local Placement Optimization (Checksum:98499784) REAL time: 2 mins 24 secs 
+Phase 5.33  Local Placement Optimization (Checksum:4c145b03) REAL time: 2 mins 46 secs 
 
 Phase 6.32  Local Placement Optimization
-Phase 6.32  Local Placement Optimization (Checksum:98499784) REAL time: 2 mins 25 secs 
+Phase 6.32  Local Placement Optimization (Checksum:4c145b03) REAL time: 2 mins 47 secs 
 
 Phase 7.2  Initial Clock and IO Placement
 
-Phase 7.2  Initial Clock and IO Placement (Checksum:c36e20bb) REAL time: 2 mins 27 secs 
+Phase 7.2  Initial Clock and IO Placement (Checksum:7fa65d26) REAL time: 2 mins 49 secs 
 
 Phase 8.36  Local Placement Optimization
-Phase 8.36  Local Placement Optimization (Checksum:c36e20bb) REAL time: 2 mins 27 secs 
+Phase 8.36  Local Placement Optimization (Checksum:7fa65d26) REAL time: 2 mins 49 secs 
 
+...........................................................
 Phase 9.30  Global Clock Region Assignment
-Phase 9.30  Global Clock Region Assignment (Checksum:c36e20bb) REAL time: 2 mins 27 secs 
+
+
+######################################################################################
+# GLOBAL CLOCK NET DISTRIBUTION UCF REPORT:
+#
+# Number of Global Clock Regions : 16
+# Number of Global Clock Networks: 13
+#
+# Clock Region Assignment: SUCCESSFUL
+
+# Location of Clock Components
+INST "sh/MEMCLK" LOC = "BUFGCTRL_X0Y24" ;
+INST "sh/testPUF/mux_clk_test" LOC = "BUFGCTRL_X0Y26" ;
+INST "sh/testPUF/NIST/test8/en_BUFG" LOC = "BUFGCTRL_X0Y6" ;
+INST "bufCLK_200" LOC = "BUFGCTRL_X0Y0" ;
+INST "bufCLK_125" LOC = "BUFGCTRL_X0Y1" ;
+INST "sh/CLOCK_TRNG1/CLKOUT0_BUFG_INST" LOC = "BUFGCTRL_X0Y30" ;
+INST "sh/CLOCK_TRNG1/CLKOUT1_BUFG_INST" LOC = "BUFGCTRL_X0Y29" ;
+INST "sh/CLOCK_TRNG1/CLKOUT2_BUFG_INST" LOC = "BUFGCTRL_X0Y27" ;
+INST "bufCLK_user" LOC = "BUFGCTRL_X0Y2" ;
+INST "sh/testPUF/NIST/test4/_and0000_BUFG" LOC = "BUFGCTRL_X0Y5" ;
+INST "sh/CLOCK_TRNG1/CLKOUT3_BUFG_INST" LOC = "BUFGCTRL_X0Y28" ;
+INST "E2M/gmii_rx_clk_delay_BUFG" LOC = "BUFGCTRL_X0Y31" ;
+INST "E2M/EC/bufSysACEClk" LOC = "BUFGCTRL_X0Y3" ;
+INST "sysACE_CLK" LOC = "AH17" ;
+INST "CLK_100" LOC = "AH15" ;
+INST "GMII_RX_CLK_0" LOC = "H17" ;
+INST "clkBPLL" LOC = "PLL_ADV_X0Y0" ;
+INST "E2M/EC/clkBPLL" LOC = "PLL_ADV_X0Y1" ;
+INST "sh/CLOCK_TRNG1/PLL_ADV_INST" LOC = "PLL_ADV_X0Y5" ;
+
+# sh/mem_clk driven by BUFGCTRL_X0Y24
+NET "sh/mem_clk" TNM_NET = "TN_sh/mem_clk" ;
+TIMEGRP "TN_sh/mem_clk" AREA_GROUP = "CLKAG_sh/mem_clk" ;
+AREA_GROUP "CLKAG_sh/mem_clk" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4, CLOCKREGION_X0Y5, CLOCKREGION_X1Y5, CLOCKREGION_X0Y6, CLOCKREGION_X1Y6, CLOCKREGION_X0Y7, CLOCKREGION_X1Y7 ;
+
+# sh/testPUF/clk_test driven by BUFGCTRL_X0Y26
+NET "sh/testPUF/clk_test" TNM_NET = "TN_sh/testPUF/clk_test" ;
+TIMEGRP "TN_sh/testPUF/clk_test" AREA_GROUP = "CLKAG_sh/testPUF/clk_test" ;
+AREA_GROUP "CLKAG_sh/testPUF/clk_test" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4, CLOCKREGION_X0Y5, CLOCKREGION_X1Y5, CLOCKREGION_X0Y6, CLOCKREGION_X1Y6, CLOCKREGION_X0Y7, CLOCKREGION_X1Y7 ;
+
+# sh/testPUF/NIST/test8/en driven by BUFGCTRL_X0Y6
+NET "sh/testPUF/NIST/test8/en" TNM_NET = "TN_sh/testPUF/NIST/test8/en" ;
+TIMEGRP "TN_sh/testPUF/NIST/test8/en" AREA_GROUP = "CLKAG_sh/testPUF/NIST/test8/en" ;
+AREA_GROUP "CLKAG_sh/testPUF/NIST/test8/en" RANGE =   CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4, CLOCKREGION_X0Y5, CLOCKREGION_X1Y5, CLOCKREGION_X0Y6, CLOCKREGION_X1Y6, CLOCKREGION_X0Y7, CLOCKREGION_X1Y7 ;
+
+# clk_200 driven by BUFGCTRL_X0Y0
+NET "clk_200" TNM_NET = "TN_clk_200" ;
+TIMEGRP "TN_clk_200" AREA_GROUP = "CLKAG_clk_200" ;
+AREA_GROUP "CLKAG_clk_200" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4, CLOCKREGION_X0Y5, CLOCKREGION_X1Y5, CLOCKREGION_X0Y6, CLOCKREGION_X1Y6, CLOCKREGION_X0Y7, CLOCKREGION_X1Y7 ;
+
+# clk_125_eth driven by BUFGCTRL_X0Y1
+NET "clk_125_eth" TNM_NET = "TN_clk_125_eth" ;
+TIMEGRP "TN_clk_125_eth" AREA_GROUP = "CLKAG_clk_125_eth" ;
+AREA_GROUP "CLKAG_clk_125_eth" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4, CLOCKREGION_X0Y5, CLOCKREGION_X1Y5, CLOCKREGION_X0Y6, CLOCKREGION_X1Y6, CLOCKREGION_X0Y7, CLOCKREGION_X1Y7 ;
+
+# sh/clk_1 driven by BUFGCTRL_X0Y30
+NET "sh/clk_1" TNM_NET = "TN_sh/clk_1" ;
+TIMEGRP "TN_sh/clk_1" AREA_GROUP = "CLKAG_sh/clk_1" ;
+AREA_GROUP "CLKAG_sh/clk_1" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4, CLOCKREGION_X0Y5, CLOCKREGION_X1Y5, CLOCKREGION_X0Y6, CLOCKREGION_X1Y6, CLOCKREGION_X0Y7, CLOCKREGION_X1Y7 ;
+
+# sh/clk_2 driven by BUFGCTRL_X0Y29
+NET "sh/clk_2" TNM_NET = "TN_sh/clk_2" ;
+TIMEGRP "TN_sh/clk_2" AREA_GROUP = "CLKAG_sh/clk_2" ;
+AREA_GROUP "CLKAG_sh/clk_2" RANGE =  ;
+
+# sh/clk_RNG driven by BUFGCTRL_X0Y27
+NET "sh/clk_RNG" TNM_NET = "TN_sh/clk_RNG" ;
+TIMEGRP "TN_sh/clk_RNG" AREA_GROUP = "CLKAG_sh/clk_RNG" ;
+AREA_GROUP "CLKAG_sh/clk_RNG" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4, CLOCKREGION_X0Y5, CLOCKREGION_X1Y5, CLOCKREGION_X0Y6, CLOCKREGION_X1Y6, CLOCKREGION_X0Y7, CLOCKREGION_X1Y7 ;
+
+# clk_user_interface driven by BUFGCTRL_X0Y2
+NET "clk_user_interface" TNM_NET = "TN_clk_user_interface" ;
+TIMEGRP "TN_clk_user_interface" AREA_GROUP = "CLKAG_clk_user_interface" ;
+AREA_GROUP "CLKAG_clk_user_interface" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4, CLOCKREGION_X0Y5, CLOCKREGION_X1Y5, CLOCKREGION_X0Y6, CLOCKREGION_X1Y6, CLOCKREGION_X0Y7, CLOCKREGION_X1Y7 ;
+
+# sh/testPUF/NIST/test4/_and0000 driven by BUFGCTRL_X0Y5
+NET "sh/testPUF/NIST/test4/_and0000" TNM_NET = "TN_sh/testPUF/NIST/test4/_and0000" ;
+TIMEGRP "TN_sh/testPUF/NIST/test4/_and0000" AREA_GROUP = "CLKAG_sh/testPUF/NIST/test4/_and0000" ;
+AREA_GROUP "CLKAG_sh/testPUF/NIST/test4/_and0000" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2 ;
+
+# sh/clk_sh driven by BUFGCTRL_X0Y28
+NET "sh/clk_sh" TNM_NET = "TN_sh/clk_sh" ;
+TIMEGRP "TN_sh/clk_sh" AREA_GROUP = "CLKAG_sh/clk_sh" ;
+AREA_GROUP "CLKAG_sh/clk_sh" RANGE =  ;
+
+# E2M/gmii_rx_clk_delay driven by BUFGCTRL_X0Y31
+NET "E2M/gmii_rx_clk_delay" TNM_NET = "TN_E2M/gmii_rx_clk_delay" ;
+TIMEGRP "TN_E2M/gmii_rx_clk_delay" AREA_GROUP = "CLKAG_E2M/gmii_rx_clk_delay" ;
+AREA_GROUP "CLKAG_E2M/gmii_rx_clk_delay" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4, CLOCKREGION_X0Y5, CLOCKREGION_X1Y5, CLOCKREGION_X0Y6, CLOCKREGION_X1Y6, CLOCKREGION_X0Y7, CLOCKREGION_X1Y7 ;
+
+# E2M/EC/sysACE_clk_o driven by BUFGCTRL_X0Y3
+NET "E2M/EC/sysACE_clk_o" TNM_NET = "TN_E2M/EC/sysACE_clk_o" ;
+TIMEGRP "TN_E2M/EC/sysACE_clk_o" AREA_GROUP = "CLKAG_E2M/EC/sysACE_clk_o" ;
+AREA_GROUP "CLKAG_E2M/EC/sysACE_clk_o" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4, CLOCKREGION_X0Y5, CLOCKREGION_X1Y5, CLOCKREGION_X0Y6, CLOCKREGION_X1Y6, CLOCKREGION_X0Y7, CLOCKREGION_X1Y7 ;
+
+# NOTE: 
+# This report is provided to help reproduce successful clock-region 
+# assignments. The report provides range constraints for all global 
+# clock networks, in a format that is directly usable in ucf files. 
+#
+#END of Global Clock Net Distribution UCF Constraints
+######################################################################################
+
+
+######################################################################################
+GLOBAL CLOCK NET LOADS DISTRIBUTION REPORT:
+
+Number of Global Clock Regions : 16
+Number of Global Clock Networks: 13
+
+Clock Region Assignment: SUCCESSFUL
+
+Clock-Region: <CLOCKREGION_X0Y0> 
+ key resource utilizations (used/available): global-clocks - 1/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      8 |      0 |      0 |      0 |     80 |     80 |      8 |      0 |      0 |      0 |      2 |      0 |   2080 |   3840 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |     62 |sh/testPUF/clk_test
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |     62 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+
+Clock-Region: <CLOCKREGION_X1Y0> 
+ key resource utilizations (used/available): global-clocks - 3/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     12 |      0 |      0 |      1 |     40 |     40 |      0 |      0 |      0 |      0 |      1 |      0 |   2400 |   4800 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_125_eth
+      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_user_interface
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    108 |sh/testPUF/clk_test
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    108 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+
+Clock-Region: <CLOCKREGION_X0Y1> 
+ key resource utilizations (used/available): global-clocks - 5/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      8 |      4 |      2 |      0 |     40 |     40 |      8 |      0 |      0 |      0 |      1 |      0 |   2080 |   3840 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     37 |clk_user_interface
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     33 |sh/clk_1
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |sh/clk_RNG
+      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |sh/mem_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |sh/testPUF/clk_test
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      2 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |     74 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+
+Clock-Region: <CLOCKREGION_X1Y1> 
+ key resource utilizations (used/available): global-clocks - 5/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     12 |      0 |      0 |      1 |     40 |     40 |      0 |      0 |      0 |      0 |      1 |      0 |   2400 |   4800 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      1 |      0 |      0 |      0 |      0 |     10 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_125_eth
+      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_user_interface
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     63 |sh/clk_1
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      8 |sh/clk_RNG
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     67 |sh/testPUF/clk_test
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      2 |      0 |      0 |      0 |      0 |     10 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    138 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+
+Clock-Region: <CLOCKREGION_X0Y2> 
+ key resource utilizations (used/available): global-clocks - 4/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      8 |      2 |      1 |      0 |     60 |     60 |      8 |      0 |      0 |      0 |      2 |      0 |   2080 |   3840 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      5 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_125_eth
+      5 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     42 |clk_user_interface
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      6 |sh/clk_1
+      0 |      0 |      0 |      0 |      0 |      0 |      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |sh/testPUF/clk_test
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     10 |      0 |      0 |      0 |      0 |      0 |      2 |      0 |      0 |      0 |      0 |      0 |      0 |     48 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+
+Clock-Region: <CLOCKREGION_X1Y2> 
+ key resource utilizations (used/available): global-clocks - 6/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      8 |      0 |      0 |      1 |     40 |     40 |      0 |      0 |      0 |      1 |      1 |      0 |   2400 |   4800 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      6 |clk_125_eth
+      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_user_interface
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      9 |sh/clk_1
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     16 |sh/clk_RNG
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     38 |sh/testPUF/NIST/test4/_and0000
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     57 |sh/testPUF/clk_test
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      4 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    126 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+
+Clock-Region: <CLOCKREGION_X0Y3> 
+ key resource utilizations (used/available): global-clocks - 5/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      8 |      0 |      0 |      0 |     60 |     60 |      8 |      0 |      0 |      0 |      2 |     16 |   2080 |   3840 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      4 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     22 |clk_125_eth
+      4 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     64 |clk_user_interface
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      8 |sh/clk_RNG
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    132 |sh/testPUF/NIST/test8/en
+      0 |      0 |      0 |      0 |      0 |      0 |      6 |      0 |      0 |      0 |      0 |      0 |      0 |     99 |sh/testPUF/clk_test
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      8 |      0 |      0 |      0 |      0 |      0 |      6 |      0 |      0 |      0 |      0 |      0 |      0 |    325 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+
+Clock-Region: <CLOCKREGION_X1Y3> 
+ key resource utilizations (used/available): global-clocks - 3/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      8 |      0 |      0 |      1 |     40 |     40 |      0 |      0 |      0 |      0 |      1 |      0 |   2400 |   4800 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |      1 |E2M/gmii_rx_clk_delay
+      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    391 |clk_125_eth
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     12 |clk_200
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |    404 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+
+Clock-Region: <CLOCKREGION_X0Y4> 
+ key resource utilizations (used/available): global-clocks - 8/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      8 |      0 |      0 |      0 |     60 |     60 |      8 |      0 |      0 |      0 |      2 |     16 |   2080 |   3840 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |     10 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |E2M/gmii_rx_clk_delay
+      6 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    165 |clk_125_eth
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |clk_200
+      6 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     37 |clk_user_interface
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |      0 |      0 |sh/clk_1
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |sh/clk_2
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     24 |sh/clk_RNG
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |sh/clk_sh
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     12 |      0 |      0 |      0 |     10 |      0 |      0 |      0 |      0 |      0 |      1 |      4 |      0 |    226 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+
+Clock-Region: <CLOCKREGION_X1Y4> 
+ key resource utilizations (used/available): global-clocks - 5/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     10 |      0 |      0 |      1 |     40 |     40 |      0 |      1 |      0 |      0 |      1 |      0 |   2400 |   4800 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     32 |E2M/EC/sysACE_clk_o
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      6 |     12 |E2M/gmii_rx_clk_delay
+      4 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |    274 |clk_125_eth
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |clk_200
+      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_user_interface
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      8 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |      0 |      0 |      0 |      0 |      6 |    319 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+
+Clock-Region: <CLOCKREGION_X0Y5> 
+ key resource utilizations (used/available): global-clocks - 4/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      8 |      2 |      1 |      0 |     60 |     60 |      8 |      0 |      0 |      0 |      2 |      0 |   2080 |   3840 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      3 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |     61 |clk_125_eth
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |clk_200
+      3 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     68 |clk_user_interface
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     28 |sh/clk_RNG
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      6 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      1 |      0 |      2 |    157 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+
+Clock-Region: <CLOCKREGION_X1Y5> 
+ key resource utilizations (used/available): global-clocks - 3/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     10 |      0 |      0 |      1 |     40 |     40 |      0 |      1 |      0 |      0 |      1 |      0 |   2400 |   4800 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      6 |     78 |E2M/gmii_rx_clk_delay
+      4 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     83 |clk_125_eth
+      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_user_interface
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      8 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      6 |    161 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+
+Clock-Region: <CLOCKREGION_X0Y6> 
+ key resource utilizations (used/available): global-clocks - 3/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      8 |      4 |      2 |      0 |     40 |     40 |      8 |      0 |      0 |      0 |      1 |      0 |   2080 |   3840 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_125_eth
+      1 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |clk_user_interface
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     24 |sh/clk_RNG
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      2 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     25 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+
+Clock-Region: <CLOCKREGION_X1Y6> 
+ key resource utilizations (used/available): global-clocks - 4/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     12 |      0 |      0 |      1 |     40 |     40 |      0 |      0 |      0 |      0 |      1 |      0 |   2400 |   4800 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      6 |      3 |E2M/gmii_rx_clk_delay
+      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_125_eth
+      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_user_interface
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     12 |sh/clk_RNG
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      4 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      6 |     15 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+
+Clock-Region: <CLOCKREGION_X0Y7> 
+ key resource utilizations (used/available): global-clocks - 1/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      8 |      0 |      0 |      0 |     80 |     80 |      8 |      0 |      0 |      0 |      2 |      0 |   2080 |   3840 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |sh/clk_RNG
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+
+Clock-Region: <CLOCKREGION_X1Y7> 
+ key resource utilizations (used/available): global-clocks - 2/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     12 |      0 |      0 |      1 |     40 |     40 |      0 |      0 |      0 |      0 |      1 |      0 |   2400 |   4800 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_125_eth
+      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_user_interface
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      4 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+NOTE:
+The above detailed report is the initial placement of the logic after the clock region assignment. The final placement
+may be significantly different because of the various optimization steps which will follow. Specifically, logic blocks
+maybe moved to adjacent clock-regions as long as the "number of clocks per region" constraint is not violated.
+
+
+# END of Global Clock Net Loads Distribution Report:
+######################################################################################
+
+
+Phase 9.30  Global Clock Region Assignment (Checksum:7fa65d26) REAL time: 2 mins 59 secs 
 
 Phase 10.3  Local Placement Optimization
-Phase 10.3  Local Placement Optimization (Checksum:c36e20bb) REAL time: 2 mins 27 secs 
+Phase 10.3  Local Placement Optimization (Checksum:7fa65d26) REAL time: 3 mins 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:c36e20bb) REAL time: 2 mins 28 secs 
+Phase 11.5  Local Placement Optimization (Checksum:7fa65d26) REAL time: 3 mins 
 
 Phase 12.8  Global Placement
-.......................................
-............
-............................................
-.......................
-.......................
-..............................
-Phase 12.8  Global Placement (Checksum:ccf734c4) REAL time: 2 mins 51 secs 
+.....................................................................................
+...............
+.................................................................................................................
+................
+................
+........................................................................
+Phase 12.8  Global Placement (Checksum:3a5c0d40) REAL time: 3 mins 41 secs 
 
 Phase 13.29  Local Placement Optimization
-Phase 13.29  Local Placement Optimization (Checksum:ccf734c4) REAL time: 2 mins 51 secs 
+Phase 13.29  Local Placement Optimization (Checksum:3a5c0d40) REAL time: 3 mins 41 secs 
 
 Phase 14.5  Local Placement Optimization
-Phase 14.5  Local Placement Optimization (Checksum:ccf734c4) REAL time: 2 mins 52 secs 
+Phase 14.5  Local Placement Optimization (Checksum:3a5c0d40) REAL time: 3 mins 41 secs 
 
 Phase 15.18  Placement Optimization
-Phase 15.18  Placement Optimization (Checksum:fd95b3d7) REAL time: 4 mins 3 secs 
+Phase 15.18  Placement Optimization (Checksum:93a358c7) REAL time: 5 mins 10 secs 
 
 Phase 16.5  Local Placement Optimization
-Phase 16.5  Local Placement Optimization (Checksum:fd95b3d7) REAL time: 4 mins 4 secs 
+Phase 16.5  Local Placement Optimization (Checksum:93a358c7) REAL time: 5 mins 10 secs 
 
 Phase 17.34  Placement Validation
-Phase 17.34  Placement Validation (Checksum:fd95b3d7) REAL time: 4 mins 4 secs 
+Phase 17.34  Placement Validation (Checksum:93a358c7) REAL time: 5 mins 11 secs 
 
-Total REAL time to Placer completion: 4 mins 5 secs 
-Total CPU  time to Placer completion: 3 mins 58 secs 
+Total REAL time to Placer completion: 5 mins 12 secs 
+Total CPU  time to Placer completion: 5 mins 11 secs 
 Running post-placement packing...
 Writing output files...
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   sh/testPUF/puf_map/picn/puf1/i2<0> is sourced by a combinatorial pin. This is
-   not good design practice. Use the CE pin to control the loading of data into
-   the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   sh/testPUF/puf_map/picn/puf2/i2<0> is sourced by a combinatorial pin. This is
-   not good design practice. Use the CE pin to control the loading of data into
-   the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   sh/testPUF/puf_map/picn/puf3/i2<0> is sourced by a combinatorial pin. This is
-   not good design practice. Use the CE pin to control the loading of data into
-   the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   sh/testPUF/puf_map/picn/puf4/i2<0> is sourced by a combinatorial pin. This is
-   not good design practice. Use the CE pin to control the loading of data into
-   the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   sh/testPUF/puf_map/picn/puf5/i2<0> is sourced by a combinatorial pin. This is
-   not good design practice. Use the CE pin to control the loading of data into
-   the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   sh/testPUF/puf_map/picn/puf6/i2<0> is sourced by a combinatorial pin. This is
-   not good design practice. Use the CE pin to control the loading of data into
-   the flip-flop.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<0>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<1>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<2>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<3>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<8>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<9>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<10>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<11>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<4>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<5>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<6>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<7>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<12>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<13>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<14>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<15>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<0>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<1>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<2>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<3>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<8>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<9>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<10>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<11>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<4>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<5>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<6>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<7>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<12>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<13>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<14>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<15>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<0>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<1>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<2>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<3>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<12>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<13>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<14>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<15>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<4>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<5>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<6>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<7>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<8>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<9>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<10>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<11>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<12>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<13>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<14>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<15>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<4>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<5>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<6>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<7>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<8>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<9>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<10>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<11>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<0>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<1>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<2>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<3>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<4>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<5>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<6>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<7>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<8>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<9>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<10>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<11>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<12>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<13>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<14>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<15>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<0>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<1>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<2>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<3>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<8>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<9>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<10>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<11>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<12>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<13>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<14>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<15>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<0>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<1>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<2>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<3>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<4>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<5>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<6>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<7>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<12>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<13>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<14>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<15>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<8>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<9>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<10>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<11>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<0>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<1>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<2>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<3>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<4>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<5>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<6>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<7>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<0>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<1>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<2>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<3>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<4>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<5>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<6>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<7>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<12>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<13>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<14>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<15>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<8>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<9>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<10>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<11>> is incomplete. The signal does
-   not drive any load pins in the design.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net sh/testPUF/puf_map/picn/puf1/i2<0> is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net sh/testPUF/puf_map/picn/puf2/i2<0> is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net sh/testPUF/puf_map/picn/puf3/i2<0> is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net sh/testPUF/puf_map/picn/puf4/i2<0> is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net sh/testPUF/puf_map/picn/puf5/i2<0> is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net sh/testPUF/puf_map/picn/puf6/i2<0> is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<4>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<5>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<6>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<7>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<12>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<13>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<14>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<15>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<8>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<9>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<10>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<11>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<0>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<1>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<2>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<3>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<12>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<13>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<14>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<15>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<8>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<9>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<10>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<11>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<4>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<5>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<6>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<7>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<0>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<1>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<2>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<3>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<0>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<1>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<2>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<3>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<12>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<13>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<14>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<15>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<8>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<9>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<10>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<11>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<4>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<5>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<6>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<7>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<4>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<5>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<6>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<7>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<8>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<9>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<10>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<11>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<12>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<13>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<14>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<15>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<0>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<1>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<2>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<3>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<0>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<1>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<2>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<3>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<8>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<9>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<10>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<11>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<12>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<13>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<14>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<15>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<4>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<5>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<6>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<7>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<4>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<5>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<6>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<7>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<8>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<9>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<10>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<11>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<12>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<13>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<14>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<15>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<0>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<1>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<2>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<3>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<4>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<5>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<6>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<7>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<12>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<13>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<14>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<15>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<0>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<1>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<2>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<3>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<8>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<9>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<10>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<11>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<12>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<13>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<14>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<15>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<0>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<1>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<2>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<3>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<8>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<9>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<10>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<11>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<4>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<5>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<6>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<7>> is incomplete. The signal does not
+   drive any load pins in the design.
 
 Design Summary
 --------------
 
 Design Summary:
 Number of errors:      0
-Number of warnings:  302
+Number of warnings:  299
 Slice Logic Utilization:
-  Number of Slice Registers:                 1,472 out of  69,120    2%
-    Number used as Flip Flops:               1,472
-  Number of Slice LUTs:                      4,533 out of  69,120    6%
-    Number used as logic:                    4,513 out of  69,120    6%
-      Number using O6 output only:           4,177
-      Number using O5 output only:             133
-      Number using O5 and O6:                  203
+  Number of Slice Registers:                 2,198 out of  69,120    3%
+    Number used as Flip Flops:               2,028
+    Number used as Latches:                    170
+  Number of Slice LUTs:                      6,349 out of  69,120    9%
+    Number used as logic:                    6,293 out of  69,120    9%
+      Number using O6 output only:           5,245
+      Number using O5 output only:             362
+      Number using O5 and O6:                  686
     Number used as Memory:                      11 out of  17,920    1%
       Number used as Shift Register:            11
         Number using O6 output only:            11
-    Number used as exclusive route-thru:         9
-  Number of route-thrus:                       144
-    Number using O6 output only:               141
-    Number using O5 output only:                 3
+    Number used as exclusive route-thru:        45
+  Number of route-thrus:                       411
+    Number using O6 output only:               403
+    Number using O5 output only:                 8
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 2,744 out of  17,280   15%
-  Number of LUT Flip Flop pairs used:        4,935
-    Number with an unused Flip Flop:         3,463 out of   4,935   70%
-    Number with an unused LUT:                 402 out of   4,935    8%
-    Number of fully used LUT-FF pairs:       1,070 out of   4,935   21%
-    Number of unique control sets:              87
+  Number of occupied Slices:                 3,348 out of  17,280   19%
+  Number of LUT Flip Flop pairs used:        6,979
+    Number with an unused Flip Flop:         4,781 out of   6,979   68%
+    Number with an unused LUT:                 630 out of   6,979    9%
+    Number of fully used LUT-FF pairs:       1,568 out of   6,979   22%
+    Number of unique control sets:             124
     Number of slice register sites lost
-      to control set restrictions:             173 out of  69,120    1%
+      to control set restrictions:             227 out of  69,120    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -1619,30 +2066,32 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        61 out of     640    9%
-    Number of LOCed IOBs:                       61 out of      61  100%
+  Number of bonded IOBs:                        63 out of     640    9%
+    Number of LOCed IOBs:                       63 out of      63  100%
     IOB Flip Flops:                             21
 
 Specific Feature Utilization:
-  Number of BlockRAM/FIFO:                      40 out of     148   27%
-    Number using BlockRAM only:                 38
+  Number of BlockRAM/FIFO:                      42 out of     148   28%
+    Number using BlockRAM only:                 40
     Number using FIFO only:                      2
     Total primitives used:
-      Number of 36k BlockRAM used:              35
+      Number of 36k BlockRAM used:              37
       Number of 18k BlockRAM used:               4
       Number of 18k FIFO used:                   2
-    Total Memory used (KB):                  1,368 out of   5,328   25%
-  Number of BUFG/BUFGCTRLs:                      6 out of      32   18%
-    Number used as BUFGs:                        6
+    Total Memory used (KB):                  1,440 out of   5,328   27%
+  Number of BUFG/BUFGCTRLs:                     13 out of      32   40%
+    Number used as BUFGs:                       11
+    Number used as BUFGCTRLs:                    2
   Number of IDELAYCTRLs:                         2 out of      22    9%
+  Number of DSP48Es:                            10 out of      64   15%
   Number of PLL_ADVs:                            3 out of       6   50%
   Number of TEMACs:                              1 out of       2   50%
 
-Average Fanout of Non-Clock Nets:                4.73
+Average Fanout of Non-Clock Nets:                4.29
 
-Peak Memory Usage:  671 MB
-Total REAL time to MAP completion:  4 mins 17 secs 
-Total CPU time to MAP completion:   4 mins 9 secs 
+Peak Memory Usage:  718 MB
+Total REAL time to MAP completion:  5 mins 27 secs 
+Total CPU time to MAP completion:   5 mins 25 secs 
 
 Mapping completed.
 See MAP report file "system_map.mrp" for details.

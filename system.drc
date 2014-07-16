@@ -1,7 +1,7 @@
 Release 14.6 Drc P.68d (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Wed Jul 16 05:29:53 2014
+Wed Jul 16 08:21:22 2014
 
 drc -z system.ncd system.pcf
 
@@ -30,30 +30,6 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<0>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<1>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<2>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<3>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<8>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<9>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<10>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<11>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
    <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<4>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
@@ -78,16 +54,40 @@ WARNING:PhysDesignRules:367 - The signal
    <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<15>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<0>> is incomplete. The signal does
+   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<8>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<1>> is incomplete. The signal does
+   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<9>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<2>> is incomplete. The signal does
+   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<10>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<3>> is incomplete. The signal does
+   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<11>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<0>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<1>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<2>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<3>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<12>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<13>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<14>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<15>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<8>> is incomplete. The signal does
@@ -114,16 +114,16 @@ WARNING:PhysDesignRules:367 - The signal
    <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<7>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<12>> is incomplete. The signal does
+   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<0>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<13>> is incomplete. The signal does
+   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<1>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<14>> is incomplete. The signal does
+   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<2>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<15>> is incomplete. The signal does
+   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<3>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<0>> is incomplete. The signal does
@@ -150,18 +150,6 @@ WARNING:PhysDesignRules:367 - The signal
    <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<15>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<4>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<5>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<6>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<7>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
    <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<8>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
@@ -174,16 +162,16 @@ WARNING:PhysDesignRules:367 - The signal
    <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<11>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<12>> is incomplete. The signal does
+   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<4>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<13>> is incomplete. The signal does
+   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<5>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<14>> is incomplete. The signal does
+   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<6>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<15>> is incomplete. The signal does
+   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<7>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<4>> is incomplete. The signal does
@@ -210,6 +198,18 @@ WARNING:PhysDesignRules:367 - The signal
    <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<11>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<12>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<13>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<14>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<15>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
    <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<0>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
@@ -222,16 +222,16 @@ WARNING:PhysDesignRules:367 - The signal
    <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<3>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<4>> is incomplete. The signal does
+   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<0>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<5>> is incomplete. The signal does
+   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<1>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<6>> is incomplete. The signal does
+   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<2>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<7>> is incomplete. The signal does
+   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<3>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<8>> is incomplete. The signal does
@@ -258,16 +258,28 @@ WARNING:PhysDesignRules:367 - The signal
    <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<15>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<0>> is incomplete. The signal does
+   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<4>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<1>> is incomplete. The signal does
+   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<5>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<2>> is incomplete. The signal does
+   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<6>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<3>> is incomplete. The signal does
+   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<7>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<4>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<5>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<6>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<7>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<8>> is incomplete. The signal does
@@ -306,16 +318,16 @@ WARNING:PhysDesignRules:367 - The signal
    <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<3>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<4>> is incomplete. The signal does
+   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<4>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<5>> is incomplete. The signal does
+   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<5>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<6>> is incomplete. The signal does
+   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<6>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<7>> is incomplete. The signal does
+   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<7>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<12>> is incomplete. The signal does
@@ -330,18 +342,6 @@ WARNING:PhysDesignRules:367 - The signal
    <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<15>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<8>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<9>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<10>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<11>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
    <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<0>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
@@ -354,40 +354,16 @@ WARNING:PhysDesignRules:367 - The signal
    <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<3>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<4>> is incomplete. The signal does
+   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<8>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<5>> is incomplete. The signal does
+   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<9>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<6>> is incomplete. The signal does
+   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<10>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<7>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<0>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<1>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<2>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<3>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<4>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<5>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<6>> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<7>> is incomplete. The signal does
+   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<11>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<12>> is incomplete. The signal does
@@ -402,6 +378,18 @@ WARNING:PhysDesignRules:367 - The signal
    <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<15>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<0>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<1>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<2>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<3>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
    <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<8>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
@@ -412,6 +400,18 @@ WARNING:PhysDesignRules:367 - The signal
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<11>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<4>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<5>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<6>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<7>> is incomplete. The signal does
    not drive any load pins in the design.
 DRC detected 0 errors and 134 warnings.  Please see the previously displayed
 individual error or warning messages for more details.

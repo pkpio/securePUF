@@ -17,12 +17,12 @@
 module pufInterconNetwork(CHALLENGE, PDL_CONFIG, RESPONSE, trigger, reset);
 
 output [5:0] RESPONSE;
-input [63:0] CHALLENGE;
+input [31:0] CHALLENGE;
 input [127:0] PDL_CONFIG;
 input trigger;
 input reset;
 
-wire [63:0] CHALLENGE;
+wire [31:0] CHALLENGE;
 wire [127:0] PDL_CONFIG;
 wire [5:0] RESPONSE;
 

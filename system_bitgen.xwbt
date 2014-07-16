@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\Users\praveen\Downloads\securePUF\system.ncd
-OUTFILE=C:\Users\praveen\Downloads\securePUF\system.bit
+INFILE=C:\Users\praveen\Dropbox\PUF_Praveen_Bak\system.ncd
+OUTFILE=C:\Users\praveen\Dropbox\PUF_Praveen_Bak\system.bit
 FAMILY=Virtex5
 PART=xc5vlx110t-1ff1136
-WORKINGDIR=C:\Users\praveen\Downloads\securePUF
+WORKINGDIR=C:\Users\praveen\Dropbox\PUF_Praveen_Bak
 LICENSE=ISE
 USER_INFO=__0_0_0

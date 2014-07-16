@@ -43,7 +43,10 @@ module testPUF #(
 	input wire [PDL_CONFIG_WIDTH-1:0] pdl_config,
 	output wire done,
 	output wire [RESPONSE_WIDTH-1:0] raw_response,
-	output wire xor_response
+	output wire xor_response,
+	
+	//Puf mode - calib or test
+	input wire calibrate
     );
 	 
 	 wire [N_CB-1:0] C;
@@ -59,7 +62,7 @@ module testPUF #(
 
 //////////			Core PUF 			/////////////////
 mapping #(
-		.CHALLENGE_WIDTH(64),
+		.CHALLENGE_WIDTH(32),
 		.PDL_CONFIG_WIDTH(128),
 		.RESPONSE_WIDTH(6)
 	) puf_map (

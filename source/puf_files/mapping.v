@@ -18,7 +18,7 @@
 `default_nettype none
 
 module mapping #(
-	parameter CHALLENGE_WIDTH = 64,
+	parameter CHALLENGE_WIDTH = 32,
 	parameter PDL_CONFIG_WIDTH = 128,
 	parameter RESPONSE_WIDTH = 6
 )(
@@ -45,17 +45,17 @@ module mapping #(
 	
 /////////////  			 Input network			/////////////
 	
-	pufInputNetwork #(.Width(32))
+	pufInputNetwork #(.Width(CHALLENGE_WIDTH))
 					pin(
-						.dataIn(challenge[31:0]),
-						.dataOut(actual_challenge[31:0])
+						.dataIn(challenge[CHALLENGE_WIDTH-1:0]),
+						.dataOut(actual_challenge[CHALLENGE_WIDTH-1:0])
 					);
 					
 					
 ////////////	Interconnect network & PUF		///////////////
 	pufInterconNetwork picn (
-						.CHALLENGE(actual_challenge[63:0]),
-						.PDL_CONFIG(pdl_config[127:0]),
+						.CHALLENGE(actual_challenge[CHALLENGE_WIDTH-1:0]),
+						.PDL_CONFIG(pdl_config[PDL_CONFIG_WIDTH-1:0]),
 						.RESPONSE(raw_response),
 						.trigger(trigger),
 						.reset(reset)

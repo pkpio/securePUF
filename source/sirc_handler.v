@@ -168,8 +168,10 @@ module SircHandler #(
 	reg paramCount;
 
 	//Operands
-	reg [31:0] A;
-	reg [31:0] B;
+	reg [31:0] is_calibrate_mode;
+	reg [31:0] pc_challenge;
+	
+	reg calibrate;
 
 	// We don't write to the register file and we only write whole bytes to the output memory
 	assign register32WriteData = 32'd0;
@@ -189,8 +191,8 @@ module SircHandler #(
 
 	initial begin
 		currState = IDLE;
-		A = 0;
-		B = 0;
+		pc_challenge = 0;
+		is_calibrate_mode = 0;
 
 		userRunClear = 0;
 
@@ -237,7 +239,6 @@ module SircHandler #(
 					//Stop trying to clear the userRunRegister
 					userRunClear <= 0;
 					inputMemoryReadReq <= 0;
-					LED <= 8'b11111111;
 					challenge_ready <= 0;
 
 					//Wait till the run register goes high
@@ -263,8 +264,8 @@ module SircHandler #(
 
 					//If a read came back, shift in the value from the register file
 					if(register32ReadDataValid) begin
-							A <= B;
-							B <= register32ReadData;
+							is_calibrate_mode <= pc_challenge;
+							pc_challenge <= register32ReadData;
 							paramCount <= 1;
 
 							//The above block act as a shift register for operands A and B
@@ -276,6 +277,18 @@ module SircHandler #(
 								outputMemoryWriteAdd <= 0;
 								inputDone <= 0;
 								memCount <= 0;
+								
+								// Check the mode of operation requested by PC.
+								if(is_calibrate_mode == 32'h00000000) begin
+									calibrate <= 1;
+									LED <= 8'b11111111;
+								end
+								
+								else begin
+									calibrate <= 0;
+									LED <= 8'b10101010;
+								end
+								
 							end
 					end
 				end
@@ -342,9 +355,17 @@ module SircHandler #(
 					outputMemoryWriteReq <= 1;
 
 					if(outputMemoryWriteAdd <= 1) begin
-						outputMemoryWriteData <= response[outputMemoryWriteAdd];
-
-						/* TODO : Siam's writing back to pc code can go here. */
+						
+						// Write back raw responses in calibrate mode
+						if(calibrate == 1) begin
+							outputMemoryWriteData <= response[outputMemoryWriteAdd];
+						end
+							
+						// Write back siam's module values to PC.
+						else begin
+							outputMemoryWriteData <= douta;
+							raddr <= raddr + 1;
+						end
 
 					end
 
@@ -392,10 +413,12 @@ module SircHandler #(
 		.reset(reset),
 		.trigger(challenge_ready),
 		.pdl_config(challengeReg),
-		.mp_challenge({A[31:0], B[31:0]}),
+		.mp_challenge(pc_challenge[31:0]),
 		.done(response_ready),
 		.raw_response(responseReg[5:0]),
-		.xor_response(xor_response)
+		.xor_response(xor_response),
+		
+		.calibrate(calibrate)		// Tells if puf in calib mode or not
 	 );
 
 endmodule

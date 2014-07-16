@@ -1,7 +1,7 @@
 Release 14.6 - par P.68d (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Wed Jul 16 05:28:36 2014
+Wed Jul 16 08:20:01 2014
 
 
 # NOTE: This file is designed to be imported into a spreadsheet program
@@ -356,7 +356,7 @@ AK3|||MGTAVTTTX_122||||||||||||
 AK4|||GND||||||||||||
 AK5|||MGTAVCC_122||||||||||||
 AK6||IOBS|IO_L18N_18|UNUSED||18|||||||||
-AK7||IOBM|IO_L18P_18|UNUSED||18|||||||||
+AK7|start|IOB|IO_L18P_18|INPUT|LVCMOS25*|18||||NONE||LOCATED|NO|NONE|
 AK8||IOBM|IO_L13P_22|UNUSED||22|||||||||
 AK9||IOBS|IO_L13N_22|UNUSED||22|||||||||
 AK10|||GND||||||||||||
@@ -1060,7 +1060,7 @@ V4|||MGTRREF_112||||||||||||
 V5|||MGTAVTTRXC||||||||||||
 V6|||GND||||||||||||
 V7||IOBS|IO_L11N_CC_18|UNUSED||18|||||||||
-V8||IOBM|IO_L17P_18|UNUSED||18|||||||||
+V8|sw|IOB|IO_L17P_18|INPUT|LVCMOS25*|18||||NONE||LOCATED|NO|NONE|
 V9||IOBS|IO_L19N_18|UNUSED||18|||||||||
 V10||IOBM|IO_L19P_18|UNUSED||18|||||||||
 V11|||VCCAUX||||||||2.5||||
