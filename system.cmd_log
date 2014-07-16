@@ -45,113 +45,51 @@ map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -regist
 par -w -intstyle ise -ol high -mt off system_map.ncd system.ncd system.pcf 
 trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system.twx system.ncd -o system.twr system.pcf 
 bitgen -intstyle ise -f system.ut system.ncd 
-xst -intstyle ise -ifn "C:/Users/praveen/Downloads/PDL-master/PDL-master/Hardware/code/system.xst" -ofn "C:/Users/praveen/Downloads/PDL-master/PDL-master/Hardware/code/system.syr" 
-xst -intstyle ise -ifn "C:/Users/praveen/Downloads/code-secure/system.xst" -ofn "C:/Users/praveen/Downloads/code-secure/system.syr" 
-xst -intstyle ise -ifn "C:/Users/praveen/Downloads/code-secure/system.xst" -ofn "C:/Users/praveen/Downloads/code-secure/system.syr" 
-ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints/XUPV5system.ucf -uc constraints/puf_logic_constraints.ucf -uc constraints/pdl_constraints.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd  
+xst -intstyle ise -ifn "C:/Users/praveen/Downloads/Rice/PDL/system.xst" -ofn "C:/Users/praveen/Downloads/Rice/PDL/system.syr" 
 ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints/XUPV5system.ucf -uc constraints/puf_logic_constraints.ucf -uc constraints/pdl_constraints.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd  
 map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_map.ncd system.ngd system.pcf 
 par -w -intstyle ise -ol high -mt off system_map.ncd system.ncd system.pcf 
 trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system.twx system.ncd -o system.twr system.pcf 
 bitgen -intstyle ise -f system.ut system.ncd 
-xst -intstyle ise -ifn "C:/Users/praveen/Downloads/code-secure/system.xst" -ofn "C:/Users/praveen/Downloads/code-secure/system.syr" 
+xst -intstyle ise -ifn "C:/Users/praveen/Downloads/Rice/PDL/system.xst" -ofn "C:/Users/praveen/Downloads/Rice/PDL/system.syr" 
 ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints/XUPV5system.ucf -uc constraints/puf_logic_constraints.ucf -uc constraints/pdl_constraints.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_map.ncd system.ngd system.pcf 
+par -w -intstyle ise -ol high -mt off system_map.ncd system.ncd system.pcf 
+bitgen -intstyle ise -f system.ut system.ncd 
+xst -intstyle ise -ifn "C:/Users/praveen/Downloads/Rice/PDL/system.xst" -ofn "C:/Users/praveen/Downloads/Rice/PDL/system.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints/XUPV5system.ucf -uc constraints/puf_logic_constraints.ucf -uc constraints/pdl_constraints.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_map.ncd system.ngd system.pcf 
+par -w -intstyle ise -ol high -mt off system_map.ncd system.ncd system.pcf 
+xst -intstyle ise -ifn "C:/Users/praveen/Downloads/Rice/PDL/system.xst" -ofn "C:/Users/praveen/Downloads/Rice/PDL/system.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints/XUPV5system.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd  
 map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_map.ncd system.ngd system.pcf 
 par -w -intstyle ise -ol high -mt off system_map.ncd system.ncd system.pcf 
 trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system.twx system.ncd -o system.twr system.pcf 
 bitgen -intstyle ise -f system.ut system.ncd 
-xst -intstyle ise -ifn "C:/Users/praveen/Downloads/code-secure/system.xst" -ofn "C:/Users/praveen/Downloads/code-secure/system.syr" 
-ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints/XUPV5system.ucf -uc constraints/puf_logic_constraints.ucf -uc constraints/pdl_constraints.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd  
+xst -intstyle ise -ifn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.xst" -ofn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.syr" 
+xst -intstyle ise -ifn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.xst" -ofn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.syr" 
+xst -intstyle ise -ifn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.xst" -ofn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.syr" 
+xst -intstyle ise -ifn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.xst" -ofn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.syr" 
+xst -intstyle ise -ifn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.xst" -ofn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.syr" 
+xst -intstyle ise -ifn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.xst" -ofn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.syr" 
+xst -intstyle ise -ifn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.xst" -ofn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.syr" 
+xst -intstyle ise -ifn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.xst" -ofn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.syr" 
+xst -intstyle ise -ifn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.xst" -ofn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints/XUPV5system.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd  
+xst -intstyle ise -ifn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.xst" -ofn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.syr" 
+xst -intstyle ise -ifn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.xst" -ofn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints/XUPV5system.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd  
+xst -intstyle ise -ifn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.xst" -ofn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.syr" 
+xst -intstyle ise -ifn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.xst" -ofn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.syr" 
+xst -intstyle ise -ifn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.xst" -ofn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.syr" 
+xst -intstyle ise -ifn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.xst" -ofn "C:/Users/Siam/Dropbox/PUF/Design_PUF/PUF_Praveen/system.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints/XUPV5system.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd  
 map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_map.ncd system.ngd system.pcf 
-par -w -intstyle ise -ol high -mt off system_map.ncd system.ncd system.pcf 
-trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system.twx system.ncd -o system.twr system.pcf 
-bitgen -intstyle ise -f system.ut system.ncd 
-xst -intstyle ise -ifn "C:/Users/praveen/Downloads/code-secure/system.xst" -ofn "C:/Users/praveen/Downloads/code-secure/system.syr" 
-ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints/XUPV5system.ucf -uc constraints/puf_logic_constraints.ucf -uc constraints/pdl_constraints.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd  
 map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_map.ncd system.ngd system.pcf 
-par -w -intstyle ise -ol high -mt off system_map.ncd system.ncd system.pcf 
-trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system.twx system.ncd -o system.twr system.pcf 
-bitgen -intstyle ise -f system.ut system.ncd 
-xst -intstyle ise -ifn "C:/Users/praveen/Downloads/code-secure/system.xst" -ofn "C:/Users/praveen/Downloads/code-secure/system.syr" 
-ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints/XUPV5system.ucf -uc constraints/puf_logic_constraints.ucf -uc constraints/pdl_constraints.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints/XUPV5system.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd  
 map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_map.ncd system.ngd system.pcf 
-par -w -intstyle ise -ol high -mt off system_map.ncd system.ncd system.pcf 
-trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system.twx system.ncd -o system.twr system.pcf 
-bitgen -intstyle ise -f system.ut system.ncd 
-xst -intstyle ise -ifn "C:/Users/praveen/Downloads/code-secure/system.xst" -ofn "C:/Users/praveen/Downloads/code-secure/system.syr" 
-ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints/XUPV5system.ucf -uc constraints/puf_logic_constraints.ucf -uc constraints/pdl_constraints.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd  
-map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_map.ncd system.ngd system.pcf 
-par -w -intstyle ise -ol high -mt off system_map.ncd system.ncd system.pcf 
-trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system.twx system.ncd -o system.twr system.pcf 
-bitgen -intstyle ise -f system.ut system.ncd 
-xst -intstyle ise -ifn "C:/Users/praveen/Downloads/code-secure/system.xst" -ofn "C:/Users/praveen/Downloads/code-secure/system.syr" 
-ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints/XUPV5system.ucf -uc constraints/puf_logic_constraints.ucf -uc constraints/pdl_constraints.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd  
-map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_map.ncd system.ngd system.pcf 
-par -w -intstyle ise -ol high -mt off system_map.ncd system.ncd system.pcf 
-trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system.twx system.ncd -o system.twr system.pcf 
-bitgen -intstyle ise -f system.ut system.ncd 
-xst -intstyle ise -ifn "C:/Users/praveen/Downloads/code-secure/system.xst" -ofn "C:/Users/praveen/Downloads/code-secure/system.syr" 
-ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints/XUPV5system.ucf -uc constraints/puf_logic_constraints.ucf -uc constraints/pdl_constraints.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd  
-map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_map.ncd system.ngd system.pcf 
-par -w -intstyle ise -ol high -mt off system_map.ncd system.ncd system.pcf 
-trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system.twx system.ncd -o system.twr system.pcf 
-bitgen -intstyle ise -f system.ut system.ncd 
-xst -intstyle ise -ifn "C:/Users/praveen/Downloads/code-secure/system.xst" -ofn "C:/Users/praveen/Downloads/code-secure/system.syr" 
-ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints/XUPV5system.ucf -uc constraints/puf_logic_constraints.ucf -uc constraints/pdl_constraints.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd  
-map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_map.ncd system.ngd system.pcf 
-par -w -intstyle ise -ol high -mt off system_map.ncd system.ncd system.pcf 
-trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system.twx system.ncd -o system.twr system.pcf 
-bitgen -intstyle ise -f system.ut system.ncd 
-xst -intstyle ise -ifn "C:/Users/praveen/Downloads/code-secure/system.xst" -ofn "C:/Users/praveen/Downloads/code-secure/system.syr" 
-ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints/XUPV5system.ucf -uc constraints/puf_logic_constraints.ucf -uc constraints/pdl_constraints.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd  
-map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_map.ncd system.ngd system.pcf 
-par -w -intstyle ise -ol high -mt off system_map.ncd system.ncd system.pcf 
-trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system.twx system.ncd -o system.twr system.pcf 
-bitgen -intstyle ise -f system.ut system.ncd 
-xst -intstyle ise -ifn "C:/Users/praveen/Downloads/code-secure/system.xst" -ofn "C:/Users/praveen/Downloads/code-secure/system.syr" 
-ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints/XUPV5system.ucf -uc constraints/puf_logic_constraints.ucf -uc constraints/pdl_constraints.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd  
-map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_map.ncd system.ngd system.pcf 
-par -w -intstyle ise -ol high -mt off system_map.ncd system.ncd system.pcf 
-trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system.twx system.ncd -o system.twr system.pcf 
-bitgen -intstyle ise -f system.ut system.ncd 
-xst -intstyle ise -ifn "C:/Users/praveen/Downloads/code-secure/system.xst" -ofn "C:/Users/praveen/Downloads/code-secure/system.syr" 
-xst -intstyle ise -ifn "C:/Users/praveen/Downloads/code-secure/system.xst" -ofn "C:/Users/praveen/Downloads/code-secure/system.syr" 
-ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints/XUPV5system.ucf -uc constraints/puf_logic_constraints.ucf -uc constraints/pdl_constraints.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd  
-map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_map.ncd system.ngd system.pcf 
-ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints/XUPV5system.ucf -uc constraints/puf_logic_constraints.ucf -uc constraints/pdl_constraints.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd  
-map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_map.ncd system.ngd system.pcf 
-par -w -intstyle ise -ol high -mt off system_map.ncd system.ncd system.pcf 
-trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system.twx system.ncd -o system.twr system.pcf 
-bitgen -intstyle ise -f system.ut system.ncd 
-ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints/XUPV5system.ucf -uc constraints/puf_logic_constraints.ucf -uc constraints/pdl_constraints.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd  
-map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_map.ncd system.ngd system.pcf 
-par -w -intstyle ise -ol high -mt off system_map.ncd system.ncd system.pcf 
-trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system.twx system.ncd -o system.twr system.pcf 
-bitgen -intstyle ise -f system.ut system.ncd 
-xst -intstyle ise -ifn "C:/Users/praveen/Downloads/code-secure/system.xst" -ofn "C:/Users/praveen/Downloads/code-secure/system.syr" 
-ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints/XUPV5system.ucf -uc constraints/puf_logic_constraints.ucf -uc constraints/pdl_constraints.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd  
-map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_map.ncd system.ngd system.pcf 
-par -w -intstyle ise -ol high -mt off system_map.ncd system.ncd system.pcf 
-trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system.twx system.ncd -o system.twr system.pcf 
-bitgen -intstyle ise -f system.ut system.ncd 
-xst -intstyle ise -ifn "C:/Users/praveen/Downloads/code-secure/system.xst" -ofn "C:/Users/praveen/Downloads/code-secure/system.syr" 
-ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints/XUPV5system.ucf -uc constraints/puf_logic_constraints.ucf -uc constraints/pdl_constraints.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd  
-map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_map.ncd system.ngd system.pcf 
-par -w -intstyle ise -ol high -mt off system_map.ncd system.ncd system.pcf 
-trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system.twx system.ncd -o system.twr system.pcf 
-bitgen -intstyle ise -f system.ut system.ncd 
-xst -intstyle ise -ifn "C:/Users/praveen/Downloads/code-secure/system.xst" -ofn "C:/Users/praveen/Downloads/code-secure/system.syr" 
-xst -intstyle ise -ifn "C:/Users/praveen/Downloads/code-secure/system.xst" -ofn "C:/Users/praveen/Downloads/code-secure/system.syr" 
-xst -intstyle ise -ifn "C:/Users/praveen/Downloads/code-secure/system.xst" -ofn "C:/Users/praveen/Downloads/code-secure/system.syr" 
-xst -intstyle ise -ifn "C:/Users/praveen/Downloads/code-secure/system.xst" -ofn "C:/Users/praveen/Downloads/code-secure/system.syr" 
-xst -intstyle ise -ifn "C:/Users/praveen/Downloads/code-secure/system.xst" -ofn "C:/Users/praveen/Downloads/code-secure/system.syr" 
-ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints/XUPV5system.ucf -uc constraints/puf_logic_constraints.ucf -uc constraints/pdl_constraints.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd  
-map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_map.ncd system.ngd system.pcf 
-par -w -intstyle ise -ol high -mt off system_map.ncd system.ncd system.pcf 
-trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system.twx system.ncd -o system.twr system.pcf 
-bitgen -intstyle ise -f system.ut system.ncd 
-xst -intstyle ise -ifn "C:/Users/praveen/Downloads/code-secure/system.xst" -ofn "C:/Users/praveen/Downloads/code-secure/system.syr" 
-ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints/XUPV5system.ucf -uc constraints/puf_logic_constraints.ucf -uc constraints/pdl_constraints.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd  
+xst -intstyle ise -ifn "C:/Users/praveen/Downloads/securePUF/system.xst" -ofn "C:/Users/praveen/Downloads/securePUF/system.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints/pdl_constraints.ucf -uc constraints/XUPV5system.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd  
 map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_map.ncd system.ngd system.pcf 
 par -w -intstyle ise -ol high -mt off system_map.ncd system.ncd system.pcf 
 trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system.twx system.ncd -o system.twr system.pcf 

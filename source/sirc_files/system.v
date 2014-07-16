@@ -74,21 +74,13 @@ module system #(
 	//input	wire 				sysACE_MPIRQ,	//SystemACE active high interrupt request - currently unused
 
 	output	wire [7:0]	LED,					//8 optional LEDs for visual feedback & debugging
-		
-	//Few test NETs
-	output	wire	test1, //Pin attached to below switch
-	input		wire	test2 //Center dip switch
+	/////
+	input wire RST,
+	
+	input wire start,
+	input wire sw
+	/////
 );
-
-
-	//Start of Praveen Testing code
-	reg test2Reg;
-	always @(posedge CLK_100) begin
-		test2Reg <= test2;
-	end
-	assign test1 = test2Reg;
-	//End of Praveen testing code
-
 
 
 	//************Handle global asynchronous reset from physical switch on board
@@ -142,7 +134,7 @@ module system #(
 		.CLKOUT1(clk_125_eth_i),					// 125 MHz
 		//************USER CLOCK
 		//If the user's circuit requires a different PLL, comment out the following line
-		.CLKOUT2(clk_user_interface_i),					
+		.CLKOUT2(clk_user_interface_i),	//167MHz				
 		.CLKFBOUT(pllFB), 							// Clock feedback output
 		.CLKIN(CLK_100), 							// Clock input
 		.CLKFBIN(pllFB), 							// Clock feedback input
@@ -298,6 +290,9 @@ module system #(
 		.outputMemoryWriteByteMask(outputMemoryWriteByteMask),	//Allows byte-wise writes when multibyte words are used - each of the OUTMEM_USER_BYTE_WIDTH line can be 0 (do not write byte) or 1 (write byte)
 		
 		//Optional connection to 8 LEDs for debugging, etc.
-		.LED(LED)
+		.LED(LED),
+		.RST(RST),
+		.start(start),
+		.sw(sw)
 		 );
 endmodule

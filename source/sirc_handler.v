@@ -2,7 +2,7 @@
 //
 // Author 			:	Praveen Kumar Pendyala
 // Create Date		:   05/27/13
-// Modify Date		:	16/01/14
+// Modify Date		:	16/07/14
 // Module Name		:   SircHandler
 // Project Name     :   PDL
 // Target Devices	: 	Xilinx Vertix 5, XUPV5 110T
@@ -67,8 +67,61 @@ module SircHandler #(
 	output 	wire 		[(OUTMEM_BYTE_WIDTH - 1):0]				outputMemoryWriteByteMask,		//Allows byte-wise writes when multibyte words are used - each of the OUTMEM_USER_BYTE_WIDTH line can be 0 (do not write byte) or 1 (write byte)
 
 	//8 optional LEDs for visual feedback & debugging
-	output	reg 	[7:0]	LED
+	output reg 	[7:0]	LED,
+	input wire RST,
+	input wire start,
+	input wire sw
 );
+
+/////////////////////////////////////////////// Siam's main code start //////////////////////////////////////////////////////
+
+	wire clk_1, clk_2, clk_RNG, clk_sh;
+	CLOCK_TRNG CLOCK_TRNG1(
+	    .CLKIN1_IN(clk),      // IN 167 MHz
+	    .CLKOUT0_OUT(clk_1),     // OUT
+	    .CLKOUT1_OUT(clk_2),// OUT
+	    .CLKOUT2_OUT(clk_RNG),   // OUT
+	    .CLKOUT3_OUT(clk_sh));    // OUT
+		 
+	// memory
+	wire wea;	 
+	wire [12:0] addra, waddr;
+	reg [12:0] raddr;
+	wire [7:0] dina, douta;
+	assign addra = wea? waddr : raddr;
+	wire mem_clk;
+
+	BUFGMUX_CTRL MEMCLK (
+	.O(mem_clk), // 1-bit output: Clock output
+	.I0(clk_sh), // 1-bit input: Clock input (S=0)
+	.I1(clk_1), // 1-bit input: Clock input (S=1)
+	.S(wea) // 1-bit input: Clock select
+	);
+
+	RMEM rmem1 (
+	  .clka(mem_clk), // input clka
+	  .wea(wea), // input [0 : 0] wea
+	  .addra(addra), // input [12 : 0] addra
+	  .dina(dina), // input [7 : 0] dina
+	  .douta(douta) // output [7 : 0] douta
+	);
+
+	parameter N_CB = 64;
+	wire [7:0] test_result;
+	
+	
+	//******   TEST PUF CODE MOVED TO BOTTOM **//
+
+	//assign LED[7:0] = test_result;
+	//assign LED[7:0] = {~wea, ~wea, ~wea, ~wea, ~wea, ~wea, ~wea, ~wea};
+
+/////////////////////////////////////////// Siam's main code ends /////////////////////////////////////////////////////////	
+
+
+
+/////////////////////////////////////////// Praveen's modified SIRC FSM start ////////////////////////////////////////////
+
+
 	// Temps
 	wire xor_response;
 
@@ -157,7 +210,7 @@ module SircHandler #(
 	end
 
 
-	always @(posedge clk) begin
+	always @(posedge clk) begin		// Edit to clock as per siam's code
 		if(reset) begin
 			currState <= IDLE;
 
@@ -184,7 +237,7 @@ module SircHandler #(
 					//Stop trying to clear the userRunRegister
 					userRunClear <= 0;
 					inputMemoryReadReq <= 0;
-					LED <= 8'b00000000;
+					LED <= 8'b11111111;
 					challenge_ready <= 0;
 
 					//Wait till the run register goes high
@@ -242,7 +295,7 @@ module SircHandler #(
 					end
 					else if(inputMemoryReadReq == 1 && inputMemoryReadAck == 1 && inputMemoryReadAdd == 15)begin
 						inputDone <= 1;
-						LED[0] <= 1;
+						//LED[0] <= 1;
 						currState <= WAIT_READ;
 					end
 				end
@@ -290,6 +343,9 @@ module SircHandler #(
 
 					if(outputMemoryWriteAdd <= 1) begin
 						outputMemoryWriteData <= response[outputMemoryWriteAdd];
+
+						/* TODO : Siam's writing back to pc code can go here. */
+
 					end
 
 					//If we just wrote a value to the output memory this cycle, increment the address
@@ -312,20 +368,34 @@ module SircHandler #(
 		end
    end
 
-//This maps the received data among PUF modules and also issues the approriate RUN signals
-mapping #(
+/////////////////////////////////////////// Praveen's modified SIRC FSM end ////////////////////////////////////////////
+	testPUF #(
+		.N_CB(N_CB),
 		.CHALLENGE_WIDTH(64),
 		.PDL_CONFIG_WIDTH(128),
-		.RESPONSE_WIDTH(6)
-	) mp (
-		.clk(clk),
+		.RESPONSE_WIDTH(6)		/*** Make sure these params are added in test_puf **/
+		) testPUF(
+		/*********** Siam's port variables ********/
+	    .clk_1(clk_1), // main clock for FSM
+	    .clk_2(clk_2), // its freq is half that of clk_1, for the test 1.2 and 1.3 testing block will receive one input bit for two resonse bits from PUF
+	    .clk_RNG(clk_RNG), // its freq is 8 times that of clk_1, challenge bits are generated at a higher rate
+		 .rst(RST),  // -TODO- replace this
+		 .start(start), // -TODO - replace this
+		 .sw(sw), // -TODO - replace this
+	    .mem_we(wea), // write enable for memory
+	    .mem_waddr(waddr), // write address for memory
+	    .mem_din(dina), // data in for memory
+	    .test_result(test_result),
+
+	    /*********** Praveen's port variables *******/
+	   .clk(clk),
 		.reset(reset),
 		.trigger(challenge_ready),
 		.pdl_config(challengeReg),
-		.challenge({A[31:0], B[31:0]}),
+		.mp_challenge({A[31:0], B[31:0]}),
 		.done(response_ready),
 		.raw_response(responseReg[5:0]),
 		.xor_response(xor_response)
-	);
+	 );
 
 endmodule

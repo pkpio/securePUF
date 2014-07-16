@@ -10,14 +10,35 @@ Target Device  : xc5vlx110t
 Target Package : ff1136
 Target Speed   : -1
 Mapper Version : virtex5 -- $Revision: 1.55 $
-Mapped Date    : Wed Jul 16 02:23:28 2014
+Mapped Date    : Wed Jul 16 05:22:25 2014
 
 Mapping design into LUTs...
-WARNING:MapLib:1073 - This design has 1174 KEEP_HIERARCHY constraints specified
+WARNING:MapLib:1073 - This design has 1166 KEEP_HIERARCHY constraints specified
    and therefore, may take a very long time to process. If your design has
    unexpectedly long run times, please consider minimizing the number of
    KEEP_HIERARCHY constraints in your design or use the -ignore_keep_hierarchy
    command line switch to have them ignored by MAP.
+WARNING:MapLib:701 - Signal start connected to top level port start has been
+   removed.
+WARNING:MapLib:701 - Signal sw connected to top level port sw has been removed.
+WARNING:MapLib:41 - All members of TNM group "sh_CLOCK_TRNG1_CLKOUT0_BUF" have
+   been optimized out of the design.
+WARNING:MapLib:41 - All members of TNM group "sh_CLOCK_TRNG1_CLKOUT1_BUF" have
+   been optimized out of the design.
+WARNING:MapLib:41 - All members of TNM group "sh_CLOCK_TRNG1_CLKOUT3_BUF" have
+   been optimized out of the design.
+WARNING:MapLib:50 - The period specification "TS_sh_CLOCK_TRNG1_CLKOUT0_BUF" has
+   been discarded because the group "sh_CLOCK_TRNG1_CLKOUT0_BUF" has been
+   optimized away.
+WARNING:MapLib:50 - The period specification "TS_sh_CLOCK_TRNG1_CLKOUT1_BUF" has
+   been discarded because the group "sh_CLOCK_TRNG1_CLKOUT1_BUF" has been
+   optimized away.
+WARNING:MapLib:50 - The period specification "TS_sh_CLOCK_TRNG1_CLKOUT3_BUF" has
+   been discarded because the group "sh_CLOCK_TRNG1_CLKOUT3_BUF" has been
+   optimized away.
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   E2M/emac_ll/v5_emac_block_inst/v5_emac_wrapper_inst/v5_emac
+   of frag HOSTCLK connected to power/ground net E2M/EC/_mux0003
 WARNING:Pack:2874 - Trimming timing constraints from pin
    E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
    lid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B
@@ -998,10 +1019,6 @@ WARNING:Pack:2874 - Trimming timing constraints from pin
    E2M/EC/register32File/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/
    valid.cstr/ramloop[0].ram.r/v5_noinit.ram/TRUE_DP.SINGLE_PRIM36.TDP_REGCLKBL_
    tiesig
-WARNING:Pack:2874 - Trimming timing constraints from pin
-   E2M/emac_ll/v5_emac_block_inst/v5_emac_wrapper_inst/v5_emac
-   of frag HOSTCLK connected to power/ground net
-   E2M/emac_ll/v5_emac_block_inst/v5_emac_wrapper_inst/client_tx_data_0_i<10>
 Running directed packing...
 WARNING:Pack:2515 - The LUT-1 inverter "E2M/EC/sysACEIO_not00001_INV_0" failed
    to join the OLOGIC comp matched to output buffer
@@ -1075,11 +1092,11 @@ WARNING:Timing:3223 - Timing constraint TS_rx_fifo_rd_to_wr_0 = MAXDELAY FROM
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 1 mins 4 secs 
-Total CPU  time at the beginning of Placer: 58 secs 
+Total REAL time at the beginning of Placer: 1 mins 2 secs 
+Total CPU  time at the beginning of Placer: 1 mins 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:a7b99ac8) REAL time: 1 mins 15 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:60727454) REAL time: 1 mins 12 secs 
 
 Phase 2.7  Design Feasibility Check
 WARNING:Place:838 - An IO Bus with more than one IO standard is found.
@@ -1094,114 +1111,504 @@ WARNING:Place:838 - An IO Bus with more than one IO standard is found.
    	 Comp: LED<7>   IOSTANDARD = LVCMOS12
 
 
-Phase 2.7  Design Feasibility Check (Checksum:a7b99ac8) REAL time: 1 mins 15 secs 
+Phase 2.7  Design Feasibility Check (Checksum:60727454) REAL time: 1 mins 12 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:f910e790) REAL time: 1 mins 15 secs 
+Phase 3.31  Local Placement Optimization (Checksum:98499784) REAL time: 1 mins 12 secs 
 
 Phase 4.37  Local Placement Optimization
-Phase 4.37  Local Placement Optimization (Checksum:f910e790) REAL time: 1 mins 15 secs 
+Phase 4.37  Local Placement Optimization (Checksum:98499784) REAL time: 1 mins 12 secs 
 
 Phase 5.33  Local Placement Optimization
-Phase 5.33  Local Placement Optimization (Checksum:f910e790) REAL time: 2 mins 23 secs 
+Phase 5.33  Local Placement Optimization (Checksum:98499784) REAL time: 2 mins 24 secs 
 
 Phase 6.32  Local Placement Optimization
-Phase 6.32  Local Placement Optimization (Checksum:f910e790) REAL time: 2 mins 24 secs 
+Phase 6.32  Local Placement Optimization (Checksum:98499784) REAL time: 2 mins 25 secs 
 
 Phase 7.2  Initial Clock and IO Placement
 
-Phase 7.2  Initial Clock and IO Placement (Checksum:32fa643f) REAL time: 2 mins 25 secs 
+Phase 7.2  Initial Clock and IO Placement (Checksum:c36e20bb) REAL time: 2 mins 27 secs 
 
 Phase 8.36  Local Placement Optimization
-Phase 8.36  Local Placement Optimization (Checksum:32fa643f) REAL time: 2 mins 25 secs 
+Phase 8.36  Local Placement Optimization (Checksum:c36e20bb) REAL time: 2 mins 27 secs 
 
 Phase 9.30  Global Clock Region Assignment
-Phase 9.30  Global Clock Region Assignment (Checksum:32fa643f) REAL time: 2 mins 25 secs 
+Phase 9.30  Global Clock Region Assignment (Checksum:c36e20bb) REAL time: 2 mins 27 secs 
 
 Phase 10.3  Local Placement Optimization
-Phase 10.3  Local Placement Optimization (Checksum:32fa643f) REAL time: 2 mins 26 secs 
+Phase 10.3  Local Placement Optimization (Checksum:c36e20bb) REAL time: 2 mins 27 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:32fa643f) REAL time: 2 mins 26 secs 
+Phase 11.5  Local Placement Optimization (Checksum:c36e20bb) REAL time: 2 mins 28 secs 
 
 Phase 12.8  Global Placement
+.......................................
+............
+............................................
+.......................
+.......................
 ..............................
-......
-..............................
-................
-................
-.....................................
-Phase 12.8  Global Placement (Checksum:1224a27e) REAL time: 2 mins 48 secs 
+Phase 12.8  Global Placement (Checksum:ccf734c4) REAL time: 2 mins 51 secs 
 
 Phase 13.29  Local Placement Optimization
-Phase 13.29  Local Placement Optimization (Checksum:1224a27e) REAL time: 2 mins 48 secs 
+Phase 13.29  Local Placement Optimization (Checksum:ccf734c4) REAL time: 2 mins 51 secs 
 
 Phase 14.5  Local Placement Optimization
-Phase 14.5  Local Placement Optimization (Checksum:1224a27e) REAL time: 2 mins 49 secs 
+Phase 14.5  Local Placement Optimization (Checksum:ccf734c4) REAL time: 2 mins 52 secs 
 
 Phase 15.18  Placement Optimization
-Phase 15.18  Placement Optimization (Checksum:1c49805) REAL time: 3 mins 57 secs 
+Phase 15.18  Placement Optimization (Checksum:fd95b3d7) REAL time: 4 mins 3 secs 
 
 Phase 16.5  Local Placement Optimization
-Phase 16.5  Local Placement Optimization (Checksum:1c49805) REAL time: 3 mins 57 secs 
+Phase 16.5  Local Placement Optimization (Checksum:fd95b3d7) REAL time: 4 mins 4 secs 
 
 Phase 17.34  Placement Validation
-Phase 17.34  Placement Validation (Checksum:1c49805) REAL time: 3 mins 58 secs 
+Phase 17.34  Placement Validation (Checksum:fd95b3d7) REAL time: 4 mins 4 secs 
 
-Total REAL time to Placer completion: 3 mins 58 secs 
-Total CPU  time to Placer completion: 3 mins 47 secs 
+Total REAL time to Placer completion: 4 mins 5 secs 
+Total CPU  time to Placer completion: 3 mins 58 secs 
 Running post-placement packing...
 Writing output files...
-WARNING:PhysDesignRules:372 - Gated clock. Clock net sh/mp/picn/puf1/i2<0> is
-   sourced by a combinatorial pin. This is not good design practice. Use the CE
-   pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net sh/mp/picn/puf2/i2<0> is
-   sourced by a combinatorial pin. This is not good design practice. Use the CE
-   pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net sh/mp/picn/puf3/i2<0> is
-   sourced by a combinatorial pin. This is not good design practice. Use the CE
-   pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net sh/mp/picn/puf4/i2<0> is
-   sourced by a combinatorial pin. This is not good design practice. Use the CE
-   pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net sh/mp/picn/puf5/i2<0> is
-   sourced by a combinatorial pin. This is not good design practice. Use the CE
-   pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net sh/mp/picn/puf6/i2<0> is
-   sourced by a combinatorial pin. This is not good design practice. Use the CE
-   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   sh/testPUF/puf_map/picn/puf1/i2<0> is sourced by a combinatorial pin. This is
+   not good design practice. Use the CE pin to control the loading of data into
+   the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   sh/testPUF/puf_map/picn/puf2/i2<0> is sourced by a combinatorial pin. This is
+   not good design practice. Use the CE pin to control the loading of data into
+   the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   sh/testPUF/puf_map/picn/puf3/i2<0> is sourced by a combinatorial pin. This is
+   not good design practice. Use the CE pin to control the loading of data into
+   the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   sh/testPUF/puf_map/picn/puf4/i2<0> is sourced by a combinatorial pin. This is
+   not good design practice. Use the CE pin to control the loading of data into
+   the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   sh/testPUF/puf_map/picn/puf5/i2<0> is sourced by a combinatorial pin. This is
+   not good design practice. Use the CE pin to control the loading of data into
+   the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   sh/testPUF/puf_map/picn/puf6/i2<0> is sourced by a combinatorial pin. This is
+   not good design practice. Use the CE pin to control the loading of data into
+   the flip-flop.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<0>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<1>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<2>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<3>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<8>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<9>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<10>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<11>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<4>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<5>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<6>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<7>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<12>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<13>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<14>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[0].TRNG/R<15>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<0>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<1>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<2>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<3>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<8>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<9>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<10>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<11>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<4>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<5>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<6>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<7>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<12>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<13>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<14>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[1].TRNG/R<15>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<0>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<1>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<2>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<3>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<12>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<13>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<14>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<15>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<4>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<5>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<6>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<7>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<8>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<9>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<10>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[2].TRNG/R<11>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<12>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<13>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<14>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<15>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<4>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<5>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<6>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<7>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<8>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<9>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<10>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<11>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<0>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<1>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<2>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[3].TRNG/R<3>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<4>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<5>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<6>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<7>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<8>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<9>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<10>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<11>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<12>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<13>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<14>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<15>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<0>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<1>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<2>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[4].TRNG/R<3>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<8>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<9>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<10>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<11>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<12>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<13>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<14>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<15>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<0>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<1>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<2>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<3>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<4>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<5>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<6>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[5].TRNG/R<7>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<12>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<13>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<14>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<15>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<8>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<9>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<10>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<11>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<0>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<1>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<2>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<3>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<4>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<5>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<6>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[6].TRNG/R<7>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<0>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<1>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<2>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<3>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<4>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<5>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<6>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<7>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<12>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<13>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<14>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<15>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<8>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<9>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<10>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <sh/testPUF/challenge_gen/TRNG[7].TRNG/R<11>> is incomplete. The signal does
+   not drive any load pins in the design.
 
 Design Summary
 --------------
 
 Design Summary:
 Number of errors:      0
-Number of warnings:  166
+Number of warnings:  302
 Slice Logic Utilization:
-  Number of Slice Registers:                 1,345 out of  69,120    1%
-    Number used as Flip Flops:               1,345
-  Number of Slice LUTs:                      4,060 out of  69,120    5%
-    Number used as logic:                    4,041 out of  69,120    5%
-      Number using O6 output only:           3,707
+  Number of Slice Registers:                 1,472 out of  69,120    2%
+    Number used as Flip Flops:               1,472
+  Number of Slice LUTs:                      4,533 out of  69,120    6%
+    Number used as logic:                    4,513 out of  69,120    6%
+      Number using O6 output only:           4,177
       Number using O5 output only:             133
-      Number using O5 and O6:                  201
+      Number using O5 and O6:                  203
     Number used as Memory:                      11 out of  17,920    1%
       Number used as Shift Register:            11
         Number using O6 output only:            11
-    Number used as exclusive route-thru:         8
-  Number of route-thrus:                       143
-    Number using O6 output only:               140
+    Number used as exclusive route-thru:         9
+  Number of route-thrus:                       144
+    Number using O6 output only:               141
     Number using O5 output only:                 3
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 2,695 out of  17,280   15%
-  Number of LUT Flip Flop pairs used:        4,519
-    Number with an unused Flip Flop:         3,174 out of   4,519   70%
-    Number with an unused LUT:                 459 out of   4,519   10%
-    Number of fully used LUT-FF pairs:         886 out of   4,519   19%
-    Number of unique control sets:              86
+  Number of occupied Slices:                 2,744 out of  17,280   15%
+  Number of LUT Flip Flop pairs used:        4,935
+    Number with an unused Flip Flop:         3,463 out of   4,935   70%
+    Number with an unused LUT:                 402 out of   4,935    8%
+    Number of fully used LUT-FF pairs:       1,070 out of   4,935   21%
+    Number of unique control sets:              87
     Number of slice register sites lost
-      to control set restrictions:             172 out of  69,120    1%
+      to control set restrictions:             173 out of  69,120    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -1212,13 +1619,13 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        62 out of     640    9%
-    Number of LOCed IOBs:                       62 out of      62  100%
-    IOB Flip Flops:                             22
+  Number of bonded IOBs:                        61 out of     640    9%
+    Number of LOCed IOBs:                       61 out of      61  100%
+    IOB Flip Flops:                             21
 
 Specific Feature Utilization:
-  Number of BlockRAM/FIFO:                      39 out of     148   26%
-    Number using BlockRAM only:                 37
+  Number of BlockRAM/FIFO:                      40 out of     148   27%
+    Number using BlockRAM only:                 38
     Number using FIFO only:                      2
     Total primitives used:
       Number of 36k BlockRAM used:              35
@@ -1228,14 +1635,14 @@ Specific Feature Utilization:
   Number of BUFG/BUFGCTRLs:                      6 out of      32   18%
     Number used as BUFGs:                        6
   Number of IDELAYCTRLs:                         2 out of      22    9%
-  Number of PLL_ADVs:                            2 out of       6   33%
+  Number of PLL_ADVs:                            3 out of       6   50%
   Number of TEMACs:                              1 out of       2   50%
 
-Average Fanout of Non-Clock Nets:                5.21
+Average Fanout of Non-Clock Nets:                4.73
 
-Peak Memory Usage:  669 MB
-Total REAL time to MAP completion:  4 mins 12 secs 
-Total CPU time to MAP completion:   3 mins 59 secs 
+Peak Memory Usage:  671 MB
+Total REAL time to MAP completion:  4 mins 17 secs 
+Total CPU time to MAP completion:   4 mins 9 secs 
 
 Mapping completed.
 See MAP report file "system_map.mrp" for details.

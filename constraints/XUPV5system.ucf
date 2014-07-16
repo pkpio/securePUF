@@ -147,6 +147,8 @@ NET "sysACE_MPOE" LOC = N8;
 #INST "sysACE_MPBRDY"		LOC = "H5" | IOSTANDARD = LVDCI_33;
 #INST "sysACE_MPIRQ"		LOC = "M7" | IOSTANDARD = LVDCI_33;
 
+NET  RST            LOC="AJ6";   # Bank 18, Vcco=3.3V, No DCI GPIO_SW_C
+
 #LED 7
 NET "LED[0]" IOSTANDARD = LVDCI_18;
 NET "LED[0]" LOC = AE24;
@@ -176,13 +178,9 @@ NET "LED[7]" IOSTANDARD = LVCMOS12;
 NET "LED[7]" DRIVE = 8;
 NET "LED[7]" LOC = H18;
 
-#Few testing NETS
-#A test pin attached to switch defined below
-NET "test1" IOSTANDARD = LVCMOS12;
-NET "test1" DRIVE = 8;
-NET "test1" LOC = AH34;
-#Center dip switch - SW14
-NET "test2" LOC = AJ6;
+NET "sw" LOC = V8;
+NET "start" LOC = AK7;
+
 
 # ************ Timing constraints
 # 125 MHz ethernet clock - 100 ps extra leeway
@@ -339,6 +337,8 @@ NET "E2M/EC/userRunRegisterSetToggleUserSide[1]" TNM = "userRunSetTogUS";
 # These are the signals need to do a soft reset that need to cross the clock domains
 NET "E2M/EC/softResetToggle" TNM = "softResetCS";
 NET "E2M/EC/softResetToggleUserSide[1]" TNM = "softResetUS";
+TIMESPEC TS_userRunClearToggle = FROM "userRunSetTogCS" TO "userRunSetTogUS" 8000 ps DATAPATHONLY;
+TIMESPEC TS_userRunClearToggle = FROM "userRunSetTogCS" TO "userRunSetTogUS" 8000 ps DATAPATHONLY;
 TIMESPEC TS_userRunClearToggle = FROM "userRunSetTogCS" TO "userRunSetTogUS" 8000 ps DATAPATHONLY;
 
 # The slow hard reset line is not considered synchronous, but we make synchronous internal resets

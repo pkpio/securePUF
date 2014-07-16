@@ -11,6 +11,8 @@ CONFIG PART = 5vlx110tff1136-1;
 ###############################             PUF logic constraints       #################################
 #########################################################################################################
 
+###############		TEMPORARILY COMMENTED OUT		#########################
+
 #INST "sh/mp/alupuf/b1_11" BEL = CFF;
 #INST "sh/mp/alupuf/a2_11" BEL = DFF;
 #INST "sh/mp/alupuf/b1_12" BEL = CFF;
