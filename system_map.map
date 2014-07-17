@@ -10,10 +10,10 @@ Target Device  : xc5vlx110t
 Target Package : ff1136
 Target Speed   : -1
 Mapper Version : virtex5 -- $Revision: 1.55 $
-Mapped Date    : Thu Jul 17 19:16:55 2014
+Mapped Date    : Thu Jul 17 22:33:55 2014
 
 Mapping design into LUTs...
-WARNING:MapLib:1073 - This design has 1166 KEEP_HIERARCHY constraints specified
+WARNING:MapLib:1073 - This design has 1169 KEEP_HIERARCHY constraints specified
    and therefore, may take a very long time to process. If your design has
    unexpectedly long run times, please consider minimizing the number of
    KEEP_HIERARCHY constraints in your design or use the -ignore_keep_hierarchy
@@ -1138,13 +1138,13 @@ Asterisk (*) preceding a constraint indicates it was not met.
   ac0_clk_phy_rx0" 7.9 ns HIGH 50%          | HOLD        |    -0.544ns|            |      10|        5280
                                             | MINPERIOD   |     5.678ns|     2.222ns|       0|           0
 ----------------------------------------------------------------------------------------------------------
-* TS_sh_CLOCK_TRNG1_CLKOUT0_BUF = PERIOD TI | SETUP       |     1.132ns|    26.568ns|       0|           0
-  MEGRP "sh_CLOCK_TRNG1_CLKOUT0_BUF" TS_CLK | HOLD        |    -0.386ns|            |     108|       24148
-  _USER_INTERFACE / 0.09375 HIGH 50%        |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-* TS_sh_CLOCK_TRNG1_CLKOUT1_BUF = PERIOD TI | SETUP       |    61.386ns|     4.032ns|       0|           0
-  MEGRP "sh_CLOCK_TRNG1_CLKOUT1_BUF" TS_CLK | HOLD        |    -0.298ns|            |      32|        4200
+* TS_sh_CLOCK_TRNG1_CLKOUT1_BUF = PERIOD TI | SETUP       |   121.698ns|     3.912ns|       0|           0
+  MEGRP "sh_CLOCK_TRNG1_CLKOUT1_BUF" TS_CLK | HOLD        |    -0.005ns|            |       4|          20
   _USER_INTERFACE / 0.046875 HIGH 50%       |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_sh_CLOCK_TRNG1_CLKOUT0_BUF = PERIOD TI | SETUP       |     1.132ns|    26.568ns|       0|           0
+  MEGRP "sh_CLOCK_TRNG1_CLKOUT0_BUF" TS_CLK | HOLD        |     0.622ns|            |       0|           0
+  _USER_INTERFACE / 0.09375 HIGH 50%        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   TS_sysACE_MPDATAIN = MAXDELAY FROM TIMEGR | SETUP       |     2.000ns|     1.160ns|       0|           0
   P "sysACE_MPDATA" TO TIMEGRP "sysACE_clk_ | HOLD        |     0.507ns|            |       0|           0
@@ -1225,18 +1225,18 @@ Analyzed       |
 Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+---
 ----------+
-|TS_CLK_USER_INTERFACE          |      5.888ns|      8.671ns|      2.491ns|            8|          140|         7226|   
-    52979|
-| TS_sh_CLOCK_TRNG1_CLKOUT0_BUF |     62.805ns|     26.568ns|          N/A|          108|            0|         1577|   
+|TS_CLK_USER_INTERFACE          |      5.888ns|      8.671ns|      2.491ns|            8|            4|         7185|   
+    51197|
+| TS_sh_CLOCK_TRNG1_CLKOUT0_BUF |     62.805ns|     26.568ns|          N/A|            0|            0|           53|   
         0|
-| TS_sh_CLOCK_TRNG1_CLKOUT1_BUF |    125.611ns|      4.032ns|          N/A|           32|            0|        51242|   
+| TS_sh_CLOCK_TRNG1_CLKOUT1_BUF |    125.611ns|      3.912ns|          N/A|            4|            0|        50984|   
         0|
 | TS_sh_CLOCK_TRNG1_CLKOUT2_BUF |      7.851ns|      1.700ns|          N/A|            0|            0|          160|   
         0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+---
 ----------+
 
-5 constraints not met.
+4 constraints not met.
 INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
    constraint is not analyzed due to the following: No paths covered by this 
    constraint; Other constraints intersect with this constraint; or This 
@@ -1247,11 +1247,11 @@ INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 32 secs 
-Total CPU  time at the beginning of Placer: 31 secs 
+Total REAL time at the beginning of Placer: 35 secs 
+Total CPU  time at the beginning of Placer: 32 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:fc426ee0) REAL time: 36 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:9349db90) REAL time: 39 secs 
 
 Phase 2.7  Design Feasibility Check
 WARNING:Place:838 - An IO Bus with more than one IO standard is found.
@@ -1266,19 +1266,19 @@ WARNING:Place:838 - An IO Bus with more than one IO standard is found.
    	 Comp: LED<7>   IOSTANDARD = LVCMOS12
 
 
-Phase 2.7  Design Feasibility Check (Checksum:fc426ee0) REAL time: 36 secs 
+Phase 2.7  Design Feasibility Check (Checksum:9349db90) REAL time: 39 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:1565f730) REAL time: 36 secs 
+Phase 3.31  Local Placement Optimization (Checksum:2a0a4b78) REAL time: 39 secs 
 
 Phase 4.37  Local Placement Optimization
-Phase 4.37  Local Placement Optimization (Checksum:1565f730) REAL time: 36 secs 
+Phase 4.37  Local Placement Optimization (Checksum:2a0a4b78) REAL time: 39 secs 
 
 Phase 5.33  Local Placement Optimization
-Phase 5.33  Local Placement Optimization (Checksum:1565f730) REAL time: 1 mins 14 secs 
+Phase 5.33  Local Placement Optimization (Checksum:2a0a4b78) REAL time: 1 mins 19 secs 
 
 Phase 6.32  Local Placement Optimization
-Phase 6.32  Local Placement Optimization (Checksum:1565f730) REAL time: 1 mins 15 secs 
+Phase 6.32  Local Placement Optimization (Checksum:2a0a4b78) REAL time: 1 mins 20 secs 
 
 Phase 7.2  Initial Clock and IO Placement
 
@@ -1290,12 +1290,12 @@ WARNING:Place:971 - A GCLK / GCLK clock component pair have been found that are
    the same half of the device (TOP or BOTTOM). You may want to analyze why this
    problem exists and correct it. This is not an error so processing will
    continue.
-Phase 7.2  Initial Clock and IO Placement (Checksum:c6d1d1f5) REAL time: 1 mins 16 secs 
+Phase 7.2  Initial Clock and IO Placement (Checksum:817bb4a2) REAL time: 1 mins 21 secs 
 
 Phase 8.36  Local Placement Optimization
-Phase 8.36  Local Placement Optimization (Checksum:c6d1d1f5) REAL time: 1 mins 16 secs 
+Phase 8.36  Local Placement Optimization (Checksum:817bb4a2) REAL time: 1 mins 21 secs 
 
-.....................................
+.............................................................................
 Phase 9.30  Global Clock Region Assignment
 
 
@@ -1303,23 +1303,24 @@ Phase 9.30  Global Clock Region Assignment
 # GLOBAL CLOCK NET DISTRIBUTION UCF REPORT:
 #
 # Number of Global Clock Regions : 16
-# Number of Global Clock Networks: 12
+# Number of Global Clock Networks: 13
 #
 # Clock Region Assignment: SUCCESSFUL
 
 # Location of Clock Components
 INST "sh/MEMCLK" LOC = "BUFGCTRL_X0Y31" ;
 INST "sh/testPUF/mux_clk_test" LOC = "BUFGCTRL_X0Y30" ;
-INST "sh/testPUF/NIST/test8/en_BUFG" LOC = "BUFGCTRL_X0Y5" ;
+INST "sh/testPUF/NIST/test8/en_BUFG" LOC = "BUFGCTRL_X0Y6" ;
 INST "bufCLK_200" LOC = "BUFGCTRL_X0Y1" ;
 INST "bufCLK_125" LOC = "BUFGCTRL_X0Y2" ;
 INST "sh/CLOCK_TRNG1/CLKOUT0_BUFG_INST" LOC = "BUFGCTRL_X0Y29" ;
 INST "sh/CLOCK_TRNG1/CLKOUT1_BUFG_INST" LOC = "BUFGCTRL_X0Y28" ;
 INST "sh/CLOCK_TRNG1/CLKOUT2_BUFG_INST" LOC = "BUFGCTRL_X0Y27" ;
 INST "bufCLK_user" LOC = "BUFGCTRL_X0Y0" ;
-INST "sh/testPUF/NIST/test4/_and0000_BUFG" LOC = "BUFGCTRL_X0Y4" ;
+INST "sh/testPUF/NIST/test4/_and0000_BUFG" LOC = "BUFGCTRL_X0Y5" ;
 INST "E2M/gmii_rx_clk_delay_BUFG" LOC = "BUFGCTRL_X0Y26" ;
 INST "E2M/EC/bufSysACEClk" LOC = "BUFGCTRL_X0Y3" ;
+INST "sh/testPUF/test_trigger_BUFG" LOC = "BUFGCTRL_X0Y4" ;
 INST "sysACE_CLK" LOC = "AH17" ;
 INST "CLK_100" LOC = "AH15" ;
 INST "GMII_RX_CLK_0" LOC = "H17" ;
@@ -1337,7 +1338,7 @@ NET "sh/testPUF/clk_test" TNM_NET = "TN_sh/testPUF/clk_test" ;
 TIMEGRP "TN_sh/testPUF/clk_test" AREA_GROUP = "CLKAG_sh/testPUF/clk_test" ;
 AREA_GROUP "CLKAG_sh/testPUF/clk_test" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4, CLOCKREGION_X0Y5, CLOCKREGION_X1Y5, CLOCKREGION_X0Y6, CLOCKREGION_X1Y6, CLOCKREGION_X0Y7, CLOCKREGION_X1Y7 ;
 
-# sh/testPUF/NIST/test8/en driven by BUFGCTRL_X0Y5
+# sh/testPUF/NIST/test8/en driven by BUFGCTRL_X0Y6
 NET "sh/testPUF/NIST/test8/en" TNM_NET = "TN_sh/testPUF/NIST/test8/en" ;
 TIMEGRP "TN_sh/testPUF/NIST/test8/en" AREA_GROUP = "CLKAG_sh/testPUF/NIST/test8/en" ;
 AREA_GROUP "CLKAG_sh/testPUF/NIST/test8/en" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1 ;
@@ -1355,7 +1356,7 @@ AREA_GROUP "CLKAG_clk_125_eth" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLO
 # sh/clk_1 driven by BUFGCTRL_X0Y29
 NET "sh/clk_1" TNM_NET = "TN_sh/clk_1" ;
 TIMEGRP "TN_sh/clk_1" AREA_GROUP = "CLKAG_sh/clk_1" ;
-AREA_GROUP "CLKAG_sh/clk_1" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4, CLOCKREGION_X0Y5, CLOCKREGION_X1Y5, CLOCKREGION_X0Y6, CLOCKREGION_X1Y6, CLOCKREGION_X0Y7, CLOCKREGION_X1Y7 ;
+AREA_GROUP "CLKAG_sh/clk_1" RANGE =   CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4, CLOCKREGION_X0Y5, CLOCKREGION_X1Y5, CLOCKREGION_X0Y6, CLOCKREGION_X1Y6, CLOCKREGION_X0Y7, CLOCKREGION_X1Y7 ;
 
 # sh/clk_2 driven by BUFGCTRL_X0Y28
 NET "sh/clk_2" TNM_NET = "TN_sh/clk_2" ;
@@ -1372,10 +1373,10 @@ NET "clk_user_interface" TNM_NET = "TN_clk_user_interface" ;
 TIMEGRP "TN_clk_user_interface" AREA_GROUP = "CLKAG_clk_user_interface" ;
 AREA_GROUP "CLKAG_clk_user_interface" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4, CLOCKREGION_X0Y5, CLOCKREGION_X1Y5, CLOCKREGION_X0Y6, CLOCKREGION_X1Y6, CLOCKREGION_X0Y7, CLOCKREGION_X1Y7 ;
 
-# sh/testPUF/NIST/test4/_and0000 driven by BUFGCTRL_X0Y4
+# sh/testPUF/NIST/test4/_and0000 driven by BUFGCTRL_X0Y5
 NET "sh/testPUF/NIST/test4/_and0000" TNM_NET = "TN_sh/testPUF/NIST/test4/_and0000" ;
 TIMEGRP "TN_sh/testPUF/NIST/test4/_and0000" AREA_GROUP = "CLKAG_sh/testPUF/NIST/test4/_and0000" ;
-AREA_GROUP "CLKAG_sh/testPUF/NIST/test4/_and0000" RANGE =   CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4, CLOCKREGION_X0Y5, CLOCKREGION_X1Y5, CLOCKREGION_X0Y6, CLOCKREGION_X1Y6, CLOCKREGION_X0Y7, CLOCKREGION_X1Y7 ;
+AREA_GROUP "CLKAG_sh/testPUF/NIST/test4/_and0000" RANGE =   CLOCKREGION_X0Y2, CLOCKREGION_X1Y2 ;
 
 # E2M/gmii_rx_clk_delay driven by BUFGCTRL_X0Y26
 NET "E2M/gmii_rx_clk_delay" TNM_NET = "TN_E2M/gmii_rx_clk_delay" ;
@@ -1386,6 +1387,11 @@ AREA_GROUP "CLKAG_E2M/gmii_rx_clk_delay" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION
 NET "E2M/EC/sysACE_clk_o" TNM_NET = "TN_E2M/EC/sysACE_clk_o" ;
 TIMEGRP "TN_E2M/EC/sysACE_clk_o" AREA_GROUP = "CLKAG_E2M/EC/sysACE_clk_o" ;
 AREA_GROUP "CLKAG_E2M/EC/sysACE_clk_o" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4, CLOCKREGION_X0Y5, CLOCKREGION_X1Y5, CLOCKREGION_X0Y6, CLOCKREGION_X1Y6, CLOCKREGION_X0Y7, CLOCKREGION_X1Y7 ;
+
+# sh/testPUF/test_trigger driven by BUFGCTRL_X0Y4
+NET "sh/testPUF/test_trigger" TNM_NET = "TN_sh/testPUF/test_trigger" ;
+TIMEGRP "TN_sh/testPUF/test_trigger" AREA_GROUP = "CLKAG_sh/testPUF/test_trigger" ;
+AREA_GROUP "CLKAG_sh/testPUF/test_trigger" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4, CLOCKREGION_X0Y5, CLOCKREGION_X1Y5, CLOCKREGION_X0Y6, CLOCKREGION_X1Y6, CLOCKREGION_X0Y7, CLOCKREGION_X1Y7 ;
 
 # NOTE: 
 # This report is provided to help reproduce successful clock-region 
@@ -1400,12 +1406,12 @@ AREA_GROUP "CLKAG_E2M/EC/sysACE_clk_o" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X
 GLOBAL CLOCK NET LOADS DISTRIBUTION REPORT:
 
 Number of Global Clock Regions : 16
-Number of Global Clock Networks: 12
+Number of Global Clock Networks: 13
 
 Clock Region Assignment: SUCCESSFUL
 
 Clock-Region: <CLOCKREGION_X0Y0> 
- key resource utilizations (used/available): global-clocks - 1/10 ;
+ key resource utilizations (used/available): global-clocks - 3/10 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -1414,14 +1420,16 @@ Clock-Region: <CLOCKREGION_X0Y0>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
         |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |     12 |sh/testPUF/clk_test
+      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_125_eth
+      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_user_interface
+      0 |      0 |      0 |      0 |      0 |      0 |      3 |      0 |      0 |      0 |      0 |      0 |      0 |    173 |sh/testPUF/clk_test
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |     12 | Total 
+      4 |      0 |      0 |      0 |      0 |      0 |      3 |      0 |      0 |      0 |      0 |      0 |      0 |    173 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 
 Clock-Region: <CLOCKREGION_X1Y0> 
- key resource utilizations (used/available): global-clocks - 1/10 ;
+ key resource utilizations (used/available): global-clocks - 2/10 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -1430,9 +1438,10 @@ Clock-Region: <CLOCKREGION_X1Y0>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
         |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |sh/testPUF/NIST/test8/en
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     52 |sh/testPUF/NIST/test8/en
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     51 |sh/testPUF/clk_test
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 | Total 
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    103 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 
@@ -1446,19 +1455,19 @@ Clock-Region: <CLOCKREGION_X0Y1>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
         |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_125_eth
-      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     20 |clk_user_interface
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |sh/clk_1
-      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |sh/mem_clk
+      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_125_eth
+      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     20 |clk_user_interface
+      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |sh/mem_clk
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     22 |sh/testPUF/NIST/test8/en
-      0 |      0 |      0 |      0 |      0 |      0 |      5 |      0 |      0 |      0 |      0 |      0 |      0 |    124 |sh/testPUF/clk_test
+      0 |      0 |      0 |      0 |      0 |      0 |      4 |      0 |      0 |      0 |      0 |      0 |      0 |     52 |sh/testPUF/clk_test
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     17 |sh/testPUF/test_trigger
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      3 |      0 |      0 |      0 |      0 |      0 |      5 |      0 |      0 |      0 |      0 |      0 |      0 |    167 | Total 
+      6 |      0 |      0 |      0 |      0 |      0 |      4 |      0 |      0 |      0 |      0 |      0 |      0 |    111 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 
 Clock-Region: <CLOCKREGION_X1Y1> 
- key resource utilizations (used/available): global-clocks - 3/10 ;
+ key resource utilizations (used/available): global-clocks - 4/10 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -1467,16 +1476,17 @@ Clock-Region: <CLOCKREGION_X1Y1>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
         |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      0 |      0 |      0 |      0 |      0 |     10 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_125_eth
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    106 |sh/testPUF/NIST/test8/en
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    110 |sh/testPUF/clk_test
+      5 |      0 |      0 |      0 |      0 |     10 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_125_eth
+      5 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |clk_user_interface
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     58 |sh/testPUF/NIST/test8/en
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     15 |sh/testPUF/clk_test
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      0 |      0 |      0 |      0 |      0 |     10 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    216 | Total 
+     10 |      0 |      0 |      0 |      0 |     10 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     77 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 
 Clock-Region: <CLOCKREGION_X0Y2> 
- key resource utilizations (used/available): global-clocks - 6/10 ;
+ key resource utilizations (used/available): global-clocks - 5/10 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -1485,19 +1495,18 @@ Clock-Region: <CLOCKREGION_X0Y2>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
         |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |clk_125_eth
-      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |     50 |clk_user_interface
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     87 |sh/clk_1
-      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |sh/mem_clk
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     28 |sh/testPUF/NIST/test4/_and0000
-      0 |      0 |      0 |      0 |      0 |      0 |      3 |      0 |      0 |      0 |      0 |      0 |      0 |    140 |sh/testPUF/clk_test
+      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_125_eth
+      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     50 |clk_user_interface
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     12 |sh/testPUF/NIST/test4/_and0000
+      0 |      0 |      0 |      0 |      0 |      0 |      3 |      0 |      0 |      0 |      0 |      0 |      0 |     81 |sh/testPUF/clk_test
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     73 |sh/testPUF/test_trigger
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      3 |      0 |      0 |      0 |      0 |      0 |      3 |      0 |      0 |      0 |      0 |      0 |      2 |    309 | Total 
+      2 |      0 |      0 |      0 |      0 |      0 |      3 |      0 |      0 |      0 |      0 |      0 |      0 |    216 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 
 Clock-Region: <CLOCKREGION_X1Y2> 
- key resource utilizations (used/available): global-clocks - 3/10 ;
+ key resource utilizations (used/available): global-clocks - 4/10 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -1506,16 +1515,17 @@ Clock-Region: <CLOCKREGION_X1Y2>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
         |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    227 |clk_125_eth
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     10 |sh/testPUF/NIST/test4/_and0000
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      5 |sh/testPUF/clk_test
+      3 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    123 |clk_125_eth
+      3 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |     15 |clk_user_interface
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     28 |sh/testPUF/NIST/test4/_and0000
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     52 |sh/testPUF/clk_test
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    242 | Total 
+      6 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |    218 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 
 Clock-Region: <CLOCKREGION_X0Y3> 
- key resource utilizations (used/available): global-clocks - 5/10 ;
+ key resource utilizations (used/available): global-clocks - 4/10 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -1524,13 +1534,12 @@ Clock-Region: <CLOCKREGION_X0Y3>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
         |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     16 |clk_125_eth
-      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     63 |clk_user_interface
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     24 |sh/clk_1
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |     18 |sh/clk_RNG
-      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |     26 |sh/testPUF/clk_test
+      3 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     13 |clk_125_eth
+      3 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     64 |clk_user_interface
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     24 |sh/clk_RNG
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     32 |sh/testPUF/test_trigger
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      4 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      2 |    147 | Total 
+      6 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    133 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 
@@ -1544,16 +1553,16 @@ Clock-Region: <CLOCKREGION_X1Y3>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
         |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      4 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    217 |clk_125_eth
+      4 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    346 |clk_125_eth
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     13 |clk_200
-      4 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_user_interface
+      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     18 |clk_user_interface
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      8 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    230 | Total 
+      6 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    377 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 
 Clock-Region: <CLOCKREGION_X0Y4> 
- key resource utilizations (used/available): global-clocks - 7/10 ;
+ key resource utilizations (used/available): global-clocks - 8/10 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -1563,19 +1572,20 @@ Clock-Region: <CLOCKREGION_X0Y4>
         |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
       0 |      0 |      0 |      0 |     10 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |E2M/gmii_rx_clk_delay
-      4 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    171 |clk_125_eth
+      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    134 |clk_125_eth
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |clk_200
-      4 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |     34 |clk_user_interface
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |      0 |     11 |sh/clk_1
+      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |     11 |clk_user_interface
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      1 |sh/clk_1
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |sh/clk_2
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |     36 |sh/clk_RNG
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |     45 |sh/clk_RNG
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |sh/testPUF/test_trigger
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      8 |      0 |      0 |      0 |     10 |      0 |      0 |      0 |      0 |      0 |      1 |      4 |      4 |    252 | Total 
+      4 |      0 |      0 |      0 |     10 |      0 |      0 |      0 |      0 |      0 |      1 |      3 |      4 |    192 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 
 Clock-Region: <CLOCKREGION_X1Y4> 
- key resource utilizations (used/available): global-clocks - 5/10 ;
+ key resource utilizations (used/available): global-clocks - 4/10 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -1585,12 +1595,11 @@ Clock-Region: <CLOCKREGION_X1Y4>
         |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
       1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     32 |E2M/EC/sysACE_clk_o
-      2 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |     20 |     94 |E2M/gmii_rx_clk_delay
-      5 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      2 |    307 |clk_125_eth
-      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |clk_user_interface
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      8 |sh/clk_RNG
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      2 |      8 |E2M/gmii_rx_clk_delay
+      5 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |    244 |clk_125_eth
+      4 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_user_interface
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-     10 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |      0 |      0 |      0 |      0 |     22 |    445 | Total 
+     10 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |      0 |      0 |      0 |      0 |      2 |    284 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 
@@ -1604,18 +1613,18 @@ Clock-Region: <CLOCKREGION_X0Y5>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
         |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      4 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     28 |clk_125_eth
+      3 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     62 |clk_125_eth
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |clk_200
-      4 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     63 |clk_user_interface
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     31 |sh/clk_1
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      6 |     61 |sh/clk_RNG
+      3 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     69 |clk_user_interface
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      8 |     63 |sh/clk_RNG
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     31 |sh/testPUF/test_trigger
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      8 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      1 |      0 |      6 |    183 | Total 
+      6 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      1 |      0 |      8 |    225 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 
 Clock-Region: <CLOCKREGION_X1Y5> 
- key resource utilizations (used/available): global-clocks - 4/10 ;
+ key resource utilizations (used/available): global-clocks - 3/10 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -1625,16 +1634,15 @@ Clock-Region: <CLOCKREGION_X1Y5>
         |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
       1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |E2M/EC/sysACE_clk_o
-      3 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     32 |clk_125_eth
-      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     17 |clk_user_interface
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |     10 |sh/clk_RNG
+      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     14 |     54 |E2M/gmii_rx_clk_delay
+      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |     72 |clk_125_eth
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      6 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |     59 | Total 
+      4 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     16 |    126 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 
 Clock-Region: <CLOCKREGION_X0Y6> 
- key resource utilizations (used/available): global-clocks - 4/10 ;
+ key resource utilizations (used/available): global-clocks - 3/10 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -1643,17 +1651,16 @@ Clock-Region: <CLOCKREGION_X0Y6>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
         |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_125_eth
-      1 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_user_interface
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |sh/clk_1
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |     18 |sh/clk_RNG
+      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_125_eth
+      2 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_user_interface
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |     10 |sh/clk_RNG
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      2 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |     19 | Total 
+      4 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |     10 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 
 Clock-Region: <CLOCKREGION_X1Y6> 
- key resource utilizations (used/available): global-clocks - 3/10 ;
+ key resource utilizations (used/available): global-clocks - 4/10 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -1662,11 +1669,12 @@ Clock-Region: <CLOCKREGION_X1Y6>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
         |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      5 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_125_eth
-      5 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_user_interface
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     17 |sh/clk_RNG
+      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |     28 |E2M/gmii_rx_clk_delay
+      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      8 |clk_125_eth
+      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_user_interface
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |     26 |sh/clk_RNG
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-     10 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     17 | Total 
+      4 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      6 |     62 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 
@@ -1688,7 +1696,7 @@ Clock-Region: <CLOCKREGION_X0Y7>
 
 
 Clock-Region: <CLOCKREGION_X1Y7> 
- key resource utilizations (used/available): global-clocks - 2/10 ;
+ key resource utilizations (used/available): global-clocks - 0/10 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -1697,10 +1705,8 @@ Clock-Region: <CLOCKREGION_X1Y7>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
         |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      4 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_125_eth
-      4 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_user_interface
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      8 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 | Total 
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 NOTE:
@@ -1713,40 +1719,40 @@ maybe moved to adjacent clock-regions as long as the "number of clocks per regio
 ######################################################################################
 
 
-Phase 9.30  Global Clock Region Assignment (Checksum:c6d1d1f5) REAL time: 1 mins 20 secs 
+Phase 9.30  Global Clock Region Assignment (Checksum:817bb4a2) REAL time: 1 mins 26 secs 
 
 Phase 10.3  Local Placement Optimization
-Phase 10.3  Local Placement Optimization (Checksum:c6d1d1f5) REAL time: 1 mins 20 secs 
+Phase 10.3  Local Placement Optimization (Checksum:817bb4a2) REAL time: 1 mins 27 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:c6d1d1f5) REAL time: 1 mins 20 secs 
+Phase 11.5  Local Placement Optimization (Checksum:817bb4a2) REAL time: 1 mins 27 secs 
 
 Phase 12.8  Global Placement
-.....................................................
-.............
-...............................................................
+....................................................................................
+.......
+............................................
 ................
-.......................
-.......................
-Phase 12.8  Global Placement (Checksum:fff6c6e4) REAL time: 1 mins 37 secs 
+................
+............................................
+Phase 12.8  Global Placement (Checksum:61b6a785) REAL time: 1 mins 46 secs 
 
 Phase 13.29  Local Placement Optimization
-Phase 13.29  Local Placement Optimization (Checksum:fff6c6e4) REAL time: 1 mins 37 secs 
+Phase 13.29  Local Placement Optimization (Checksum:61b6a785) REAL time: 1 mins 46 secs 
 
 Phase 14.5  Local Placement Optimization
-Phase 14.5  Local Placement Optimization (Checksum:fff6c6e4) REAL time: 1 mins 38 secs 
+Phase 14.5  Local Placement Optimization (Checksum:61b6a785) REAL time: 1 mins 46 secs 
 
 Phase 15.18  Placement Optimization
-Phase 15.18  Placement Optimization (Checksum:dec2b6b6) REAL time: 2 mins 9 secs 
+Phase 15.18  Placement Optimization (Checksum:8a574270) REAL time: 2 mins 25 secs 
 
 Phase 16.5  Local Placement Optimization
-Phase 16.5  Local Placement Optimization (Checksum:dec2b6b6) REAL time: 2 mins 9 secs 
+Phase 16.5  Local Placement Optimization (Checksum:8a574270) REAL time: 2 mins 26 secs 
 
 Phase 17.34  Placement Validation
-Phase 17.34  Placement Validation (Checksum:dec2b6b6) REAL time: 2 mins 9 secs 
+Phase 17.34  Placement Validation (Checksum:8a574270) REAL time: 2 mins 26 secs 
 
-Total REAL time to Placer completion: 2 mins 10 secs 
-Total CPU  time to Placer completion: 2 mins 8 secs 
+Total REAL time to Placer completion: 2 mins 27 secs 
+Total CPU  time to Placer completion: 2 mins 22 secs 
 Running post-placement packing...
 Writing output files...
 WARNING:PhysDesignRules:372 - Gated clock. Clock net sh/testPUF/puf_map/picn/puf1/i2<0> is sourced by a combinatorial
@@ -1769,31 +1775,31 @@ Design Summary:
 Number of errors:      0
 Number of warnings:  172
 Slice Logic Utilization:
-  Number of Slice Registers:                 2,315 out of  69,120    3%
+  Number of Slice Registers:                 2,317 out of  69,120    3%
     Number used as Flip Flops:               2,145
-    Number used as Latches:                    170
-  Number of Slice LUTs:                      6,572 out of  69,120    9%
-    Number used as logic:                    6,506 out of  69,120    9%
-      Number using O6 output only:           5,465
-      Number using O5 output only:             370
-      Number using O5 and O6:                  671
+    Number used as Latches:                    172
+  Number of Slice LUTs:                      6,612 out of  69,120    9%
+    Number used as logic:                    6,546 out of  69,120    9%
+      Number using O6 output only:           5,512
+      Number using O5 output only:             369
+      Number using O5 and O6:                  665
     Number used as Memory:                      20 out of  17,920    1%
       Number used as Shift Register:            20
         Number using O6 output only:            20
     Number used as exclusive route-thru:        46
-  Number of route-thrus:                       440
-    Number using O6 output only:               412
-    Number using O5 output only:                28
+  Number of route-thrus:                       419
+    Number using O6 output only:               410
+    Number using O5 output only:                 9
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 3,424 out of  17,280   19%
-  Number of LUT Flip Flop pairs used:        7,195
-    Number with an unused Flip Flop:         4,880 out of   7,195   67%
-    Number with an unused LUT:                 623 out of   7,195    8%
-    Number of fully used LUT-FF pairs:       1,692 out of   7,195   23%
-    Number of unique control sets:             139
+  Number of occupied Slices:                 3,449 out of  17,280   19%
+  Number of LUT Flip Flop pairs used:        7,274
+    Number with an unused Flip Flop:         4,957 out of   7,274   68%
+    Number with an unused LUT:                 662 out of   7,274    9%
+    Number of fully used LUT-FF pairs:       1,655 out of   7,274   22%
+    Number of unique control sets:             140
     Number of slice register sites lost
-      to control set restrictions:             253 out of  69,120    1%
+      to control set restrictions:             251 out of  69,120    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -1809,27 +1815,27 @@ IO Utilization:
     IOB Flip Flops:                             21
 
 Specific Feature Utilization:
-  Number of BlockRAM/FIFO:                      42 out of     148   28%
-    Number using BlockRAM only:                 40
+  Number of BlockRAM/FIFO:                      41 out of     148   27%
+    Number using BlockRAM only:                 39
     Number using FIFO only:                      2
     Total primitives used:
       Number of 36k BlockRAM used:              37
       Number of 18k BlockRAM used:               4
       Number of 18k FIFO used:                   2
     Total Memory used (KB):                  1,440 out of   5,328   27%
-  Number of BUFG/BUFGCTRLs:                     12 out of      32   37%
-    Number used as BUFGs:                       10
+  Number of BUFG/BUFGCTRLs:                     13 out of      32   40%
+    Number used as BUFGs:                       11
     Number used as BUFGCTRLs:                    2
   Number of IDELAYCTRLs:                         2 out of      22    9%
   Number of DSP48Es:                            10 out of      64   15%
   Number of PLL_ADVs:                            3 out of       6   50%
   Number of TEMACs:                              1 out of       2   50%
 
-Average Fanout of Non-Clock Nets:                4.32
+Average Fanout of Non-Clock Nets:                4.31
 
-Peak Memory Usage:  732 MB
-Total REAL time to MAP completion:  2 mins 17 secs 
-Total CPU time to MAP completion:   2 mins 15 secs 
+Peak Memory Usage:  726 MB
+Total REAL time to MAP completion:  2 mins 34 secs 
+Total CPU time to MAP completion:   2 mins 29 secs 
 
 Mapping completed.
 See MAP report file "system_map.mrp" for details.

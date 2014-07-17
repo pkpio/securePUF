@@ -107,7 +107,7 @@ module SircHandler #(
 	);
 
 	parameter N_CB = 64;
-	wire [7:0] test_result;
+	//wire [7:0] test_result;
 	
 	
 	//******   TEST PUF CODE MOVED TO BOTTOM **//
@@ -123,7 +123,7 @@ module SircHandler #(
 
 
 	// Temps
-	wire xor_response;
+	//wire xor_response;
 
 	//FSM states
 	localparam  IDLE = 0;							// Waiting
@@ -439,7 +439,7 @@ module SircHandler #(
 	    .mem_we(wea), // write enable for memory
 	    .mem_waddr(waddr), // write address for memory
 	    .mem_din(dina), // data in for memory
-	    .test_result(test_result),
+	    //.test_result(test_result),
 
 	    /*********** Praveen's port variables *******/
 	   .clk(clk),
@@ -449,7 +449,6 @@ module SircHandler #(
 		.pc_challenge(pc_challenge[31:0]),
 		.done(response_ready),
 		.raw_response(responseReg[5:0]),
-		.xor_response(xor_response),
 		
 		.calibrate(calibrate),		// Tells if puf in calib mode or not
 		.test_start(test_start),

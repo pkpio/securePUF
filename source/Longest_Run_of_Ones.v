@@ -124,7 +124,8 @@ module calculate_chi_sqr(
 	input wire en,
 	output wire [20:0] chi_sqr
 	);
-	
+
+(* KEEP = "TRUE" *) (* S = "TRUE" *)
 reg [9:0] v0_sqr, v1_sqr, v2_sqr, v3_sqr;
 /*
 (1024/pi) =	

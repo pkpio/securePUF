@@ -34,7 +34,7 @@ module testPUF #(
 	output reg mem_we, // write enable for memory
 	output reg [12:0] mem_waddr, // write address for memory
 	output reg [7:0] mem_din, // data in for memory
-	output wire [7:0] test_result,
+	//output wire [7:0] test_result,
 	 
 	 //Praveen's ports
 	input wire clk,
@@ -44,7 +44,7 @@ module testPUF #(
 	input wire [PDL_CONFIG_WIDTH-1:0] pdl_config,
 	output wire done,
 	output wire [RESPONSE_WIDTH-1:0] raw_response,
-	output wire xor_response,
+	//output wire xor_response,
 	
 	// Other ports for integration
 	input wire calibrate,  //Puf mode - calib or test
@@ -58,6 +58,9 @@ module testPUF #(
 	 wire [CHALLENGE_WIDTH-1:0] puf_challenge;
 	 wire trigger;
 	 reg test_trigger;
+	 
+	 
+	 (* KEEP = "TRUE" *) (* S = "TRUE" *) wire xor_response;
 	 
 // Choose challenge source based on mode
 
@@ -104,13 +107,15 @@ mapping #(
 ///////////		Clocks generator		////////////	
 	BUFGMUX_CTRL mux_clk_test (
 	.O(clk_test), // 1-bit output: Clock output
-	.I0(clk_1), // 1-bit input: Clock input (S=0)
+	.I0(test_trigger), // 1-bit input: Clock input (S=0)
 	.I1(clk_2), // 1-bit input: Clock input (S=1)
 	.S(sel_clk_test) // 1-bit input: Clock select
 	);
 	 
 	reg test_data;
 	wire response;
+	reg tempCount;
+	wire [7:0] test_result;
 	
 ///////////			NIST			////////////
 	NIST NIST(
@@ -127,139 +132,126 @@ mapping #(
 	
 	reg [4:0] state;
 	reg [3:0] clockCount;
-	 
-	 always @(posedge clk_1) 
-	 
-	 
-	 if (rst) begin
-		state <= 0;
-	 end
-	 else begin
-		test_trigger <= ~test_trigger;
-		case (state)
-		
-		0:	begin		
-			mem_we <= 1; 
-			mem_waddr <= 0;
-			test_done <= 0; // Edit
-			clockCount <= 0;
-			
-			if (test_start) begin // push button // Edit
-				state <= 1;
-				//LED <= 8'b00000000;
-				//if(sw) state <= 1; // dip switch
-				//else state <= 5; // calibration starts at this state 
-			end
-			else state <= 0;
-			end
-		
-		1:	begin
-			// init
-			resp_bit_count<= 0; 
-			test_count <= 0; 
-			test1 <= 0; 
-			test2 <= 0; 
-			test3 <= 0; 
-			test4 <= 0;
-			test5 <= 0; 
-			test6 <= 0; 
-			test7 <= 0; 
-			test8 <= 0; 
-			test_index <= 0;
-						
-			sel_clk_test <= 0; // for test 1.1 one response bit is generated per challenge, testing block operates at the same freq as the FSM
-			
-			gen_challenge <= C; // feed challenge
-			
-			LED <= 8'b10101010;
-			
-			state <= 2;
-			clockCount <= 0;
-			end
-			
-		2:	begin			
-			gen_challenge <= C; // feed challenge
-			test_data <= xor_response; // read response and feed that to testing block
-			resp_bit_count <= resp_bit_count+1; // count response bits
-			LED <= 8'b00110011;
-			
-			if (resp_bit_count == 19999) state <= 3; // one round of testing is done, go to next state and read test results
-			else state <= 2;
-			
-			end
-			
-		3: begin
-			gen_challenge <= C; // feed challenge, while we are reading the test results, we should keep on testing
-			test_data <= xor_response; // read response and feed that to testing block
-			resp_bit_count <= 0; // reset bit count for next round of testing
-			
-			LED <= test_result;
-			
-			
-			// add the results
-			test1 <= test1 + test_result[0];
-			test2 <= test2 + test_result[1];
-			test3 <= test3 + test_result[2];
-			test4 <= test4 + test_result[3];
-			test5 <= test5 + test_result[4];
-			test6 <= test6 + test_result[5];
-			test7 <= test7 + test_result[6];
-			test8 <= test8 + test_result[7];
-			
-			test_count <= test_count + 1;	// count the no of testing rounds		
-			if (test_count==254) state <= 4;  // testing done for the first phase, go to next state to store the test results
-			else state <= 2; // keep on testing
-			end
-			
-		4:	begin
-			gen_challenge <= C; // feed challenge
-			test_data <= xor_response; // read response and feed that to testing block
-			
-			mem_waddr <= mem_waddr + 1;
-			test_index <= test_index + 1;
-			if (test_index == 0) mem_din <= test1;
-			else if (test_index == 1) mem_din <= test2;
-			else if (test_index == 2) mem_din <= test3;
-			else if (test_index == 3) mem_din <= test4;
-			else if (test_index == 4) mem_din <= test5;
-			else if (test_index == 5) mem_din <= test6;
-			else if (test_index == 6) mem_din <= test7;
-			else if (test_index == 7) mem_din <= test8;
-			
-			if (test_index == 7) state <= 15; // storing test results is done, go to last state 
-			else state <= 4; // keep on stroing test results
-			end
-			
-		15:begin
-			gen_challenge <= C; // feed challenge
-			test_data <= xor_response; // read response and feed that to testing block
-			
-			mem_we <= 0; // now we read the results from memory
-			state <= 15;	// Edit 15
-			test_done <= 1; // Edit
-			end
-		
-		endcase
-	 end
 	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	 
+	 always @(posedge clk_1) begin		
+			test_trigger <= ~test_trigger;
+	 end
+	 
+	 always @(negedge test_trigger) begin 
+	 
+		 if (rst) begin
+			state <= 0;
+		 end
+		 else begin
+			case (state)
+			
+			0:	begin		
+				mem_we <= 1; 
+				mem_waddr <= 0;
+				test_done <= 0; // Edit
+				clockCount <= 0;
+				
+				if (test_start) begin // push button // Edit
+					state <= 1;
+					//LED <= 8'b00000000;
+					//if(sw) state <= 1; // dip switch
+					//else state <= 5; // calibration starts at this state 
+				end
+				else state <= 0;
+				end
+			
+			1:	begin
+				// init
+				resp_bit_count<= 0; 
+				test_count <= 0; 
+				test1 <= 0; 
+				test2 <= 0; 
+				test3 <= 0; 
+				test4 <= 0;
+				test5 <= 0; 
+				test6 <= 0; 
+				test7 <= 0; 
+				test8 <= 0; 
+				test_index <= 0;
+							
+				sel_clk_test <= 0; // for test 1.1 one response bit is generated per challenge, testing block operates at the same freq as the FSM
+				
+				gen_challenge <= C; // feed challenge
+				
+				LED <= 8'b10101010;
+				
+				state <= 2;
+				clockCount <= 0;
+				end
+				
+			2:	begin			
+				gen_challenge <= C; // feed challenge
+				test_data <= xor_response; // read response and feed that to testing block
+				resp_bit_count <= resp_bit_count+1; // count response bits
+				LED <= 8'b00110011;
+				
+				if (resp_bit_count == 19999) state <= 3; // one round of testing is done, go to next state and read test results
+				else state <= 2;
+				
+				end
+				
+			3: begin
+				gen_challenge <= C; // feed challenge, while we are reading the test results, we should keep on testing
+				test_data <= xor_response; // read response and feed that to testing block
+				resp_bit_count <= 0; // reset bit count for next round of testing
+				
+				LED <= test_result;
+				
+				
+				// add the results
+				test1 <= test1 + test_result[0];
+				test2 <= test2 + test_result[1];
+				test3 <= test3 + test_result[2];
+				test4 <= test4 + test_result[3];
+				test5 <= test5 + test_result[4];
+				test6 <= test6 + test_result[5];
+				test7 <= test7 + test_result[6];
+				test8 <= test8 + test_result[7];
+				
+				test_count <= test_count + 1;	// count the no of testing rounds		
+				if (test_count==254) state <= 4;  // testing done for the first phase, go to next state to store the test results
+				else state <= 2; // keep on testing
+				end
+				
+			4:	begin
+				gen_challenge <= C; // feed challenge
+				test_data <= xor_response; // read response and feed that to testing block
+				
+				mem_waddr <= mem_waddr + 1;
+				test_index <= test_index + 1;
+				if (test_index == 0) mem_din <= test1;
+				else if (test_index == 1) mem_din <= test2;
+				else if (test_index == 2) mem_din <= test3;
+				else if (test_index == 3) mem_din <= test4;
+				else if (test_index == 4) mem_din <= test5;
+				else if (test_index == 5) mem_din <= test6;
+				else if (test_index == 6) mem_din <= test7;
+				else if (test_index == 7) mem_din <= test8;
+				
+				if (test_index == 7) state <= 15; // storing test results is done, go to last state 
+				else state <= 4; // keep on stroing test results
+				
+				end
+				
+			15:begin
+				gen_challenge <= C; // feed challenge
+				test_data <= xor_response; // read response and feed that to testing block
+				
+				mem_we <= 0; // now we read the results from memory
+				state <= 15;	
+				test_done <= 1; // To tell SircHandler to start writing to PC.
+				end
+			
+			endcase
+		 end
+		
+	end
 
 
 endmodule

@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.18 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.18 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> Reading design: system.prj
 
@@ -1487,6 +1487,8 @@ Analyzing module <testPUF> in library <work>.
 	RESPONSE_WIDTH = 32'sb00000000000000000000000000000110
 Module <testPUF> is correct for synthesis.
  
+    Set user-defined property "KEEP =  TRUE" for signal <xor_response>.
+    Set user-defined property "S =  TRUE" for signal <xor_response>.
 Analyzing module <challenge_gen> in library <work>.
 	N = 32'sb00000000000000000000000000010000
 	N_CB = 32'sb00000000000000000000000001000000
@@ -1541,6 +1543,9 @@ Analyzing module <mapping> in library <work>.
 	RESPONSE_WIDTH = 32'sb00000000000000000000000000000110
 Module <mapping> is correct for synthesis.
  
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <picn> in unit <mapping>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pin> in unit <mapping>.
+    Set user-defined property "KEEP_HIERARCHY =  TRUE" for instance <pon> in unit <mapping>.
 Analyzing module <pufInputNetwork> in library <work>.
 	N = 32'sb00000000000000000000000000100000
 	Width = 32'sb00000000000000000000000000100000
@@ -2368,6 +2373,14 @@ Module <Longest_Run_of_Ones> is correct for synthesis.
 Analyzing module <calculate_chi_sqr> in library <work>.
 Module <calculate_chi_sqr> is correct for synthesis.
  
+    Set user-defined property "KEEP =  TRUE" for signal <v0_sqr>.
+    Set user-defined property "S =  TRUE" for signal <v0_sqr>.
+    Set user-defined property "KEEP =  TRUE" for signal <v1_sqr>.
+    Set user-defined property "S =  TRUE" for signal <v1_sqr>.
+    Set user-defined property "KEEP =  TRUE" for signal <v2_sqr>.
+    Set user-defined property "S =  TRUE" for signal <v2_sqr>.
+    Set user-defined property "KEEP =  TRUE" for signal <v3_sqr>.
+    Set user-defined property "S =  TRUE" for signal <v3_sqr>.
 Analyzing module <Nonoverlapping_template> in library <work>.
 	B = 4'b1100
 	M = 32'sb00000000000000000000000100000000
@@ -2542,35 +2555,35 @@ WARNING:Xst:737 - Found 10-bit latch for signal <v1_sqr>. Latches may be generat
 WARNING:Xst:737 - Found 10-bit latch for signal <v2_sqr>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 10-bit latch for signal <v3_sqr>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Found 21-bit adder for signal <chi_sqr>.
-    Found 21-bit adder for signal <chi_sqr$addsub0000> created at line 137.
-    Found 21-bit adder for signal <chi_sqr$addsub0001> created at line 137.
-    Found 21-bit adder for signal <chi_sqr$addsub0002> created at line 137.
-    Found 21-bit adder for signal <chi_sqr$addsub0003> created at line 137.
-    Found 21-bit adder for signal <chi_sqr$addsub0004> created at line 137.
-    Found 21-bit adder for signal <chi_sqr$addsub0005> created at line 137.
-    Found 21-bit adder for signal <chi_sqr$addsub0006> created at line 137.
-    Found 21-bit adder for signal <chi_sqr$addsub0007> created at line 137.
-    Found 21-bit adder for signal <chi_sqr$addsub0008> created at line 137.
-    Found 21-bit adder for signal <chi_sqr$addsub0009> created at line 137.
-    Found 21-bit adder for signal <chi_sqr$addsub0010> created at line 137.
-    Found 21-bit adder for signal <chi_sqr$addsub0011> created at line 137.
-    Found 21-bit adder for signal <chi_sqr$addsub0012> created at line 137.
-    Found 21-bit adder for signal <chi_sqr$addsub0013> created at line 137.
-    Found 21-bit adder for signal <chi_sqr$addsub0014> created at line 137.
-    Found 21-bit adder for signal <chi_sqr$addsub0015> created at line 137.
-    Found 21-bit adder for signal <chi_sqr$addsub0016> created at line 137.
-    Found 21-bit adder for signal <chi_sqr$addsub0017> created at line 137.
-    Found 21-bit adder for signal <chi_sqr$addsub0018> created at line 137.
-    Found 21-bit adder for signal <chi_sqr$addsub0019> created at line 137.
-    Found 21-bit adder for signal <chi_sqr$addsub0020> created at line 137.
-    Found 21-bit adder for signal <chi_sqr$addsub0021> created at line 137.
-    Found 21-bit adder for signal <chi_sqr$addsub0022> created at line 137.
-    Found 21-bit adder for signal <chi_sqr$addsub0023> created at line 137.
-    Found 21-bit adder for signal <chi_sqr$addsub0024> created at line 137.
-    Found 5x5-bit multiplier for signal <v0_sqr$mult0000> created at line 143.
-    Found 5x5-bit multiplier for signal <v1_sqr$mult0000> created at line 144.
-    Found 5x5-bit multiplier for signal <v2_sqr$mult0000> created at line 145.
-    Found 5x5-bit multiplier for signal <v3_sqr$mult0000> created at line 146.
+    Found 21-bit adder for signal <chi_sqr$addsub0000> created at line 138.
+    Found 21-bit adder for signal <chi_sqr$addsub0001> created at line 138.
+    Found 21-bit adder for signal <chi_sqr$addsub0002> created at line 138.
+    Found 21-bit adder for signal <chi_sqr$addsub0003> created at line 138.
+    Found 21-bit adder for signal <chi_sqr$addsub0004> created at line 138.
+    Found 21-bit adder for signal <chi_sqr$addsub0005> created at line 138.
+    Found 21-bit adder for signal <chi_sqr$addsub0006> created at line 138.
+    Found 21-bit adder for signal <chi_sqr$addsub0007> created at line 138.
+    Found 21-bit adder for signal <chi_sqr$addsub0008> created at line 138.
+    Found 21-bit adder for signal <chi_sqr$addsub0009> created at line 138.
+    Found 21-bit adder for signal <chi_sqr$addsub0010> created at line 138.
+    Found 21-bit adder for signal <chi_sqr$addsub0011> created at line 138.
+    Found 21-bit adder for signal <chi_sqr$addsub0012> created at line 138.
+    Found 21-bit adder for signal <chi_sqr$addsub0013> created at line 138.
+    Found 21-bit adder for signal <chi_sqr$addsub0014> created at line 138.
+    Found 21-bit adder for signal <chi_sqr$addsub0015> created at line 138.
+    Found 21-bit adder for signal <chi_sqr$addsub0016> created at line 138.
+    Found 21-bit adder for signal <chi_sqr$addsub0017> created at line 138.
+    Found 21-bit adder for signal <chi_sqr$addsub0018> created at line 138.
+    Found 21-bit adder for signal <chi_sqr$addsub0019> created at line 138.
+    Found 21-bit adder for signal <chi_sqr$addsub0020> created at line 138.
+    Found 21-bit adder for signal <chi_sqr$addsub0021> created at line 138.
+    Found 21-bit adder for signal <chi_sqr$addsub0022> created at line 138.
+    Found 21-bit adder for signal <chi_sqr$addsub0023> created at line 138.
+    Found 21-bit adder for signal <chi_sqr$addsub0024> created at line 138.
+    Found 5x5-bit multiplier for signal <v0_sqr$mult0000> created at line 144.
+    Found 5x5-bit multiplier for signal <v1_sqr$mult0000> created at line 145.
+    Found 5x5-bit multiplier for signal <v2_sqr$mult0000> created at line 146.
+    Found 5x5-bit multiplier for signal <v3_sqr$mult0000> created at line 147.
     Summary:
 	inferred  26 Adder/Subtractor(s).
 	inferred   4 Multiplier(s).
@@ -3497,6 +3510,7 @@ Synthesizing Unit <testPUF>.
     Related source file is "source/test_PUF.v".
 WARNING:Xst:647 - Input <start> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <sw> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <tempCount> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <response> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <gen_challenge<63:32>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <clockCount> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -3506,7 +3520,7 @@ WARNING:Xst:646 - Signal <clockCount> is assigned but never used. This unconnect
     | Transitions        | 10                                             |
     | Inputs             | 4                                              |
     | Outputs            | 7                                              |
-    | Clock              | clk_1                     (rising_edge)        |
+    | Clock              | test_trigger              (falling_edge)       |
     | Reset              | rst                       (positive)           |
     | Reset type         | synchronous                                    |
     | Reset State        | 00000                                          |
@@ -3519,9 +3533,9 @@ WARNING:Xst:646 - Signal <clockCount> is assigned but never used. This unconnect
     Found 8-bit register for signal <LED>.
     Found 1-bit register for signal <mem_we>.
     Found 64-bit register for signal <gen_challenge>.
-    Found 13-bit adder for signal <mem_waddr$addsub0000> created at line 218.
+    Found 13-bit adder for signal <mem_waddr$addsub0000> created at line 225.
     Found 15-bit register for signal <resp_bit_count>.
-    Found 15-bit adder for signal <resp_bit_count$addsub0000> created at line 183.
+    Found 15-bit adder for signal <resp_bit_count$addsub0000> created at line 190.
     Found 8-bit register for signal <test1>.
     Found 8-bit adder for signal <test1$addsub0000>.
     Found 8-bit register for signal <test2>.
@@ -3539,10 +3553,10 @@ WARNING:Xst:646 - Signal <clockCount> is assigned but never used. This unconnect
     Found 8-bit register for signal <test8>.
     Found 8-bit adder for signal <test8$addsub0000>.
     Found 8-bit register for signal <test_count>.
-    Found 8-bit adder for signal <test_count$addsub0000> created at line 209.
+    Found 8-bit adder for signal <test_count$addsub0000> created at line 216.
     Found 1-bit register for signal <test_data>.
     Found 5-bit register for signal <test_index>.
-    Found 5-bit adder for signal <test_index$addsub0000> created at line 219.
+    Found 5-bit adder for signal <test_index$addsub0000> created at line 226.
     Found 1-bit register for signal <test_trigger>.
     Summary:
 	inferred   1 Finite State Machine(s).
@@ -3553,7 +3567,6 @@ Unit <testPUF> synthesized.
 
 Synthesizing Unit <SircHandler>.
     Related source file is "source/sirc_handler.v".
-WARNING:Xst:646 - Signal <xor_response> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <test_result> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <response_ready> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <responseRegBuffer> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
@@ -3875,6 +3888,8 @@ Synthesizing (advanced) Unit <Longest_Run_of_Ones>.
 		Pushing register(s) into the multiplier macro.
 INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier calculate_chi_sqr1/Mmult_v3_sqr_mult0000 by adding 2 register level(s).
 INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier calculate_chi_sqr1/Mmult_v0_sqr_mult0000 by adding 2 register level(s).
+INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal calculate_chi_sqr1/v3_sqr<8> may hinder XST clustering optimizations.
+INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal calculate_chi_sqr1/v3_sqr<9> may hinder XST clustering optimizations.
 Unit <Longest_Run_of_Ones> synthesized (advanced).
 
 Synthesizing (advanced) Unit <Nonoverlapping_template>.
@@ -3925,6 +3940,10 @@ INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier 
 INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier calculate_chi_sqr_88/Mmult_V_sqr_0_mult0000 by adding 2 register level(s).
 INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier calculate_chi_sqr_88/Mmult_V_sqr_1_mult0000 by adding 2 register level(s).
 Unit <Overlapping_template> synthesized (advanced).
+
+Synthesizing (advanced) Unit <calculate_chi_sqr>.
+INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal v3_sqr may hinder XST clustering optimizations.
+Unit <calculate_chi_sqr> synthesized (advanced).
 
 Synthesizing (advanced) Unit <tx_client_fifo_8>.
 INFO:Xst:2774 - HDL ADVISOR - ASYNC_REG property attached to signal wr_rd_addr may hinder XST clustering optimizations.
@@ -4058,13 +4077,13 @@ Macro Statistics
 WARNING:Xst:1710 - FF/Latch <rd_enable_delay> (without init value) has a constant value of 1 in block <tx_client_fifo_8>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rd_enable_delay2> (without init value) has a constant value of 1 in block <tx_client_fifo_8>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <test8_0> (without init value) has a constant value of 0 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <test8_1> (without init value) has a constant value of 0 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <test8_2> (without init value) has a constant value of 0 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <test8_3> (without init value) has a constant value of 0 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <test8_4> (without init value) has a constant value of 0 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <test8_5> (without init value) has a constant value of 0 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <test8_6> (without init value) has a constant value of 0 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <test8_7> (without init value) has a constant value of 0 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <test8_1> (without init value) has a constant value of 0 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <test8_2> (without init value) has a constant value of 0 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <test8_3> (without init value) has a constant value of 0 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <test8_4> (without init value) has a constant value of 0 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <test8_5> (without init value) has a constant value of 0 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <test8_6> (without init value) has a constant value of 0 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <test8_7> (without init value) has a constant value of 0 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <test8_0> of sequential type is unconnected in block <testPUF>.
 WARNING:Xst:2677 - Node <test8_1> of sequential type is unconnected in block <testPUF>.
 WARNING:Xst:2677 - Node <test8_2> of sequential type is unconnected in block <testPUF>.
@@ -4092,13 +4111,13 @@ INFO:Xst:1901 - Instance delayRXClk in unit ethernet2BlockMem of type IDELAY has
 INFO:Xst:1901 - Instance mux_clk_test in unit testPUF of type BUFGMUX_CTRL has been replaced by BUFGCTRL
 INFO:Xst:1901 - Instance MEMCLK in unit SircHandler of type BUFGMUX_CTRL has been replaced by BUFGCTRL
 INFO:Xst:1901 - Instance clkBPLL in unit system of type PLL_BASE has been replaced by PLL_ADV
-WARNING:Xst:1710 - FF/Latch <NIST/test4/calculate_chi_sqr1/v2_sqr_1> (without init value) has a constant value of 0 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <NIST/test4/calculate_chi_sqr1/v1_sqr_1> (without init value) has a constant value of 0 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <NIST/test4/calculate_chi_sqr1/v2_sqr_1> of sequential type is unconnected in block <testPUF>.
-WARNING:Xst:2677 - Node <NIST/test4/calculate_chi_sqr1/v1_sqr_1> of sequential type is unconnected in block <testPUF>.
-WARNING:Xst:2170 - Unit Osc_Ring : the following signal(s) form a combinatorial loop: c<2>, c<1>, c<0>, c<3>.
+WARNING:Xst:2170 - Unit Osc_Ring : the following signal(s) form a combinatorial loop: c<3>, c<2>, c<1>, c<0>.
 
 Optimizing unit <system> ...
+
+Optimizing unit <pufInputNetwork> ...
+
+Optimizing unit <pufOutputNetwork> ...
 
 Optimizing unit <Nonoverlapping_template> ...
 
@@ -4272,6 +4291,8 @@ Optimizing unit <PDL_PUF_6> ...
 
 Optimizing unit <ethernet2BlockMem> ...
 
+Optimizing unit <pufInterconNetwork> ...
+
 Optimizing unit <testPUF> ...
 
 Optimizing unit <SircHandler> ...
@@ -4355,6 +4376,7 @@ WARNING:Xst:2677 - Node <sh/challenge_4_0> of sequential type is unconnected in 
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block system, actual ratio is 11.
+INFO:Xst:2260 - The FF/Latch <sh/testPUF/NIST/test4/calculate_chi_sqr1/v2_sqr_1> in Unit <system> is equivalent to the following FF/Latch : <sh/testPUF/NIST/test4/calculate_chi_sqr1/v1_sqr_1> 
 
 Final Macro Processing ...
 
@@ -4420,40 +4442,43 @@ Design Statistics
 # IOs                              : 63
 
 Cell Usage :
-# BELS                             : 9909
-#      GND                         : 5
-#      INV                         : 197
+# BELS                             : 9948
+#      GND                         : 6
+#      INV                         : 196
 #      LUT1                        : 787
-#      LUT2                        : 672
-#      LUT3                        : 724
-#      LUT4                        : 687
-#      LUT5                        : 945
-#      LUT6                        : 3040
+#      LUT2                        : 700
+#      LUT3                        : 764
+#      LUT4                        : 685
+#      LUT5                        : 912
+#      LUT6                        : 3046
 #      MUXCY                       : 1402
 #      MUXF7                       : 49
 #      VCC                         : 5
 #      XORCY                       : 1396
-# FlipFlops/Latches                : 2336
+# FlipFlops/Latches                : 2338
 #      FD                          : 220
 #      FDC                         : 37
 #      FDCE                        : 13
-#      FDE                         : 1076
+#      FDE                         : 927
+#      FDE_1                       : 148
 #      FDP                         : 27
-#      FDR                         : 292
+#      FDR                         : 288
+#      FDR_1                       : 5
 #      FDRE                        : 387
 #      FDRS                        : 97
 #      FDRSE                       : 4
-#      FDS                         : 8
+#      FDS                         : 7
+#      FDS_1                       : 1
 #      FDSE                        : 4
-#      LD                          : 170
+#      LD                          : 172
 #      ODDR                        : 1
 # RAMS                             : 41
 #      RAMB16                      : 4
 #      RAMB36_EXP                  : 37
 # Shift Registers                  : 20
 #      SRLC16E                     : 20
-# Clock Buffers                    : 13
-#      BUFG                        : 11
+# Clock Buffers                    : 14
+#      BUFG                        : 12
 #      BUFGCTRL                    : 2
 # IO Buffers                       : 61
 #      IBUF                        : 15
@@ -4476,18 +4501,18 @@ Selected Device : 5vlx110tff1136-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            2326  out of  69120     3%  
- Number of Slice LUTs:                 7072  out of  69120    10%  
-    Number used as Logic:              7052  out of  69120    10%  
+ Number of Slice Registers:            2328  out of  69120     3%  
+ Number of Slice LUTs:                 7110  out of  69120    10%  
+    Number used as Logic:              7090  out of  69120    10%  
     Number used as Memory:               20  out of  17920     0%  
        Number used as SRL:               20
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   9398
-   Number with an unused Flip Flop:    7072  out of   9398    75%  
-   Number with an unused LUT:          2326  out of   9398    24%  
-   Number of fully used LUT-FF pairs:     0  out of   9398     0%  
-   Number of unique control sets:       150
+ Number of LUT Flip Flop pairs used:   9438
+   Number with an unused Flip Flop:    7110  out of   9438    75%  
+   Number with an unused LUT:          2328  out of   9438    24%  
+   Number of fully used LUT-FF pairs:     0  out of   9438     0%  
+   Number of unique control sets:       151
 
 IO Utilization: 
  Number of IOs:                          63
@@ -4498,7 +4523,7 @@ Specific Feature Utilization:
  Number of Block RAM/FIFO:               41  out of    148    27%  
     Number using Block RAM only:         39
     Number using FIFO only:               2
- Number of BUFG/BUFGCTRLs:               13  out of     32    40%  
+ Number of BUFG/BUFGCTRLs:               14  out of     32    43%  
  Number of DSP48Es:                      10  out of     64    15%  
  Number of PLL_ADVs:                      3  out of      6    50%  
 
@@ -4528,9 +4553,9 @@ GMII_RX_CLK_0                                                                   
 clk_user_interface_i                                                                                                | BUFG                                                                                                                               | 287   |
 E2M/EC/sysACE_delay_clk                                                                                             | BUFG                                                                                                                               | 34    |
 clk_200_i                                                                                                           | BUFG                                                                                                                               | 13    |
-sh/CLOCK_TRNG1/CLKOUT0_BUF                                                                                          | BUFG                                                                                                                               | 155   |
-sh/clk_1                                                                                                            | BUFGCTRL                                                                                                                           | 434   |
-sh/testPUF/NIST/test4/_and00001(sh/testPUF/NIST/test4/_and00001:O)                                                  | BUFG(*)(sh/testPUF/NIST/test4/calculate_chi_sqr1/v3_sqr_0)                                                                         | 38    |
+sh/CLOCK_TRNG1/CLKOUT0_BUF                                                                                          | BUFG                                                                                                                               | 1     |
+sh/testPUF/test_trigger1                                                                                            | BUFG                                                                                                                               | 588   |
+sh/testPUF/NIST/test4/_and00001(sh/testPUF/NIST/test4/_and00001:O)                                                  | BUFG(*)(sh/testPUF/NIST/test4/calculate_chi_sqr1/v3_sqr_0)                                                                         | 40    |
 sh/testPUF/NIST/test8/en1(sh/testPUF/NIST/test8/en1:O)                                                              | BUFG(*)(sh/testPUF/NIST/test8/calculate_chi_sqr_88/V_sqr_0_21)                                                                     | 132   |
 sh/CLOCK_TRNG1/CLKOUT2_BUF                                                                                          | BUFG                                                                                                                               | 176   |
 sh/testPUF/puf_map/picn/puf1/sarray[0]/pdl_bottom/o(sh/testPUF/puf_map/picn/puf1/sarray[0]/pdl_bottom/LUT6_inst_0:O)| NONE(*)(sh/testPUF/puf_map/picn/puf1/FDC1)                                                                                         | 1     |
@@ -4655,10 +4680,10 @@ Delay:               5.616ns (Levels of Logic = 6)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDE:C->Q              4   0.471   0.989  E2M/EC/tx_curr_bytes_left_23 (E2M/EC/tx_curr_bytes_left_23)
-     LUT5:I0->O            1   0.094   0.973  E2M/EC/tx_state_cmp_eq0027247_SW1 (N859)
+     LUT5:I0->O            1   0.094   0.973  E2M/EC/tx_state_cmp_eq0027247_SW1 (N857)
      LUT6:I1->O           22   0.094   0.593  E2M/EC/tx_state_cmp_eq0027260 (E2M/EC/tx_state_cmp_eq0027)
      LUT6:I5->O           91   0.094   0.618  E2M/EC/N305 (E2M/EC/N305)
-     LUT5:I4->O            1   0.094   0.710  E2M/EC/tx_header_buffer_src_add_mux0000<11>6_SW0_SW1 (N687)
+     LUT5:I4->O            1   0.094   0.710  E2M/EC/tx_header_buffer_src_add_mux0000<11>6_SW0_SW1 (N685)
      LUT6:I3->O           24   0.094   0.698  E2M/EC/tx_header_buffer_src_add_mux0000<11>6 (E2M/EC/N1631)
      LUT5:I3->O            1   0.094   0.000  E2M/EC/tx_header_buffer_src_add_mux0000<9>1 (E2M/EC/tx_header_buffer_src_add_mux0000<9>)
      FDE:D                    -0.018          E2M/EC/tx_header_buffer_src_add_9
@@ -4744,7 +4769,7 @@ Delay:               3.627ns (Levels of Logic = 3)
     ----------------------------------------  ------------
      FDR:C->Q             24   0.471   0.698  E2M/EC/sysACE_state_FSM_FFd2 (E2M/EC/sysACE_state_FSM_FFd2)
      LUT3:I1->O            8   0.094   1.107  E2M/EC/sysACE_MPADD_not00011 (E2M/EC/sysACE_MPADD_not0001)
-     LUT6:I0->O            1   0.094   1.069  E2M/EC/sysACE_MPDATA_In_mux0000<0>1_SW0 (N22)
+     LUT6:I0->O            1   0.094   1.069  E2M/EC/sysACE_MPDATA_In_mux0000<0>1_SW0 (N20)
      LUT6:I0->O            1   0.094   0.000  E2M/EC/sysACE_MPDATA_In_mux0000<0>1 (E2M/EC/sysACE_MPDATA_In_mux0000<0>1)
      FD:D                     -0.018          E2M/EC/sysACE_MPDATA_In_0
     ----------------------------------------
@@ -4774,46 +4799,42 @@ Delay:               0.807ns (Levels of Logic = 0)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'sh/CLOCK_TRNG1/CLKOUT0_BUF'
-  Clock period: 3.832ns (frequency: 260.960MHz)
-  Total number of paths / destination ports: 1293 / 163
+  Clock period: 1.391ns (frequency: 718.907MHz)
+  Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Delay:               3.832ns (Levels of Logic = 4)
-  Source:            sh/testPUF/resp_bit_count_6 (FF)
-  Destination:       sh/testPUF/state_FSM_FFd4 (FF)
+Delay:               1.391ns (Levels of Logic = 0)
+  Source:            sh/testPUF/test_trigger (FF)
+  Destination:       sh/testPUF/test_trigger (FF)
   Source Clock:      sh/CLOCK_TRNG1/CLKOUT0_BUF rising
   Destination Clock: sh/CLOCK_TRNG1/CLKOUT0_BUF rising
 
-  Data Path: sh/testPUF/resp_bit_count_6 to sh/testPUF/state_FSM_FFd4
+  Data Path: sh/testPUF/test_trigger to sh/testPUF/test_trigger
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              3   0.471   0.984  sh/testPUF/resp_bit_count_6 (sh/testPUF/resp_bit_count_6)
-     LUT5:I0->O            1   0.094   0.576  sh/testPUF/state_cmp_eq000033 (sh/testPUF/state_cmp_eq000033)
-     LUT6:I4->O            1   0.094   0.710  sh/testPUF/state_cmp_eq000065_SW0 (N1115)
-     LUT6:I3->O            2   0.094   0.715  sh/testPUF/state_cmp_eq000065 (sh/testPUF/state_cmp_eq0000)
-     LUT5:I2->O            1   0.094   0.000  sh/testPUF/state_FSM_FFd4-In1 (sh/testPUF/state_FSM_FFd4-In)
-     FDR:D                    -0.018          sh/testPUF/state_FSM_FFd4
+     FDR:C->Q              3   0.471   0.347  sh/testPUF/test_trigger (sh/testPUF/test_trigger1)
+     FDR:R                     0.573          sh/testPUF/test_trigger
     ----------------------------------------
-    Total                      3.832ns (0.847ns logic, 2.985ns route)
-                                       (22.1% logic, 77.9% route)
+    Total                      1.391ns (1.044ns logic, 0.347ns route)
+                                       (75.1% logic, 24.9% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'sh/clk_1'
+Timing constraint: Default period analysis for Clock 'sh/testPUF/test_trigger1'
   Clock period: 6.130ns (frequency: 163.132MHz)
-  Total number of paths / destination ports: 50984 / 1087
+  Total number of paths / destination ports: 52602 / 1253
 -------------------------------------------------------------------------
 Delay:               6.130ns (Levels of Logic = 7)
   Source:            sh/testPUF/NIST/test8/V_2_0 (FF)
   Destination:       sh/testPUF/NIST/test8/calculate_chi_sqr_88/Mmult_V_sqr_0_mult0000 (DSP)
-  Source Clock:      sh/clk_1 rising
-  Destination Clock: sh/clk_1 rising
+  Source Clock:      sh/testPUF/test_trigger1 rising
+  Destination Clock: sh/testPUF/test_trigger1 rising
 
   Data Path: sh/testPUF/NIST/test8/V_2_0 to sh/testPUF/NIST/test8/calculate_chi_sqr_88/Mmult_V_sqr_0_mult0000
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDRE:C->Q             2   0.471   1.074  sh/testPUF/NIST/test8/V_2_0 (sh/testPUF/NIST/test8/V_2_0)
-     LUT6:I0->O            1   0.094   0.480  sh/testPUF/NIST/test8/mux51_SW3 (N626)
+     LUT6:I0->O            1   0.094   0.480  sh/testPUF/NIST/test8/mux51_SW3 (N624)
      LUT5:I4->O           17   0.094   0.568  sh/testPUF/NIST/test8/mux51 (sh/testPUF/NIST/test8/Madd_COND_26_addsub0000_cy<0>)
      LUT6:I5->O           11   0.094   0.535  sh/testPUF/NIST/test8/Madd_COND_26_addsub0000_cy<4>1108 (sh/testPUF/NIST/test8/Madd_COND_26_addsub0000_cy<4>)
      LUT6:I5->O            9   0.094   0.524  sh/testPUF/NIST/test8/Madd_COND_26_addsub0000_cy<6>1107 (sh/testPUF/NIST/test8/Madd_COND_26_addsub0000_cy<6>)
@@ -4883,7 +4904,7 @@ Offset:              2.626ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
     TEMAC:EMAC0CLIENTTXACK   12   0.000   0.849  E2M/emac_ll/v5_emac_block_inst/v5_emac_wrapper_inst/v5_emac (E2M/emac_ll/tx_ack_0_i)
-     LUT5:I1->O            1   0.094   0.710  E2M/emac_ll/client_side_FIFO_emac0/tx_fifo_i/rd_en_SW3 (N163)
+     LUT5:I1->O            1   0.094   0.710  E2M/emac_ll/client_side_FIFO_emac0/tx_fifo_i/rd_en_SW3 (N145)
      LUT6:I3->O           43   0.094   0.465  E2M/emac_ll/client_side_FIFO_emac0/tx_fifo_i/rd_en (E2M/emac_ll/client_side_FIFO_emac0/tx_fifo_i/rd_en)
      RAMB16:ENB                0.414          E2M/emac_ll/client_side_FIFO_emac0/tx_fifo_i/ramgen_u
     ----------------------------------------
@@ -4913,33 +4934,13 @@ Offset:              2.952ns (Levels of Logic = 3)
                                        (9.6% logic, 90.4% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'sh/CLOCK_TRNG1/CLKOUT0_BUF'
-  Total number of paths / destination ports: 155 / 155
--------------------------------------------------------------------------
-Offset:              2.300ns (Levels of Logic = 2)
-  Source:            RST (PAD)
-  Destination:       sh/testPUF/test_trigger (FF)
-  Destination Clock: sh/CLOCK_TRNG1/CLKOUT0_BUF rising
-
-  Data Path: RST to sh/testPUF/test_trigger
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O           488   0.818   0.548  RST_IBUF (RST_IBUF)
-     INV:I->O            141   0.238   0.483  sh/testPUF/rst_inv1_INV_0 (sh/testPUF/rst_inv)
-     FDE:CE                    0.213          sh/testPUF/test_trigger
-    ----------------------------------------
-    Total                      2.300ns (1.269ns logic, 1.031ns route)
-                                       (55.2% logic, 44.8% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'sh/clk_1'
-  Total number of paths / destination ports: 528 / 528
+Timing constraint: Default OFFSET IN BEFORE for Clock 'sh/testPUF/test_trigger1'
+  Total number of paths / destination ports: 682 / 682
 -------------------------------------------------------------------------
 Offset:              4.246ns (Levels of Logic = 3)
   Source:            RST (PAD)
   Destination:       sh/testPUF/NIST/test3/count_bits0_0 (FF)
-  Destination Clock: sh/clk_1 rising
+  Destination Clock: sh/testPUF/test_trigger1 rising
 
   Data Path: RST to sh/testPUF/NIST/test3/count_bits0_0
                                 Gate     Net
@@ -5017,23 +5018,23 @@ Offset:              3.395ns (Levels of Logic = 1)
                                        (90.1% logic, 9.9% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'sh/CLOCK_TRNG1/CLKOUT0_BUF'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'sh/testPUF/test_trigger1'
   Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Offset:              3.264ns (Levels of Logic = 1)
+Offset:              3.260ns (Levels of Logic = 1)
   Source:            sh/testPUF/LED_7 (FF)
   Destination:       LED<7> (PAD)
-  Source Clock:      sh/CLOCK_TRNG1/CLKOUT0_BUF rising
+  Source Clock:      sh/testPUF/test_trigger1 falling
 
   Data Path: sh/testPUF/LED_7 to LED<7>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              2   0.471   0.341  sh/testPUF/LED_7 (sh/testPUF/LED_7)
+     FDE_1:C->Q            2   0.467   0.341  sh/testPUF/LED_7 (sh/testPUF/LED_7)
      OBUF:I->O                 2.452          LED_7_OBUF (LED<7>)
     ----------------------------------------
-    Total                      3.264ns (2.923ns logic, 0.341ns route)
-                                       (89.6% logic, 10.4% route)
+    Total                      3.260ns (2.919ns logic, 0.341ns route)
+                                       (89.5% logic, 10.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'GMII_RX_CLK_0'
@@ -5094,14 +5095,14 @@ Delay:               3.617ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 188.00 secs
-Total CPU time to Xst completion: 188.57 secs
+Total REAL time to Xst completion: 199.00 secs
+Total CPU time to Xst completion: 199.65 secs
  
 --> 
 
-Total memory usage is 549384 kilobytes
+Total memory usage is 549968 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  303 (   0 filtered)
-Number of infos    :   38 (   0 filtered)
+Number of warnings :  299 (   0 filtered)
+Number of infos    :   42 (   0 filtered)
 

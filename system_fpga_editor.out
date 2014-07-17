@@ -1,0 +1,287 @@
+#:C119   
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.68d
+#Current Working Directory:
+#:D   C:\Users\praveen\Dropbox\PUF_Praveen_Bak
+#Date/Time:
+#:T   Thu Jul 17 21:08:14 2014
+#------------------------------
+	#Reading system.ncd...
+	#Loading device for application Rf_Device from file '5vlx110t.nph' in environment C:\Xilinx\14.6\ISE_DS\ISE\.
+	#   "system" is an NCD, version 3.2, device xc5vlx110t, package ff1136, speed -1
+	#Design creation date: 2014.07.17.13.47.09
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+select -k comp 'sh/testPUF/NIST/test8/calculate_chi_sqr_88/Madd_chi_sqr_addsub0009C9'
+	#3
+unselect comp 'sh/testPUF/NIST/test8/calculate_chi_sqr_88/Madd_chi_sqr_addsub0009C9'
+	#4
+select -k comp 'sh/testPUF/puf_map/picn/puf2/i1<59>'
+	#5
+unselect comp 'sh/testPUF/puf_map/picn/puf2/i1<59>'
+	#6
+select -k comp 'sh/testPUF/puf_map/picn/puf2/i1<60>'
+	#7
+unselect comp 'sh/testPUF/puf_map/picn/puf2/i1<60>'
+	#8
+select -k comp 'sh/testPUF/puf_map/picn/puf2/i1<61>'
+	#9
+unselect comp 'sh/testPUF/puf_map/picn/puf2/i1<61>'
+	#10
+select -k comp 'sh/testPUF/puf_map/picn/puf2/i1<62>'
+	#11
+unselect comp 'sh/testPUF/puf_map/picn/puf2/i1<62>'
+	#12
+select -k comp 'sh/testPUF/puf_map/picn/puf2/i1<63>'
+	#13
+unselect comp 'sh/testPUF/puf_map/picn/puf2/i1<63>'
+	#14
+select -k comp 'sh/testPUF/puf_map/picn/puf2/i2<0>'
+	#15
+unselect comp 'sh/testPUF/puf_map/picn/puf2/i2<0>'
+	#16
+select -k comp 'sh/testPUF/puf_map/picn/puf2/i1<63>'
+	#17
+unselect -all
+	#18
+select net 'sh/testPUF/puf_map/picn/puf2/sarray[63]/pdl_top/w'
+	#net "sh/testPUF/puf_map/picn/puf2/sarray[63]/pdl_top/w"
+	#19
+unselect -all
+	#20
+select net 'sh/testPUF/puf_map/picn/puf2/i1<63>'
+	#net "sh/testPUF/puf_map/picn/puf2/i1<63>"
+	#21
+unselect -all
+	#22
+select net 'sh/testPUF/puf_map/picn/puf2/q_buf'
+	#net "sh/testPUF/puf_map/picn/puf2/q_buf"
+	#23
+unselect -all
+	#24
+select net 'sh/testPUF/trigger'
+	#net "sh/testPUF/trigger"
+	#25
+unselect -all
+	#26
+select net 'sh/testPUF/puf_map/picn/puf2/q_buf'
+	#net "sh/testPUF/puf_map/picn/puf2/q_buf"
+	#27
+post attr
+	#Building the delay mediator...
+	#Hint: to automatically load delays when design is loaded, setattr main auto_load_delays true
+	#28
+unpost net "sh/testPUF/puf_map/picn/puf2/q_buf"
+	#29
+unselect -all
+	#30
+unselect -all
+	#31
+select net 'sh/testPUF/puf_map/picn/puf2/q_buf'
+	#net "sh/testPUF/puf_map/picn/puf2/q_buf"
+	#32
+unselect -all
+	#33
+select wire 'DOUBLE(-106137,226808)'
+	#node = DOUBLE(-106137,226808)
+	#34
+unselect -all
+	#35
+unselect -all
+	#36
+select comp 'sh/testPUF/puf_map/picn/puf2/q_buf'
+	#comp "sh/testPUF/puf_map/picn/puf2/q_buf",  site "SLICE_X10Y150",  type = SLICEL  (RPM grid X33Y300)
+	#37
+unselect -all
+	#38
+unselect -all
+	#39
+select net 'sh/testPUF/trigger'
+	#net "sh/testPUF/trigger"
+	#40
+post attr
+	#41
+unpost net "sh/testPUF/trigger"
+	#42
+unselect -all
+	#43
+select net 'sh/responseReg<0>'
+	#net "sh/responseReg<0>"
+	#44
+unselect -all
+	#45
+select comp 'sh/responseReg<0>'
+	#comp "sh/responseReg<0>",  site "SLICE_X5Y19",  type = SLICEL  (RPM grid X19Y38)
+	#46
+unselect -all
+	#47
+select comp 'sh/testPUF/puf_map/picn/puf1/puf_out'
+	#comp "sh/testPUF/puf_map/picn/puf1/puf_out",  site "SLICE_X5Y20",  type = SLICEL  (RPM grid X19Y40)
+	#48
+unselect -all
+	#49
+select net 'sh/testPUF/puf_map/picn/puf1/i1<0>'
+	#net "sh/testPUF/puf_map/picn/puf1/i1<0>"
+	#50
+unselect -all
+	#51
+select net 'sh/testPUF/puf_map/picn/puf1/i2<0>'
+	#net "sh/testPUF/puf_map/picn/puf1/i2<0>"
+	#52
+unselect -all
+	#53
+select net 'sh/testPUF/puf_map/picn/puf1/i1<0>'
+	#net "sh/testPUF/puf_map/picn/puf1/i1<0>"
+	#54
+unselect -all
+	#55
+select comp 'sh/testPUF/puf_map/picn/puf1/puf_out'
+	#comp "sh/testPUF/puf_map/picn/puf1/puf_out",  site "SLICE_X5Y20",  type = SLICEL  (RPM grid X19Y40)
+	#56
+post attr
+	#57
+unpost comp "sh/testPUF/puf_map/picn/puf1/puf_out"
+	#58
+unselect -all
+	#59
+select net 'sh/testPUF/puf_map/picn/puf1/i2<0>'
+	#net "sh/testPUF/puf_map/picn/puf1/i2<0>"
+	#60
+unselect -all
+	#61
+unselect -all
+	#62
+select pin 'SLICE_X5Y20.B5'
+	#site.pin = SLICE_X5Y20.B5
+	#63
+unselect -all
+	#64
+select comp 'sh/testPUF/puf_map/picn/puf1/puf_out'
+	#comp "sh/testPUF/puf_map/picn/puf1/puf_out",  site "SLICE_X5Y20",  type = SLICEL  (RPM grid X19Y40)
+	#65
+unselect -all
+	#66
+select net 'sh/testPUF/puf_map/picn/puf1/puf_out'
+	#net "sh/testPUF/puf_map/picn/puf1/puf_out"
+	#67
+unselect -all
+	#68
+unselect -all
+	#69
+select net 'sh/responseReg<0>'
+	#net "sh/responseReg<0>"
+	#70
+post attr
+	#71
+select pin "SLICE_X6Y72.A3"
+	#72
+unselect -all
+	#73
+select -k pin "SLICE_X6Y72.A3"
+	#74
+unselect pin "SLICE_X6Y72.A3"
+	#75
+select pin "SLICE_X6Y72.A3"
+	#76
+unselect -all
+	#77
+select comp 'sh/outputMemoryWriteData<3>'
+	#comp "sh/outputMemoryWriteData<3>",  site "SLICE_X6Y72",  type = SLICEL  (RPM grid X21Y144)
+	#78
+unselect pin "SLICE_X6Y72.A3"
+	#79
+select pin "SLICE_X15Y19.B2"
+	#80
+unselect -all
+	#81
+select -k pin "SLICE_X15Y19.B2"
+	#82
+unselect -all
+	#83
+select comp 'sh/testPUF/test_data'
+	#comp "sh/testPUF/test_data",  site "SLICE_X15Y19",  type = SLICEL  (RPM grid X43Y38)
+	#84
+unselect pin "SLICE_X15Y19.B2"
+	#85
+select pin "SLICE_X5Y19.D"
+	#86
+unselect -all
+	#87
+select -k pin "SLICE_X5Y19.D"
+	#88
+unselect -all
+	#89
+select comp 'sh/responseReg<0>'
+	#comp "sh/responseReg<0>",  site "SLICE_X5Y19",  type = SLICEL  (RPM grid X19Y38)
+	#90
+post attr
+	#91
+unpost comp "sh/responseReg<0>"
+	#92
+unpost net "sh/responseReg<0>"
+	#93
+unselect -all
+	#94
+select wire 'INPUT(-120328,-194160)'
+	#node = INPUT(-120328,-194160)
+	#95
+unselect -all
+	#96
+select wire 'INPUT(-120456,-194728)'
+	#node = INPUT(-120456,-194728)
+	#97
+unselect -all
+	#98
+unselect -all
+	#99
+unselect -all
+	#100
+select net 'sh/responseReg<0>'
+	#net "sh/responseReg<0>"
+	#101
+post attr
+	#102
+select pin "SLICE_X6Y72.A3"
+	#103
+unselect -all
+	#104
+select -k pin "SLICE_X6Y72.A3"
+	#105
+unselect -all
+	#106
+select comp 'sh/outputMemoryWriteData<3>'
+	#comp "sh/outputMemoryWriteData<3>",  site "SLICE_X6Y72",  type = SLICEL  (RPM grid X21Y144)
+	#107
+unselect pin "SLICE_X6Y72.A3"
+	#108
+select pin "SLICE_X15Y19.B2"
+	#109
+unselect -all
+	#110
+select -k pin "SLICE_X15Y19.B2"
+	#111
+unselect -all
+	#112
+select comp 'sh/testPUF/test_data'
+	#comp "sh/testPUF/test_data",  site "SLICE_X15Y19",  type = SLICEL  (RPM grid X43Y38)
+	#113
+unselect pin "SLICE_X15Y19.B2"
+	#114
+select pin "SLICE_X5Y19.D"
+	#115
+unselect -all
+	#116
+select -k pin "SLICE_X5Y19.D"
+	#117
+unselect -all
+	#118
+select comp 'sh/responseReg<0>'
+	#comp "sh/responseReg<0>",  site "SLICE_X5Y19",  type = SLICEL  (RPM grid X19Y38)
+	#119
+unpost net "sh/responseReg<0>"
+	#120
+unselect comp 'sh/responseReg<0>'

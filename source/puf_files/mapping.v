@@ -45,6 +45,7 @@ module mapping #(
 	
 /////////////  			 Input network			/////////////
 	
+	(* KEEP_HIERARCHY="TRUE" *)
 	pufInputNetwork #(.Width(CHALLENGE_WIDTH))
 					pin(
 						.dataIn(challenge[CHALLENGE_WIDTH-1:0]),
@@ -53,6 +54,7 @@ module mapping #(
 					
 					
 ////////////	Interconnect network & PUF		///////////////
+	(* KEEP_HIERARCHY="TRUE" *)
 	pufInterconNetwork picn (
 						.CHALLENGE(actual_challenge[CHALLENGE_WIDTH-1:0]),
 						.PDL_CONFIG(pdl_config[PDL_CONFIG_WIDTH-1:0]),
@@ -62,6 +64,7 @@ module mapping #(
 						);
 						
 ////////////		Output network				///////////////
+	(* KEEP_HIERARCHY="TRUE" *)
 	pufOutputNetwork pon (
 						.response(raw_response),
 						.xor_response(xor_response)

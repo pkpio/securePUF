@@ -9,38 +9,38 @@ Target Device  : xc5vlx110t
 Target Package : ff1136
 Target Speed   : -1
 Mapper Version : virtex5 -- $Revision: 1.55 $
-Mapped Date    : Thu Jul 17 19:16:55 2014
+Mapped Date    : Thu Jul 17 22:33:55 2014
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:  172
 Slice Logic Utilization:
-  Number of Slice Registers:                 2,315 out of  69,120    3%
+  Number of Slice Registers:                 2,317 out of  69,120    3%
     Number used as Flip Flops:               2,145
-    Number used as Latches:                    170
-  Number of Slice LUTs:                      6,572 out of  69,120    9%
-    Number used as logic:                    6,506 out of  69,120    9%
-      Number using O6 output only:           5,465
-      Number using O5 output only:             370
-      Number using O5 and O6:                  671
+    Number used as Latches:                    172
+  Number of Slice LUTs:                      6,612 out of  69,120    9%
+    Number used as logic:                    6,546 out of  69,120    9%
+      Number using O6 output only:           5,512
+      Number using O5 output only:             369
+      Number using O5 and O6:                  665
     Number used as Memory:                      20 out of  17,920    1%
       Number used as Shift Register:            20
         Number using O6 output only:            20
     Number used as exclusive route-thru:        46
-  Number of route-thrus:                       440
-    Number using O6 output only:               412
-    Number using O5 output only:                28
+  Number of route-thrus:                       419
+    Number using O6 output only:               410
+    Number using O5 output only:                 9
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 3,424 out of  17,280   19%
-  Number of LUT Flip Flop pairs used:        7,195
-    Number with an unused Flip Flop:         4,880 out of   7,195   67%
-    Number with an unused LUT:                 623 out of   7,195    8%
-    Number of fully used LUT-FF pairs:       1,692 out of   7,195   23%
-    Number of unique control sets:             139
+  Number of occupied Slices:                 3,449 out of  17,280   19%
+  Number of LUT Flip Flop pairs used:        7,274
+    Number with an unused Flip Flop:         4,957 out of   7,274   68%
+    Number with an unused LUT:                 662 out of   7,274    9%
+    Number of fully used LUT-FF pairs:       1,655 out of   7,274   22%
+    Number of unique control sets:             140
     Number of slice register sites lost
-      to control set restrictions:             253 out of  69,120    1%
+      to control set restrictions:             251 out of  69,120    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -56,27 +56,27 @@ IO Utilization:
     IOB Flip Flops:                             21
 
 Specific Feature Utilization:
-  Number of BlockRAM/FIFO:                      42 out of     148   28%
-    Number using BlockRAM only:                 40
+  Number of BlockRAM/FIFO:                      41 out of     148   27%
+    Number using BlockRAM only:                 39
     Number using FIFO only:                      2
     Total primitives used:
       Number of 36k BlockRAM used:              37
       Number of 18k BlockRAM used:               4
       Number of 18k FIFO used:                   2
     Total Memory used (KB):                  1,440 out of   5,328   27%
-  Number of BUFG/BUFGCTRLs:                     12 out of      32   37%
-    Number used as BUFGs:                       10
+  Number of BUFG/BUFGCTRLs:                     13 out of      32   40%
+    Number used as BUFGs:                       11
     Number used as BUFGCTRLs:                    2
   Number of IDELAYCTRLs:                         2 out of      22    9%
   Number of DSP48Es:                            10 out of      64   15%
   Number of PLL_ADVs:                            3 out of       6   50%
   Number of TEMACs:                              1 out of       2   50%
 
-Average Fanout of Non-Clock Nets:                4.32
+Average Fanout of Non-Clock Nets:                4.31
 
-Peak Memory Usage:  732 MB
-Total REAL time to MAP completion:  2 mins 17 secs 
-Total CPU time to MAP completion:   2 mins 15 secs 
+Peak Memory Usage:  726 MB
+Total REAL time to MAP completion:  2 mins 34 secs 
+Total CPU time to MAP completion:   2 mins 29 secs 
 
 Table of Contents
 -----------------
@@ -99,7 +99,7 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:MapLib:1073 - This design has 1166 KEEP_HIERARCHY constraints specified
+WARNING:MapLib:1073 - This design has 1169 KEEP_HIERARCHY constraints specified
    and therefore, may take a very long time to process. If your design has
    unexpectedly long run times, please consider minimizing the number of
    KEEP_HIERARCHY constraints in your design or use the -ignore_keep_hierarchy
@@ -2053,7 +2053,7 @@ INFO:Pack:1650 - Map created a placed design.
 Section 4 - Removed Logic Summary
 ---------------------------------
    1 block(s) removed
-  10 block(s) optimized away
+  11 block(s) optimized away
    2 signal(s) removed
 
 Section 5 - Removed Logic
@@ -2091,6 +2091,7 @@ GND 		XST_GND
 VCC 		XST_VCC
 GND 		sh/rmem1/XST_GND
 VCC 		sh/rmem1/XST_VCC
+GND 		sh/testPUF/puf_map/pin/XST_GND
 
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.
@@ -2125,13 +2126,13 @@ Asterisk (*) preceding a constraint indicates it was not met.
   ac0_clk_phy_rx0" 7.9 ns HIGH 50%          | HOLD        |    -0.544ns|            |      10|        5280
                                             | MINPERIOD   |     5.678ns|     2.222ns|       0|           0
 ----------------------------------------------------------------------------------------------------------
-* TS_sh_CLOCK_TRNG1_CLKOUT0_BUF = PERIOD TI | SETUP       |     1.132ns|    26.568ns|       0|           0
-  MEGRP "sh_CLOCK_TRNG1_CLKOUT0_BUF" TS_CLK | HOLD        |    -0.386ns|            |     108|       24148
-  _USER_INTERFACE / 0.09375 HIGH 50%        |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-* TS_sh_CLOCK_TRNG1_CLKOUT1_BUF = PERIOD TI | SETUP       |    61.386ns|     4.032ns|       0|           0
-  MEGRP "sh_CLOCK_TRNG1_CLKOUT1_BUF" TS_CLK | HOLD        |    -0.298ns|            |      32|        4200
+* TS_sh_CLOCK_TRNG1_CLKOUT1_BUF = PERIOD TI | SETUP       |   121.698ns|     3.912ns|       0|           0
+  MEGRP "sh_CLOCK_TRNG1_CLKOUT1_BUF" TS_CLK | HOLD        |    -0.005ns|            |       4|          20
   _USER_INTERFACE / 0.046875 HIGH 50%       |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_sh_CLOCK_TRNG1_CLKOUT0_BUF = PERIOD TI | SETUP       |     1.132ns|    26.568ns|       0|           0
+  MEGRP "sh_CLOCK_TRNG1_CLKOUT0_BUF" TS_CLK | HOLD        |     0.622ns|            |       0|           0
+  _USER_INTERFACE / 0.09375 HIGH 50%        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   TS_sysACE_MPDATAIN = MAXDELAY FROM TIMEGR | SETUP       |     2.000ns|     1.160ns|       0|           0
   P "sysACE_MPDATA" TO TIMEGRP "sysACE_clk_ | HOLD        |     0.507ns|            |       0|           0
@@ -2207,13 +2208,13 @@ Derived Constraints for TS_CLK_USER_INTERFACE
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_CLK_USER_INTERFACE          |      5.888ns|      8.671ns|      2.491ns|            8|          140|         7226|        52979|
-| TS_sh_CLOCK_TRNG1_CLKOUT0_BUF |     62.805ns|     26.568ns|          N/A|          108|            0|         1577|            0|
-| TS_sh_CLOCK_TRNG1_CLKOUT1_BUF |    125.611ns|      4.032ns|          N/A|           32|            0|        51242|            0|
+|TS_CLK_USER_INTERFACE          |      5.888ns|      8.671ns|      2.491ns|            8|            4|         7185|        51197|
+| TS_sh_CLOCK_TRNG1_CLKOUT0_BUF |     62.805ns|     26.568ns|          N/A|            0|            0|           53|            0|
+| TS_sh_CLOCK_TRNG1_CLKOUT1_BUF |    125.611ns|      3.912ns|          N/A|            4|            0|        50984|            0|
 | TS_sh_CLOCK_TRNG1_CLKOUT2_BUF |      7.851ns|      1.700ns|          N/A|            0|            0|          160|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
-5 constraints not met.
+4 constraints not met.
 INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
    constraint is not analyzed due to the following: No paths covered by this 
    constraint; Other constraints intersect with this constraint; or This 
