@@ -67,7 +67,7 @@ module SircHandler #(
 	output 	wire 		[(OUTMEM_BYTE_WIDTH - 1):0]				outputMemoryWriteByteMask,		//Allows byte-wise writes when multibyte words are used - each of the OUTMEM_USER_BYTE_WIDTH line can be 0 (do not write byte) or 1 (write byte)
 
 	//8 optional LEDs for visual feedback & debugging
-	output reg 	[7:0]	LED,
+	output wire [7:0]	LED,
 	input wire RST,
 	input wire start,
 	input wire sw
@@ -93,7 +93,7 @@ module SircHandler #(
 
 	BUFGMUX_CTRL MEMCLK (
 	.O(mem_clk), // 1-bit output: Clock output
-	.I0(clk_sh), // 1-bit input: Clock input (S=0)
+	.I0(clk), // 1-bit input: Clock input (S=0) //EDit from clk_sh
 	.I1(clk_1), // 1-bit input: Clock input (S=1)
 	.S(wea) // 1-bit input: Clock select
 	);
@@ -172,6 +172,8 @@ module SircHandler #(
 	reg [31:0] pc_challenge;
 	
 	reg calibrate;
+	reg test_start;
+	wire test_done;
 
 	// We don't write to the register file and we only write whole bytes to the output memory
 	assign register32WriteData = 32'd0;
@@ -184,6 +186,7 @@ module SircHandler #(
 	reg [4:0] regCount;
 	reg [7:0] bitCount;
 	reg [5:0] resp_wait_count;
+	reg [5:0] slowRmemCount;
 
 	//PUF execution variables
 	reg challenge_ready;
@@ -281,12 +284,12 @@ module SircHandler #(
 								// Check the mode of operation requested by PC.
 								if(is_calibrate_mode == 32'h00000000) begin
 									calibrate <= 1;
-									LED <= 8'b11111111;
+									//LED <= 8'b11111111;
 								end
 								
 								else begin
 									calibrate <= 0;
-									LED <= 8'b10101010;
+									//LED <= 8'b10101010;
 								end
 								
 							end
@@ -308,7 +311,6 @@ module SircHandler #(
 					end
 					else if(inputMemoryReadReq == 1 && inputMemoryReadAck == 1 && inputMemoryReadAdd == 15)begin
 						inputDone <= 1;
-						//LED[0] <= 1;
 						currState <= WAIT_READ;
 					end
 				end
@@ -332,6 +334,9 @@ module SircHandler #(
 				end
 
 				COMPUTE: begin
+					// - TODO -
+					// Issue trigger from test_puf block in test mode
+					// Multiple triggers as multiple runs in each state of test_puf.
 					if(regCount == 0) begin
 						challenge_ready <= 1;
 						regCount <= regCount+1;
@@ -340,49 +345,77 @@ module SircHandler #(
 						challenge_ready <= 0;
 					end
 
-					if(resp_wait_count == 10) begin
-						currState <= WRITE;
-						memCount <= 0;
-						regCount <= 0;
-						outputMemoryWriteAdd <= 0;
+					// Calib mode - wait for sometime for evaluation
+					if(calibrate == 1) begin						
+						if(resp_wait_count == 10) begin
+							currState <= WRITE;
+							memCount <= 0;
+							regCount <= 0;
+							outputMemoryWriteAdd <= 0;
+						end
+						
+						resp_wait_count <= resp_wait_count + 1;
 					end
 					
-					resp_wait_count <= resp_wait_count + 1;
+					// Test mode - wait for signal from Siam's code as it is using  a different clock
+					if(calibrate != 1) begin
+						test_start <= 1;
+						
+						if(test_done == 1) begin
+							currState <= WRITE;
+							memCount <= 0;
+							regCount <= 0;
+							test_start <= 0;
+							outputMemoryWriteAdd <= 0;
+							
+							//////////// TEMP ////////////
+							raddr <= 0;
+							slowRmemCount <= 0;
+						end
+					end
 
 				end
 
 				WRITE: begin
 					outputMemoryWriteReq <= 1;
-
-					if(outputMemoryWriteAdd <= 1) begin
+					
+					// Read memory is too slow.
+					if(slowRmemCount == 10) begin
+						slowRmemCount <= 0;
 						
 						// Write back raw responses in calibrate mode
 						if(calibrate == 1) begin
-							outputMemoryWriteData <= response[outputMemoryWriteAdd];
+							if(outputMemoryWriteAdd <= 1) begin
+								outputMemoryWriteData <= response[outputMemoryWriteAdd];
+							end
 						end
-							
+						
 						// Write back siam's module values to PC.
 						else begin
 							outputMemoryWriteData <= douta;
-							raddr <= raddr + 1;
 						end
 
-					end
+						//If we just wrote a value to the output memory this cycle, increment the address
+						//NOTE : Due to bug described above we write on bit more by using length instead of lengthMinus1
+						if(outputMemoryWriteReq == 1  && outputMemoryWriteAck == 1 && outputMemoryWriteAdd != 10) begin
+							outputMemoryWriteAdd <= outputMemoryWriteAdd + 1;
+							raddr <= raddr + 1;
+							memCount <= memCount+1;
+							currState <= WRITE;
+						end
 
-					//If we just wrote a value to the output memory this cycle, increment the address
-					//NOTE : Due to bug described above we write on bit more by using length instead of lengthMinus1
-					if(outputMemoryWriteReq == 1  && outputMemoryWriteAck == 1 && outputMemoryWriteAdd != 2) begin
-						outputMemoryWriteAdd <= outputMemoryWriteAdd + 1;
-						memCount <= memCount+1;
-						currState <= WRITE;
+						//Stop writing and go back to IDLE state if writing reached length of data
+						if(outputMemoryWriteReq == 1  && outputMemoryWriteAck == 1 && outputMemoryWriteAdd == 10) begin
+							outputMemoryWriteReq <= 0;
+							currState <= IDLE;
+							userRunClear <= 1;
+						end
 					end
-
-					//Stop writing and go back to IDLE state if writing reached length of data
-					if(outputMemoryWriteReq == 1  && outputMemoryWriteAck == 1 && outputMemoryWriteAdd == 2) begin
-						outputMemoryWriteReq <= 0;
-						currState <= IDLE;
-						userRunClear <= 1;
+					
+					else begin
+						slowRmemCount <= slowRmemCount + 1;
 					end
+					
 				end
 
 			endcase
@@ -392,7 +425,7 @@ module SircHandler #(
 /////////////////////////////////////////// Praveen's modified SIRC FSM end ////////////////////////////////////////////
 	testPUF #(
 		.N_CB(N_CB),
-		.CHALLENGE_WIDTH(64),
+		.CHALLENGE_WIDTH(32),
 		.PDL_CONFIG_WIDTH(128),
 		.RESPONSE_WIDTH(6)		/*** Make sure these params are added in test_puf **/
 		) testPUF(
@@ -411,14 +444,17 @@ module SircHandler #(
 	    /*********** Praveen's port variables *******/
 	   .clk(clk),
 		.reset(reset),
-		.trigger(challenge_ready),
+		.calb_trigger(challenge_ready),
 		.pdl_config(challengeReg),
-		.mp_challenge(pc_challenge[31:0]),
+		.pc_challenge(pc_challenge[31:0]),
 		.done(response_ready),
 		.raw_response(responseReg[5:0]),
 		.xor_response(xor_response),
 		
-		.calibrate(calibrate)		// Tells if puf in calib mode or not
+		.calibrate(calibrate),		// Tells if puf in calib mode or not
+		.test_start(test_start),
+		.test_done(test_done),
+		.LED(LED)
 	 );
 
 endmodule
