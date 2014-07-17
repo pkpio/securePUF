@@ -15,12 +15,13 @@
 //
 // Revision: 
 // Revision 0.01 - File Created
-// Additional Comments: 
+// Additional Comments: In test mode trigger is given as negative test fsm clock
+// so that we get data on every clock cycle.
 //
 //////////////////////////////////////////////////////////////////////////////////
 module testPUF #(
-	parameter N_CB = 64,
-	parameter CHALLENGE_WIDTH = 64,
+	parameter N_CB = 32,
+	parameter CHALLENGE_WIDTH = 32,
 	parameter PDL_CONFIG_WIDTH = 128,
 	parameter RESPONSE_WIDTH = 6)(
 	//Siam's ports
@@ -38,19 +39,29 @@ module testPUF #(
 	 //Praveen's ports
 	input wire clk,
 	input wire reset,
-	input wire trigger,
-	input wire [CHALLENGE_WIDTH-1:0] mp_challenge,
+	input wire calb_trigger,
+	input wire [CHALLENGE_WIDTH-1:0] pc_challenge,
 	input wire [PDL_CONFIG_WIDTH-1:0] pdl_config,
 	output wire done,
 	output wire [RESPONSE_WIDTH-1:0] raw_response,
 	output wire xor_response,
 	
-	//Puf mode - calib or test
-	input wire calibrate
-    );
+	// Other ports for integration
+	input wire calibrate,  //Puf mode - calib or test
+	input wire test_start, // To start the test FSM.
+	output reg test_done,  //To tell SIRC FSM, test is done. They are using different clocks. 
+   output reg [7:0] LED
+	 );
 	 
 	 wire [N_CB-1:0] C;
-	 reg [N_CB-1:0] challenge;
+	 reg [N_CB-1:0] gen_challenge;
+	 wire [CHALLENGE_WIDTH-1:0] puf_challenge;
+	 wire trigger;
+	 reg test_trigger;
+	 
+// Choose challenge source based on mode
+
+	assign puf_challenge[CHALLENGE_WIDTH-1:0] = (calibrate==1) ? pc_challenge : gen_challenge[CHALLENGE_WIDTH-1:0];
 
 ///////////		Challenge generator		////////////
 	 challenge_gen #(N_CB) challenge_gen(
@@ -58,7 +69,6 @@ module testPUF #(
 	 .rst(rst),
     .C(C)
     );
-	 
 
 //////////			Core PUF 			/////////////////
 mapping #(
@@ -70,13 +80,23 @@ mapping #(
 		.reset(reset),
 		.trigger(trigger),
 		.pdl_config(pdl_config),
-		.challenge(mp_challenge),
+		.challenge(puf_challenge),
 		.done(done),
 		.raw_response(raw_response),
 		.xor_response(xor_response)
 	);
+	 
+///////////		trigger generator		////////////	
 
+	assign trigger = (calibrate == 1)?calb_trigger:test_trigger;
 
+	/*
+	BUFGMUX_CTRL mux_trigger (
+	.O(trigger), // 1-bit output: Clock output
+	.I0(test_trigger), // 1-bit input: Clock input (S=0)
+	.I1(calb_trigger), // 1-bit input: Clock input (S=1)
+	.S(calibrate) // 1-bit input: Clock select
+	);*/
 	 
 	wire clk_test;
 	reg sel_clk_test;
@@ -103,23 +123,31 @@ mapping #(
 	reg [14:0] resp_bit_count; // count no of bits for tests; 
 	reg [7:0] test_count; // no of testing rounds
 	reg [7:0] test1, test2, test3, test4, test5, test6, test7, test8; // count how many times each test passes
-	reg [3:0] test_index;
+	reg [4:0] test_index;
 	
 	reg [4:0] state;
+	reg [3:0] clockCount;
 	 
 	 always @(posedge clk_1) 
+	 
+	 
 	 if (rst) begin
 		state <= 0;
 	 end
 	 else begin
+		test_trigger <= ~test_trigger;
 		case (state)
 		
 		0:	begin		
 			mem_we <= 1; 
 			mem_waddr <= 0;
+			test_done <= 0; // Edit
+			clockCount <= 0;
 			
-			if (start) begin // push button
-				if(sw) state <= 1; // dip switch
+			if (test_start) begin // push button // Edit
+				state <= 1;
+				//LED <= 8'b00000000;
+				//if(sw) state <= 1; // dip switch
 				//else state <= 5; // calibration starts at this state 
 			end
 			else state <= 0;
@@ -141,24 +169,32 @@ mapping #(
 						
 			sel_clk_test <= 0; // for test 1.1 one response bit is generated per challenge, testing block operates at the same freq as the FSM
 			
-			challenge <= C; // feed challenge
+			gen_challenge <= C; // feed challenge
+			
+			LED <= 8'b10101010;
 			
 			state <= 2;
+			clockCount <= 0;
 			end
 			
-		2:	begin
-			challenge <= C; // feed challenge
-			test_data <= response; // read response and feed that to testing block
+		2:	begin			
+			gen_challenge <= C; // feed challenge
+			test_data <= raw_response[1];//C[12];//xor_response; // read response and feed that to testing block
 			resp_bit_count <= resp_bit_count+1; // count response bits
+			LED <= 8'b00110011;
 			
 			if (resp_bit_count == 19999) state <= 3; // one round of testing is done, go to next state and read test results
-			else state <= 2; 
+			else state <= 2;
+			
 			end
 			
 		3: begin
-			challenge <= C; // feed challenge, while we are reading the test results, we should keep on testing
-			test_data <= response; // read response and feed that to testing block
+			gen_challenge <= C; // feed challenge, while we are reading the test results, we should keep on testing
+			test_data <= raw_response[1];//C[12];//xor_response; // read response and feed that to testing block
 			resp_bit_count <= 0; // reset bit count for next round of testing
+			
+			LED <= test_result;
+			
 			
 			// add the results
 			test1 <= test1 + test_result[0];
@@ -176,8 +212,8 @@ mapping #(
 			end
 			
 		4:	begin
-			challenge <= C; // feed challenge
-			test_data <= response; // read response and feed that to testing block
+			gen_challenge <= C; // feed challenge
+			test_data <= raw_response[1];//C[12];//xor_response; // read response and feed that to testing block
 			
 			mem_waddr <= mem_waddr + 1;
 			test_index <= test_index + 1;
@@ -190,16 +226,17 @@ mapping #(
 			else if (test_index == 6) mem_din <= test7;
 			else if (test_index == 7) mem_din <= test8;
 			
-			if (test_index == 7) state <= 15; // storing test results is done, go to last state 
+			if (test_index == 8) state <= 15; // storing test results is done, go to last state 
 			else state <= 4; // keep on stroing test results
 			end
 			
 		15:begin
-			challenge <= C; // feed challenge
-			test_data <= response; // read response and feed that to testing block
+			gen_challenge <= C; // feed challenge
+			test_data <= raw_response[1];//C[12];//xor_response; // read response and feed that to testing block
 			
 			mem_we <= 0; // now we read the results from memory
-			state <= 15;
+			state <= 15;	// Edit 15
+			test_done <= 1; // Edit
 			end
 		
 		endcase
