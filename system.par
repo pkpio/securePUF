@@ -1,7 +1,7 @@
 Release 14.6 par P.68d (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-PRAVEEN-PC::  Wed Jul 16 08:16:46 2014
+PRAVEEN-PC::  Thu Jul 17 18:19:46 2014
 
 par -w -intstyle ise -ol high -mt off system_map.ncd system.ncd system.pcf 
 
@@ -20,8 +20,10 @@ Device speed data version:  "PRODUCTION 1.73 2013-06-08".
 
 Device Utilization Summary:
 
-   Number of BUFGs                          11 out of 32     34%
+   Number of BUFGs                          10 out of 32     31%
    Number of BUFGCTRLs                       2 out of 32      6%
+      Number of LOCed BUFGCTRLs              1 out of 2      50%
+
    Number of DSP48Es                        10 out of 64     15%
    Number of IDELAYCTRLs                     2 out of 22      9%
    Number of ILOGICs                        10 out of 800     1%
@@ -31,18 +33,18 @@ Device Utilization Summary:
    Number of IODELAYs                       11 out of 800     1%
    Number of OLOGICs                        11 out of 800     1%
    Number of PLL_ADVs                        3 out of 6      50%
-   Number of RAMB18X2s                       3 out of 148     2%
+   Number of RAMB18X2s                       4 out of 148     2%
    Number of RAMB36_EXPs                    37 out of 148    25%
    Number of RAMBFIFO18_36s                  2 out of 148     1%
    Number of TEMACs                          1 out of 2      50%
-   Number of Slices                       3348 out of 17280  19%
-   Number of Slice Registers              2198 out of 69120   2%
-      Number used as Flip Flops           2028
+   Number of Slices                       3422 out of 17280  19%
+   Number of Slice Registers              2315 out of 69120   3%
+      Number used as Flip Flops           2145
       Number used as Latches               170
       Number used as LatchThrus              0
 
-   Number of Slice LUTS                   6349 out of 69120   9%
-   Number of Slice LUT-Flip Flop pairs    6979 out of 69120  10%
+   Number of Slice LUTS                   6571 out of 69120   9%
+   Number of Slice LUT-Flip Flop pairs    7207 out of 69120  10%
 
 
 Overall effort level (-ol):   High 
@@ -52,342 +54,39 @@ WARNING:Timing:3223 - Timing constraint TS_rx_fifo_rd_to_wr_0 = MAXDELAY FROM TI
        "clk_125_eth" 8 ns DATAPATHONLY; ignored during timing analysis.
 INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please
    consult the Xilinx Command Line Tools User Guide for information on generating a TSI report.
-Starting initial Timing Analysis.  REAL time: 39 secs 
-Finished initial Timing Analysis.  REAL time: 39 secs 
+Starting initial Timing Analysis.  REAL time: 16 secs 
+Finished initial Timing Analysis.  REAL time: 17 secs 
 
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[0].TRNG/R<4> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[0].TRNG/R<5> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[0].TRNG/R<6> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[0].TRNG/R<7> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[0].TRNG/R<12> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[0].TRNG/R<13> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[0].TRNG/R<14> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[0].TRNG/R<15> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[0].TRNG/R<8> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[0].TRNG/R<9> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[0].TRNG/R<10> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[0].TRNG/R<11> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[0].TRNG/R<0> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[0].TRNG/R<1> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[0].TRNG/R<2> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[0].TRNG/R<3> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[1].TRNG/R<12> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[1].TRNG/R<13> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[1].TRNG/R<14> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[1].TRNG/R<15> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[1].TRNG/R<8> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[1].TRNG/R<9> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[1].TRNG/R<10> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[1].TRNG/R<11> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[1].TRNG/R<4> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[1].TRNG/R<5> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[1].TRNG/R<6> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[1].TRNG/R<7> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[1].TRNG/R<0> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[1].TRNG/R<1> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[1].TRNG/R<2> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[1].TRNG/R<3> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[2].TRNG/R<0> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[2].TRNG/R<1> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[2].TRNG/R<2> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[2].TRNG/R<3> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[2].TRNG/R<12> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[2].TRNG/R<13> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[2].TRNG/R<14> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[2].TRNG/R<15> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[2].TRNG/R<8> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[2].TRNG/R<9> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[2].TRNG/R<10> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[2].TRNG/R<11> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[2].TRNG/R<4> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[2].TRNG/R<5> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[2].TRNG/R<6> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[2].TRNG/R<7> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[3].TRNG/R<4> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[3].TRNG/R<5> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[3].TRNG/R<6> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[3].TRNG/R<7> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[3].TRNG/R<8> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[3].TRNG/R<9> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[3].TRNG/R<10> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[3].TRNG/R<11> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[3].TRNG/R<12> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[3].TRNG/R<13> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[3].TRNG/R<14> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[3].TRNG/R<15> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[3].TRNG/R<0> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[3].TRNG/R<1> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[3].TRNG/R<2> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[3].TRNG/R<3> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[4].TRNG/R<0> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[4].TRNG/R<1> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[4].TRNG/R<2> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[4].TRNG/R<3> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[4].TRNG/R<8> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[4].TRNG/R<9> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[4].TRNG/R<10> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[4].TRNG/R<11> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[4].TRNG/R<12> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[4].TRNG/R<13> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[4].TRNG/R<14> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[4].TRNG/R<15> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[4].TRNG/R<4> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[4].TRNG/R<5> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[4].TRNG/R<6> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[4].TRNG/R<7> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[5].TRNG/R<4> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[5].TRNG/R<5> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[5].TRNG/R<6> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[5].TRNG/R<7> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[5].TRNG/R<8> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[5].TRNG/R<9> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[5].TRNG/R<10> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[5].TRNG/R<11> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[5].TRNG/R<12> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[5].TRNG/R<13> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[5].TRNG/R<14> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[5].TRNG/R<15> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[5].TRNG/R<0> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[5].TRNG/R<1> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[5].TRNG/R<2> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[5].TRNG/R<3> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[6].TRNG/R<4> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[6].TRNG/R<5> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[6].TRNG/R<6> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[6].TRNG/R<7> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[6].TRNG/R<12> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[6].TRNG/R<13> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[6].TRNG/R<14> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[6].TRNG/R<15> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[6].TRNG/R<0> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[6].TRNG/R<1> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[6].TRNG/R<2> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[6].TRNG/R<3> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[6].TRNG/R<8> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[6].TRNG/R<9> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[6].TRNG/R<10> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[6].TRNG/R<11> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[7].TRNG/R<12> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[7].TRNG/R<13> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[7].TRNG/R<14> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[7].TRNG/R<15> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[7].TRNG/R<0> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[7].TRNG/R<1> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[7].TRNG/R<2> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[7].TRNG/R<3> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[7].TRNG/R<8> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[7].TRNG/R<9> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[7].TRNG/R<10> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[7].TRNG/R<11> has no load.  PAR will not attempt to route
-   this signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[7].TRNG/R<4> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[7].TRNG/R<5> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[7].TRNG/R<6> has no load.  PAR will not attempt to route this
-   signal.
-WARNING:Par:288 - The signal sh/testPUF/challenge_gen/TRNG[7].TRNG/R<7> has no load.  PAR will not attempt to route this
-   signal.
+WARNING:Par:288 - The signal sw_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal start_IBUF has no load.  PAR will not attempt to route this signal.
 Starting Router
 
 
-Phase  1  : 38066 unrouted;      REAL time: 44 secs 
+Phase  1  : 39400 unrouted;      REAL time: 19 secs 
 
-Phase  2  : 33332 unrouted;      REAL time: 48 secs 
+Phase  2  : 34615 unrouted;      REAL time: 20 secs 
 
-Phase  3  : 9409 unrouted;      REAL time: 1 mins 17 secs 
+Phase  3  : 10063 unrouted;      REAL time: 34 secs 
 
-Phase  4  : 9434 unrouted; (Setup:47066, Hold:150841, Component Switching Limit:0)     REAL time: 1 mins 47 secs 
-
-Updating file: system.ncd with current fully routed design.
-
-Phase  5  : 0 unrouted; (Setup:49922, Hold:148855, Component Switching Limit:0)     REAL time: 2 mins 6 secs 
-
-Phase  6  : 0 unrouted; (Setup:50438, Hold:148855, Component Switching Limit:0)     REAL time: 2 mins 11 secs 
+Phase  4  : 10053 unrouted; (Setup:209815, Hold:10557, Component Switching Limit:0)     REAL time: 44 secs 
 
 Updating file: system.ncd with current fully routed design.
 
-Phase  7  : 0 unrouted; (Setup:50438, Hold:148855, Component Switching Limit:0)     REAL time: 2 mins 45 secs 
+Phase  5  : 0 unrouted; (Setup:209815, Hold:9333, Component Switching Limit:0)     REAL time: 52 secs 
 
-Phase  8  : 0 unrouted; (Setup:49862, Hold:148783, Component Switching Limit:0)     REAL time: 2 mins 58 secs 
-WARNING:Route:466 - Unusually high hold time violation detected among 65 connections. The top 20 such instances are
-   printed below. The router will continue and try to fix it
-	sh/raddr<3>:AQ -> sh/addra<12>:A5 -3355
-	sh/addra<12>:A ->
-sh/rmem1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SP.SINGLE_PRIM
-36.SP:ADDRAU2 -3355
-	sh/addra<12>:A ->
-sh/rmem1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SP.SINGLE_PRIM
-36.SP:ADDRAL2 -3346
-	sh/raddr<11>:DQ -> sh/addra<2>:A5 -3324
-	sh/addra<2>:A ->
-sh/rmem1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SP.SINGLE_PRIM
-36.SP:ADDRAL13 -3324
-	sh/addra<2>:A ->
-sh/rmem1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SP.SINGLE_PRIM
-36.SP:ADDRAU13 -3299
-	sh/raddr<3>:BQ -> sh/addra<2>:B5 -3269
-	sh/addra<2>:B ->
-sh/rmem1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SP.SINGLE_PRIM
-36.SP:ADDRAU3 -3269
-	sh/addra<2>:B ->
-sh/rmem1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SP.SINGLE_PRIM
-36.SP:ADDRAL3 -3260
-	sh/raddr<7>:CQ -> sh/testPUF/mem_we:C5 -3249
-	sh/testPUF/mem_we:C ->
-sh/rmem1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SP.SINGLE_PRIM
-36.SP:ADDRAU8 -3249
-	sh/testPUF/mem_we:C ->
-sh/rmem1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SP.SINGLE_PRIM
-36.SP:ADDRAL8 -3240
-	sh/raddr<7>:DQ -> sh/testPUF/mem_we:D5 -3211
-	sh/testPUF/mem_we:D ->
-sh/rmem1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SP.SINGLE_PRIM
-36.SP:ADDRAU9 -3211
-	sh/raddr<3>:DQ -> sh/addra<2>:C5 -3209
-	sh/addra<2>:C ->
-sh/rmem1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SP.SINGLE_PRIM
-36.SP:ADDRAL5 -3209
-	sh/testPUF/mem_we:D ->
-sh/rmem1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SP.SINGLE_PRIM
-36.SP:ADDRAL9 -3202
-	sh/raddr<7>:AQ -> sh/testPUF/mem_waddr<12>:A5 -3158
-	sh/testPUF/mem_waddr<12>:A ->
-sh/rmem1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SP.SINGLE_PRIM
-36.SP:ADDRAU6 -3158
-	sh/testPUF/mem_waddr<12>:A ->
-sh/rmem1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SP.SINGLE_PRIM
-36.SP:ADDRAL6 -3149
+Phase  6  : 0 unrouted; (Setup:209815, Hold:9333, Component Switching Limit:0)     REAL time: 54 secs 
 
+Updating file: system.ncd with current fully routed design.
 
-Phase  9  : 0 unrouted; (Setup:49862, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 
+Phase  7  : 0 unrouted; (Setup:209815, Hold:9333, Component Switching Limit:0)     REAL time: 1 mins 4 secs 
 
-Phase 10  : 0 unrouted; (Setup:48946, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 2 secs 
-Total REAL time to Router completion: 3 mins 2 secs 
-Total CPU time to Router completion: 3 mins 9 secs 
+Phase  8  : 0 unrouted; (Setup:209815, Hold:9333, Component Switching Limit:0)     REAL time: 1 mins 8 secs 
+
+Phase  9  : 0 unrouted; (Setup:209815, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 9 secs 
+
+Phase 10  : 0 unrouted; (Setup:209815, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 10 secs 
+Total REAL time to Router completion: 1 mins 10 secs 
+Total CPU time to Router completion: 1 mins 14 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -405,30 +104,30 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|          sh/clk_RNG |BUFGCTRL_X0Y27| No   |   32 |  0.404     |  2.014      |
+|          sh/clk_RNG |BUFGCTRL_X0Y27| No   |   54 |  0.359     |  1.888      |
 +---------------------+--------------+------+------+------------+-------------+
-|         clk_125_eth | BUFGCTRL_X0Y1| No   |  461 |  0.558     |  2.087      |
+|sh/testPUF/NIST/test |              |      |      |            |             |
+|          4/_and0000 | BUFGCTRL_X0Y4| No   |   11 |  0.080     |  1.708      |
 +---------------------+--------------+------+------+------------+-------------+
-|            sh/clk_1 |BUFGCTRL_X0Y30| No   |   50 |  0.165     |  1.813      |
+|         clk_125_eth | BUFGCTRL_X0Y2| No   |  456 |  0.590     |  2.121      |
 +---------------------+--------------+------+------+------------+-------------+
-|  clk_user_interface | BUFGCTRL_X0Y2| No   |  156 |  0.507     |  2.057      |
+| sh/testPUF/clk_test |BUFGCTRL_X0Y30|Yes   |  142 |  0.358     |  2.073      |
 +---------------------+--------------+------+------+------------+-------------+
-| sh/testPUF/clk_test |BUFGCTRL_X0Y26| No   |  126 |  0.413     |  2.088      |
+|  clk_user_interface | BUFGCTRL_X0Y0| No   |  159 |  0.475     |  2.121      |
++---------------------+--------------+------+------+------------+-------------+
+|            sh/clk_1 |BUFGCTRL_X0Y29| No   |   65 |  0.390     |  2.022      |
++---------------------+--------------+------+------+------------+-------------+
+| E2M/EC/sysACE_clk_o | BUFGCTRL_X0Y3| No   |   18 |  0.166     |  1.870      |
 +---------------------+--------------+------+------+------------+-------------+
 |E2M/gmii_rx_clk_dela |              |      |      |            |             |
-|                   y |BUFGCTRL_X0Y31| No   |   54 |  0.506     |  2.090      |
+|                   y |BUFGCTRL_X0Y26| No   |   47 |  0.410     |  2.090      |
 +---------------------+--------------+------+------+------------+-------------+
-|             clk_200 | BUFGCTRL_X0Y0| No   |    6 |  0.175     |  1.723      |
-+---------------------+--------------+------+------+------------+-------------+
-|sh/testPUF/NIST/test |              |      |      |            |             |
-|                8/en | BUFGCTRL_X0Y6| No   |   36 |  0.233     |  1.891      |
+|             clk_200 | BUFGCTRL_X0Y1| No   |    6 |  0.170     |  1.723      |
 +---------------------+--------------+------+------+------------+-------------+
 |sh/testPUF/NIST/test |              |      |      |            |             |
-|          4/_and0000 | BUFGCTRL_X0Y5| No   |   12 |  0.231     |  1.960      |
+|                8/en | BUFGCTRL_X0Y5| No   |   36 |  0.288     |  1.985      |
 +---------------------+--------------+------+------+------------+-------------+
-| E2M/EC/sysACE_clk_o | BUFGCTRL_X0Y3| No   |   19 |  0.161     |  1.859      |
-+---------------------+--------------+------+------+------------+-------------+
-|          sh/mem_clk |BUFGCTRL_X0Y24| No   |    4 |  0.125     |  2.040      |
+|          sh/mem_clk |BUFGCTRL_X0Y31| No   |    4 |  0.009     |  2.110      |
 +---------------------+--------------+------+------+------------+-------------+
 |sh/testPUF/puf_map/p |              |      |      |            |             |
 |      icn/puf1/i2<0> |         Local|      |    1 |  0.000     |  0.581      |
@@ -457,7 +156,7 @@ the minimum and maximum path delays which includes logic delays.
 * The fanout is the number of component pins not the individual BEL loads,
 for example SLICE loads not FF loads.
 
-Timing Score: 48946 (Setup: 48946, Hold: 0, Component Switching Limit: 0)
+Timing Score: 209815 (Setup: 209815, Hold: 0, Component Switching Limit: 0)
 
 WARNING:Par:468 - Your design did not meet timing.  The following are some suggestions to assist you to meet timing in
    your design.
@@ -476,7 +175,7 @@ WARNING:Par:468 - Your design did not meet timing.  The following are some sugge
    TechXclusives->Timing Closure" for tips and suggestions for meeting timing
    in your design.
 
-Number of Timing Constraints that were not applied: 2
+Number of Timing Constraints that were not applied: 1
 
 Asterisk (*) preceding a constraint indicates it was not met.
    This may be due to a setup or hold violation.
@@ -485,85 +184,81 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-* TS_sh_CLOCK_TRNG1_CLKOUT3_BUF = PERIOD TI | SETUP       |    -2.815ns|    22.766ns|      58|       25694
-  MEGRP "sh_CLOCK_TRNG1_CLKOUT3_BUF"        | HOLD        |     0.788ns|            |       0|           0
-    TS_CLK_USER_INTERFACE HIGH 50%          |             |            |            |        |            
+* TS_CLK_USER_INTERFACE = PERIOD TIMEGRP "c | SETUP       |    -5.992ns|    23.860ns|      49|      209815
+  lk_user_interface" 5.888 ns HIGH 50%      | HOLD        |     0.298ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-* TS_CLK_USER_INTERFACE = PERIOD TIMEGRP "c | SETUP       |    -2.104ns|     7.992ns|      41|       23252
-  lk_user_interface" 5.888 ns HIGH 50%      | HOLD        |     0.468ns|            |       0|           0
+  TS_CLK_125 = PERIOD TIMEGRP "clk_125_eth" | SETUP       |     0.040ns|     7.860ns|       0|           0
+   7.9 ns HIGH 50%                          | HOLD        |     0.280ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  TS_hard_reset_IG = MAXDELAY FROM TIMEGRP  | SETUP       |     0.117ns|     7.883ns|       0|           0
-  "hard_reset" TO TIMEGRP "FFS" 8 ns        | HOLD        |     0.333ns|            |       0|           0
-    DATAPATHONLY                            |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_CLK_125 = PERIOD TIMEGRP "clk_125_eth" | SETUP       |     0.139ns|     7.761ns|       0|           0
-   7.9 ns HIGH 50%                          | HOLD        |     0.255ns|            |       0|           0
-----------------------------------------------------------------------------------------------------------
-  TS_tx_max_output_1 = MAXDELAY FROM TIMEGR | SETUP       |     0.273ns|     7.727ns|       0|           0
-  P "tx_max_output" TO TIMEGRP         "tx_ | HOLD        |     0.479ns|            |       0|           0
-  max_output_target" 8 ns DATAPATHONLY      |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_sysACE_MPDATAIN = MAXDELAY FROM TIMEGR | SETUP       |     0.457ns|     2.703ns|       0|           0
-  P "sysACE_MPDATA" TO TIMEGRP         "sys | HOLD        |     1.492ns|            |       0|           0
+  TS_sysACE_MPDATAIN = MAXDELAY FROM TIMEGR | SETUP       |     0.185ns|     2.975ns|       0|           0
+  P "sysACE_MPDATA" TO TIMEGRP         "sys | HOLD        |     1.598ns|            |       0|           0
   ACE_clk_o" 3.16 ns DATAPATHONLY           |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_Emac0_clk_phy_rx0 = PERIOD TIMEGRP "Em | SETUP       |     0.665ns|     7.235ns|       0|           0
-  ac0_clk_phy_rx0" 7.9 ns HIGH 50%          | HOLD        |     0.452ns|            |       0|           0
+  TS_tx_max_output_1 = MAXDELAY FROM TIMEGR | SETUP       |     0.188ns|     7.812ns|       0|           0
+  P "tx_max_output" TO TIMEGRP         "tx_ | HOLD        |     0.492ns|            |       0|           0
+  max_output_target" 8 ns DATAPATHONLY      |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  ts_tx_meta_protect_0 = MAXDELAY FROM TIME | SETUP       |     0.790ns|     4.210ns|       0|           0
-  GRP "tx_metastable_0" 5 ns         DATAPA | HOLD        |     0.604ns|            |       0|           0
+  TS_hard_reset_IG = MAXDELAY FROM TIMEGRP  | SETUP       |     0.280ns|     7.720ns|       0|           0
+  "hard_reset" TO TIMEGRP "FFS" 8 ns        | HOLD        |     0.360ns|            |       0|           0
+    DATAPATHONLY                            |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_Emac0_clk_phy_rx0 = PERIOD TIMEGRP "Em | SETUP       |     0.665ns|     7.235ns|       0|           0
+  ac0_clk_phy_rx0" 7.9 ns HIGH 50%          | HOLD        |     0.265ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  ts_tx_meta_protect_0 = MAXDELAY FROM TIME | SETUP       |     1.262ns|     3.738ns|       0|           0
+  GRP "tx_metastable_0" 5 ns         DATAPA | HOLD        |     0.473ns|            |       0|           0
   THONLY                                    |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  ts_rx_meta_protect_0 = MAXDELAY FROM TIME | SETUP       |     3.454ns|     1.546ns|       0|           0
-  GRP "rx_metastable_0" 5 ns                | HOLD        |     0.451ns|            |       0|           0
-----------------------------------------------------------------------------------------------------------
-  TS_CLK_200 = PERIOD TIMEGRP "clk_200" 4.9 | SETUP       |     4.052ns|     0.848ns|       0|           0
-   ns HIGH 50%                              | HOLD        |     0.489ns|            |       0|           0
-                                            | MINLOWPULSE |     3.846ns|     1.054ns|       0|           0
-----------------------------------------------------------------------------------------------------------
-  TS_tx_fifo_wr_to_rd_0 = MAXDELAY FROM TIM | SETUP       |     4.312ns|     3.688ns|       0|           0
-  EGRP "tx_fifo_wr_to_rd_0" TO TIMEGRP      | HOLD        |     0.852ns|            |       0|           0
-      "clk_125_eth" 8 ns DATAPATHONLY       |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_userRunClearToggle = MAXDELAY FROM TIM | SETUP       |     6.069ns|     1.931ns|       0|           0
-  EGRP "userRunSetTogCS" TO TIMEGRP         | HOLD        |     1.559ns|            |       0|           0
-   "userRunSetTogUS" 8 ns DATAPATHONLY      |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_sh_CLOCK_TRNG1_CLKOUT2_BUF = PERIOD TI | MINPERIOD   |     6.184ns|     1.666ns|       0|           0
-  MEGRP "sh_CLOCK_TRNG1_CLKOUT2_BUF"        |             |            |            |        |            
-    TS_CLK_USER_INTERFACE / 0.75 HIGH 50%   |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_tx_fifo_rd_to_wr_0 = MAXDELAY FROM TIM | SETUP       |     6.786ns|     1.214ns|       0|           0
-  EGRP "tx_fifo_rd_to_wr_0" TO TIMEGRP      | HOLD        |     0.517ns|            |       0|           0
-      "clk_125_eth" 8 ns DATAPATHONLY       |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_rx_fifo_wr_to_rd_0 = MAXDELAY FROM TIM | SETUP       |     6.855ns|     1.145ns|       0|           0
-  EGRP "rx_fifo_wr_to_rd_0" TO TIMEGRP      | HOLD        |     0.828ns|            |       0|           0
-      "clk_125_eth" 8 ns DATAPATHONLY       |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_tx_fifo_addr_0 = MAXDELAY FROM TIMEGRP | SETUP       |     8.608ns|     1.392ns|       0|           0
-   "tx_addr_rd_0" TO TIMEGRP         "tx_ad | HOLD        |     0.431ns|            |       0|           0
-  dr_wr_0" 10 ns                            |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_sysACE_OE = MAXDELAY FROM TIMEGRP "sys | MAXDELAY    |    19.388ns|     4.052ns|       0|           0
-  ACE_clk_o" TO TIMEGRP "sysACE_MPOE"       |             |            |            |        |            
-     23.44 ns DATAPATHONLY                  |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_sysACE_WE = MAXDELAY FROM TIMEGRP "sys | MAXDELAY    |    19.758ns|     3.682ns|       0|           0
-  ACE_clk_o" TO TIMEGRP "sysACE_MPWE"       |             |            |            |        |            
-     23.44 ns DATAPATHONLY                  |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_sysACE_clk_o = PERIOD TIMEGRP "sysACE_ | SETUP       |    28.298ns|     1.902ns|       0|           0
-  clk_o" 30.2 ns HIGH 50%                   | HOLD        |     0.358ns|            |       0|           0
-                                            | MINPERIOD   |    27.978ns|     2.222ns|       0|           0
-----------------------------------------------------------------------------------------------------------
-  TS_sh_CLOCK_TRNG1_CLKOUT0_BUF = PERIOD TI | SETUP       |    57.920ns|     4.885ns|       0|           0
-  MEGRP "sh_CLOCK_TRNG1_CLKOUT0_BUF"        | HOLD        |     0.450ns|            |       0|           0
+  TS_sh_CLOCK_TRNG1_CLKOUT0_BUF = PERIOD TI | SETUP       |     1.717ns|    18.879ns|       0|           0
+  MEGRP "sh_CLOCK_TRNG1_CLKOUT0_BUF"        | HOLD        |     0.047ns|            |       0|           0
     TS_CLK_USER_INTERFACE / 0.09375 HIGH 50 |             |            |            |        |            
   %                                         |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_sh_CLOCK_TRNG1_CLKOUT1_BUF = PERIOD TI | SETUP       |   117.380ns|     8.230ns|       0|           0
-  MEGRP "sh_CLOCK_TRNG1_CLKOUT1_BUF"        | HOLD        |     0.437ns|            |       0|           0
+  ts_rx_meta_protect_0 = MAXDELAY FROM TIME | SETUP       |     3.679ns|     1.321ns|       0|           0
+  GRP "rx_metastable_0" 5 ns                | HOLD        |     0.414ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_CLK_200 = PERIOD TIMEGRP "clk_200" 4.9 | SETUP       |     4.055ns|     0.845ns|       0|           0
+   ns HIGH 50%                              | HOLD        |     0.486ns|            |       0|           0
+                                            | MINLOWPULSE |     3.846ns|     1.054ns|       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_sh_CLOCK_TRNG1_CLKOUT2_BUF = PERIOD TI | SETUP       |     4.417ns|     3.433ns|       0|           0
+  MEGRP "sh_CLOCK_TRNG1_CLKOUT2_BUF"        | HOLD        |     0.443ns|            |       0|           0
+    TS_CLK_USER_INTERFACE / 0.75 HIGH 50%   |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_tx_fifo_wr_to_rd_0 = MAXDELAY FROM TIM | SETUP       |     5.312ns|     2.688ns|       0|           0
+  EGRP "tx_fifo_wr_to_rd_0" TO TIMEGRP      | HOLD        |     1.017ns|            |       0|           0
+      "clk_125_eth" 8 ns DATAPATHONLY       |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_userRunClearToggle = MAXDELAY FROM TIM | SETUP       |     6.120ns|     1.880ns|       0|           0
+  EGRP "userRunSetTogCS" TO TIMEGRP         | HOLD        |     1.318ns|            |       0|           0
+   "userRunSetTogUS" 8 ns DATAPATHONLY      |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_rx_fifo_wr_to_rd_0 = MAXDELAY FROM TIM | SETUP       |     6.540ns|     1.460ns|       0|           0
+  EGRP "rx_fifo_wr_to_rd_0" TO TIMEGRP      | HOLD        |     1.122ns|            |       0|           0
+      "clk_125_eth" 8 ns DATAPATHONLY       |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_tx_fifo_rd_to_wr_0 = MAXDELAY FROM TIM | SETUP       |     6.798ns|     1.202ns|       0|           0
+  EGRP "tx_fifo_rd_to_wr_0" TO TIMEGRP      | HOLD        |     0.549ns|            |       0|           0
+      "clk_125_eth" 8 ns DATAPATHONLY       |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_tx_fifo_addr_0 = MAXDELAY FROM TIMEGRP | SETUP       |     8.732ns|     1.268ns|       0|           0
+   "tx_addr_rd_0" TO TIMEGRP         "tx_ad | HOLD        |     0.453ns|            |       0|           0
+  dr_wr_0" 10 ns                            |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_sysACE_OE = MAXDELAY FROM TIMEGRP "sys | MAXDELAY    |    19.327ns|     4.113ns|       0|           0
+  ACE_clk_o" TO TIMEGRP "sysACE_MPOE"       |             |            |            |        |            
+     23.44 ns DATAPATHONLY                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_sysACE_WE = MAXDELAY FROM TIMEGRP "sys | MAXDELAY    |    19.775ns|     3.665ns|       0|           0
+  ACE_clk_o" TO TIMEGRP "sysACE_MPWE"       |             |            |            |        |            
+     23.44 ns DATAPATHONLY                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_sysACE_clk_o = PERIOD TIMEGRP "sysACE_ | SETUP       |    28.317ns|     1.883ns|       0|           0
+  clk_o" 30.2 ns HIGH 50%                   | HOLD        |     0.210ns|            |       0|           0
+                                            | MINPERIOD   |    27.978ns|     2.222ns|       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_sh_CLOCK_TRNG1_CLKOUT1_BUF = PERIOD TI | SETUP       |    59.725ns|    11.444ns|       0|           0
+  MEGRP "sh_CLOCK_TRNG1_CLKOUT1_BUF"        | HOLD        |     0.086ns|            |       0|           0
     TS_CLK_USER_INTERFACE / 0.046875 HIGH 5 |             |            |            |        |            
   0%                                        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
@@ -583,14 +278,13 @@ Derived Constraints for TS_CLK_USER_INTERFACE
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_CLK_USER_INTERFACE          |      5.888ns|      7.992ns|     22.766ns|           41|           58|         6398|        22100|
-| TS_sh_CLOCK_TRNG1_CLKOUT0_BUF |     62.805ns|      4.885ns|          N/A|            0|            0|         1085|            0|
-| TS_sh_CLOCK_TRNG1_CLKOUT1_BUF |    125.611ns|      8.230ns|          N/A|            0|            0|        20833|            0|
-| TS_sh_CLOCK_TRNG1_CLKOUT2_BUF |      7.851ns|      1.666ns|          N/A|            0|            0|            0|            0|
-| TS_sh_CLOCK_TRNG1_CLKOUT3_BUF |      5.888ns|     22.766ns|          N/A|           58|            0|          182|            0|
+|TS_CLK_USER_INTERFACE          |      5.888ns|     23.860ns|      2.575ns|           49|            0|         7226|        52979|
+| TS_sh_CLOCK_TRNG1_CLKOUT0_BUF |     62.805ns|     18.879ns|          N/A|            0|            0|         1577|            0|
+| TS_sh_CLOCK_TRNG1_CLKOUT1_BUF |    125.611ns|     11.444ns|          N/A|            0|            0|        51242|            0|
+| TS_sh_CLOCK_TRNG1_CLKOUT2_BUF |      7.851ns|      3.433ns|          N/A|            0|            0|          160|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
-2 constraints not met.
+1 constraint not met.
 INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
    constraint is not analyzed due to the following: No paths covered by this 
    constraint; Other constraints intersect with this constraint; or This 
@@ -602,19 +296,19 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-WARNING:Par:283 - There are 128 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+WARNING:Par:283 - There are 2 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 3 mins 16 secs 
-Total CPU time to PAR completion: 3 mins 23 secs 
+Total REAL time to PAR completion: 1 mins 16 secs 
+Total CPU time to PAR completion: 1 mins 20 secs 
 
-Peak Memory Usage:  664 MB
+Peak Memory Usage:  686 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
-Timing: Completed - 99 errors found.
+Timing: Completed - 49 errors found.
 
 Number of error messages: 0
-Number of warning messages: 133
+Number of warning messages: 6
 Number of info messages: 1
 
 Writing design to file system.ncd

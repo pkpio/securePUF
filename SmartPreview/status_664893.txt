@@ -1,0 +1,12 @@
+
+STATUS:
+	+------------------------------------+--------------------------------+
+	| Most recent SmartPreview on disk:  |                     system.ncd |
+	| Fully placed:                      |                            YES |
+	| Fully routed:                      |                            YES |
+	| SmartPreview status:               |               ready for bitgen |
+	| Timing score:                      |                         664893 |
+	| Timing errors:                     |                             69 |
+	| Number of failing constraints:     |                              5 |
+	+------------------------------------+--------------------------------+
+
