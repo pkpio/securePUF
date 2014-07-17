@@ -57,7 +57,7 @@ module testPUF #(
 	 reg [N_CB-1:0] gen_challenge;
 	 wire [CHALLENGE_WIDTH-1:0] puf_challenge;
 	 wire trigger;
-	 reg test_trigger;
+	 wire test_trigger;
 	 
 	 
 	 (* KEEP = "TRUE" *) (* S = "TRUE" *) wire xor_response;
@@ -107,7 +107,7 @@ mapping #(
 ///////////		Clocks generator		////////////	
 	BUFGMUX_CTRL mux_clk_test (
 	.O(clk_test), // 1-bit output: Clock output
-	.I0(test_trigger), // 1-bit input: Clock input (S=0)
+	.I0(clk_1), // 1-bit input: Clock input (S=0)
 	.I1(clk_2), // 1-bit input: Clock input (S=1)
 	.S(sel_clk_test) // 1-bit input: Clock select
 	);
@@ -133,12 +133,14 @@ mapping #(
 	reg [4:0] state;
 	reg [3:0] clockCount;
 	
-	 
+	 assign test_trigger = ~clk_1;
+	 /*
 	 always @(posedge clk_1) begin		
 			test_trigger <= ~test_trigger;
 	 end
+	 */
 	 
-	 always @(negedge test_trigger) begin 
+	 always @(posedge clk_1) begin 
 	 
 		 if (rst) begin
 			state <= 0;

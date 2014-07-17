@@ -3019,28 +3019,28 @@ For more information about the Timing Analyzer, consult the Xilinx Timing Analyz
 </arg>
 </msg>
 
-<msg type="warning" file="Place" num="971" delta="new" >A GCLK / GCLK clock component pair have been found that are not placed at an optimal GCLK / GCLK site pair. The GCLK component &lt;<arg fmt="%s" index="1">bufCLK_user</arg>&gt; is placed at site &lt;<arg fmt="%s" index="2">BUFGCTRL_X0Y0</arg>&gt;. The corresponding GCLK component &lt;<arg fmt="%s" index="3">sh/MEMCLK</arg>&gt; is placed at site &lt;<arg fmt="%s" index="4">BUFGCTRL_X0Y31</arg>&gt;. The GCLK site can use the fast path to the other GCLK if both the GCLK components are placed in the same half of the device (TOP or BOTTOM). You may want to analyze why this problem exists and correct it. This is not an error so processing will continue.
+<msg type="warning" file="Place" num="971" delta="old" >A GCLK / GCLK clock component pair have been found that are not placed at an optimal GCLK / GCLK site pair. The GCLK component &lt;<arg fmt="%s" index="1">bufCLK_user</arg>&gt; is placed at site &lt;<arg fmt="%s" index="2">BUFGCTRL_X0Y0</arg>&gt;. The corresponding GCLK component &lt;<arg fmt="%s" index="3">sh/MEMCLK</arg>&gt; is placed at site &lt;<arg fmt="%s" index="4">BUFGCTRL_X0Y31</arg>&gt;. The GCLK site can use the fast path to the other GCLK if both the GCLK components are placed in the same half of the device (TOP or BOTTOM). You may want to analyze why this problem exists and correct it. This is not an error so processing will continue.
 </msg>
 
-<msg type="info" file="Pack" num="1650" delta="new" >Map created a placed design.
+<msg type="info" file="Pack" num="1650" delta="old" >Map created a placed design.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">sh/testPUF/puf_map/picn/puf1/i2&lt;0&gt;</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">sh/testPUF/puf_map/picn/puf1/i2&lt;0&gt;</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">sh/testPUF/puf_map/picn/puf2/i2&lt;0&gt;</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">sh/testPUF/puf_map/picn/puf2/i2&lt;0&gt;</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">sh/testPUF/puf_map/picn/puf3/i2&lt;0&gt;</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">sh/testPUF/puf_map/picn/puf3/i2&lt;0&gt;</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">sh/testPUF/puf_map/picn/puf4/i2&lt;0&gt;</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">sh/testPUF/puf_map/picn/puf4/i2&lt;0&gt;</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">sh/testPUF/puf_map/picn/puf5/i2&lt;0&gt;</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">sh/testPUF/puf_map/picn/puf5/i2&lt;0&gt;</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">sh/testPUF/puf_map/picn/puf6/i2&lt;0&gt;</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">sh/testPUF/puf_map/picn/puf6/i2&lt;0&gt;</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
 </msg>
 
 </messages>
