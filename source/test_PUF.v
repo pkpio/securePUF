@@ -133,14 +133,14 @@ mapping #(
 	reg [4:0] state;
 	reg [3:0] clockCount;
 	
-	 assign test_trigger = clk_1;
+	 assign test_trigger = ~clk_1;
 	 /*
 	 always @(posedge clk_1) begin		
 			test_trigger <= ~test_trigger;
 	 end
 	 */
 	 
-	 always @(negedge clk_1) begin 
+	 always @(posedge clk_1) begin 
 	 
 		 if (rst) begin
 			state <= 0;

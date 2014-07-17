@@ -1,0 +1,27 @@
+# Output products list for <SysMon>
+SysMon.asy
+SysMon.gise
+SysMon.v
+SysMon.veo
+SysMon.xco
+SysMon.xise
+SysMon\doc\sysmon_wiz_ds608.pdf
+SysMon\doc\sysmon_wiz_gsg741.pdf
+SysMon\example_design\SysMon_exdes.v
+SysMon\implement\implement.bat
+SysMon\implement\implement.sh
+SysMon\implement\xst.prj
+SysMon\implement\xst.scr
+SysMon\simulation\SysMon_tb.v
+SysMon\simulation\functional\design.txt
+SysMon\simulation\functional\simcmds.tcl
+SysMon\simulation\functional\simulate_isim.bat
+SysMon\simulation\functional\simulate_isim.sh
+SysMon\simulation\functional\simulate_mti.do
+SysMon\simulation\functional\simulate_ncsim.sh
+SysMon\simulation\functional\simulate_vcs.sh
+SysMon\simulation\functional\wave.do
+SysMon\sysmon_wiz_readme.txt
+SysMon_flist.txt
+SysMon_xmdf.tcl
+_xmsgs\pn_parser.xmsgs
