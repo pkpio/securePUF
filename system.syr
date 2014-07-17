@@ -2420,13 +2420,9 @@ Unit <pufInputNetwork> synthesized.
 
 Synthesizing Unit <pufOutputNetwork>.
     Related source file is "source/puf_files/pufOutputNetwork.v".
-    Found 1-bit adder for signal <xor_response>.
-    Found 1-bit adder for signal <xor_response$addsub0000> created at line 22.
-    Found 1-bit adder for signal <xor_response$addsub0001> created at line 22.
-    Found 1-bit adder for signal <xor_response$addsub0002> created at line 22.
-    Found 1-bit adder for signal <xor_response$addsub0003> created at line 22.
+    Found 1-bit xor6 for signal <xor_response>.
     Summary:
-	inferred   5 Adder/Subtractor(s).
+	inferred   1 Xor(s).
 Unit <pufOutputNetwork> synthesized.
 
 
@@ -3619,8 +3615,8 @@ Macro Statistics
  11x11-bit multiplier                                  : 6
  5x5-bit multiplier                                    : 4
  9x9-bit multiplier                                    : 1
-# Adders/Subtractors                                   : 151
- 1-bit adder                                           : 35
+# Adders/Subtractors                                   : 146
+ 1-bit adder                                           : 30
  1-bit adder carry out                                 : 1
  10-bit subtractor                                     : 1
  11-bit adder                                          : 1
@@ -3710,8 +3706,9 @@ Macro Statistics
  8-bit comparator greater                              : 3
 # Multiplexers                                         : 1
  11-bit 6-to-1 multiplexer                             : 1
-# Xors                                                 : 31
+# Xors                                                 : 32
  1-bit xor2                                            : 31
+ 1-bit xor6                                            : 1
 
 =========================================================================
 
@@ -3800,8 +3797,6 @@ Loading core <blk_mem_gen_inputMem> for timing and area information for instance
 Loading core <blk_mem_gen_outputMem> for timing and area information for instance <memOutputData>.
 Loading core <blk_mem_gen_paramReg> for timing and area information for instance <register32File>.
 Loading core <RMEM> for timing and area information for instance <rmem1>.
-WARNING:Xst:1290 - Hierarchical block <pon> is unconnected in block <puf_map>.
-   It will be removed from the design.
 WARNING:Xst:1710 - FF/Latch <rd_enable_delay> (without init value) has a constant value of 1 in block <tx_fifo_i>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <test8_0> (without init value) has a constant value of 0 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <test8_1> (without init value) has a constant value of 0 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
@@ -3980,9 +3975,8 @@ Macro Statistics
  11x11-bit registered multiplier                       : 6
  5x5-bit multiplier                                    : 2
  5x5-bit registered multiplier                         : 2
-# Adders/Subtractors                                   : 149
- 1-bit adder                                           : 31
- 1-bit adder carry in                                  : 2
+# Adders/Subtractors                                   : 146
+ 1-bit adder                                           : 30
  1-bit adder carry out                                 : 1
  10-bit subtractor                                     : 1
  11-bit adder                                          : 1
@@ -4052,8 +4046,9 @@ Macro Statistics
  8-bit comparator greater                              : 3
 # Multiplexers                                         : 11
  1-bit 6-to-1 multiplexer                              : 11
-# Xors                                                 : 31
+# Xors                                                 : 32
  1-bit xor2                                            : 31
+ 1-bit xor6                                            : 1
 
 =========================================================================
 
@@ -4101,7 +4096,7 @@ WARNING:Xst:1710 - FF/Latch <NIST/test4/calculate_chi_sqr1/v2_sqr_1> (without in
 WARNING:Xst:1710 - FF/Latch <NIST/test4/calculate_chi_sqr1/v1_sqr_1> (without init value) has a constant value of 0 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <NIST/test4/calculate_chi_sqr1/v2_sqr_1> of sequential type is unconnected in block <testPUF>.
 WARNING:Xst:2677 - Node <NIST/test4/calculate_chi_sqr1/v1_sqr_1> of sequential type is unconnected in block <testPUF>.
-WARNING:Xst:2170 - Unit Osc_Ring : the following signal(s) form a combinatorial loop: c<3>, c<2>, c<1>, c<0>.
+WARNING:Xst:2170 - Unit Osc_Ring : the following signal(s) form a combinatorial loop: c<2>, c<1>, c<0>, c<3>.
 
 Optimizing unit <system> ...
 
@@ -4425,15 +4420,15 @@ Design Statistics
 # IOs                              : 63
 
 Cell Usage :
-# BELS                             : 9908
+# BELS                             : 9909
 #      GND                         : 5
 #      INV                         : 197
 #      LUT1                        : 787
-#      LUT2                        : 673
-#      LUT3                        : 726
-#      LUT4                        : 689
-#      LUT5                        : 940
-#      LUT6                        : 3039
+#      LUT2                        : 672
+#      LUT3                        : 724
+#      LUT4                        : 687
+#      LUT5                        : 945
+#      LUT6                        : 3040
 #      MUXCY                       : 1402
 #      MUXF7                       : 49
 #      VCC                         : 5
@@ -4482,16 +4477,16 @@ Selected Device : 5vlx110tff1136-1
 
 Slice Logic Utilization: 
  Number of Slice Registers:            2326  out of  69120     3%  
- Number of Slice LUTs:                 7071  out of  69120    10%  
-    Number used as Logic:              7051  out of  69120    10%  
+ Number of Slice LUTs:                 7072  out of  69120    10%  
+    Number used as Logic:              7052  out of  69120    10%  
     Number used as Memory:               20  out of  17920     0%  
        Number used as SRL:               20
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   9397
-   Number with an unused Flip Flop:    7071  out of   9397    75%  
-   Number with an unused LUT:          2326  out of   9397    24%  
-   Number of fully used LUT-FF pairs:     0  out of   9397     0%  
+ Number of LUT Flip Flop pairs used:   9398
+   Number with an unused Flip Flop:    7072  out of   9398    75%  
+   Number with an unused LUT:          2326  out of   9398    24%  
+   Number of fully used LUT-FF pairs:     0  out of   9398     0%  
    Number of unique control sets:       150
 
 IO Utilization: 
@@ -4660,10 +4655,10 @@ Delay:               5.616ns (Levels of Logic = 6)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDE:C->Q              4   0.471   0.989  E2M/EC/tx_curr_bytes_left_23 (E2M/EC/tx_curr_bytes_left_23)
-     LUT5:I0->O            1   0.094   0.973  E2M/EC/tx_state_cmp_eq0027247_SW1 (N857)
+     LUT5:I0->O            1   0.094   0.973  E2M/EC/tx_state_cmp_eq0027247_SW1 (N859)
      LUT6:I1->O           22   0.094   0.593  E2M/EC/tx_state_cmp_eq0027260 (E2M/EC/tx_state_cmp_eq0027)
      LUT6:I5->O           91   0.094   0.618  E2M/EC/N305 (E2M/EC/N305)
-     LUT5:I4->O            1   0.094   0.710  E2M/EC/tx_header_buffer_src_add_mux0000<11>6_SW0_SW1 (N685)
+     LUT5:I4->O            1   0.094   0.710  E2M/EC/tx_header_buffer_src_add_mux0000<11>6_SW0_SW1 (N687)
      LUT6:I3->O           24   0.094   0.698  E2M/EC/tx_header_buffer_src_add_mux0000<11>6 (E2M/EC/N1631)
      LUT5:I3->O            1   0.094   0.000  E2M/EC/tx_header_buffer_src_add_mux0000<9>1 (E2M/EC/tx_header_buffer_src_add_mux0000<9>)
      FDE:D                    -0.018          E2M/EC/tx_header_buffer_src_add_9
@@ -4749,7 +4744,7 @@ Delay:               3.627ns (Levels of Logic = 3)
     ----------------------------------------  ------------
      FDR:C->Q             24   0.471   0.698  E2M/EC/sysACE_state_FSM_FFd2 (E2M/EC/sysACE_state_FSM_FFd2)
      LUT3:I1->O            8   0.094   1.107  E2M/EC/sysACE_MPADD_not00011 (E2M/EC/sysACE_MPADD_not0001)
-     LUT6:I0->O            1   0.094   1.069  E2M/EC/sysACE_MPDATA_In_mux0000<0>1_SW0 (N20)
+     LUT6:I0->O            1   0.094   1.069  E2M/EC/sysACE_MPDATA_In_mux0000<0>1_SW0 (N22)
      LUT6:I0->O            1   0.094   0.000  E2M/EC/sysACE_MPDATA_In_mux0000<0>1 (E2M/EC/sysACE_MPDATA_In_mux0000<0>1)
      FD:D                     -0.018          E2M/EC/sysACE_MPDATA_In_0
     ----------------------------------------
@@ -4794,7 +4789,7 @@ Delay:               3.832ns (Levels of Logic = 4)
     ----------------------------------------  ------------
      FDE:C->Q              3   0.471   0.984  sh/testPUF/resp_bit_count_6 (sh/testPUF/resp_bit_count_6)
      LUT5:I0->O            1   0.094   0.576  sh/testPUF/state_cmp_eq000033 (sh/testPUF/state_cmp_eq000033)
-     LUT6:I4->O            1   0.094   0.710  sh/testPUF/state_cmp_eq000065_SW0 (N1113)
+     LUT6:I4->O            1   0.094   0.710  sh/testPUF/state_cmp_eq000065_SW0 (N1115)
      LUT6:I3->O            2   0.094   0.715  sh/testPUF/state_cmp_eq000065 (sh/testPUF/state_cmp_eq0000)
      LUT5:I2->O            1   0.094   0.000  sh/testPUF/state_FSM_FFd4-In1 (sh/testPUF/state_FSM_FFd4-In)
      FDR:D                    -0.018          sh/testPUF/state_FSM_FFd4
@@ -4818,7 +4813,7 @@ Delay:               6.130ns (Levels of Logic = 7)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDRE:C->Q             2   0.471   1.074  sh/testPUF/NIST/test8/V_2_0 (sh/testPUF/NIST/test8/V_2_0)
-     LUT6:I0->O            1   0.094   0.480  sh/testPUF/NIST/test8/mux51_SW3 (N624)
+     LUT6:I0->O            1   0.094   0.480  sh/testPUF/NIST/test8/mux51_SW3 (N626)
      LUT5:I4->O           17   0.094   0.568  sh/testPUF/NIST/test8/mux51 (sh/testPUF/NIST/test8/Madd_COND_26_addsub0000_cy<0>)
      LUT6:I5->O           11   0.094   0.535  sh/testPUF/NIST/test8/Madd_COND_26_addsub0000_cy<4>1108 (sh/testPUF/NIST/test8/Madd_COND_26_addsub0000_cy<4>)
      LUT6:I5->O            9   0.094   0.524  sh/testPUF/NIST/test8/Madd_COND_26_addsub0000_cy<6>1107 (sh/testPUF/NIST/test8/Madd_COND_26_addsub0000_cy<6>)
@@ -4888,7 +4883,7 @@ Offset:              2.626ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
     TEMAC:EMAC0CLIENTTXACK   12   0.000   0.849  E2M/emac_ll/v5_emac_block_inst/v5_emac_wrapper_inst/v5_emac (E2M/emac_ll/tx_ack_0_i)
-     LUT5:I1->O            1   0.094   0.710  E2M/emac_ll/client_side_FIFO_emac0/tx_fifo_i/rd_en_SW3 (N161)
+     LUT5:I1->O            1   0.094   0.710  E2M/emac_ll/client_side_FIFO_emac0/tx_fifo_i/rd_en_SW3 (N163)
      LUT6:I3->O           43   0.094   0.465  E2M/emac_ll/client_side_FIFO_emac0/tx_fifo_i/rd_en (E2M/emac_ll/client_side_FIFO_emac0/tx_fifo_i/rd_en)
      RAMB16:ENB                0.414          E2M/emac_ll/client_side_FIFO_emac0/tx_fifo_i/ramgen_u
     ----------------------------------------
@@ -5099,14 +5094,14 @@ Delay:               3.617ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 192.00 secs
-Total CPU time to Xst completion: 191.97 secs
+Total REAL time to Xst completion: 188.00 secs
+Total CPU time to Xst completion: 188.57 secs
  
 --> 
 
-Total memory usage is 549448 kilobytes
+Total memory usage is 549384 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  304 (   0 filtered)
+Number of warnings :  303 (   0 filtered)
 Number of infos    :   38 (   0 filtered)
 

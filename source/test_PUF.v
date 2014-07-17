@@ -179,7 +179,7 @@ mapping #(
 			
 		2:	begin			
 			gen_challenge <= C; // feed challenge
-			test_data <= raw_response[1];//C[12];//xor_response; // read response and feed that to testing block
+			test_data <= xor_response; // read response and feed that to testing block
 			resp_bit_count <= resp_bit_count+1; // count response bits
 			LED <= 8'b00110011;
 			
@@ -190,7 +190,7 @@ mapping #(
 			
 		3: begin
 			gen_challenge <= C; // feed challenge, while we are reading the test results, we should keep on testing
-			test_data <= raw_response[1];//C[12];//xor_response; // read response and feed that to testing block
+			test_data <= xor_response; // read response and feed that to testing block
 			resp_bit_count <= 0; // reset bit count for next round of testing
 			
 			LED <= test_result;
@@ -213,7 +213,7 @@ mapping #(
 			
 		4:	begin
 			gen_challenge <= C; // feed challenge
-			test_data <= raw_response[1];//C[12];//xor_response; // read response and feed that to testing block
+			test_data <= xor_response; // read response and feed that to testing block
 			
 			mem_waddr <= mem_waddr + 1;
 			test_index <= test_index + 1;
@@ -232,7 +232,7 @@ mapping #(
 			
 		15:begin
 			gen_challenge <= C; // feed challenge
-			test_data <= raw_response[1];//C[12];//xor_response; // read response and feed that to testing block
+			test_data <= xor_response; // read response and feed that to testing block
 			
 			mem_we <= 0; // now we read the results from memory
 			state <= 15;	// Edit 15

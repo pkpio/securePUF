@@ -9,7 +9,7 @@ Target Device  : xc5vlx110t
 Target Package : ff1136
 Target Speed   : -1
 Mapper Version : virtex5 -- $Revision: 1.55 $
-Mapped Date    : Thu Jul 17 18:17:12 2014
+Mapped Date    : Thu Jul 17 19:16:55 2014
 
 Design Summary
 --------------
@@ -19,25 +19,25 @@ Slice Logic Utilization:
   Number of Slice Registers:                 2,315 out of  69,120    3%
     Number used as Flip Flops:               2,145
     Number used as Latches:                    170
-  Number of Slice LUTs:                      6,571 out of  69,120    9%
-    Number used as logic:                    6,505 out of  69,120    9%
+  Number of Slice LUTs:                      6,572 out of  69,120    9%
+    Number used as logic:                    6,506 out of  69,120    9%
       Number using O6 output only:           5,465
-      Number using O5 output only:             369
+      Number using O5 output only:             370
       Number using O5 and O6:                  671
     Number used as Memory:                      20 out of  17,920    1%
       Number used as Shift Register:            20
         Number using O6 output only:            20
     Number used as exclusive route-thru:        46
-  Number of route-thrus:                       420
+  Number of route-thrus:                       440
     Number using O6 output only:               412
-    Number using O5 output only:                 8
+    Number using O5 output only:                28
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 3,422 out of  17,280   19%
-  Number of LUT Flip Flop pairs used:        7,207
-    Number with an unused Flip Flop:         4,892 out of   7,207   67%
-    Number with an unused LUT:                 636 out of   7,207    8%
-    Number of fully used LUT-FF pairs:       1,679 out of   7,207   23%
+  Number of occupied Slices:                 3,424 out of  17,280   19%
+  Number of LUT Flip Flop pairs used:        7,195
+    Number with an unused Flip Flop:         4,880 out of   7,195   67%
+    Number with an unused LUT:                 623 out of   7,195    8%
+    Number of fully used LUT-FF pairs:       1,692 out of   7,195   23%
     Number of unique control sets:             139
     Number of slice register sites lost
       to control set restrictions:             253 out of  69,120    1%
@@ -56,8 +56,8 @@ IO Utilization:
     IOB Flip Flops:                             21
 
 Specific Feature Utilization:
-  Number of BlockRAM/FIFO:                      43 out of     148   29%
-    Number using BlockRAM only:                 41
+  Number of BlockRAM/FIFO:                      42 out of     148   28%
+    Number using BlockRAM only:                 40
     Number using FIFO only:                      2
     Total primitives used:
       Number of 36k BlockRAM used:              37
@@ -74,9 +74,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                4.32
 
-Peak Memory Usage:  723 MB
-Total REAL time to MAP completion:  2 mins 30 secs 
-Total CPU time to MAP completion:   2 mins 28 secs 
+Peak Memory Usage:  732 MB
+Total REAL time to MAP completion:  2 mins 17 secs 
+Total CPU time to MAP completion:   2 mins 15 secs 
 
 Table of Contents
 -----------------
