@@ -226,7 +226,7 @@ mapping #(
 			else if (test_index == 6) mem_din <= test7;
 			else if (test_index == 7) mem_din <= test8;
 			
-			if (test_index == 8) state <= 15; // storing test results is done, go to last state 
+			if (test_index == 7) state <= 15; // storing test results is done, go to last state 
 			else state <= 4; // keep on stroing test results
 			end
 			
