@@ -24,7 +24,7 @@ module challenge_gen #(parameter N_CB = 64)(
     output reg [N_CB-1:0] C
     );
 	 
-	parameter n = 3, N = 16, logN = 4, N_RNG = 8;
+	parameter n = 3, N = 16, logN = 4, N_RNG = 4;
 	wire [N_RNG-1:0]RAND;
 	
 	genvar k;

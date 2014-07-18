@@ -115,7 +115,7 @@ module SircHandler #(
 	  .douta(douta) // output [7 : 0] douta
 	);
 
-	parameter N_CB = 64;
+	parameter N_CB = 32;
 	//wire [7:0] test_result;
 	
 	

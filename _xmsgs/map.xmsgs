@@ -2320,7 +2320,7 @@ To see the details of these <arg fmt="%s" index="4">info</arg> messages, please 
 <msg type="info" file="MapLib" num="950" delta="old" >SAVE has been detected on block &quot;<arg fmt="%s" index="1">pdl_bottom</arg>&quot;
 </msg>
 
-<msg type="warning" file="MapLib" num="1073" delta="old" >This design has <arg fmt="%i" index="1">1169</arg> KEEP_HIERARCHY constraints specified and therefore, may take a very long time to process. If your design has unexpectedly long run times, please consider minimizing the number of KEEP_HIERARCHY constraints in your design or use the -ignore_keep_hierarchy command line switch to have them ignored by MAP.
+<msg type="warning" file="MapLib" num="1073" delta="new" >This design has <arg fmt="%i" index="1">1165</arg> KEEP_HIERARCHY constraints specified and therefore, may take a very long time to process. If your design has unexpectedly long run times, please consider minimizing the number of KEEP_HIERARCHY constraints in your design or use the -ignore_keep_hierarchy command line switch to have them ignored by MAP.
 </msg>
 
 <msg type="info" file="MapLib" num="1078" delta="old" ><arg fmt="%s" index="1">IDELAYCTRL symbol &quot;E2M/delayCtrl0&quot; (output signal=&lt;none&gt;)</arg> does not have assigned IODELAY_GROUP. A default GROUP &quot;<arg fmt="%s" index="2">MapGeneratedIodelayGroup</arg>&quot; will be assigned.

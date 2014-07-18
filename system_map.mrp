@@ -9,37 +9,37 @@ Target Device  : xc5vlx110t
 Target Package : ff1136
 Target Speed   : -1
 Mapper Version : virtex5 -- $Revision: 1.55 $
-Mapped Date    : Fri Jul 18 06:25:01 2014
+Mapped Date    : Fri Jul 18 06:53:10 2014
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:  172
 Slice Logic Utilization:
-  Number of Slice Registers:                 2,518 out of  69,120    3%
-    Number used as Flip Flops:               2,345
+  Number of Slice Registers:                 2,386 out of  69,120    3%
+    Number used as Flip Flops:               2,213
     Number used as Latches:                    172
     Number used as Latch-thrus:                  1
-  Number of Slice LUTs:                      6,928 out of  69,120   10%
-    Number used as logic:                    6,861 out of  69,120    9%
-      Number using O6 output only:           5,822
-      Number using O5 output only:             369
+  Number of Slice LUTs:                      6,570 out of  69,120    9%
+    Number used as logic:                    6,511 out of  69,120    9%
+      Number using O6 output only:           5,474
+      Number using O5 output only:             367
       Number using O5 and O6:                  670
-    Number used as Memory:                      20 out of  17,920    1%
-      Number used as Shift Register:            20
-        Number using O6 output only:            20
+    Number used as Memory:                      12 out of  17,920    1%
+      Number used as Shift Register:            12
+        Number using O6 output only:            12
     Number used as exclusive route-thru:        47
-  Number of route-thrus:                       418
+  Number of route-thrus:                       420
     Number using O6 output only:               411
-    Number using O5 output only:                 7
+    Number using O5 output only:                 9
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 3,560 out of  17,280   20%
-  Number of LUT Flip Flop pairs used:        7,572
-    Number with an unused Flip Flop:         5,054 out of   7,572   66%
-    Number with an unused LUT:                 644 out of   7,572    8%
-    Number of fully used LUT-FF pairs:       1,874 out of   7,572   24%
-    Number of unique control sets:             138
+  Number of occupied Slices:                 3,657 out of  17,280   21%
+  Number of LUT Flip Flop pairs used:        7,266
+    Number with an unused Flip Flop:         4,880 out of   7,266   67%
+    Number with an unused LUT:                 696 out of   7,266    9%
+    Number of fully used LUT-FF pairs:       1,690 out of   7,266   23%
+    Number of unique control sets:             137
     Number of slice register sites lost
       to control set restrictions:             247 out of  69,120    1%
 
@@ -74,11 +74,11 @@ Specific Feature Utilization:
   Number of SYSMONs:                             1 out of       1  100%
   Number of TEMACs:                              1 out of       2   50%
 
-Average Fanout of Non-Clock Nets:                4.36
+Average Fanout of Non-Clock Nets:                4.47
 
-Peak Memory Usage:  761 MB
-Total REAL time to MAP completion:  2 mins 51 secs 
-Total CPU time to MAP completion:   2 mins 48 secs 
+Peak Memory Usage:  753 MB
+Total REAL time to MAP completion:  2 mins 50 secs 
+Total CPU time to MAP completion:   2 mins 49 secs 
 
 Table of Contents
 -----------------
@@ -101,7 +101,7 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:MapLib:1073 - This design has 1169 KEEP_HIERARCHY constraints specified
+WARNING:MapLib:1073 - This design has 1165 KEEP_HIERARCHY constraints specified
    and therefore, may take a very long time to process. If your design has
    unexpectedly long run times, please consider minimizing the number of
    KEEP_HIERARCHY constraints in your design or use the -ignore_keep_hierarchy
@@ -2122,7 +2122,7 @@ Asterisk (*) preceding a constraint indicates it was not met.
   lk_user_interface" 5.888 ns HIGH 50%      | HOLD        |     0.059ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 * TS_sh_CLOCK_TRNG1_CLKOUT0_BUF = PERIOD TI | SETUP       |     0.572ns|    44.494ns|       0|           0
-  MEGRP "sh_CLOCK_TRNG1_CLKOUT0_BUF" TS_CLK | HOLD        |    -8.688ns|            |     114|       75536
+  MEGRP "sh_CLOCK_TRNG1_CLKOUT0_BUF" TS_CLK | HOLD        |    -8.688ns|            |     114|       75688
   _USER_INTERFACE / 0.09375 HIGH 50%        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
 * TS_CLK_125 = PERIOD TIMEGRP "clk_125_eth" | SETUP       |     5.184ns|     2.716ns|       0|           0
@@ -2158,9 +2158,9 @@ Asterisk (*) preceding a constraint indicates it was not met.
   "hard_reset" TO TIMEGRP "FFS" 8 ns DATAPA | HOLD        |     0.161ns|            |       0|           0
   THONLY                                    |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_sh_CLOCK_TRNG1_CLKOUT2_BUF = PERIOD TI | SETUP       |     6.987ns|     0.863ns|       0|           0
+  TS_sh_CLOCK_TRNG1_CLKOUT2_BUF = PERIOD TI | SETUP       |     7.105ns|     0.745ns|       0|           0
   MEGRP "sh_CLOCK_TRNG1_CLKOUT2_BUF" TS_CLK | HOLD        |     0.195ns|            |       0|           0
-  _USER_INTERFACE / 0.75 HIGH 50%           | MINLOWPULSE |     6.150ns|     1.700ns|       0|           0
+  _USER_INTERFACE / 0.75 HIGH 50%           | MINPERIOD   |     6.184ns|     1.666ns|       0|           0
 ----------------------------------------------------------------------------------------------------------
   TS_tx_fifo_wr_to_rd_0 = MAXDELAY FROM TIM | SETUP       |     6.611ns|     1.389ns|       0|           0
   EGRP "tx_fifo_wr_to_rd_0" TO TIMEGRP "clk | HOLD        |     0.195ns|            |       0|           0
@@ -2210,10 +2210,10 @@ Derived Constraints for TS_CLK_USER_INTERFACE
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_CLK_USER_INTERFACE          |      5.888ns|     40.397ns|      4.171ns|           14|          146|         7270|        71210|
-| TS_sh_CLOCK_TRNG1_CLKOUT0_BUF |     62.805ns|     44.494ns|          N/A|          114|            0|        19806|            0|
+|TS_CLK_USER_INTERFACE          |      5.888ns|     40.397ns|      4.171ns|           14|          146|         7270|        70250|
+| TS_sh_CLOCK_TRNG1_CLKOUT0_BUF |     62.805ns|     44.494ns|          N/A|          114|            0|        18910|            0|
 | TS_sh_CLOCK_TRNG1_CLKOUT1_BUF |    125.611ns|      4.032ns|          N/A|           32|            0|        51244|            0|
-| TS_sh_CLOCK_TRNG1_CLKOUT2_BUF |      7.851ns|      1.700ns|          N/A|            0|            0|          160|            0|
+| TS_sh_CLOCK_TRNG1_CLKOUT2_BUF |      7.851ns|      1.666ns|          N/A|            0|            0|           96|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 5 constraints not met.

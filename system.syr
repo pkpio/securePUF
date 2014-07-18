@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.18 secs
  
 --> Reading design: system.prj
 
@@ -323,7 +323,7 @@ Analyzing hierarchy for module <fifo36Wrapper> in library <work>.
 Analyzing hierarchy for module <challenge_gen> in library <work> with parameters.
 	N = "00000000000000000000000000010000"
 	N_CB = "00000000000000000000000000100000"
-	N_RNG = "00000000000000000000000000001000"
+	N_RNG = "00000000000000000000000000000100"
 	logN = "00000000000000000000000000000100"
 	n = "00000000000000000000000000000011"
 
@@ -1502,7 +1502,7 @@ Module <testPUF> is correct for synthesis.
 Analyzing module <challenge_gen> in library <work>.
 	N = 32'sb00000000000000000000000000010000
 	N_CB = 32'sb00000000000000000000000000100000
-	N_RNG = 32'sb00000000000000000000000000001000
+	N_RNG = 32'sb00000000000000000000000000000100
 	logN = 32'sb00000000000000000000000000000100
 	n = 32'sb00000000000000000000000000000011
 Module <challenge_gen> is correct for synthesis.
@@ -4056,8 +4056,8 @@ Macro Statistics
  9-bit updown counter                                  : 2
 # Accumulators                                         : 1
  12-bit updown accumulator                             : 1
-# Registers                                            : 2127
- Flip-Flops                                            : 2127
+# Registers                                            : 2059
+ Flip-Flops                                            : 2059
 # Latches                                              : 10
  10-bit latch                                          : 4
  22-bit latch                                          : 6
@@ -4132,4 +4132,1002 @@ INFO:Xst:1901 - Instance delayRXClk in unit ethernet2BlockMem of type IDELAY has
 INFO:Xst:1901 - Instance mux_clk_test in unit testPUF of type BUFGMUX_CTRL has been replaced by BUFGCTRL
 INFO:Xst:1901 - Instance MEMCLK in unit SircHandler of type BUFGMUX_CTRL has been replaced by BUFGCTRL
 INFO:Xst:1901 - Instance clkBPLL in unit system of type PLL_BASE has been replaced by PLL_ADV
-WARNING:Xst:2170 - Unit Osc_Ring : the following signal(s) form a combinatorial loop: c<1>, c<2>, c<3>, c<0>.
+WARNING:Xst:2170 - Unit Osc_Ring : the following signal(s) form a combinatorial loop: c<2>, c<1>, c<0>, c<3>.
+
+Optimizing unit <system> ...
+
+Optimizing unit <pufInputNetwork> ...
+
+Optimizing unit <pufOutputNetwork> ...
+
+Optimizing unit <Nonoverlapping_template> ...
+
+Optimizing unit <decision> ...
+
+Optimizing unit <gmii_if> ...
+
+Optimizing unit <tx_client_fifo_8> ...
+
+Optimizing unit <rx_client_fifo_8> ...
+
+Optimizing unit <iobuf16> ...
+
+Optimizing unit <XOR_tree> ...
+
+Optimizing unit <Osc_Ring> ...
+
+Optimizing unit <pdl_block_1> ...
+
+Optimizing unit <pdl_block_2> ...
+
+Optimizing unit <ethernetController> ...
+
+Optimizing unit <TRNG_RO> ...
+
+Optimizing unit <pdl_based_switch_1> ...
+
+Optimizing unit <pdl_based_switch_2> ...
+
+Optimizing unit <pdl_based_switch_3> ...
+
+Optimizing unit <pdl_based_switch_4> ...
+
+Optimizing unit <pdl_based_switch_5> ...
+
+Optimizing unit <pdl_based_switch_6> ...
+
+Optimizing unit <pdl_based_switch_7> ...
+
+Optimizing unit <pdl_based_switch_8> ...
+
+Optimizing unit <pdl_based_switch_9> ...
+
+Optimizing unit <pdl_based_switch_10> ...
+
+Optimizing unit <pdl_based_switch_11> ...
+
+Optimizing unit <pdl_based_switch_12> ...
+
+Optimizing unit <pdl_based_switch_13> ...
+
+Optimizing unit <pdl_based_switch_14> ...
+
+Optimizing unit <pdl_based_switch_15> ...
+
+Optimizing unit <pdl_based_switch_16> ...
+
+Optimizing unit <pdl_based_switch_17> ...
+
+Optimizing unit <pdl_based_switch_18> ...
+
+Optimizing unit <pdl_based_switch_19> ...
+
+Optimizing unit <pdl_based_switch_20> ...
+
+Optimizing unit <pdl_based_switch_21> ...
+
+Optimizing unit <pdl_based_switch_22> ...
+
+Optimizing unit <pdl_based_switch_23> ...
+
+Optimizing unit <pdl_based_switch_24> ...
+
+Optimizing unit <pdl_based_switch_25> ...
+
+Optimizing unit <pdl_based_switch_26> ...
+
+Optimizing unit <pdl_based_switch_27> ...
+
+Optimizing unit <pdl_based_switch_28> ...
+
+Optimizing unit <pdl_based_switch_29> ...
+
+Optimizing unit <pdl_based_switch_30> ...
+
+Optimizing unit <pdl_based_switch_31> ...
+
+Optimizing unit <pdl_based_switch_32> ...
+
+Optimizing unit <pdl_based_switch_33> ...
+
+Optimizing unit <pdl_based_switch_34> ...
+
+Optimizing unit <pdl_based_switch_35> ...
+
+Optimizing unit <pdl_based_switch_36> ...
+
+Optimizing unit <pdl_based_switch_37> ...
+
+Optimizing unit <pdl_based_switch_38> ...
+
+Optimizing unit <pdl_based_switch_39> ...
+
+Optimizing unit <pdl_based_switch_40> ...
+
+Optimizing unit <pdl_based_switch_41> ...
+
+Optimizing unit <pdl_based_switch_42> ...
+
+Optimizing unit <pdl_based_switch_43> ...
+
+Optimizing unit <pdl_based_switch_44> ...
+
+Optimizing unit <pdl_based_switch_45> ...
+
+Optimizing unit <pdl_based_switch_46> ...
+
+Optimizing unit <pdl_based_switch_47> ...
+
+Optimizing unit <pdl_based_switch_48> ...
+
+Optimizing unit <pdl_based_switch_49> ...
+
+Optimizing unit <pdl_based_switch_50> ...
+
+Optimizing unit <pdl_based_switch_51> ...
+
+Optimizing unit <pdl_based_switch_52> ...
+
+Optimizing unit <pdl_based_switch_53> ...
+
+Optimizing unit <pdl_based_switch_54> ...
+
+Optimizing unit <pdl_based_switch_55> ...
+
+Optimizing unit <pdl_based_switch_56> ...
+
+Optimizing unit <pdl_based_switch_57> ...
+
+Optimizing unit <pdl_based_switch_58> ...
+
+Optimizing unit <pdl_based_switch_59> ...
+
+Optimizing unit <pdl_based_switch_60> ...
+
+Optimizing unit <pdl_based_switch_61> ...
+
+Optimizing unit <pdl_based_switch_62> ...
+
+Optimizing unit <pdl_based_switch_63> ...
+
+Optimizing unit <pdl_based_switch_64> ...
+
+Optimizing unit <Overlapping_template> ...
+
+Optimizing unit <emac_single_locallink> ...
+
+Optimizing unit <challenge_gen> ...
+
+Optimizing unit <PDL_PUF_1> ...
+
+Optimizing unit <PDL_PUF_2> ...
+
+Optimizing unit <PDL_PUF_3> ...
+
+Optimizing unit <PDL_PUF_4> ...
+
+Optimizing unit <PDL_PUF_5> ...
+
+Optimizing unit <PDL_PUF_6> ...
+
+Optimizing unit <ethernet2BlockMem> ...
+
+Optimizing unit <pufInterconNetwork> ...
+
+Optimizing unit <testPUF> ...
+WARNING:Xst:1710 - FF/Latch <challenge_bit_ctr_0_0> (without init value) has a constant value of 1 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <challenge_bit_ctr_0_0> of sequential type is unconnected in block <testPUF>.
+
+Optimizing unit <SircHandler> ...
+WARNING:Xst:2677 - Node <E2M/emac_ll/client_side_FIFO_emac0/tx_fifo_i/wr_addr_diff_1> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <E2M/emac_ll/client_side_FIFO_emac0/tx_fifo_i/wr_addr_diff_0> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <E2M/emac_ll/client_side_FIFO_emac0/tx_fifo_i/wr_fifo_status_0> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <E2M/emac_ll/client_side_FIFO_emac0/tx_fifo_i/wr_fifo_status_1> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <E2M/emac_ll/client_side_FIFO_emac0/tx_fifo_i/wr_fifo_status_2> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <E2M/emac_ll/client_side_FIFO_emac0/tx_fifo_i/wr_fifo_status_3> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/wr_addr_diff_1> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/wr_addr_diff_0> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/wr_fifo_status_0> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/wr_fifo_status_1> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/wr_fifo_status_2> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/wr_fifo_status_3> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_15_7> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_15_6> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_15_5> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_15_4> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_15_3> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_15_2> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_15_1> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_15_0> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_14_7> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_14_6> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_14_5> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_14_4> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_14_3> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_14_2> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_14_1> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_14_0> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_12_7> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_12_6> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_12_5> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_12_4> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_12_3> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_12_2> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_12_1> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_12_0> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_13_7> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_13_6> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_13_5> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_13_4> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_13_3> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_13_2> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_13_1> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_13_0> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_6_7> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_6_6> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_6_5> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_6_4> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_6_3> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_6_2> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_6_1> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_6_0> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_5_7> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_5_6> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_5_5> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_5_4> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_5_3> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_5_2> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_5_1> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_5_0> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_7_7> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_7_6> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_7_5> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_7_4> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_7_3> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_7_2> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_7_1> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_7_0> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_4_7> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_4_6> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_4_5> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_4_4> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_4_3> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_4_2> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_4_1> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <sh/challenge_4_0> of sequential type is unconnected in block <system>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block system, actual ratio is 11.
+INFO:Xst:2260 - The FF/Latch <sh/testPUF/NIST/test4/calculate_chi_sqr1/v2_sqr_1> in Unit <system> is equivalent to the following FF/Latch : <sh/testPUF/NIST/test4/calculate_chi_sqr1/v1_sqr_1> 
+
+Final Macro Processing ...
+
+Processing Unit <system> :
+	Found 3-bit shift register for signal <E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/wr_data_bram_7>.
+	Found 3-bit shift register for signal <E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/wr_data_bram_6>.
+	Found 3-bit shift register for signal <E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/wr_data_bram_5>.
+	Found 3-bit shift register for signal <E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/wr_data_bram_4>.
+	Found 3-bit shift register for signal <E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/wr_data_bram_3>.
+	Found 3-bit shift register for signal <E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/wr_data_bram_2>.
+	Found 3-bit shift register for signal <E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/wr_data_bram_1>.
+	Found 3-bit shift register for signal <E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/wr_data_bram_0>.
+	Found 2-bit shift register for signal <E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/wr_bf_pipe_1>.
+	Found 2-bit shift register for signal <E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/wr_gf_pipe_1>.
+	Found 2-bit shift register for signal <E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/rd_valid_pipe_1>.
+	Found 2-bit shift register for signal <E2M/EC/inputMemoryReadDataValidPipeline_1>.
+INFO:Xst:741 - HDL ADVISOR - A 13-bit shift register was found for signal <E2M/delayCtrl0Reset_12> and currently occupies 13 logic cells (6 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
+Unit <system> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 2212
+ Flip-Flops                                            : 2212
+# Shift Registers                                      : 12
+ 2-bit shift register                                  : 4
+ 3-bit shift register                                  : 8
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : system.ngr
+Top Level Output File Name         : system
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 63
+
+Cell Usage :
+# BELS                             : 9910
+#      GND                         : 6
+#      INV                         : 197
+#      LUT1                        : 596
+#      LUT2                        : 588
+#      LUT3                        : 812
+#      LUT4                        : 727
+#      LUT5                        : 948
+#      LUT6                        : 3149
+#      MUXCY                       : 1417
+#      MUXF7                       : 58
+#      VCC                         : 5
+#      XORCY                       : 1407
+# FlipFlops/Latches                : 2406
+#      FD                          : 160
+#      FDC                         : 37
+#      FDCE                        : 13
+#      FDE                         : 1184
+#      FDP                         : 27
+#      FDR                         : 312
+#      FDRE                        : 387
+#      FDRS                        : 97
+#      FDRSE                       : 4
+#      FDS                         : 8
+#      FDSE                        : 4
+#      LD                          : 172
+#      ODDR                        : 1
+# RAMS                             : 41
+#      RAMB16                      : 4
+#      RAMB36_EXP                  : 37
+# Shift Registers                  : 12
+#      SRLC16E                     : 12
+# Clock Buffers                    : 13
+#      BUFG                        : 11
+#      BUFGCTRL                    : 2
+# IO Buffers                       : 61
+#      IBUF                        : 15
+#      IOBUF                       : 16
+#      OBUF                        : 30
+# DSPs                             : 10
+#      DSP48E                      : 10
+# Others                           : 19
+#      FIFO18_36                   : 2
+#      IDELAYCTRL                  : 1
+#      IODELAY                     : 11
+#      PLL_ADV                     : 3
+#      SYSMON                      : 1
+#      TEMAC                       : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 5vlx110tff1136-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            2396  out of  69120     3%  
+ Number of Slice LUTs:                 7029  out of  69120    10%  
+    Number used as Logic:              7017  out of  69120    10%  
+    Number used as Memory:               12  out of  17920     0%  
+       Number used as SRL:               12
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   9425
+   Number with an unused Flip Flop:    7029  out of   9425    74%  
+   Number with an unused LUT:          2396  out of   9425    25%  
+   Number of fully used LUT-FF pairs:     0  out of   9425     0%  
+   Number of unique control sets:       144
+
+IO Utilization: 
+ Number of IOs:                          63
+ Number of bonded IOBs:                  61  out of    640     9%  
+    IOB Flip Flops/Latches:              10
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               41  out of    148    27%  
+    Number using Block RAM only:         39
+    Number using FIFO only:               2
+ Number of BUFG/BUFGCTRLs:               13  out of     32    40%  
+ Number of DSP48Es:                      10  out of     64    15%  
+ Number of PLL_ADVs:                      3  out of      6    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                                                                                                        | Clock buffer(FF name)                                                                                                              | Load  |
+--------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
+clk_125_eth_i                                                                                                       | BUFG                                                                                                                               | 1055  |
+GMII_RX_CLK_0                                                                                                       | IBUF+IODELAY+BUFG                                                                                                                  | 116   |
+clk_user_interface_i                                                                                                | BUFG                                                                                                                               | 288   |
+E2M/EC/sysACE_delay_clk                                                                                             | BUFG                                                                                                                               | 34    |
+clk_200_i                                                                                                           | BUFG                                                                                                                               | 13    |
+sh/CLOCK_TRNG1/CLKOUT0_BUF                                                                                          | BUFG                                                                                                                               | 290   |
+sh/clk_1                                                                                                            | BUFGCTRL                                                                                                                           | 434   |
+sh/testPUF/NIST/test4/_and00001(sh/testPUF/NIST/test4/_and00001:O)                                                  | BUFG(*)(sh/testPUF/NIST/test4/calculate_chi_sqr1/v3_sqr_0)                                                                         | 40    |
+sh/testPUF/NIST/test8/en1(sh/testPUF/NIST/test8/en1:O)                                                              | BUFG(*)(sh/testPUF/NIST/test8/calculate_chi_sqr_88/V_sqr_0_21)                                                                     | 132   |
+sh/CLOCK_TRNG1/CLKOUT2_BUF                                                                                          | BUFG                                                                                                                               | 100   |
+sh/testPUF/puf_map/picn/puf1/sarray[0]/pdl_bottom/o(sh/testPUF/puf_map/picn/puf1/sarray[0]/pdl_bottom/LUT6_inst_0:O)| NONE(*)(sh/testPUF/puf_map/picn/puf1/FDC1)                                                                                         | 1     |
+sh/testPUF/puf_map/picn/puf2/sarray[0]/pdl_bottom/o(sh/testPUF/puf_map/picn/puf2/sarray[0]/pdl_bottom/LUT6_inst_0:O)| NONE(*)(sh/testPUF/puf_map/picn/puf2/FDC1)                                                                                         | 1     |
+sh/testPUF/puf_map/picn/puf3/sarray[0]/pdl_bottom/o(sh/testPUF/puf_map/picn/puf3/sarray[0]/pdl_bottom/LUT6_inst_0:O)| NONE(*)(sh/testPUF/puf_map/picn/puf3/FDC1)                                                                                         | 1     |
+sh/testPUF/puf_map/picn/puf4/sarray[0]/pdl_bottom/o(sh/testPUF/puf_map/picn/puf4/sarray[0]/pdl_bottom/LUT6_inst_0:O)| NONE(*)(sh/testPUF/puf_map/picn/puf4/FDC1)                                                                                         | 1     |
+sh/testPUF/puf_map/picn/puf5/sarray[0]/pdl_bottom/o(sh/testPUF/puf_map/picn/puf5/sarray[0]/pdl_bottom/LUT6_inst_0:O)| NONE(*)(sh/testPUF/puf_map/picn/puf5/FDC1)                                                                                         | 1     |
+sh/testPUF/puf_map/picn/puf6/sarray[0]/pdl_bottom/o(sh/testPUF/puf_map/picn/puf6/sarray[0]/pdl_bottom/LUT6_inst_0:O)| NONE(*)(sh/testPUF/puf_map/picn/puf6/FDC1)                                                                                         | 1     |
+clk_user_interface                                                                                                  | BUFGCTRL                                                                                                                           | 2     |
+sh/rmem1/N1                                                                                                         | NONE(sh/rmem1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SP.SINGLE_PRIM36.SP)| 2     |
+--------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
+(*) These 8 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                                                                                                                                                                                       | Buffer(FF name)                                                                                                                                       | Load  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+E2M/EC/memInputData/N0(E2M/EC/memInputData/XST_GND:G)                                                                                                                                                                                                                                                | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B)  | 128   |
+E2M/delayCtrl0Reset_12(E2M/delayCtrl0Reset_12:Q)                                                                                                                                                                                                                                                     | NONE(E2M/emac_ll/rx_bad_frame_0_r)                                                                                                                    | 45    |
+E2M/EC/memOutputData/N0(E2M/EC/memOutputData/XST_GND:G)                                                                                                                                                                                                                                              | NONE(E2M/EC/memOutputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP)     | 16    |
+sh/rmem1/N1(sh/rmem1/XST_GND:G)                                                                                                                                                                                                                                                                      | NONE(sh/rmem1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SP.SINGLE_PRIM36.SP)                   | 16    |
+E2M/EC/resetMaxOutputAddress(E2M/EC/resetMaxOutputAddress:Q)                                                                                                                                                                                                                                         | NONE(E2M/EC/tx_max_output_address_0)                                                                                                                  | 13    |
+E2M/hardResetClockLockLow_inv(E2M/hardResetClockLockLow_inv1:O)                                                                                                                                                                                                                                      | NONE(E2M/delayCtrl0Reset_0)                                                                                                                           | 13    |
+E2M/EC/register32File/N0(E2M/EC/register32File/XST_GND:G)                                                                                                                                                                                                                                            | NONE(E2M/EC/register32File/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/TRUE_DP.SINGLE_PRIM36.TDP)| 8     |
+E2M/EC/userLogicReset(E2M/EC/userLogicReset:Q)                                                                                                                                                                                                                                                       | NONE(sh/testPUF/puf_map/picn/puf1/FDC1)                                                                                                               | 6     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/cascaderega_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/cascaderegb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v5_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATA)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v5_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATB)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v5_noinit.ram/cascaderega_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGA)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v5_noinit.ram/cascaderegb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGB)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v5_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATA)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v5_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATB)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v5_noinit.ram/cascaderega_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGA)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v5_noinit.ram/cascaderegb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGB)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v5_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATA)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v5_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATB)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v5_noinit.ram/cascaderega_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGA)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v5_noinit.ram/cascaderegb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGB)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/v5_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATA)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/v5_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATB)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/v5_noinit.ram/cascaderega_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGA)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/v5_noinit.ram/cascaderegb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGB)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v5_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATA)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v5_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATB)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v5_noinit.ram/cascaderega_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGA)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v5_noinit.ram/cascaderegb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGB)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v5_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATA)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v5_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATB)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v5_noinit.ram/cascaderega_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGA)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v5_noinit.ram/cascaderegb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGB)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v5_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v5_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v5_noinit.ram/cascaderega_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v5_noinit.ram/cascaderegb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v5_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v5_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v5_noinit.ram/cascaderega_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v5_noinit.ram/cascaderegb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v5_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v5_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v5_noinit.ram/cascaderega_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v5_noinit.ram/cascaderegb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/cascaderega_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/cascaderegb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/cascaderega_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/cascaderegb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v5_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v5_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v5_noinit.ram/cascaderega_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v5_noinit.ram/cascaderegb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/cascaderega_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/cascaderegb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v5_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v5_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v5_noinit.ram/cascaderega_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v5_noinit.ram/cascaderegb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v5_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v5_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTLATB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v5_noinit.ram/cascaderega_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v5_noinit.ram/cascaderegb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_B:CASCADEOUTREGB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v5_noinit.ram/SDP.CASCADED_PRIM36.TDP_T)  | 2     |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 6.130ns (Maximum Frequency: 163.132MHz)
+   Minimum input arrival time before clock: 4.237ns
+   Maximum output required time after clock: 3.920ns
+   Maximum combinational path delay: 3.617ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_125_eth_i'
+  Clock period: 5.616ns (frequency: 178.055MHz)
+  Total number of paths / destination ports: 183150 / 3550
+-------------------------------------------------------------------------
+Delay:               5.616ns (Levels of Logic = 6)
+  Source:            E2M/EC/tx_curr_bytes_left_23 (FF)
+  Destination:       E2M/EC/tx_header_buffer_src_add_1 (FF)
+  Source Clock:      clk_125_eth_i rising
+  Destination Clock: clk_125_eth_i rising
+
+  Data Path: E2M/EC/tx_curr_bytes_left_23 to E2M/EC/tx_header_buffer_src_add_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              4   0.471   0.989  E2M/EC/tx_curr_bytes_left_23 (E2M/EC/tx_curr_bytes_left_23)
+     LUT5:I0->O            1   0.094   0.973  E2M/EC/tx_state_cmp_eq0027247_SW1 (N905)
+     LUT6:I1->O           22   0.094   0.593  E2M/EC/tx_state_cmp_eq0027260 (E2M/EC/tx_state_cmp_eq0027)
+     LUT6:I5->O           91   0.094   0.618  E2M/EC/N305 (E2M/EC/N305)
+     LUT5:I4->O            1   0.094   0.710  E2M/EC/tx_header_buffer_src_add_mux0000<11>6_SW0_SW1 (N733)
+     LUT6:I3->O           24   0.094   0.698  E2M/EC/tx_header_buffer_src_add_mux0000<11>6 (E2M/EC/N1631)
+     LUT5:I3->O            1   0.094   0.000  E2M/EC/tx_header_buffer_src_add_mux0000<9>1 (E2M/EC/tx_header_buffer_src_add_mux0000<9>)
+     FDE:D                    -0.018          E2M/EC/tx_header_buffer_src_add_9
+    ----------------------------------------
+    Total                      5.616ns (1.035ns logic, 4.581ns route)
+                                       (18.4% logic, 81.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'GMII_RX_CLK_0'
+  Clock period: 3.663ns (frequency: 273.000MHz)
+  Total number of paths / destination ports: 1953 / 218
+-------------------------------------------------------------------------
+Delay:               3.663ns (Levels of Logic = 15)
+  Source:            E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/wr_rd_addr_gray_8 (FF)
+  Destination:       E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/wr_addr_diff_11 (FF)
+  Source Clock:      GMII_RX_CLK_0 rising
+  Destination Clock: GMII_RX_CLK_0 rising
+
+  Data Path: E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/wr_rd_addr_gray_8 to E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/wr_addr_diff_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              5   0.471   0.811  E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/wr_rd_addr_gray_8 (E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/wr_rd_addr_gray_8)
+     LUT4:I0->O            6   0.094   0.507  E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/Mxor_wr_rd_addr_xor0002_Result1 (E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/gray_to_bin_1_gray_to_bin<8>)
+     LUT5:I4->O            6   0.094   0.603  E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/Mxor_wr_rd_addr_xor0006_Result1 (E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/gray_to_bin_1_gray_to_bin<4>)
+     LUT6:I4->O            1   0.094   0.000  E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/Msub_wr_addr_diff_sub0000_lut<0> (E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/Msub_wr_addr_diff_sub0000_lut<0>)
+     MUXCY:S->O            1   0.372   0.000  E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/Msub_wr_addr_diff_sub0000_cy<0> (E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/Msub_wr_addr_diff_sub0000_cy<0>)
+     MUXCY:CI->O           1   0.026   0.000  E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/Msub_wr_addr_diff_sub0000_cy<1> (E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/Msub_wr_addr_diff_sub0000_cy<1>)
+     MUXCY:CI->O           1   0.026   0.000  E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/Msub_wr_addr_diff_sub0000_cy<2> (E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/Msub_wr_addr_diff_sub0000_cy<2>)
+     MUXCY:CI->O           1   0.026   0.000  E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/Msub_wr_addr_diff_sub0000_cy<3> (E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/Msub_wr_addr_diff_sub0000_cy<3>)
+     MUXCY:CI->O           1   0.026   0.000  E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/Msub_wr_addr_diff_sub0000_cy<4> (E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/Msub_wr_addr_diff_sub0000_cy<4>)
+     MUXCY:CI->O           1   0.026   0.000  E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/Msub_wr_addr_diff_sub0000_cy<5> (E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/Msub_wr_addr_diff_sub0000_cy<5>)
+     MUXCY:CI->O           1   0.026   0.000  E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/Msub_wr_addr_diff_sub0000_cy<6> (E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/Msub_wr_addr_diff_sub0000_cy<6>)
+     MUXCY:CI->O           1   0.026   0.000  E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/Msub_wr_addr_diff_sub0000_cy<7> (E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/Msub_wr_addr_diff_sub0000_cy<7>)
+     MUXCY:CI->O           1   0.026   0.000  E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/Msub_wr_addr_diff_sub0000_cy<8> (E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/Msub_wr_addr_diff_sub0000_cy<8>)
+     MUXCY:CI->O           1   0.026   0.000  E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/Msub_wr_addr_diff_sub0000_cy<9> (E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/Msub_wr_addr_diff_sub0000_cy<9>)
+     MUXCY:CI->O           0   0.026   0.000  E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/Msub_wr_addr_diff_sub0000_cy<10> (E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/Msub_wr_addr_diff_sub0000_cy<10>)
+     XORCY:CI->O           1   0.357   0.000  E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/Msub_wr_addr_diff_sub0000_xor<11> (E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/wr_addr_diff_sub0000<11>)
+     FDR:D                    -0.018          E2M/emac_ll/client_side_FIFO_emac0/rx_fifo_i/wr_addr_diff_11
+    ----------------------------------------
+    Total                      3.663ns (1.742ns logic, 1.921ns route)
+                                       (47.6% logic, 52.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_user_interface_i'
+  Clock period: 4.748ns (frequency: 210.610MHz)
+  Total number of paths / destination ports: 7172 / 1641
+-------------------------------------------------------------------------
+Delay:               4.748ns (Levels of Logic = 4)
+  Source:            sh/outputMemoryWriteAdd_9 (FF)
+  Destination:       sh/raddr_12 (FF)
+  Source Clock:      clk_user_interface_i rising
+  Destination Clock: clk_user_interface_i rising
+
+  Data Path: sh/outputMemoryWriteAdd_9 to sh/raddr_12
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             11   0.471   1.124  sh/outputMemoryWriteAdd_9 (sh/outputMemoryWriteAdd_9)
+     LUT6:I0->O            4   0.094   0.726  sh/currState_cmp_eq001218 (sh/currState_cmp_eq001218)
+     LUT6:I3->O           31   0.094   0.916  sh/memCount_mux0000<2>1111 (sh/N37)
+     LUT6:I2->O           13   0.094   1.135  sh/raddr_mux0000<0>11 (sh/N2)
+     LUT6:I0->O            1   0.094   0.000  sh/raddr_mux0000<9>1 (sh/raddr_mux0000<9>)
+     FDE:D                    -0.018          sh/raddr_3
+    ----------------------------------------
+    Total                      4.748ns (0.847ns logic, 3.901ns route)
+                                       (17.8% logic, 82.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'E2M/EC/sysACE_delay_clk'
+  Clock period: 3.627ns (frequency: 275.710MHz)
+  Total number of paths / destination ports: 222 / 48
+-------------------------------------------------------------------------
+Delay:               3.627ns (Levels of Logic = 3)
+  Source:            E2M/EC/sysACE_state_FSM_FFd2 (FF)
+  Destination:       E2M/EC/sysACE_MPDATA_In_0 (FF)
+  Source Clock:      E2M/EC/sysACE_delay_clk rising
+  Destination Clock: E2M/EC/sysACE_delay_clk rising
+
+  Data Path: E2M/EC/sysACE_state_FSM_FFd2 to E2M/EC/sysACE_MPDATA_In_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             24   0.471   0.698  E2M/EC/sysACE_state_FSM_FFd2 (E2M/EC/sysACE_state_FSM_FFd2)
+     LUT3:I1->O            8   0.094   1.107  E2M/EC/sysACE_MPADD_not00011 (E2M/EC/sysACE_MPADD_not0001)
+     LUT6:I0->O            1   0.094   1.069  E2M/EC/sysACE_MPDATA_In_mux0000<0>1_SW0 (N26)
+     LUT6:I0->O            1   0.094   0.000  E2M/EC/sysACE_MPDATA_In_mux0000<0>1 (E2M/EC/sysACE_MPDATA_In_mux0000<0>1)
+     FD:D                     -0.018          E2M/EC/sysACE_MPDATA_In_0
+    ----------------------------------------
+    Total                      3.627ns (0.753ns logic, 2.874ns route)
+                                       (20.8% logic, 79.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_200_i'
+  Clock period: 0.807ns (frequency: 1239.157MHz)
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Delay:               0.807ns (Levels of Logic = 0)
+  Source:            E2M/delayCtrl0Reset_11 (FF)
+  Destination:       E2M/delayCtrl0Reset_12 (FF)
+  Source Clock:      clk_200_i rising
+  Destination Clock: clk_200_i rising
+
+  Data Path: E2M/delayCtrl0Reset_11 to E2M/delayCtrl0Reset_12
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              1   0.471   0.336  E2M/delayCtrl0Reset_11 (E2M/delayCtrl0Reset_11)
+     FDP:D                    -0.018          E2M/delayCtrl0Reset_12
+    ----------------------------------------
+    Total                      0.807ns (0.471ns logic, 0.336ns route)
+                                       (58.4% logic, 41.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'sh/CLOCK_TRNG1/CLKOUT0_BUF'
+  Clock period: 4.411ns (frequency: 226.693MHz)
+  Total number of paths / destination ports: 5014 / 290
+-------------------------------------------------------------------------
+Delay:               4.411ns (Levels of Logic = 5)
+  Source:            sh/testPUF/state_FSM_FFd19 (FF)
+  Destination:       sh/testPUF/gen_challenge_0 (FF)
+  Source Clock:      sh/CLOCK_TRNG1/CLKOUT0_BUF rising
+  Destination Clock: sh/CLOCK_TRNG1/CLKOUT0_BUF rising
+
+  Data Path: sh/testPUF/state_FSM_FFd19 to sh/testPUF/gen_challenge_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             19   0.471   1.168  sh/testPUF/state_FSM_FFd19 (sh/testPUF/state_FSM_FFd19)
+     LUT6:I0->O           33   0.094   0.607  sh/testPUF/hold_challenge_mux0000<0>11 (sh/testPUF/N2)
+     LUT6:I5->O           33   0.094   0.607  sh/testPUF/gen_challenge_mux0000<0>11 (sh/testPUF/N0)
+     LUT6:I5->O           32   0.094   0.607  sh/testPUF/gen_challenge_or00001 (sh/testPUF/gen_challenge_or0000)
+     LUT4:I3->O            1   0.094   0.480  sh/testPUF/gen_challenge_mux0000<9>_SW0 (N113)
+     LUT5:I4->O            1   0.094   0.000  sh/testPUF/gen_challenge_mux0000<9> (sh/testPUF/gen_challenge_mux0000<9>)
+     FDE:D                    -0.018          sh/testPUF/gen_challenge_9
+    ----------------------------------------
+    Total                      4.411ns (0.941ns logic, 3.470ns route)
+                                       (21.3% logic, 78.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'sh/clk_1'
+  Clock period: 6.130ns (frequency: 163.132MHz)
+  Total number of paths / destination ports: 50984 / 1087
+-------------------------------------------------------------------------
+Delay:               6.130ns (Levels of Logic = 7)
+  Source:            sh/testPUF/NIST/test8/V_2_0 (FF)
+  Destination:       sh/testPUF/NIST/test8/calculate_chi_sqr_88/Mmult_V_sqr_0_mult0000 (DSP)
+  Source Clock:      sh/clk_1 rising
+  Destination Clock: sh/clk_1 rising
+
+  Data Path: sh/testPUF/NIST/test8/V_2_0 to sh/testPUF/NIST/test8/calculate_chi_sqr_88/Mmult_V_sqr_0_mult0000
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.471   1.074  sh/testPUF/NIST/test8/V_2_0 (sh/testPUF/NIST/test8/V_2_0)
+     LUT6:I0->O            1   0.094   0.480  sh/testPUF/NIST/test8/mux51_SW3 (N672)
+     LUT5:I4->O           17   0.094   0.568  sh/testPUF/NIST/test8/mux51 (sh/testPUF/NIST/test8/Madd_COND_26_addsub0000_cy<0>)
+     LUT6:I5->O           11   0.094   0.535  sh/testPUF/NIST/test8/Madd_COND_26_addsub0000_cy<4>1108 (sh/testPUF/NIST/test8/Madd_COND_26_addsub0000_cy<4>)
+     LUT6:I5->O            9   0.094   0.524  sh/testPUF/NIST/test8/Madd_COND_26_addsub0000_cy<6>1107 (sh/testPUF/NIST/test8/Madd_COND_26_addsub0000_cy<6>)
+     LUT6:I5->O            1   0.094   0.710  sh/testPUF/NIST/test8/Madd_COND_26_addsub0000_xor<8>172 (sh/testPUF/NIST/test8/Madd_COND_26_addsub0000_xor<8>172)
+     LUT5:I2->O            6   0.094   0.507  sh/testPUF/NIST/test8/Madd_COND_26_addsub0000_xor<8>1299 (sh/testPUF/NIST/test8/COND_26_addsub0000<8>)
+     LUT4:I3->O            3   0.094   0.347  sh/testPUF/NIST/test8/V_4_mux0000<8>1 (sh/testPUF/NIST/test8/V_4_mux0000<8>)
+     DSP48E:A8                 0.256          sh/testPUF/NIST/test8/calculate_chi_sqr_88/Mmult_V_sqr_4_mult0000
+    ----------------------------------------
+    Total                      6.130ns (1.385ns logic, 4.745ns route)
+                                       (22.6% logic, 77.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'sh/CLOCK_TRNG1/CLKOUT2_BUF'
+  Clock period: 3.151ns (frequency: 317.360MHz)
+  Total number of paths / destination ports: 96 / 36
+-------------------------------------------------------------------------
+Delay:               3.151ns (Levels of Logic = 4)
+  Source:            sh/testPUF/challenge_gen/TRNG[0].TRNG/Ring[15].Ring/Sample (FF)
+  Destination:       sh/testPUF/challenge_gen/TRNG[0].TRNG/Capture (FF)
+  Source Clock:      sh/CLOCK_TRNG1/CLKOUT2_BUF rising
+  Destination Clock: sh/CLOCK_TRNG1/CLKOUT2_BUF rising
+
+  Data Path: sh/testPUF/challenge_gen/TRNG[0].TRNG/Ring[15].Ring/Sample to sh/testPUF/challenge_gen/TRNG[0].TRNG/Capture
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.471   0.576  Ring[15].Ring/Sample (R<15>)
+     LUT2:I0->O            1   0.094   0.576  XOR_tree1/XOR_col[4].XOR_row[15].XOR (XOR_tree1/X<3><7>)
+     LUT2:I0->O            1   0.094   0.576  XOR_tree1/XOR_col[3].XOR_row[7].XOR (XOR_tree1/X<2><3>)
+     LUT2:I0->O            1   0.094   0.576  XOR_tree1/XOR_col[2].XOR_row[3].XOR (XOR_tree1/X<1><1>)
+     LUT2:I0->O            1   0.094   0.000  XOR_tree1/XOR_col[1].XOR_row[1].XOR (randD)
+     FD:D                     -0.018          Capture
+    ----------------------------------------
+    Total                      3.151ns (0.847ns logic, 2.304ns route)
+                                       (26.9% logic, 73.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'GMII_RX_CLK_0'
+  Total number of paths / destination ports: 21 / 21
+-------------------------------------------------------------------------
+Offset:              0.336ns (Levels of Logic = 0)
+  Source:            E2M/emac_ll/v5_emac_block_inst/v5_emac_wrapper_inst/v5_emac:EMAC0CLIENTRXD0 (PAD)
+  Destination:       E2M/emac_ll/rx_data_0_r_0 (FF)
+  Destination Clock: GMII_RX_CLK_0 rising
+
+  Data Path: E2M/emac_ll/v5_emac_block_inst/v5_emac_wrapper_inst/v5_emac:EMAC0CLIENTRXD0 to E2M/emac_ll/rx_data_0_r_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    TEMAC:EMAC0CLIENTRXD0    1   0.000   0.336  E2M/emac_ll/v5_emac_block_inst/v5_emac_wrapper_inst/v5_emac (E2M/emac_ll/rx_data_0_i<0>)
+     FDC:D                    -0.018          E2M/emac_ll/rx_data_0_r_0
+    ----------------------------------------
+    Total                      0.336ns (0.000ns logic, 0.336ns route)
+                                       (0.0% logic, 100.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_125_eth_i'
+  Total number of paths / destination ports: 161 / 105
+-------------------------------------------------------------------------
+Offset:              2.626ns (Levels of Logic = 2)
+  Source:            E2M/emac_ll/v5_emac_block_inst/v5_emac_wrapper_inst/v5_emac:EMAC0CLIENTTXACK (PAD)
+  Destination:       E2M/emac_ll/client_side_FIFO_emac0/tx_fifo_i/ramgen_u (RAM)
+  Destination Clock: clk_125_eth_i rising
+
+  Data Path: E2M/emac_ll/v5_emac_block_inst/v5_emac_wrapper_inst/v5_emac:EMAC0CLIENTTXACK to E2M/emac_ll/client_side_FIFO_emac0/tx_fifo_i/ramgen_u
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    TEMAC:EMAC0CLIENTTXACK   12   0.000   0.849  E2M/emac_ll/v5_emac_block_inst/v5_emac_wrapper_inst/v5_emac (E2M/emac_ll/tx_ack_0_i)
+     LUT5:I1->O            1   0.094   0.710  E2M/emac_ll/client_side_FIFO_emac0/tx_fifo_i/rd_en_SW3 (N209)
+     LUT6:I3->O           43   0.094   0.465  E2M/emac_ll/client_side_FIFO_emac0/tx_fifo_i/rd_en (E2M/emac_ll/client_side_FIFO_emac0/tx_fifo_i/rd_en)
+     RAMB16:ENB                0.414          E2M/emac_ll/client_side_FIFO_emac0/tx_fifo_i/ramgen_u
+    ----------------------------------------
+    Total                      2.626ns (0.602ns logic, 2.024ns route)
+                                       (22.9% logic, 77.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'E2M/EC/sysACE_delay_clk'
+  Total number of paths / destination ports: 68 / 49
+-------------------------------------------------------------------------
+Offset:              2.952ns (Levels of Logic = 3)
+  Source:            E2M/EC/clkBPLL:LOCKED (PAD)
+  Destination:       E2M/EC/sysACE_MPDATA_In_2 (FF)
+  Destination Clock: E2M/EC/sysACE_delay_clk rising
+
+  Data Path: E2M/EC/clkBPLL:LOCKED to E2M/EC/sysACE_MPDATA_In_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    PLL_ADV:LOCKED         7   0.000   0.609  E2M/EC/clkBPLL (E2M/EC/sysACEPllLock)
+     LUT2:I0->O           19   0.094   1.072  E2M/EC/sysACEreset1 (E2M/EC/sysACEreset)
+     LUT6:I1->O            4   0.094   0.989  E2M/EC/sysACE_MPDATA_In_mux0000<2>121 (E2M/EC/N73)
+     LUT5:I0->O            1   0.094   0.000  E2M/EC/sysACE_MPDATA_In_mux0000<5>11 (E2M/EC/sysACE_MPDATA_In_mux0000<5>1)
+     FD:D                     -0.018          E2M/EC/sysACE_MPDATA_In_5
+    ----------------------------------------
+    Total                      2.952ns (0.282ns logic, 2.670ns route)
+                                       (9.6% logic, 90.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'sh/CLOCK_TRNG1/CLKOUT0_BUF'
+  Total number of paths / destination ports: 876 / 309
+-------------------------------------------------------------------------
+Offset:              3.052ns (Levels of Logic = 8)
+  Source:            sh/testPUF/SystemMonitor1/SysMon1/SYSMON_INST:DO6 (PAD)
+  Destination:       sh/testPUF/Temperature_0 (FF)
+  Destination Clock: sh/CLOCK_TRNG1/CLKOUT0_BUF rising
+
+  Data Path: sh/testPUF/SystemMonitor1/SysMon1/SYSMON_INST:DO6 to sh/testPUF/Temperature_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    SYSMON:DO6             4   0.000   0.726  sh/testPUF/SystemMonitor1/SysMon1/SYSMON_INST (sh/testPUF/SysMonData<6>)
+     LUT4:I1->O            1   0.094   0.000  sh/testPUF/Mcompar_state_cmp_ge0000_lut<0> (sh/testPUF/Mcompar_state_cmp_ge0000_lut<0>)
+     MUXCY:S->O            1   0.372   0.000  sh/testPUF/Mcompar_state_cmp_ge0000_cy<0> (sh/testPUF/Mcompar_state_cmp_ge0000_cy<0>)
+     MUXCY:CI->O           1   0.026   0.000  sh/testPUF/Mcompar_state_cmp_ge0000_cy<1> (sh/testPUF/Mcompar_state_cmp_ge0000_cy<1>)
+     MUXCY:CI->O           1   0.026   0.000  sh/testPUF/Mcompar_state_cmp_ge0000_cy<2> (sh/testPUF/Mcompar_state_cmp_ge0000_cy<2>)
+     MUXCY:CI->O           1   0.026   0.000  sh/testPUF/Mcompar_state_cmp_ge0000_cy<3> (sh/testPUF/Mcompar_state_cmp_ge0000_cy<3>)
+     MUXCY:CI->O           4   0.254   0.496  sh/testPUF/Mcompar_state_cmp_ge0000_cy<4> (sh/testPUF/state_cmp_ge0000)
+     LUT6:I5->O           11   0.094   0.844  sh/testPUF/Temperature_mux0000<0>1 (sh/testPUF/N4)
+     LUT6:I2->O            1   0.094   0.000  sh/testPUF/Temperature_mux0000<9>1 (sh/testPUF/Temperature_mux0000<9>)
+     FDE:D                    -0.018          sh/testPUF/Temperature_9
+    ----------------------------------------
+    Total                      3.052ns (0.986ns logic, 2.066ns route)
+                                       (32.3% logic, 67.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'sh/clk_1'
+  Total number of paths / destination ports: 528 / 528
+-------------------------------------------------------------------------
+Offset:              4.237ns (Levels of Logic = 3)
+  Source:            RST (PAD)
+  Destination:       sh/testPUF/NIST/test3/count_bits0_0 (FF)
+  Destination Clock: sh/clk_1 rising
+
+  Data Path: RST to sh/testPUF/NIST/test3/count_bits0_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           443   0.818   1.176  RST_IBUF (RST_IBUF)
+     LUT6:I1->O            1   0.094   1.069  sh/testPUF/NIST/test3/count_bits0_and000014 (sh/testPUF/NIST/test3/count_bits0_and000014)
+     LUT6:I0->O           15   0.094   0.413  sh/testPUF/NIST/test3/count_bits0_and000065 (sh/testPUF/NIST/test3/count_bits0_and0000)
+     FDRS:R                    0.573          sh/testPUF/NIST/test3/count_bits0_0
+    ----------------------------------------
+    Total                      4.237ns (1.579ns logic, 2.658ns route)
+                                       (37.3% logic, 62.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'sh/CLOCK_TRNG1/CLKOUT2_BUF'
+  Total number of paths / destination ports: 64 / 64
+-------------------------------------------------------------------------
+Offset:              3.413ns (Levels of Logic = 6)
+  Source:            RST (PAD)
+  Destination:       sh/testPUF/challenge_gen/TRNG[0].TRNG/Ring[15].Ring/Sample (FF)
+  Destination Clock: sh/CLOCK_TRNG1/CLKOUT2_BUF rising
+
+  Data Path: RST to sh/testPUF/challenge_gen/TRNG[0].TRNG/Ring[15].Ring/Sample
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           443   0.818   0.779  RST_IBUF (RST_IBUF)
+     begin scope: 'sh/testPUF/challenge_gen/TRNG[3].TRNG'
+     LUT2:I0->O            1   0.094   0.480  Ring[9].Ring/c_3_mux00001 (Ring[9].Ring/c<3>)
+     LUT1:I0->O            1   0.094   0.480  Ring[9].Ring/inverter[2].inverter (Ring[9].Ring/c<2>)
+     LUT1:I0->O            1   0.094   0.480  Ring[9].Ring/inverter[1].inverter (Ring[9].Ring/c<1>)
+     LUT1:I0->O            2   0.094   0.000  Ring[9].Ring/inverter[0].inverter (Ring[9].Ring/c<0>)
+     FD:D                     -0.018          Ring[9].Ring/Sample
+    ----------------------------------------
+    Total                      3.413ns (1.194ns logic, 2.219ns route)
+                                       (35.0% logic, 65.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'E2M/EC/sysACE_delay_clk'
+  Total number of paths / destination ports: 41 / 25
+-------------------------------------------------------------------------
+Offset:              3.920ns (Levels of Logic = 2)
+  Source:            E2M/EC/sysACE_MPOE (FF)
+  Destination:       sysACE_MPDATA<15> (PAD)
+  Source Clock:      E2M/EC/sysACE_delay_clk rising
+
+  Data Path: E2M/EC/sysACE_MPOE to sysACE_MPDATA<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDSE:C->Q             2   0.471   0.341  E2M/EC/sysACE_MPOE (E2M/EC/sysACE_MPOE)
+     INV:I->O             16   0.238   0.418  E2M/EC/sysACEIO_not00001_INV_0 (E2M/EC/sysACEIO_not0000)
+     IOBUF:T->IO               2.452          E2M/EC/sysACEIO/IOBUF_B15 (sysACE_MPDATA<15>)
+    ----------------------------------------
+    Total                      3.920ns (3.161ns logic, 0.759ns route)
+                                       (80.6% logic, 19.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_125_eth_i'
+  Total number of paths / destination ports: 20 / 20
+-------------------------------------------------------------------------
+Offset:              3.395ns (Levels of Logic = 1)
+  Source:            E2M/emac_ll/v5_emac_block_inst/gmii0/gmii_tx_clk_oddr (FF)
+  Destination:       GMII_GTX_CLK_0 (PAD)
+  Source Clock:      clk_125_eth_i rising
+
+  Data Path: E2M/emac_ll/v5_emac_block_inst/gmii0/gmii_tx_clk_oddr to GMII_GTX_CLK_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     ODDR:C->Q             1   0.607   0.336  E2M/emac_ll/v5_emac_block_inst/gmii0/gmii_tx_clk_oddr (GMII_GTX_CLK_0_OBUF)
+     OBUF:I->O                 2.452          GMII_GTX_CLK_0_OBUF (GMII_GTX_CLK_0)
+    ----------------------------------------
+    Total                      3.395ns (3.059ns logic, 0.336ns route)
+                                       (90.1% logic, 9.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'GMII_RX_CLK_0'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              0.807ns (Levels of Logic = 0)
+  Source:            E2M/emac_ll/v5_emac_block_inst/gmii0/RX_DV_TO_MAC (FF)
+  Destination:       E2M/emac_ll/v5_emac_block_inst/v5_emac_wrapper_inst/v5_emac:PHYEMAC0RXDV (PAD)
+  Source Clock:      GMII_RX_CLK_0 rising
+
+  Data Path: E2M/emac_ll/v5_emac_block_inst/gmii0/RX_DV_TO_MAC to E2M/emac_ll/v5_emac_block_inst/v5_emac_wrapper_inst/v5_emac:PHYEMAC0RXDV
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.471   0.336  E2M/emac_ll/v5_emac_block_inst/gmii0/RX_DV_TO_MAC (E2M/emac_ll/v5_emac_block_inst/gmii0/RX_DV_TO_MAC)
+    TEMAC:PHYEMAC0RXDV         0.000          E2M/emac_ll/v5_emac_block_inst/v5_emac_wrapper_inst/v5_emac
+    ----------------------------------------
+    Total                      0.807ns (0.471ns logic, 0.336ns route)
+                                       (58.4% logic, 41.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_200_i'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.963ns (Levels of Logic = 0)
+  Source:            E2M/delayCtrl0Reset_12 (FF)
+  Destination:       E2M/emac_ll/v5_emac_block_inst/v5_emac_wrapper_inst/v5_emac:RESET (PAD)
+  Source Clock:      clk_200_i rising
+
+  Data Path: E2M/delayCtrl0Reset_12 to E2M/emac_ll/v5_emac_block_inst/v5_emac_wrapper_inst/v5_emac:RESET
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q            189   0.471   0.492  E2M/delayCtrl0Reset_12 (E2M/delayCtrl0Reset_12)
+    TEMAC:RESET                0.000          E2M/emac_ll/v5_emac_block_inst/v5_emac_wrapper_inst/v5_emac
+    ----------------------------------------
+    Total                      0.963ns (0.471ns logic, 0.492ns route)
+                                       (48.9% logic, 51.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 18 / 18
+-------------------------------------------------------------------------
+Delay:               3.617ns (Levels of Logic = 2)
+  Source:            RESET (PAD)
+  Destination:       GMII_RESET_B (PAD)
+
+  Data Path: RESET to GMII_RESET_B
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.818   0.347  reset_ibuf (hard_reset_low)
+     OBUF:I->O                 2.452          GMII_RESET_B_OBUF (GMII_RESET_B)
+    ----------------------------------------
+    Total                      3.617ns (3.270ns logic, 0.347ns route)
+                                       (90.4% logic, 9.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 204.00 secs
+Total CPU time to Xst completion: 203.97 secs
+ 
+--> 
+
+Total memory usage is 556296 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  238 (   0 filtered)
+Number of infos    :   41 (   0 filtered)
+
