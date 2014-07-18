@@ -415,7 +415,7 @@ module SircHandler #(
 
 						//If we just wrote a value to the output memory this cycle, increment the address
 						//NOTE : Due to bug described above we write on bit more by using length instead of lengthMinus1
-						if(outputMemoryWriteReq == 1  && outputMemoryWriteAck == 1 && outputMemoryWriteAdd != 200) begin
+						if(outputMemoryWriteReq == 1  && outputMemoryWriteAck == 1 && outputMemoryWriteAdd != 550) begin
 							outputMemoryWriteAdd <= outputMemoryWriteAdd + 1;
 							raddr <= raddr + 1;
 							memCount <= memCount+1;
@@ -423,7 +423,7 @@ module SircHandler #(
 						end
 
 						//Stop writing and go back to IDLE state if writing reached length of data
-						if(outputMemoryWriteReq == 1  && outputMemoryWriteAck == 1 && outputMemoryWriteAdd == 200) begin
+						if(outputMemoryWriteReq == 1  && outputMemoryWriteAck == 1 && outputMemoryWriteAdd == 550) begin
 							outputMemoryWriteReq <= 0;
 							currState <= IDLE;
 							userRunClear <= 1;
