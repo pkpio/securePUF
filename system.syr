@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.18 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> Reading design: system.prj
 
@@ -3563,13 +3563,12 @@ Unit <mapping> synthesized.
 
 Synthesizing Unit <testPUF>.
     Related source file is "source/test_PUF.v".
-WARNING:Xst:1305 - Output <LED> is never assigned. Tied to value 00000000.
 WARNING:Xst:646 - Signal <SysMonData<5:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found finite state machine <FSM_5> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 26                                             |
     | Transitions        | 80                                             |
-    | Inputs             | 43                                             |
+    | Inputs             | 44                                             |
     | Outputs            | 26                                             |
     | Clock              | clk_1                     (rising_edge)        |
     | Reset              | rst                       (positive)           |
@@ -3581,19 +3580,20 @@ WARNING:Xst:646 - Signal <SysMonData<5:0>> is assigned but never used. This unco
     Found 8-bit register for signal <mem_din>.
     Found 1-bit register for signal <test_done>.
     Found 13-bit register for signal <mem_waddr>.
+    Found 8-bit register for signal <LED>.
     Found 1-bit register for signal <mem_we>.
     Found 1-bit register for signal <bb>.
     Found 32-bit register for signal <challenge_bit_ctr>.
     Found 32-bit register for signal <challenge_bit_ctr_0>.
     Found 8-bit register for signal <count_resp>.
-    Found 8-bit adder for signal <count_resp$addsub0000> created at line 497.
+    Found 8-bit adder for signal <count_resp$addsub0000> created at line 498.
     Found 32-bit register for signal <gen_challenge>.
     Found 32-bit xor2 for signal <gen_challenge$xor0000> created at line 292.
     Found 32-bit register for signal <hold_challenge>.
     Found 1-bit register for signal <hold_resp_bit>.
     Found 13-bit adder for signal <mem_waddr$addsub0000>.
     Found 1-bit register for signal <sel_clk_test>.
-    Found 10-bit comparator greatequal for signal <state$cmp_ge0000> created at line 485.
+    Found 10-bit comparator greatequal for signal <state$cmp_ge0000> created at line 486.
     Found 8-bit register for signal <sum_resp>.
     Found 8-bit adder for signal <sum_resp$addsub0000>.
     Found 11-bit register for signal <Temperature>.
@@ -3617,7 +3617,7 @@ WARNING:Xst:646 - Signal <SysMonData<5:0>> is assigned but never used. This unco
     Found 4-bit adder for signal <test_index$addsub0000>.
     Summary:
 	inferred   1 Finite State Machine(s).
-	inferred 273 D-type flip-flop(s).
+	inferred 281 D-type flip-flop(s).
 	inferred  15 Adder/Subtractor(s).
 	inferred   1 Comparator(s).
 Unit <testPUF> synthesized.
@@ -3626,7 +3626,6 @@ Unit <testPUF> synthesized.
 Synthesizing Unit <SircHandler>.
     Related source file is "source/sirc_handler.v".
 WARNING:Xst:647 - Input <start> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <sw> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:646 - Signal <response_ready> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <responseRegBuffer> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:653 - Signal <responseReg<15:6>> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000.
@@ -3734,7 +3733,7 @@ Macro Statistics
  12-bit updown accumulator                             : 1
  20-bit up accumulator                                 : 1
  22-bit up accumulator                                 : 1
-# Registers                                            : 370
+# Registers                                            : 371
  1-bit register                                        : 236
  11-bit register                                       : 8
  12-bit register                                       : 12
@@ -3751,7 +3750,7 @@ Macro Statistics
  5-bit register                                        : 4
  6-bit register                                        : 3
  7-bit register                                        : 3
- 8-bit register                                        : 52
+ 8-bit register                                        : 53
  9-bit register                                        : 1
 # Latches                                              : 10
  10-bit latch                                          : 4
@@ -4056,8 +4055,8 @@ Macro Statistics
  9-bit updown counter                                  : 2
 # Accumulators                                         : 1
  12-bit updown accumulator                             : 1
-# Registers                                            : 2059
- Flip-Flops                                            : 2059
+# Registers                                            : 2067
+ Flip-Flops                                            : 2067
 # Latches                                              : 10
  10-bit latch                                          : 4
  22-bit latch                                          : 6
@@ -4132,7 +4131,7 @@ INFO:Xst:1901 - Instance delayRXClk in unit ethernet2BlockMem of type IDELAY has
 INFO:Xst:1901 - Instance mux_clk_test in unit testPUF of type BUFGMUX_CTRL has been replaced by BUFGCTRL
 INFO:Xst:1901 - Instance MEMCLK in unit SircHandler of type BUFGMUX_CTRL has been replaced by BUFGCTRL
 INFO:Xst:1901 - Instance clkBPLL in unit system of type PLL_BASE has been replaced by PLL_ADV
-WARNING:Xst:2170 - Unit Osc_Ring : the following signal(s) form a combinatorial loop: c<2>, c<1>, c<0>, c<3>.
+WARNING:Xst:2170 - Unit Osc_Ring : the following signal(s) form a combinatorial loop: c<1>, c<0>, c<3>, c<2>.
 
 Optimizing unit <system> ...
 
@@ -4316,7 +4315,15 @@ Optimizing unit <pufInterconNetwork> ...
 
 Optimizing unit <testPUF> ...
 WARNING:Xst:1710 - FF/Latch <challenge_bit_ctr_0_0> (without init value) has a constant value of 1 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_1> (without init value) has a constant value of 1 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_3> (without init value) has a constant value of 1 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_5> (without init value) has a constant value of 1 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_7> (without init value) has a constant value of 1 in block <testPUF>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <challenge_bit_ctr_0_0> of sequential type is unconnected in block <testPUF>.
+WARNING:Xst:2677 - Node <LED_1> of sequential type is unconnected in block <testPUF>.
+WARNING:Xst:2677 - Node <LED_3> of sequential type is unconnected in block <testPUF>.
+WARNING:Xst:2677 - Node <LED_5> of sequential type is unconnected in block <testPUF>.
+WARNING:Xst:2677 - Node <LED_7> of sequential type is unconnected in block <testPUF>.
 
 Optimizing unit <SircHandler> ...
 WARNING:Xst:2677 - Node <E2M/emac_ll/client_side_FIFO_emac0/tx_fifo_i/wr_addr_diff_1> of sequential type is unconnected in block <system>.
@@ -4423,8 +4430,8 @@ Unit <system> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 2212
- Flip-Flops                                            : 2212
+# Registers                                            : 2216
+ Flip-Flops                                            : 2216
 # Shift Registers                                      : 12
  2-bit shift register                                  : 4
  3-bit shift register                                  : 8
@@ -4456,24 +4463,24 @@ Design Statistics
 # IOs                              : 63
 
 Cell Usage :
-# BELS                             : 9910
+# BELS                             : 9914
 #      GND                         : 6
 #      INV                         : 197
 #      LUT1                        : 596
-#      LUT2                        : 588
-#      LUT3                        : 812
-#      LUT4                        : 727
-#      LUT5                        : 948
+#      LUT2                        : 586
+#      LUT3                        : 814
+#      LUT4                        : 725
+#      LUT5                        : 954
 #      LUT6                        : 3149
 #      MUXCY                       : 1417
 #      MUXF7                       : 58
 #      VCC                         : 5
 #      XORCY                       : 1407
-# FlipFlops/Latches                : 2406
+# FlipFlops/Latches                : 2410
 #      FD                          : 160
 #      FDC                         : 37
 #      FDCE                        : 13
-#      FDE                         : 1184
+#      FDE                         : 1188
 #      FDP                         : 27
 #      FDR                         : 312
 #      FDRE                        : 387
@@ -4491,8 +4498,8 @@ Cell Usage :
 # Clock Buffers                    : 13
 #      BUFG                        : 11
 #      BUFGCTRL                    : 2
-# IO Buffers                       : 61
-#      IBUF                        : 15
+# IO Buffers                       : 62
+#      IBUF                        : 16
 #      IOBUF                       : 16
 #      OBUF                        : 30
 # DSPs                             : 10
@@ -4513,22 +4520,22 @@ Selected Device : 5vlx110tff1136-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            2396  out of  69120     3%  
- Number of Slice LUTs:                 7029  out of  69120    10%  
-    Number used as Logic:              7017  out of  69120    10%  
+ Number of Slice Registers:            2400  out of  69120     3%  
+ Number of Slice LUTs:                 7033  out of  69120    10%  
+    Number used as Logic:              7021  out of  69120    10%  
     Number used as Memory:               12  out of  17920     0%  
        Number used as SRL:               12
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   9425
-   Number with an unused Flip Flop:    7029  out of   9425    74%  
-   Number with an unused LUT:          2396  out of   9425    25%  
-   Number of fully used LUT-FF pairs:     0  out of   9425     0%  
+ Number of LUT Flip Flop pairs used:   9433
+   Number with an unused Flip Flop:    7033  out of   9433    74%  
+   Number with an unused LUT:          2400  out of   9433    25%  
+   Number of fully used LUT-FF pairs:     0  out of   9433     0%  
    Number of unique control sets:       144
 
 IO Utilization: 
  Number of IOs:                          63
- Number of bonded IOBs:                  61  out of    640     9%  
+ Number of bonded IOBs:                  62  out of    640     9%  
     IOB Flip Flops/Latches:              10
 
 Specific Feature Utilization:
@@ -4565,7 +4572,7 @@ GMII_RX_CLK_0                                                                   
 clk_user_interface_i                                                                                                | BUFG                                                                                                                               | 288   |
 E2M/EC/sysACE_delay_clk                                                                                             | BUFG                                                                                                                               | 34    |
 clk_200_i                                                                                                           | BUFG                                                                                                                               | 13    |
-sh/CLOCK_TRNG1/CLKOUT0_BUF                                                                                          | BUFG                                                                                                                               | 290   |
+sh/CLOCK_TRNG1/CLKOUT0_BUF                                                                                          | BUFG                                                                                                                               | 294   |
 sh/clk_1                                                                                                            | BUFGCTRL                                                                                                                           | 434   |
 sh/testPUF/NIST/test4/_and00001(sh/testPUF/NIST/test4/_and00001:O)                                                  | BUFG(*)(sh/testPUF/NIST/test4/calculate_chi_sqr1/v3_sqr_0)                                                                         | 40    |
 sh/testPUF/NIST/test8/en1(sh/testPUF/NIST/test8/en1:O)                                                              | BUFG(*)(sh/testPUF/NIST/test8/calculate_chi_sqr_88/V_sqr_0_21)                                                                     | 132   |
@@ -4812,7 +4819,7 @@ Delay:               0.807ns (Levels of Logic = 0)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'sh/CLOCK_TRNG1/CLKOUT0_BUF'
   Clock period: 4.411ns (frequency: 226.693MHz)
-  Total number of paths / destination ports: 5014 / 290
+  Total number of paths / destination ports: 5026 / 294
 -------------------------------------------------------------------------
 Delay:               4.411ns (Levels of Logic = 5)
   Source:            sh/testPUF/state_FSM_FFd19 (FF)
@@ -4952,9 +4959,9 @@ Offset:              2.952ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'sh/CLOCK_TRNG1/CLKOUT0_BUF'
-  Total number of paths / destination ports: 876 / 309
+  Total number of paths / destination ports: 904 / 314
 -------------------------------------------------------------------------
-Offset:              3.052ns (Levels of Logic = 8)
+Offset:              3.148ns (Levels of Logic = 8)
   Source:            sh/testPUF/SystemMonitor1/SysMon1/SYSMON_INST:DO6 (PAD)
   Destination:       sh/testPUF/Temperature_0 (FF)
   Destination Clock: sh/CLOCK_TRNG1/CLKOUT0_BUF rising
@@ -4969,13 +4976,13 @@ Offset:              3.052ns (Levels of Logic = 8)
      MUXCY:CI->O           1   0.026   0.000  sh/testPUF/Mcompar_state_cmp_ge0000_cy<1> (sh/testPUF/Mcompar_state_cmp_ge0000_cy<1>)
      MUXCY:CI->O           1   0.026   0.000  sh/testPUF/Mcompar_state_cmp_ge0000_cy<2> (sh/testPUF/Mcompar_state_cmp_ge0000_cy<2>)
      MUXCY:CI->O           1   0.026   0.000  sh/testPUF/Mcompar_state_cmp_ge0000_cy<3> (sh/testPUF/Mcompar_state_cmp_ge0000_cy<3>)
-     MUXCY:CI->O           4   0.254   0.496  sh/testPUF/Mcompar_state_cmp_ge0000_cy<4> (sh/testPUF/state_cmp_ge0000)
-     LUT6:I5->O           11   0.094   0.844  sh/testPUF/Temperature_mux0000<0>1 (sh/testPUF/N4)
+     MUXCY:CI->O           4   0.254   0.592  sh/testPUF/Mcompar_state_cmp_ge0000_cy<4> (sh/testPUF/state_cmp_ge0000)
+     LUT6:I4->O           11   0.094   0.844  sh/testPUF/Temperature_mux0000<0>1 (sh/testPUF/N4)
      LUT6:I2->O            1   0.094   0.000  sh/testPUF/Temperature_mux0000<9>1 (sh/testPUF/Temperature_mux0000<9>)
      FDE:D                    -0.018          sh/testPUF/Temperature_9
     ----------------------------------------
-    Total                      3.052ns (0.986ns logic, 2.066ns route)
-                                       (32.3% logic, 67.7% route)
+    Total                      3.148ns (0.986ns logic, 2.162ns route)
+                                       (31.3% logic, 68.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'sh/clk_1'
@@ -5062,6 +5069,25 @@ Offset:              3.395ns (Levels of Logic = 1)
                                        (90.1% logic, 9.9% route)
 
 =========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'sh/CLOCK_TRNG1/CLKOUT0_BUF'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              3.264ns (Levels of Logic = 1)
+  Source:            sh/testPUF/LED_6 (FF)
+  Destination:       LED<6> (PAD)
+  Source Clock:      sh/CLOCK_TRNG1/CLKOUT0_BUF rising
+
+  Data Path: sh/testPUF/LED_6 to LED<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.471   0.341  sh/testPUF/LED_6 (sh/testPUF/LED_6)
+     OBUF:I->O                 2.452          LED_6_OBUF (LED<6>)
+    ----------------------------------------
+    Total                      3.264ns (2.923ns logic, 0.341ns route)
+                                       (89.6% logic, 10.4% route)
+
+=========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'GMII_RX_CLK_0'
   Total number of paths / destination ports: 10 / 10
 -------------------------------------------------------------------------
@@ -5120,14 +5146,14 @@ Delay:               3.617ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 204.00 secs
-Total CPU time to Xst completion: 203.97 secs
+Total REAL time to Xst completion: 200.00 secs
+Total CPU time to Xst completion: 199.84 secs
  
 --> 
 
-Total memory usage is 556296 kilobytes
+Total memory usage is 557192 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  238 (   0 filtered)
+Number of warnings :  244 (   0 filtered)
 Number of infos    :   41 (   0 filtered)
 

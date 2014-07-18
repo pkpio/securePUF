@@ -453,7 +453,7 @@ module SircHandler #(
 	    .clk_RNG(clk_RNG), // its freq is 8 times that of clk_1, challenge bits are generated at a higher rate
 		 .rst(RST),  // -TODO- replace this
 		 //.start(start), // -TODO - replace this
-		 //.sw(sw), // -TODO - replace this
+		 .sw(sw), // -TODO - replace this
 	    .mem_we(wea), // write enable for memory
 	    .mem_waddr(waddr), // write address for memory
 	    .mem_din(dina), // data in for memory

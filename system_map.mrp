@@ -9,36 +9,35 @@ Target Device  : xc5vlx110t
 Target Package : ff1136
 Target Speed   : -1
 Mapper Version : virtex5 -- $Revision: 1.55 $
-Mapped Date    : Fri Jul 18 06:53:10 2014
+Mapped Date    : Fri Jul 18 08:36:18 2014
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:  172
 Slice Logic Utilization:
-  Number of Slice Registers:                 2,386 out of  69,120    3%
-    Number used as Flip Flops:               2,213
+  Number of Slice Registers:                 2,389 out of  69,120    3%
+    Number used as Flip Flops:               2,217
     Number used as Latches:                    172
-    Number used as Latch-thrus:                  1
-  Number of Slice LUTs:                      6,570 out of  69,120    9%
-    Number used as logic:                    6,511 out of  69,120    9%
-      Number using O6 output only:           5,474
-      Number using O5 output only:             367
+  Number of Slice LUTs:                      6,574 out of  69,120    9%
+    Number used as logic:                    6,515 out of  69,120    9%
+      Number using O6 output only:           5,476
+      Number using O5 output only:             369
       Number using O5 and O6:                  670
     Number used as Memory:                      12 out of  17,920    1%
       Number used as Shift Register:            12
         Number using O6 output only:            12
     Number used as exclusive route-thru:        47
-  Number of route-thrus:                       420
+  Number of route-thrus:                       433
     Number using O6 output only:               411
-    Number using O5 output only:                 9
+    Number using O5 output only:                22
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 3,657 out of  17,280   21%
-  Number of LUT Flip Flop pairs used:        7,266
-    Number with an unused Flip Flop:         4,880 out of   7,266   67%
-    Number with an unused LUT:                 696 out of   7,266    9%
-    Number of fully used LUT-FF pairs:       1,690 out of   7,266   23%
+  Number of occupied Slices:                 3,553 out of  17,280   20%
+  Number of LUT Flip Flop pairs used:        7,285
+    Number with an unused Flip Flop:         4,896 out of   7,285   67%
+    Number with an unused LUT:                 711 out of   7,285    9%
+    Number of fully used LUT-FF pairs:       1,678 out of   7,285   23%
     Number of unique control sets:             137
     Number of slice register sites lost
       to control set restrictions:             247 out of  69,120    1%
@@ -57,8 +56,8 @@ IO Utilization:
     IOB Flip Flops:                             21
 
 Specific Feature Utilization:
-  Number of BlockRAM/FIFO:                      42 out of     148   28%
-    Number using BlockRAM only:                 40
+  Number of BlockRAM/FIFO:                      43 out of     148   29%
+    Number using BlockRAM only:                 41
     Number using FIFO only:                      2
     Total primitives used:
       Number of 36k BlockRAM used:              37
@@ -76,8 +75,8 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                4.47
 
-Peak Memory Usage:  753 MB
-Total REAL time to MAP completion:  2 mins 50 secs 
+Peak Memory Usage:  748 MB
+Total REAL time to MAP completion:  2 mins 51 secs 
 Total CPU time to MAP completion:   2 mins 49 secs 
 
 Table of Contents
@@ -1231,10 +1230,6 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net sh/testPUF/puf_map/picn/puf
 Section 3 - Informational
 -------------------------
 INFO:LIT:243 - Logical network start_IBUF has no load.
-INFO:LIT:395 - The above info message is repeated 1 more times for the following
-   (max. 5 shown):
-   sw_IBUF
-   To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:MapLib:950 - SAVE has been detected on block "pdl_top"
 INFO:MapLib:950 - SAVE has been detected on block "pdl_bottom"
@@ -2210,8 +2205,8 @@ Derived Constraints for TS_CLK_USER_INTERFACE
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_CLK_USER_INTERFACE          |      5.888ns|     40.397ns|      4.171ns|           14|          146|         7270|        70250|
-| TS_sh_CLOCK_TRNG1_CLKOUT0_BUF |     62.805ns|     44.494ns|          N/A|          114|            0|        18910|            0|
+|TS_CLK_USER_INTERFACE          |      5.888ns|     40.397ns|      4.171ns|           14|          146|         7270|        70238|
+| TS_sh_CLOCK_TRNG1_CLKOUT0_BUF |     62.805ns|     44.494ns|          N/A|          114|            0|        18898|            0|
 | TS_sh_CLOCK_TRNG1_CLKOUT1_BUF |    125.611ns|      4.032ns|          N/A|           32|            0|        51244|            0|
 | TS_sh_CLOCK_TRNG1_CLKOUT2_BUF |      7.851ns|      1.666ns|          N/A|            0|            0|           96|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+

@@ -30,7 +30,7 @@ module testPUF #(
 	input wire clk_RNG, // its freq is 8 times that of clk_1, challenge bits are generated at a higher rate
 	input wire rst,
 	//input wire start, // connect this to a push button
-	//input wire sw,
+	input wire sw,
 	output reg mem_we, // write enable for memory
 	output reg [12:0] mem_waddr, // write address for memory
 	output reg [7:0] mem_din, // data in for memory
@@ -478,9 +478,10 @@ parameter T = 19999;
 				
 				gen_challenge <= C;
 				hold_challenge <= C;
+				LED <= 8'b11111111;
 		
 
-				if (~read_temp) state <= 36;
+				if (sw) state <= 36;
 				else if (~SysMonRdy) state <= 31;
 				else if (Temperature[10:1] >= SysMonData[15:6]) state <= 31;
 				else begin
@@ -512,7 +513,7 @@ parameter T = 19999;
 				count_resp <= 0;
 				
 				if (test_index == 5) state <= 34;
-				else state <= 32;			
+				else state <= 32;	
 				end
 				
 			34:begin
@@ -549,6 +550,7 @@ parameter T = 19999;
 				mem_we <= 0; // now we read the results from memory
 				test_done <= 1;
 				state <= 63;
+				LED <= 8'b10101010;
 				end
 			
 			endcase

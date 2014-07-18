@@ -376,3 +376,17 @@ map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -regist
 par -w -intstyle ise -ol high -mt off system_map.ncd system.ncd system.pcf 
 trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system.twx system.ncd -o system.twr system.pcf 
 bitgen -intstyle ise -f system.ut system.ncd 
+xst -intstyle ise -ifn "C:/Users/praveen/Dropbox/PUF_Praveen_Bak/system.xst" -ofn "C:/Users/praveen/Dropbox/PUF_Praveen_Bak/system.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints/XUPV5system.ucf -uc constraints/pdl_constraints.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd  
+xst -intstyle ise -ifn "C:/Users/praveen/Dropbox/PUF_Praveen_Bak/system.xst" -ofn "C:/Users/praveen/Dropbox/PUF_Praveen_Bak/system.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints/XUPV5system.ucf -uc constraints/pdl_constraints.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_map.ncd system.ngd system.pcf 
+par -w -intstyle ise -ol high -mt off system_map.ncd system.ncd system.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system.twx system.ncd -o system.twr system.pcf 
+bitgen -intstyle ise -f system.ut system.ncd 
+xst -intstyle ise -ifn "C:/Users/praveen/Dropbox/PUF_Praveen_Bak/system.xst" -ofn "C:/Users/praveen/Dropbox/PUF_Praveen_Bak/system.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints/XUPV5system.ucf -uc constraints/pdl_constraints.ucf -p xc5vlx110t-ff1136-1 system.ngc system.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o system_map.ncd system.ngd system.pcf 
+par -w -intstyle ise -ol high -mt off system_map.ncd system.ncd system.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml system.twx system.ncd -o system.twr system.pcf 
+bitgen -intstyle ise -f system.ut system.ncd 
