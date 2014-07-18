@@ -1,7 +1,7 @@
 Release 14.6 par P.68d (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-PRAVEEN-PC::  Fri Jul 18 02:18:41 2014
+PRAVEEN-PC::  Fri Jul 18 06:01:36 2014
 
 par -w -intstyle ise -ol high -mt off system_map.ncd system.ncd system.pcf 
 
@@ -36,15 +36,16 @@ Device Utilization Summary:
    Number of RAMB18X2s                       3 out of 148     2%
    Number of RAMB36_EXPs                    37 out of 148    25%
    Number of RAMBFIFO18_36s                  2 out of 148     1%
+   Number of SYSMONs                         1 out of 1     100%
    Number of TEMACs                          1 out of 2      50%
-   Number of Slices                       3436 out of 17280  19%
-   Number of Slice Registers              2316 out of 69120   3%
-      Number used as Flip Flops           2144
+   Number of Slices                       3704 out of 17280  21%
+   Number of Slice Registers              2517 out of 69120   3%
+      Number used as Flip Flops           2345
       Number used as Latches               172
       Number used as LatchThrus              0
 
-   Number of Slice LUTS                   6613 out of 69120   9%
-   Number of Slice LUT-Flip Flop pairs    7246 out of 69120  10%
+   Number of Slice LUTS                   6928 out of 69120  10%
+   Number of Slice LUT-Flip Flop pairs    7610 out of 69120  11%
 
 
 Overall effort level (-ol):   High 
@@ -55,63 +56,63 @@ WARNING:Timing:3223 - Timing constraint TS_rx_fifo_rd_to_wr_0 = MAXDELAY FROM TI
 INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please
    consult the Xilinx Command Line Tools User Guide for information on generating a TSI report.
 Starting initial Timing Analysis.  REAL time: 17 secs 
-Finished initial Timing Analysis.  REAL time: 17 secs 
+Finished initial Timing Analysis.  REAL time: 18 secs 
 
 WARNING:Par:288 - The signal sw_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal start_IBUF has no load.  PAR will not attempt to route this signal.
 Starting Router
 
 
-Phase  1  : 39502 unrouted;      REAL time: 20 secs 
+Phase  1  : 41308 unrouted;      REAL time: 20 secs 
 
-Phase  2  : 34708 unrouted;      REAL time: 21 secs 
+Phase  2  : 36404 unrouted;      REAL time: 22 secs 
 
-Phase  3  : 10109 unrouted;      REAL time: 39 secs 
+Phase  3  : 10465 unrouted;      REAL time: 38 secs 
 
-Phase  4  : 10151 unrouted; (Setup:1233541, Hold:838334, Component Switching Limit:0)     REAL time: 55 secs 
-
-Updating file: system.ncd with current fully routed design.
-
-Phase  5  : 0 unrouted; (Setup:1244462, Hold:837662, Component Switching Limit:0)     REAL time: 1 mins 6 secs 
-
-Phase  6  : 0 unrouted; (Setup:1244462, Hold:837662, Component Switching Limit:0)     REAL time: 1 mins 8 secs 
+Phase  4  : 10608 unrouted; (Setup:1956345, Hold:837543, Component Switching Limit:0)     REAL time: 58 secs 
 
 Updating file: system.ncd with current fully routed design.
 
-Phase  7  : 0 unrouted; (Setup:1244976, Hold:837305, Component Switching Limit:0)     REAL time: 1 mins 30 secs 
+Phase  5  : 0 unrouted; (Setup:1961449, Hold:837689, Component Switching Limit:0)     REAL time: 1 mins 11 secs 
+
+Phase  6  : 0 unrouted; (Setup:1961449, Hold:837689, Component Switching Limit:0)     REAL time: 1 mins 14 secs 
 
 Updating file: system.ncd with current fully routed design.
 
-Phase  8  : 0 unrouted; (Setup:1244976, Hold:837305, Component Switching Limit:0)     REAL time: 1 mins 40 secs 
+Phase  7  : 0 unrouted; (Setup:1962207, Hold:837689, Component Switching Limit:0)     REAL time: 1 mins 36 secs 
+
+Updating file: system.ncd with current fully routed design.
+
+Phase  8  : 0 unrouted; (Setup:1962207, Hold:837689, Component Switching Limit:0)     REAL time: 1 mins 47 secs 
 WARNING:Route:466 - Unusually high hold time violation detected among 4718 connections. The top 20 such instances are
    printed below. The router will continue and try to fix it
-	sh/testPUF/puf_map/picn/puf3/i1<0>:D -> sh/testPUF/puf_map/picn/puf3/puf_out:DX -139537
-	sh/challenge_0_3:AQ -> sh/testPUF/puf_map/picn/puf3/i1<0>:D5 -139537
-	sh/challenge_0_3:AQ -> sh/testPUF/puf_map/picn/puf3/i1<0>:D6 -139453
-	sh/testPUF/puf_map/picn/puf4/i1<0>:D -> sh/testPUF/puf_map/picn/puf4/puf_out:DX -139346
-	sh/challenge_0_3:AQ -> sh/testPUF/puf_map/picn/puf4/i1<0>:D6 -139346
-	sh/testPUF/puf_map/picn/puf1/i1<0>:D -> sh/testPUF/puf_map/picn/puf1/puf_out:DX -139292
-	sh/challenge_0_3:AQ -> sh/testPUF/puf_map/picn/puf1/i1<0>:D5 -139292
-	sh/challenge_0_3:AQ -> sh/testPUF/puf_map/picn/puf4/i1<0>:D5 -139262
-	sh/testPUF/puf_map/picn/puf5/i1<0>:D -> sh/testPUF/puf_map/picn/puf5/puf_out:DX -139247
-	sh/challenge_0_3:AQ -> sh/testPUF/puf_map/picn/puf5/i1<0>:D6 -139247
-	sh/challenge_0_3:AQ -> sh/testPUF/puf_map/picn/puf3/i1<0>:D4 -139247
-	sh/testPUF/puf_map/picn/puf2/i1<0>:D -> sh/testPUF/puf_map/picn/puf2/puf_out:DX -139240
-	sh/challenge_0_3:AQ -> sh/testPUF/puf_map/picn/puf2/i1<0>:D5 -139240
-	sh/challenge_0_3:AQ -> sh/testPUF/puf_map/picn/puf1/i1<0>:D6 -139207
-	sh/challenge_0_3:AQ -> sh/testPUF/puf_map/picn/puf3/i1<0>:D3 -139174
-	sh/challenge_0_3:AQ -> sh/testPUF/puf_map/picn/puf5/i1<0>:D5 -139163
-	sh/challenge_0_3:AQ -> sh/testPUF/puf_map/picn/puf2/i1<0>:D6 -139155
-	sh/challenge_0_3:AQ -> sh/testPUF/puf_map/picn/puf4/i1<0>:D4 -139141
-	sh/challenge_0_3:AQ -> sh/testPUF/puf_map/picn/puf4/i1<0>:D2 -139071
-	sh/challenge_0_3:AQ -> sh/testPUF/puf_map/picn/puf4/i1<0>:D3 -139068
+	sh/testPUF/puf_map/picn/puf2/i1<0>:D -> sh/testPUF/puf_map/picn/puf2/puf_out:DX -139377
+	sh/challenge_0_3:AQ -> sh/testPUF/puf_map/picn/puf2/i1<0>:D6 -139377
+	sh/testPUF/puf_map/picn/puf1/i1<0>:D -> sh/testPUF/puf_map/picn/puf1/puf_out:DX -139335
+	sh/challenge_0_3:AQ -> sh/testPUF/puf_map/picn/puf1/i1<0>:D6 -139335
+	sh/challenge_0_3:AQ -> sh/testPUF/puf_map/picn/puf1/i1<0>:D4 -139277
+	sh/challenge_0_3:AQ -> sh/testPUF/puf_map/picn/puf2/i1<0>:D5 -139270
+	sh/testPUF/puf_map/picn/puf3/i1<0>:D -> sh/testPUF/puf_map/picn/puf3/puf_out:DX -139252
+	sh/challenge_0_3:AQ -> sh/testPUF/puf_map/picn/puf3/i1<0>:D5 -139252
+	sh/challenge_0_3:AQ -> sh/testPUF/puf_map/picn/puf2/i1<0>:D3 -139246
+	sh/challenge_0_3:AQ -> sh/testPUF/puf_map/picn/puf1/i1<0>:D5 -139242
+	sh/testPUF/puf_map/picn/puf4/i1<0>:D -> sh/testPUF/puf_map/picn/puf4/puf_out:DX -139218
+	sh/challenge_0_3:AQ -> sh/testPUF/puf_map/picn/puf4/i1<0>:D5 -139218
+	sh/challenge_0_3:AQ -> sh/testPUF/puf_map/picn/puf3/i1<0>:D6 -139167
+	sh/challenge_0_3:AQ -> sh/testPUF/puf_map/picn/puf2/i1<0>:D4 -139150
+	sh/challenge_0_3:AQ -> sh/testPUF/puf_map/picn/puf4/i1<0>:D6 -139133
+	sh/testPUF/puf_map/picn/puf5/i1<0>:D -> sh/testPUF/puf_map/picn/puf5/puf_out:DX -139096
+	sh/challenge_0_3:AQ -> sh/testPUF/puf_map/picn/puf5/i1<0>:D6 -139096
+	sh/challenge_0_3:AQ -> sh/testPUF/puf_map/picn/puf1/i1<0>:D3 -139048
+	sh/challenge_0_3:AQ -> sh/testPUF/puf_map/picn/puf5/i1<0>:D5 -139011
+	sh/testPUF/puf_map/picn/puf6/i1<0>:D -> sh/testPUF/puf_map/picn/puf6/puf_out:DX -138991
 
 
-Phase  9  : 0 unrouted; (Setup:1244976, Hold:835366, Component Switching Limit:0)     REAL time: 1 mins 46 secs 
+Phase  9  : 0 unrouted; (Setup:1962207, Hold:835269, Component Switching Limit:0)     REAL time: 3 mins 6 secs 
 
-Phase 10  : 0 unrouted; (Setup:1244392, Hold:835366, Component Switching Limit:0)     REAL time: 1 mins 48 secs 
-Total REAL time to Router completion: 1 mins 48 secs 
-Total CPU time to Router completion: 1 mins 53 secs 
+Phase 10  : 0 unrouted; (Setup:1961532, Hold:835269, Component Switching Limit:0)     REAL time: 3 mins 8 secs 
+Total REAL time to Router completion: 3 mins 8 secs 
+Total CPU time to Router completion: 3 mins 13 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -129,39 +130,39 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|          sh/clk_RNG |BUFGCTRL_X0Y27| No   |   54 |  0.342     |  1.989      |
+|          sh/clk_RNG |BUFGCTRL_X0Y27| No   |   54 |  0.337     |  1.916      |
 +---------------------+--------------+------+------+------------+-------------+
-|         clk_125_eth | BUFGCTRL_X0Y2| No   |  455 |  0.672     |  2.197      |
+|            sh/clk_1 |BUFGCTRL_X0Y29| No   |  132 |  0.431     |  2.044      |
 +---------------------+--------------+------+------+------------+-------------+
-| sh/testPUF/clk_test |BUFGCTRL_X0Y30|Yes   |  142 |  0.448     |  2.078      |
+| sh/testPUF/clk_test |BUFGCTRL_X0Y30|Yes   |  142 |  0.446     |  2.073      |
++---------------------+--------------+------+------+------------+-------------+
+|         clk_125_eth | BUFGCTRL_X0Y2| No   |  455 |  0.560     |  2.087      |
 +---------------------+--------------+------+------+------------+-------------+
 |E2M/gmii_rx_clk_dela |              |      |      |            |             |
-|                   y |BUFGCTRL_X0Y26| No   |   50 |  0.381     |  2.197      |
+|                   y |BUFGCTRL_X0Y26| No   |   51 |  0.311     |  2.090      |
++---------------------+--------------+------+------+------------+-------------+
+|  clk_user_interface | BUFGCTRL_X0Y0| No   |  161 |  0.466     |  2.057      |
++---------------------+--------------+------+------+------------+-------------+
+| E2M/EC/sysACE_clk_o | BUFGCTRL_X0Y3| No   |   19 |  0.171     |  1.869      |
 +---------------------+--------------+------+------+------------+-------------+
 |sh/testPUF/NIST/test |              |      |      |            |             |
-|          4/_and0000 | BUFGCTRL_X0Y4| No   |   12 |  0.129     |  1.751      |
-+---------------------+--------------+------+------+------------+-------------+
-|  clk_user_interface | BUFGCTRL_X0Y0| No   |  162 |  0.574     |  2.188      |
-+---------------------+--------------+------+------+------------+-------------+
-|            sh/clk_1 |BUFGCTRL_X0Y29| No   |   65 |  0.351     |  1.987      |
-+---------------------+--------------+------+------+------------+-------------+
-| E2M/EC/sysACE_clk_o | BUFGCTRL_X0Y3| No   |   19 |  0.173     |  1.873      |
-+---------------------+--------------+------+------+------------+-------------+
-|             clk_200 | BUFGCTRL_X0Y1| No   |    6 |  0.182     |  1.723      |
+|                8/en | BUFGCTRL_X0Y5| No   |   36 |  0.137     |  1.861      |
 +---------------------+--------------+------+------+------------+-------------+
 |sh/testPUF/NIST/test |              |      |      |            |             |
-|                8/en | BUFGCTRL_X0Y5| No   |   36 |  0.221     |  1.935      |
+|          4/_and0000 | BUFGCTRL_X0Y4| No   |   12 |  0.122     |  1.743      |
 +---------------------+--------------+------+------+------------+-------------+
-|          sh/mem_clk |BUFGCTRL_X0Y31| No   |    4 |  0.071     |  2.121      |
+|             clk_200 | BUFGCTRL_X0Y1| No   |    6 |  0.175     |  1.723      |
++---------------------+--------------+------+------+------------+-------------+
+|          sh/mem_clk |BUFGCTRL_X0Y31| No   |    4 |  0.023     |  2.124      |
 +---------------------+--------------+------+------+------------+-------------+
 |sh/testPUF/puf_map/p |              |      |      |            |             |
-|      icn/puf1/i2<0> |         Local|      |    1 |  0.000     |  0.605      |
+|      icn/puf1/i2<0> |         Local|      |    1 |  0.000     |  0.581      |
 +---------------------+--------------+------+------+------------+-------------+
 |sh/testPUF/puf_map/p |              |      |      |            |             |
 |      icn/puf2/i2<0> |         Local|      |    1 |  0.000     |  0.585      |
 +---------------------+--------------+------+------+------------+-------------+
 |sh/testPUF/puf_map/p |              |      |      |            |             |
-|      icn/puf3/i2<0> |         Local|      |    1 |  0.000     |  0.581      |
+|      icn/puf3/i2<0> |         Local|      |    1 |  0.000     |  0.606      |
 +---------------------+--------------+------+------+------------+-------------+
 |sh/testPUF/puf_map/p |              |      |      |            |             |
 |      icn/puf4/i2<0> |         Local|      |    1 |  0.000     |  0.585      |
@@ -181,7 +182,7 @@ the minimum and maximum path delays which includes logic delays.
 * The fanout is the number of component pins not the individual BEL loads,
 for example SLICE loads not FF loads.
 
-Timing Score: 2079758 (Setup: 1244392, Hold: 835366, Component Switching Limit: 0)
+Timing Score: 2796801 (Setup: 1961532, Hold: 835269, Component Switching Limit: 0)
 
 WARNING:Par:468 - Your design did not meet timing.  The following are some suggestions to assist you to meet timing in
    your design.
@@ -209,81 +210,81 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-* TS_CLK_USER_INTERFACE = PERIOD TIMEGRP "c | SETUP       |  -144.615ns|   439.659ns|      76|     1106872
-  lk_user_interface" 5.888 ns HIGH 50%      | HOLD        |     0.447ns|            |       0|           0
+* TS_CLK_USER_INTERFACE = PERIOD TIMEGRP "c | SETUP       |  -144.617ns|   439.665ns|      82|     1100256
+  lk_user_interface" 5.888 ns HIGH 50%      | HOLD        |     0.472ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-* TS_sh_CLOCK_TRNG1_CLKOUT0_BUF = PERIOD TI | SETUP       |   -80.809ns|   373.724ns|       7|      137520
-  MEGRP "sh_CLOCK_TRNG1_CLKOUT0_BUF"        | HOLD        |  -139.537ns|            |       6|      835366
+* TS_sh_CLOCK_TRNG1_CLKOUT0_BUF = PERIOD TI | SETUP       |   -81.338ns|   345.651ns|      16|      861276
+  MEGRP "sh_CLOCK_TRNG1_CLKOUT0_BUF"        | HOLD        |  -139.377ns|            |       6|      835269
     TS_CLK_USER_INTERFACE / 0.09375 HIGH 50 |             |            |            |        |            
   %                                         |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_hard_reset_IG = MAXDELAY FROM TIMEGRP  | SETUP       |     0.025ns|     7.975ns|       0|           0
-  "hard_reset" TO TIMEGRP "FFS" 8 ns        | HOLD        |     0.354ns|            |       0|           0
+  TS_hard_reset_IG = MAXDELAY FROM TIMEGRP  | SETUP       |     0.097ns|     7.903ns|       0|           0
+  "hard_reset" TO TIMEGRP "FFS" 8 ns        | HOLD        |     0.333ns|            |       0|           0
     DATAPATHONLY                            |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_CLK_125 = PERIOD TIMEGRP "clk_125_eth" | SETUP       |     0.042ns|     7.858ns|       0|           0
-   7.9 ns HIGH 50%                          | HOLD        |     0.311ns|            |       0|           0
+  TS_CLK_125 = PERIOD TIMEGRP "clk_125_eth" | SETUP       |     0.117ns|     7.783ns|       0|           0
+   7.9 ns HIGH 50%                          | HOLD        |     0.359ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  TS_tx_max_output_1 = MAXDELAY FROM TIMEGR | SETUP       |     0.052ns|     7.948ns|       0|           0
-  P "tx_max_output" TO TIMEGRP         "tx_ | HOLD        |     0.480ns|            |       0|           0
+  TS_tx_max_output_1 = MAXDELAY FROM TIMEGR | SETUP       |     0.246ns|     7.754ns|       0|           0
+  P "tx_max_output" TO TIMEGRP         "tx_ | HOLD        |     0.471ns|            |       0|           0
   max_output_target" 8 ns DATAPATHONLY      |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_Emac0_clk_phy_rx0 = PERIOD TIMEGRP "Em | SETUP       |     0.540ns|     7.360ns|       0|           0
-  ac0_clk_phy_rx0" 7.9 ns HIGH 50%          | HOLD        |     0.251ns|            |       0|           0
+  TS_Emac0_clk_phy_rx0 = PERIOD TIMEGRP "Em | SETUP       |     0.530ns|     7.370ns|       0|           0
+  ac0_clk_phy_rx0" 7.9 ns HIGH 50%          | HOLD        |     0.458ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
   TS_sysACE_MPDATAIN = MAXDELAY FROM TIMEGR | SETUP       |     0.654ns|     2.506ns|       0|           0
-  P "sysACE_MPDATA" TO TIMEGRP         "sys | HOLD        |     1.490ns|            |       0|           0
+  P "sysACE_MPDATA" TO TIMEGRP         "sys | HOLD        |     1.190ns|            |       0|           0
   ACE_clk_o" 3.16 ns DATAPATHONLY           |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  ts_tx_meta_protect_0 = MAXDELAY FROM TIME | SETUP       |     1.096ns|     3.904ns|       0|           0
-  GRP "tx_metastable_0" 5 ns         DATAPA | HOLD        |     0.585ns|            |       0|           0
+  ts_tx_meta_protect_0 = MAXDELAY FROM TIME | SETUP       |     0.947ns|     4.053ns|       0|           0
+  GRP "tx_metastable_0" 5 ns         DATAPA | HOLD        |     0.509ns|            |       0|           0
   THONLY                                    |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   TS_CLK_200 = PERIOD TIMEGRP "clk_200" 4.9 | SETUP       |     4.052ns|     0.848ns|       0|           0
    ns HIGH 50%                              | HOLD        |     0.489ns|            |       0|           0
                                             | MINLOWPULSE |     3.846ns|     1.054ns|       0|           0
 ----------------------------------------------------------------------------------------------------------
-  ts_rx_meta_protect_0 = MAXDELAY FROM TIME | SETUP       |     3.930ns|     1.070ns|       0|           0
-  GRP "rx_metastable_0" 5 ns                | HOLD        |     0.442ns|            |       0|           0
+  ts_rx_meta_protect_0 = MAXDELAY FROM TIME | SETUP       |     3.885ns|     1.115ns|       0|           0
+  GRP "rx_metastable_0" 5 ns                | HOLD        |     0.446ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  TS_sh_CLOCK_TRNG1_CLKOUT2_BUF = PERIOD TI | SETUP       |     4.727ns|     3.123ns|       0|           0
-  MEGRP "sh_CLOCK_TRNG1_CLKOUT2_BUF"        | HOLD        |     0.441ns|            |       0|           0
+  TS_sh_CLOCK_TRNG1_CLKOUT2_BUF = PERIOD TI | SETUP       |     4.074ns|     3.776ns|       0|           0
+  MEGRP "sh_CLOCK_TRNG1_CLKOUT2_BUF"        | HOLD        |     0.319ns|            |       0|           0
     TS_CLK_USER_INTERFACE / 0.75 HIGH 50%   |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_tx_fifo_wr_to_rd_0 = MAXDELAY FROM TIM | SETUP       |     4.804ns|     3.196ns|       0|           0
-  EGRP "tx_fifo_wr_to_rd_0" TO TIMEGRP      | HOLD        |     0.907ns|            |       0|           0
+  TS_tx_fifo_wr_to_rd_0 = MAXDELAY FROM TIM | SETUP       |     4.864ns|     3.136ns|       0|           0
+  EGRP "tx_fifo_wr_to_rd_0" TO TIMEGRP      | HOLD        |     0.856ns|            |       0|           0
       "clk_125_eth" 8 ns DATAPATHONLY       |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_userRunClearToggle = MAXDELAY FROM TIM | SETUP       |     6.136ns|     1.864ns|       0|           0
-  EGRP "userRunSetTogCS" TO TIMEGRP         | HOLD        |     1.528ns|            |       0|           0
+  TS_userRunClearToggle = MAXDELAY FROM TIM | SETUP       |     6.312ns|     1.688ns|       0|           0
+  EGRP "userRunSetTogCS" TO TIMEGRP         | HOLD        |     1.215ns|            |       0|           0
    "userRunSetTogUS" 8 ns DATAPATHONLY      |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_rx_fifo_wr_to_rd_0 = MAXDELAY FROM TIM | SETUP       |     6.512ns|     1.488ns|       0|           0
-  EGRP "rx_fifo_wr_to_rd_0" TO TIMEGRP      | HOLD        |     1.147ns|            |       0|           0
+  TS_tx_fifo_rd_to_wr_0 = MAXDELAY FROM TIM | SETUP       |     6.735ns|     1.265ns|       0|           0
+  EGRP "tx_fifo_rd_to_wr_0" TO TIMEGRP      | HOLD        |     0.459ns|            |       0|           0
       "clk_125_eth" 8 ns DATAPATHONLY       |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_tx_fifo_rd_to_wr_0 = MAXDELAY FROM TIM | SETUP       |     6.709ns|     1.291ns|       0|           0
-  EGRP "tx_fifo_rd_to_wr_0" TO TIMEGRP      | HOLD        |     0.500ns|            |       0|           0
+  TS_rx_fifo_wr_to_rd_0 = MAXDELAY FROM TIM | SETUP       |     6.799ns|     1.201ns|       0|           0
+  EGRP "rx_fifo_wr_to_rd_0" TO TIMEGRP      | HOLD        |     0.883ns|            |       0|           0
       "clk_125_eth" 8 ns DATAPATHONLY       |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_tx_fifo_addr_0 = MAXDELAY FROM TIMEGRP | SETUP       |     8.600ns|     1.400ns|       0|           0
-   "tx_addr_rd_0" TO TIMEGRP         "tx_ad | HOLD        |     0.463ns|            |       0|           0
+  TS_tx_fifo_addr_0 = MAXDELAY FROM TIMEGRP | SETUP       |     8.316ns|     1.684ns|       0|           0
+   "tx_addr_rd_0" TO TIMEGRP         "tx_ad | HOLD        |     0.564ns|            |       0|           0
   dr_wr_0" 10 ns                            |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_sysACE_OE = MAXDELAY FROM TIMEGRP "sys | MAXDELAY    |    19.363ns|     4.077ns|       0|           0
+  TS_sysACE_OE = MAXDELAY FROM TIMEGRP "sys | MAXDELAY    |    19.552ns|     3.888ns|       0|           0
   ACE_clk_o" TO TIMEGRP "sysACE_MPOE"       |             |            |            |        |            
      23.44 ns DATAPATHONLY                  |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_sysACE_WE = MAXDELAY FROM TIMEGRP "sys | MAXDELAY    |    19.600ns|     3.840ns|       0|           0
+  TS_sysACE_WE = MAXDELAY FROM TIMEGRP "sys | MAXDELAY    |    19.602ns|     3.838ns|       0|           0
   ACE_clk_o" TO TIMEGRP "sysACE_MPWE"       |             |            |            |        |            
      23.44 ns DATAPATHONLY                  |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_sysACE_clk_o = PERIOD TIMEGRP "sysACE_ | SETUP       |    28.344ns|     1.856ns|       0|           0
-  clk_o" 30.2 ns HIGH 50%                   | HOLD        |     0.387ns|            |       0|           0
+  TS_sysACE_clk_o = PERIOD TIMEGRP "sysACE_ | SETUP       |    28.216ns|     1.984ns|       0|           0
+  clk_o" 30.2 ns HIGH 50%                   | HOLD        |     0.415ns|            |       0|           0
                                             | MINPERIOD   |    27.978ns|     2.222ns|       0|           0
 ----------------------------------------------------------------------------------------------------------
-  TS_sh_CLOCK_TRNG1_CLKOUT1_BUF = PERIOD TI | SETUP       |    58.402ns|    10.711ns|       0|           0
-  MEGRP "sh_CLOCK_TRNG1_CLKOUT1_BUF"        | HOLD        |     0.223ns|            |       0|           0
+  TS_sh_CLOCK_TRNG1_CLKOUT1_BUF = PERIOD TI | SETUP       |    57.420ns|    10.770ns|       0|           0
+  MEGRP "sh_CLOCK_TRNG1_CLKOUT1_BUF"        | HOLD        |     0.011ns|            |       0|           0
     TS_CLK_USER_INTERFACE / 0.046875 HIGH 5 |             |            |            |        |            
   0%                                        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
@@ -303,10 +304,10 @@ Derived Constraints for TS_CLK_USER_INTERFACE
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_CLK_USER_INTERFACE          |      5.888ns|    439.659ns|     35.037ns|           76|           13|         7232|        65896|
-| TS_sh_CLOCK_TRNG1_CLKOUT0_BUF |     62.805ns|    373.724ns|          N/A|           13|            0|        14494|            0|
-| TS_sh_CLOCK_TRNG1_CLKOUT1_BUF |    125.611ns|     10.711ns|          N/A|            0|            0|        51242|            0|
-| TS_sh_CLOCK_TRNG1_CLKOUT2_BUF |      7.851ns|      3.123ns|          N/A|            0|            0|          160|            0|
+|TS_CLK_USER_INTERFACE          |      5.888ns|    439.665ns|     32.405ns|           82|           22|         7270|        71210|
+| TS_sh_CLOCK_TRNG1_CLKOUT0_BUF |     62.805ns|    345.651ns|          N/A|           22|            0|        19806|            0|
+| TS_sh_CLOCK_TRNG1_CLKOUT1_BUF |    125.611ns|     10.770ns|          N/A|            0|            0|        51244|            0|
+| TS_sh_CLOCK_TRNG1_CLKOUT2_BUF |      7.851ns|      3.776ns|          N/A|            0|            0|          160|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 2 constraints not met.
@@ -323,14 +324,14 @@ All signals are completely routed.
 
 WARNING:Par:283 - There are 2 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 1 mins 54 secs 
-Total CPU time to PAR completion: 1 mins 59 secs 
+Total REAL time to PAR completion: 3 mins 15 secs 
+Total CPU time to PAR completion: 3 mins 20 secs 
 
-Peak Memory Usage:  708 MB
+Peak Memory Usage:  785 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
-Timing: Completed - 89 errors found.
+Timing: Completed - 104 errors found.
 
 Number of error messages: 0
 Number of warning messages: 7

@@ -10179,6 +10179,9 @@ WARNING:NgdBuild:1440 - User specified non-default attribute value (6.000000)
    value.  This could result in incorrect uncertainty calculated for PLL output
    clocks.
 Checking expanded design ...
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "sh/testPUF/SystemMonitor1/SysMon1/SYSMON_INST" of type "SYSMON".  This
+   attribute will be ignored.
 
 Partition Implementation Status
 -------------------------------
@@ -10189,12 +10192,12 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings: 1561
+  Number of warnings: 1562
 
-Total memory usage is 241784 kilobytes
+Total memory usage is 243064 kilobytes
 
 Writing NGD file "system.ngd" ...
-Total REAL time to NGDBUILD completion:  53 sec
+Total REAL time to NGDBUILD completion:  54 sec
 Total CPU time to NGDBUILD completion:   30 sec
 
 Writing NGDBUILD log file "system.bld"...

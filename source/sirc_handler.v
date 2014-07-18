@@ -1,10 +1,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 //
 // Author 			:	Praveen Kumar Pendyala
-// Create Date		:   05/27/13
-// Modify Date		:	16/07/14
+// Create Date		:  05/27/13
+// Modify Date		:	18/07/14
 // Module Name		:   SircHandler
-// Project Name     :   PDL
+// Project Name   :  securePUF
 // Target Devices	: 	Xilinx Vertix 5, XUPV5 110T
 // Tool versions	: 	13.2 ISE
 //
@@ -13,6 +13,15 @@
 // 1. Receive 128-bits of pdl configuration data and 2 32-bit operands from PC.
 // 2. Evaluate the PUFs response for the given configuration and operands.
 // 3. Send the responses back to PC.
+//
+//	NOTE:
+// About parameter op_mode
+// This decides the mode of operation of the device for a given sirc session (pc-board-pc)
+// The notation is,
+// 32h'00000000 - calibration
+// 32h'00000001 - temperature read
+// 32h'YYYYYYYX - normal test mode. (at least one Y is non-zero)
+// 
 //
 //	Bugs :
 //	- While writing back to memory the first element is written twice (i.e., to memory addresses 0 and 1).
@@ -41,7 +50,7 @@ module SircHandler #(
 	input		wire 				reset,
 																												//A user application can only check the status of the run register and reset it to zero
 	input		wire 				userRunValue,																//Read run register value
-	output		reg					userRunClear,																//Reset run register
+	output	reg				userRunClear,																//Reset run register
 
 	//Parameter register file connections
 	output 	reg															register32CmdReq,					//Parameter register handshaking request signal - assert to perform read or write
@@ -122,9 +131,6 @@ module SircHandler #(
 /////////////////////////////////////////// Praveen's modified SIRC FSM start ////////////////////////////////////////////
 
 
-	// Temps
-	//wire xor_response;
-
 	//FSM states
 	localparam  IDLE = 0;							// Waiting
 	localparam  READING_IN_PARAMETERS = 1;	// Get values from the reg32 parameters
@@ -167,11 +173,12 @@ module SircHandler #(
 	//Counter
 	reg paramCount;
 
-	//Operands
-	reg [31:0] is_calibrate_mode;
+	//Parameters from PC
+	reg [31:0] op_mode;			// Mode of PUF operation.
 	reg [31:0] pc_challenge;
 	
 	reg calibrate;
+	reg read_temp;
 	reg test_start;
 	wire test_done;
 
@@ -195,7 +202,7 @@ module SircHandler #(
 	initial begin
 		currState = IDLE;
 		pc_challenge = 0;
-		is_calibrate_mode = 0;
+		op_mode = 0;
 
 		userRunClear = 0;
 
@@ -267,7 +274,7 @@ module SircHandler #(
 
 					//If a read came back, shift in the value from the register file
 					if(register32ReadDataValid) begin
-							is_calibrate_mode <= pc_challenge;
+							op_mode <= pc_challenge;
 							pc_challenge <= register32ReadData;
 							paramCount <= 1;
 
@@ -282,15 +289,26 @@ module SircHandler #(
 								memCount <= 0;
 								
 								// Check the mode of operation requested by PC.
-								if(is_calibrate_mode == 32'h00000000) begin
+								
+								// Calibration mode
+								if(op_mode == 32'h00000000) begin
 									calibrate <= 1;
-									//LED <= 8'b11111111;
+									read_temp <= 0;
 								end
 								
+								// temperature test mode
+								else if (op_mode == 32'h00000001) begin
+									read_temp <= 1;
+									calibrate <= 0;
+								end
+								
+								// Normal test mode
 								else begin
 									calibrate <= 0;
-									//LED <= 8'b10101010;
+									read_temp <= 0;
 								end
+								
+								// Mode setting  complete.
 								
 							end
 					end
@@ -397,7 +415,7 @@ module SircHandler #(
 
 						//If we just wrote a value to the output memory this cycle, increment the address
 						//NOTE : Due to bug described above we write on bit more by using length instead of lengthMinus1
-						if(outputMemoryWriteReq == 1  && outputMemoryWriteAck == 1 && outputMemoryWriteAdd != 10) begin
+						if(outputMemoryWriteReq == 1  && outputMemoryWriteAck == 1 && outputMemoryWriteAdd != 200) begin
 							outputMemoryWriteAdd <= outputMemoryWriteAdd + 1;
 							raddr <= raddr + 1;
 							memCount <= memCount+1;
@@ -405,7 +423,7 @@ module SircHandler #(
 						end
 
 						//Stop writing and go back to IDLE state if writing reached length of data
-						if(outputMemoryWriteReq == 1  && outputMemoryWriteAck == 1 && outputMemoryWriteAdd == 10) begin
+						if(outputMemoryWriteReq == 1  && outputMemoryWriteAck == 1 && outputMemoryWriteAdd == 200) begin
 							outputMemoryWriteReq <= 0;
 							currState <= IDLE;
 							userRunClear <= 1;
@@ -434,8 +452,8 @@ module SircHandler #(
 	    .clk_2(clk_2), // its freq is half that of clk_1, for the test 1.2 and 1.3 testing block will receive one input bit for two resonse bits from PUF
 	    .clk_RNG(clk_RNG), // its freq is 8 times that of clk_1, challenge bits are generated at a higher rate
 		 .rst(RST),  // -TODO- replace this
-		 .start(start), // -TODO - replace this
-		 .sw(sw), // -TODO - replace this
+		 //.start(start), // -TODO - replace this
+		 //.sw(sw), // -TODO - replace this
 	    .mem_we(wea), // write enable for memory
 	    .mem_waddr(waddr), // write address for memory
 	    .mem_din(dina), // data in for memory
@@ -451,6 +469,7 @@ module SircHandler #(
 		.raw_response(responseReg[5:0]),
 		
 		.calibrate(calibrate),		// Tells if puf in calib mode or not
+		.read_temp(read_temp),		// Tells the test to do a temperature test
 		.test_start(test_start),
 		.test_done(test_done),
 		.LED(LED)

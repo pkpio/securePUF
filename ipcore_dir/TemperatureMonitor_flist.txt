@@ -1,0 +1,27 @@
+# Output products list for <TemperatureMonitor>
+TemperatureMonitor.asy
+TemperatureMonitor.gise
+TemperatureMonitor.v
+TemperatureMonitor.veo
+TemperatureMonitor.xco
+TemperatureMonitor.xise
+TemperatureMonitor\doc\sysmon_wiz_ds608.pdf
+TemperatureMonitor\doc\sysmon_wiz_gsg741.pdf
+TemperatureMonitor\example_design\TemperatureMonitor_exdes.v
+TemperatureMonitor\implement\implement.bat
+TemperatureMonitor\implement\implement.sh
+TemperatureMonitor\implement\xst.prj
+TemperatureMonitor\implement\xst.scr
+TemperatureMonitor\simulation\TemperatureMonitor_tb.v
+TemperatureMonitor\simulation\functional\design.txt
+TemperatureMonitor\simulation\functional\simcmds.tcl
+TemperatureMonitor\simulation\functional\simulate_isim.bat
+TemperatureMonitor\simulation\functional\simulate_isim.sh
+TemperatureMonitor\simulation\functional\simulate_mti.do
+TemperatureMonitor\simulation\functional\simulate_ncsim.sh
+TemperatureMonitor\simulation\functional\simulate_vcs.sh
+TemperatureMonitor\simulation\functional\wave.do
+TemperatureMonitor\sysmon_wiz_readme.txt
+TemperatureMonitor_flist.txt
+TemperatureMonitor_xmdf.tcl
+_xmsgs\pn_parser.xmsgs

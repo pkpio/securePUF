@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.68d on Fri Jul 18 02:18:32 2014
+// Written by: Map P.68d on Fri Jul 18 06:01:28 2014
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -5489,56 +5489,51 @@ TIMEGRP clk_user_interface = BEL "E2M/EC/resetUserClockDomain" BEL
         "E2M/EC/tx_max_output_address_9" BEL "E2M/EC/tx_max_output_address_10"
         BEL "E2M/EC/tx_max_output_address_11" BEL
         "E2M/EC/tx_max_output_address_12" BEL "E2M/EC/userRunRegisterUserSide"
-        BEL "sh/MEMCLK" BEL "sh/is_calibrate_mode_31" BEL
-        "sh/is_calibrate_mode_30" BEL "sh/is_calibrate_mode_29" BEL
-        "sh/is_calibrate_mode_28" BEL "sh/is_calibrate_mode_27" BEL
-        "sh/is_calibrate_mode_26" BEL "sh/is_calibrate_mode_25" BEL
-        "sh/is_calibrate_mode_24" BEL "sh/is_calibrate_mode_23" BEL
-        "sh/is_calibrate_mode_22" BEL "sh/is_calibrate_mode_21" BEL
-        "sh/is_calibrate_mode_20" BEL "sh/is_calibrate_mode_19" BEL
-        "sh/is_calibrate_mode_18" BEL "sh/is_calibrate_mode_17" BEL
-        "sh/is_calibrate_mode_16" BEL "sh/is_calibrate_mode_15" BEL
-        "sh/is_calibrate_mode_14" BEL "sh/is_calibrate_mode_13" BEL
-        "sh/is_calibrate_mode_12" BEL "sh/is_calibrate_mode_11" BEL
-        "sh/is_calibrate_mode_10" BEL "sh/is_calibrate_mode_9" BEL
-        "sh/is_calibrate_mode_8" BEL "sh/is_calibrate_mode_7" BEL
-        "sh/is_calibrate_mode_6" BEL "sh/is_calibrate_mode_5" BEL
-        "sh/is_calibrate_mode_4" BEL "sh/is_calibrate_mode_3" BEL
-        "sh/is_calibrate_mode_2" BEL "sh/is_calibrate_mode_1" BEL
-        "sh/is_calibrate_mode_0" BEL "sh/challenge_11_7" BEL
-        "sh/challenge_11_6" BEL "sh/challenge_11_5" BEL "sh/challenge_11_4"
-        BEL "sh/challenge_11_3" BEL "sh/challenge_11_2" BEL
-        "sh/challenge_11_1" BEL "sh/challenge_11_0" BEL "sh/challenge_9_7" BEL
-        "sh/challenge_9_6" BEL "sh/challenge_9_5" BEL "sh/challenge_9_4" BEL
-        "sh/challenge_9_3" BEL "sh/challenge_9_2" BEL "sh/challenge_9_1" BEL
-        "sh/challenge_9_0" BEL "sh/challenge_8_7" BEL "sh/challenge_8_6" BEL
-        "sh/challenge_8_5" BEL "sh/challenge_8_4" BEL "sh/challenge_8_3" BEL
-        "sh/challenge_8_2" BEL "sh/challenge_8_1" BEL "sh/challenge_8_0" BEL
-        "sh/challenge_10_7" BEL "sh/challenge_10_6" BEL "sh/challenge_10_5"
-        BEL "sh/challenge_10_4" BEL "sh/challenge_10_3" BEL
-        "sh/challenge_10_2" BEL "sh/challenge_10_1" BEL "sh/challenge_10_0"
-        BEL "sh/challenge_3_7" BEL "sh/challenge_3_6" BEL "sh/challenge_3_5"
-        BEL "sh/challenge_3_4" BEL "sh/challenge_3_3" BEL "sh/challenge_3_2"
-        BEL "sh/challenge_3_1" BEL "sh/challenge_3_0" BEL "sh/challenge_2_7"
-        BEL "sh/challenge_2_6" BEL "sh/challenge_2_5" BEL "sh/challenge_2_4"
-        BEL "sh/challenge_2_3" BEL "sh/challenge_2_2" BEL "sh/challenge_2_1"
-        BEL "sh/challenge_2_0" BEL "sh/challenge_1_7" BEL "sh/challenge_1_6"
-        BEL "sh/challenge_1_5" BEL "sh/challenge_1_4" BEL "sh/challenge_1_3"
-        BEL "sh/challenge_1_2" BEL "sh/challenge_1_1" BEL "sh/challenge_1_0"
-        BEL "sh/slowRmemCount_5" BEL "sh/slowRmemCount_4" BEL
-        "sh/slowRmemCount_3" BEL "sh/slowRmemCount_2" BEL "sh/slowRmemCount_1"
-        BEL "sh/slowRmemCount_0" BEL "sh/raddr_12" BEL "sh/raddr_11" BEL
-        "sh/raddr_10" BEL "sh/raddr_9" BEL "sh/raddr_8" BEL "sh/raddr_7" BEL
-        "sh/raddr_6" BEL "sh/raddr_5" BEL "sh/raddr_4" BEL "sh/raddr_3" BEL
-        "sh/raddr_2" BEL "sh/raddr_1" BEL "sh/raddr_0" BEL "sh/challenge_0_7"
-        BEL "sh/challenge_0_6" BEL "sh/challenge_0_5" BEL "sh/challenge_0_4"
-        BEL "sh/challenge_0_3" BEL "sh/challenge_0_2" BEL "sh/challenge_0_1"
-        BEL "sh/challenge_0_0" BEL "sh/resp_wait_count_5" BEL
-        "sh/resp_wait_count_4" BEL "sh/resp_wait_count_3" BEL
-        "sh/resp_wait_count_2" BEL "sh/resp_wait_count_1" BEL
-        "sh/resp_wait_count_0" BEL "sh/regCount_0" BEL "sh/test_start" BEL
-        "sh/memCount_5" BEL "sh/memCount_4" BEL "sh/memCount_3" BEL
-        "sh/memCount_2" BEL "sh/memCount_1" BEL "sh/memCount_0" BEL
+        BEL "sh/MEMCLK" BEL "sh/op_mode_31" BEL "sh/op_mode_30" BEL
+        "sh/op_mode_29" BEL "sh/op_mode_28" BEL "sh/op_mode_27" BEL
+        "sh/op_mode_26" BEL "sh/op_mode_25" BEL "sh/op_mode_24" BEL
+        "sh/op_mode_23" BEL "sh/op_mode_22" BEL "sh/op_mode_21" BEL
+        "sh/op_mode_20" BEL "sh/op_mode_19" BEL "sh/op_mode_18" BEL
+        "sh/op_mode_17" BEL "sh/op_mode_16" BEL "sh/op_mode_15" BEL
+        "sh/op_mode_14" BEL "sh/op_mode_13" BEL "sh/op_mode_12" BEL
+        "sh/op_mode_11" BEL "sh/op_mode_10" BEL "sh/op_mode_9" BEL
+        "sh/op_mode_8" BEL "sh/op_mode_7" BEL "sh/op_mode_6" BEL
+        "sh/op_mode_5" BEL "sh/op_mode_4" BEL "sh/op_mode_3" BEL
+        "sh/op_mode_2" BEL "sh/op_mode_1" BEL "sh/op_mode_0" BEL
+        "sh/challenge_11_7" BEL "sh/challenge_11_6" BEL "sh/challenge_11_5"
+        BEL "sh/challenge_11_4" BEL "sh/challenge_11_3" BEL
+        "sh/challenge_11_2" BEL "sh/challenge_11_1" BEL "sh/challenge_11_0"
+        BEL "sh/challenge_9_7" BEL "sh/challenge_9_6" BEL "sh/challenge_9_5"
+        BEL "sh/challenge_9_4" BEL "sh/challenge_9_3" BEL "sh/challenge_9_2"
+        BEL "sh/challenge_9_1" BEL "sh/challenge_9_0" BEL "sh/challenge_8_7"
+        BEL "sh/challenge_8_6" BEL "sh/challenge_8_5" BEL "sh/challenge_8_4"
+        BEL "sh/challenge_8_3" BEL "sh/challenge_8_2" BEL "sh/challenge_8_1"
+        BEL "sh/challenge_8_0" BEL "sh/challenge_10_7" BEL "sh/challenge_10_6"
+        BEL "sh/challenge_10_5" BEL "sh/challenge_10_4" BEL
+        "sh/challenge_10_3" BEL "sh/challenge_10_2" BEL "sh/challenge_10_1"
+        BEL "sh/challenge_10_0" BEL "sh/challenge_3_7" BEL "sh/challenge_3_6"
+        BEL "sh/challenge_3_5" BEL "sh/challenge_3_4" BEL "sh/challenge_3_3"
+        BEL "sh/challenge_3_2" BEL "sh/challenge_3_1" BEL "sh/challenge_3_0"
+        BEL "sh/challenge_2_7" BEL "sh/challenge_2_6" BEL "sh/challenge_2_5"
+        BEL "sh/challenge_2_4" BEL "sh/challenge_2_3" BEL "sh/challenge_2_2"
+        BEL "sh/challenge_2_1" BEL "sh/challenge_2_0" BEL "sh/challenge_1_7"
+        BEL "sh/challenge_1_6" BEL "sh/challenge_1_5" BEL "sh/challenge_1_4"
+        BEL "sh/challenge_1_3" BEL "sh/challenge_1_2" BEL "sh/challenge_1_1"
+        BEL "sh/challenge_1_0" BEL "sh/slowRmemCount_5" BEL
+        "sh/slowRmemCount_4" BEL "sh/slowRmemCount_3" BEL "sh/slowRmemCount_2"
+        BEL "sh/slowRmemCount_1" BEL "sh/slowRmemCount_0" BEL "sh/raddr_12"
+        BEL "sh/raddr_11" BEL "sh/raddr_10" BEL "sh/raddr_9" BEL "sh/raddr_8"
+        BEL "sh/raddr_7" BEL "sh/raddr_6" BEL "sh/raddr_5" BEL "sh/raddr_4"
+        BEL "sh/raddr_3" BEL "sh/raddr_2" BEL "sh/raddr_1" BEL "sh/raddr_0"
+        BEL "sh/challenge_0_7" BEL "sh/challenge_0_6" BEL "sh/challenge_0_5"
+        BEL "sh/challenge_0_4" BEL "sh/challenge_0_3" BEL "sh/challenge_0_2"
+        BEL "sh/challenge_0_1" BEL "sh/challenge_0_0" BEL
+        "sh/resp_wait_count_5" BEL "sh/resp_wait_count_4" BEL
+        "sh/resp_wait_count_3" BEL "sh/resp_wait_count_2" BEL
+        "sh/resp_wait_count_1" BEL "sh/resp_wait_count_0" BEL "sh/regCount_0"
+        BEL "sh/test_start" BEL "sh/calibrate" BEL "sh/memCount_5" BEL
+        "sh/memCount_4" BEL "sh/memCount_3" BEL "sh/memCount_2" BEL
+        "sh/memCount_1" BEL "sh/memCount_0" BEL "sh/read_temp" BEL
         "sh/pc_challenge_31" BEL "sh/pc_challenge_30" BEL "sh/pc_challenge_29"
         BEL "sh/pc_challenge_28" BEL "sh/pc_challenge_27" BEL
         "sh/pc_challenge_26" BEL "sh/pc_challenge_25" BEL "sh/pc_challenge_24"
@@ -5551,8 +5546,8 @@ TIMEGRP clk_user_interface = BEL "E2M/EC/resetUserClockDomain" BEL
         BEL "sh/pc_challenge_8" BEL "sh/pc_challenge_7" BEL
         "sh/pc_challenge_6" BEL "sh/pc_challenge_5" BEL "sh/pc_challenge_4"
         BEL "sh/pc_challenge_3" BEL "sh/pc_challenge_2" BEL
-        "sh/pc_challenge_1" BEL "sh/pc_challenge_0" BEL "sh/calibrate" BEL
-        "sh/register32CmdReq" BEL "sh/challenge_ready" BEL "sh/paramCount" BEL
+        "sh/pc_challenge_1" BEL "sh/pc_challenge_0" BEL "sh/register32CmdReq"
+        BEL "sh/challenge_ready" BEL "sh/paramCount" BEL
         "sh/outputMemoryWriteData_7" BEL "sh/outputMemoryWriteData_6" BEL
         "sh/outputMemoryWriteData_5" BEL "sh/outputMemoryWriteData_4" BEL
         "sh/outputMemoryWriteData_3" BEL "sh/outputMemoryWriteData_2" BEL
@@ -6177,54 +6172,68 @@ TIMEGRP clk_200 = BEL "E2M/delayCtrl0Reset_12" BEL "E2M/delayCtrl0Reset_11"
         "E2M/delayCtrl0Reset_2" BEL "E2M/delayCtrl0Reset_1" BEL
         "E2M/delayCtrl0Reset_0" BEL "E2M/delayCtrl0_MapLib_replicate13" BEL
         "E2M/delayCtrl0_MapLib_replicate1";
+PIN sh/testPUF/SystemMonitor1/SysMon1/SYSMON_INST_pins<9> = BEL
+        "sh/testPUF/SystemMonitor1/SysMon1/SYSMON_INST" PINNAME DCLK;
 TIMEGRP sh_CLOCK_TRNG1_CLKOUT0_BUF = BEL "sh/testPUF/mem_we" BEL
-        "sh/testPUF/mem_waddr_0" BEL "sh/testPUF/mem_waddr_1" BEL
-        "sh/testPUF/mem_waddr_2" BEL "sh/testPUF/mem_waddr_3" BEL
-        "sh/testPUF/mem_waddr_4" BEL "sh/testPUF/mem_waddr_5" BEL
-        "sh/testPUF/mem_waddr_6" BEL "sh/testPUF/mem_waddr_7" BEL
-        "sh/testPUF/mem_waddr_8" BEL "sh/testPUF/mem_waddr_9" BEL
-        "sh/testPUF/mem_waddr_10" BEL "sh/testPUF/mem_waddr_11" BEL
-        "sh/testPUF/mem_waddr_12" BEL "sh/testPUF/test_done" BEL
-        "sh/testPUF/resp_bit_count_0" BEL "sh/testPUF/resp_bit_count_1" BEL
-        "sh/testPUF/resp_bit_count_2" BEL "sh/testPUF/resp_bit_count_3" BEL
-        "sh/testPUF/resp_bit_count_4" BEL "sh/testPUF/resp_bit_count_5" BEL
-        "sh/testPUF/resp_bit_count_6" BEL "sh/testPUF/resp_bit_count_7" BEL
-        "sh/testPUF/resp_bit_count_8" BEL "sh/testPUF/resp_bit_count_9" BEL
-        "sh/testPUF/resp_bit_count_10" BEL "sh/testPUF/resp_bit_count_11" BEL
-        "sh/testPUF/resp_bit_count_12" BEL "sh/testPUF/resp_bit_count_13" BEL
-        "sh/testPUF/resp_bit_count_14" BEL "sh/testPUF/test2_0" BEL
-        "sh/testPUF/test2_1" BEL "sh/testPUF/test2_2" BEL "sh/testPUF/test2_3"
-        BEL "sh/testPUF/test2_4" BEL "sh/testPUF/test2_5" BEL
-        "sh/testPUF/test2_6" BEL "sh/testPUF/test2_7" BEL
+        "sh/testPUF/Temperature_0" BEL "sh/testPUF/Temperature_1" BEL
+        "sh/testPUF/Temperature_2" BEL "sh/testPUF/Temperature_3" BEL
+        "sh/testPUF/Temperature_4" BEL "sh/testPUF/Temperature_5" BEL
+        "sh/testPUF/Temperature_6" BEL "sh/testPUF/Temperature_7" BEL
+        "sh/testPUF/Temperature_8" BEL "sh/testPUF/Temperature_9" BEL
+        "sh/testPUF/Temperature_10" BEL "sh/testPUF/mem_waddr_0" BEL
+        "sh/testPUF/mem_waddr_1" BEL "sh/testPUF/mem_waddr_2" BEL
+        "sh/testPUF/mem_waddr_3" BEL "sh/testPUF/mem_waddr_4" BEL
+        "sh/testPUF/mem_waddr_5" BEL "sh/testPUF/mem_waddr_6" BEL
+        "sh/testPUF/mem_waddr_7" BEL "sh/testPUF/mem_waddr_8" BEL
+        "sh/testPUF/mem_waddr_9" BEL "sh/testPUF/mem_waddr_10" BEL
+        "sh/testPUF/mem_waddr_11" BEL "sh/testPUF/mem_waddr_12" BEL
+        "sh/testPUF/test_done" BEL "sh/testPUF/test_0_0" BEL
+        "sh/testPUF/test_0_1" BEL "sh/testPUF/test_0_2" BEL
+        "sh/testPUF/test_0_3" BEL "sh/testPUF/test_0_4" BEL
+        "sh/testPUF/test_0_5" BEL "sh/testPUF/test_0_6" BEL
+        "sh/testPUF/test_0_7" BEL "sh/testPUF/test_bit_count_0" BEL
+        "sh/testPUF/test_bit_count_1" BEL "sh/testPUF/test_bit_count_2" BEL
+        "sh/testPUF/test_bit_count_3" BEL "sh/testPUF/test_bit_count_4" BEL
+        "sh/testPUF/test_bit_count_5" BEL "sh/testPUF/test_bit_count_6" BEL
+        "sh/testPUF/test_bit_count_7" BEL "sh/testPUF/test_bit_count_8" BEL
+        "sh/testPUF/test_bit_count_9" BEL "sh/testPUF/test_bit_count_10" BEL
+        "sh/testPUF/test_bit_count_11" BEL "sh/testPUF/test_bit_count_12" BEL
+        "sh/testPUF/test_bit_count_13" BEL "sh/testPUF/test_bit_count_14" BEL
         "sh/testPUF/test_count_0" BEL "sh/testPUF/test_count_1" BEL
         "sh/testPUF/test_count_2" BEL "sh/testPUF/test_count_3" BEL
         "sh/testPUF/test_count_4" BEL "sh/testPUF/test_count_5" BEL
         "sh/testPUF/test_count_6" BEL "sh/testPUF/test_count_7" BEL
-        "sh/testPUF/test1_0" BEL "sh/testPUF/test1_1" BEL "sh/testPUF/test1_2"
-        BEL "sh/testPUF/test1_3" BEL "sh/testPUF/test1_4" BEL
-        "sh/testPUF/test1_5" BEL "sh/testPUF/test1_6" BEL "sh/testPUF/test1_7"
-        BEL "sh/testPUF/test3_0" BEL "sh/testPUF/test3_1" BEL
-        "sh/testPUF/test3_2" BEL "sh/testPUF/test3_3" BEL "sh/testPUF/test3_4"
-        BEL "sh/testPUF/test3_5" BEL "sh/testPUF/test3_6" BEL
-        "sh/testPUF/test3_7" BEL "sh/testPUF/test4_0" BEL "sh/testPUF/test4_1"
-        BEL "sh/testPUF/test4_2" BEL "sh/testPUF/test4_3" BEL
-        "sh/testPUF/test4_4" BEL "sh/testPUF/test4_5" BEL "sh/testPUF/test4_6"
-        BEL "sh/testPUF/test4_7" BEL "sh/testPUF/test5_0" BEL
-        "sh/testPUF/test5_1" BEL "sh/testPUF/test5_2" BEL "sh/testPUF/test5_3"
-        BEL "sh/testPUF/test5_4" BEL "sh/testPUF/test5_5" BEL
-        "sh/testPUF/test5_6" BEL "sh/testPUF/test5_7" BEL "sh/testPUF/test6_0"
-        BEL "sh/testPUF/test6_1" BEL "sh/testPUF/test6_2" BEL
-        "sh/testPUF/test6_3" BEL "sh/testPUF/test6_4" BEL "sh/testPUF/test6_5"
-        BEL "sh/testPUF/test6_6" BEL "sh/testPUF/test6_7" BEL
-        "sh/testPUF/test7_0" BEL "sh/testPUF/test7_1" BEL "sh/testPUF/test7_2"
-        BEL "sh/testPUF/test7_3" BEL "sh/testPUF/test7_4" BEL
-        "sh/testPUF/test7_5" BEL "sh/testPUF/test7_6" BEL "sh/testPUF/test7_7"
-        BEL "sh/testPUF/LED_0" BEL "sh/testPUF/LED_1" BEL "sh/testPUF/LED_2"
-        BEL "sh/testPUF/LED_3" BEL "sh/testPUF/LED_4" BEL "sh/testPUF/LED_5"
-        BEL "sh/testPUF/LED_6" BEL "sh/testPUF/LED_7" BEL
-        "sh/testPUF/test_index_0" BEL "sh/testPUF/test_index_1" BEL
-        "sh/testPUF/test_index_2" BEL "sh/testPUF/test_index_3" BEL
-        "sh/testPUF/test_index_4" BEL "sh/testPUF/gen_challenge_0" BEL
+        "sh/testPUF/test_3_0" BEL "sh/testPUF/test_3_1" BEL
+        "sh/testPUF/test_3_2" BEL "sh/testPUF/test_3_3" BEL
+        "sh/testPUF/test_3_4" BEL "sh/testPUF/test_3_5" BEL
+        "sh/testPUF/test_3_6" BEL "sh/testPUF/test_3_7" BEL
+        "sh/testPUF/test_1_0" BEL "sh/testPUF/test_1_1" BEL
+        "sh/testPUF/test_1_2" BEL "sh/testPUF/test_1_3" BEL
+        "sh/testPUF/test_1_4" BEL "sh/testPUF/test_1_5" BEL
+        "sh/testPUF/test_1_6" BEL "sh/testPUF/test_1_7" BEL
+        "sh/testPUF/test_2_0" BEL "sh/testPUF/test_2_1" BEL
+        "sh/testPUF/test_2_2" BEL "sh/testPUF/test_2_3" BEL
+        "sh/testPUF/test_2_4" BEL "sh/testPUF/test_2_5" BEL
+        "sh/testPUF/test_2_6" BEL "sh/testPUF/test_2_7" BEL
+        "sh/testPUF/test_6_0" BEL "sh/testPUF/test_6_1" BEL
+        "sh/testPUF/test_6_2" BEL "sh/testPUF/test_6_3" BEL
+        "sh/testPUF/test_6_4" BEL "sh/testPUF/test_6_5" BEL
+        "sh/testPUF/test_6_6" BEL "sh/testPUF/test_6_7" BEL
+        "sh/testPUF/test_4_0" BEL "sh/testPUF/test_4_1" BEL
+        "sh/testPUF/test_4_2" BEL "sh/testPUF/test_4_3" BEL
+        "sh/testPUF/test_4_4" BEL "sh/testPUF/test_4_5" BEL
+        "sh/testPUF/test_4_6" BEL "sh/testPUF/test_4_7" BEL
+        "sh/testPUF/test_5_0" BEL "sh/testPUF/test_5_1" BEL
+        "sh/testPUF/test_5_2" BEL "sh/testPUF/test_5_3" BEL
+        "sh/testPUF/test_5_4" BEL "sh/testPUF/test_5_5" BEL
+        "sh/testPUF/test_5_6" BEL "sh/testPUF/test_5_7" BEL
+        "sh/testPUF/sel_clk_test" BEL "sh/testPUF/test_index_0" BEL
+        "sh/testPUF/test_index_1" BEL "sh/testPUF/test_index_2" BEL
+        "sh/testPUF/test_index_3" BEL "sh/testPUF/mem_din_0" BEL
+        "sh/testPUF/mem_din_1" BEL "sh/testPUF/mem_din_2" BEL
+        "sh/testPUF/mem_din_3" BEL "sh/testPUF/mem_din_4" BEL
+        "sh/testPUF/mem_din_5" BEL "sh/testPUF/mem_din_6" BEL
+        "sh/testPUF/mem_din_7" BEL "sh/testPUF/gen_challenge_0" BEL
         "sh/testPUF/gen_challenge_1" BEL "sh/testPUF/gen_challenge_2" BEL
         "sh/testPUF/gen_challenge_3" BEL "sh/testPUF/gen_challenge_4" BEL
         "sh/testPUF/gen_challenge_5" BEL "sh/testPUF/gen_challenge_6" BEL
@@ -6240,18 +6249,162 @@ TIMEGRP sh_CLOCK_TRNG1_CLKOUT0_BUF = BEL "sh/testPUF/mem_we" BEL
         "sh/testPUF/gen_challenge_25" BEL "sh/testPUF/gen_challenge_26" BEL
         "sh/testPUF/gen_challenge_27" BEL "sh/testPUF/gen_challenge_28" BEL
         "sh/testPUF/gen_challenge_29" BEL "sh/testPUF/gen_challenge_30" BEL
-        "sh/testPUF/gen_challenge_31" BEL "sh/testPUF/test_data" BEL
-        "sh/testPUF/mem_din_0" BEL "sh/testPUF/mem_din_1" BEL
-        "sh/testPUF/mem_din_2" BEL "sh/testPUF/mem_din_3" BEL
-        "sh/testPUF/mem_din_4" BEL "sh/testPUF/mem_din_5" BEL
-        "sh/testPUF/mem_din_6" BEL "sh/testPUF/mem_din_7" BEL
-        "sh/testPUF/NIST/test4/v0_0" BEL "sh/testPUF/NIST/test4/v0_1" BEL
-        "sh/testPUF/NIST/test4/v0_2" BEL "sh/testPUF/NIST/test4/v0_3" BEL
-        "sh/testPUF/NIST/test4/v0_4" BEL "sh/testPUF/NIST/test4/v3_0" BEL
-        "sh/testPUF/NIST/test4/v3_1" BEL "sh/testPUF/NIST/test4/v3_2" BEL
-        "sh/testPUF/NIST/test4/v3_3" BEL "sh/testPUF/NIST/test4/v3_4" BEL
-        "sh/testPUF/NIST/test4/en1" BEL "sh/testPUF/NIST/test4/count_bits1_0"
-        BEL "sh/testPUF/NIST/test4/count_bits1_1" BEL
+        "sh/testPUF/gen_challenge_31" BEL "sh/testPUF/test_bit" BEL
+        "sh/testPUF/bb" BEL "sh/testPUF/challenge_bit_ctr_01" BEL
+        "sh/testPUF/challenge_bit_ctr_1" BEL "sh/testPUF/challenge_bit_ctr_2"
+        BEL "sh/testPUF/challenge_bit_ctr_3" BEL
+        "sh/testPUF/challenge_bit_ctr_4" BEL "sh/testPUF/challenge_bit_ctr_5"
+        BEL "sh/testPUF/challenge_bit_ctr_6" BEL
+        "sh/testPUF/challenge_bit_ctr_7" BEL "sh/testPUF/challenge_bit_ctr_8"
+        BEL "sh/testPUF/challenge_bit_ctr_9" BEL
+        "sh/testPUF/challenge_bit_ctr_10" BEL
+        "sh/testPUF/challenge_bit_ctr_11" BEL
+        "sh/testPUF/challenge_bit_ctr_12" BEL
+        "sh/testPUF/challenge_bit_ctr_13" BEL
+        "sh/testPUF/challenge_bit_ctr_14" BEL
+        "sh/testPUF/challenge_bit_ctr_15" BEL
+        "sh/testPUF/challenge_bit_ctr_16" BEL
+        "sh/testPUF/challenge_bit_ctr_17" BEL
+        "sh/testPUF/challenge_bit_ctr_18" BEL
+        "sh/testPUF/challenge_bit_ctr_19" BEL
+        "sh/testPUF/challenge_bit_ctr_20" BEL
+        "sh/testPUF/challenge_bit_ctr_21" BEL
+        "sh/testPUF/challenge_bit_ctr_22" BEL
+        "sh/testPUF/challenge_bit_ctr_23" BEL
+        "sh/testPUF/challenge_bit_ctr_24" BEL
+        "sh/testPUF/challenge_bit_ctr_25" BEL
+        "sh/testPUF/challenge_bit_ctr_26" BEL
+        "sh/testPUF/challenge_bit_ctr_27" BEL
+        "sh/testPUF/challenge_bit_ctr_28" BEL
+        "sh/testPUF/challenge_bit_ctr_29" BEL
+        "sh/testPUF/challenge_bit_ctr_30" BEL
+        "sh/testPUF/challenge_bit_ctr_31" BEL
+        "sh/testPUF/challenge_bit_ctr_32" BEL
+        "sh/testPUF/challenge_bit_ctr_33" BEL
+        "sh/testPUF/challenge_bit_ctr_34" BEL
+        "sh/testPUF/challenge_bit_ctr_35" BEL
+        "sh/testPUF/challenge_bit_ctr_36" BEL
+        "sh/testPUF/challenge_bit_ctr_37" BEL
+        "sh/testPUF/challenge_bit_ctr_38" BEL
+        "sh/testPUF/challenge_bit_ctr_39" BEL
+        "sh/testPUF/challenge_bit_ctr_40" BEL
+        "sh/testPUF/challenge_bit_ctr_41" BEL
+        "sh/testPUF/challenge_bit_ctr_42" BEL
+        "sh/testPUF/challenge_bit_ctr_43" BEL
+        "sh/testPUF/challenge_bit_ctr_44" BEL
+        "sh/testPUF/challenge_bit_ctr_45" BEL
+        "sh/testPUF/challenge_bit_ctr_46" BEL
+        "sh/testPUF/challenge_bit_ctr_47" BEL
+        "sh/testPUF/challenge_bit_ctr_48" BEL
+        "sh/testPUF/challenge_bit_ctr_49" BEL
+        "sh/testPUF/challenge_bit_ctr_50" BEL
+        "sh/testPUF/challenge_bit_ctr_51" BEL
+        "sh/testPUF/challenge_bit_ctr_52" BEL
+        "sh/testPUF/challenge_bit_ctr_53" BEL
+        "sh/testPUF/challenge_bit_ctr_54" BEL
+        "sh/testPUF/challenge_bit_ctr_55" BEL
+        "sh/testPUF/challenge_bit_ctr_56" BEL
+        "sh/testPUF/challenge_bit_ctr_57" BEL
+        "sh/testPUF/challenge_bit_ctr_58" BEL
+        "sh/testPUF/challenge_bit_ctr_59" BEL
+        "sh/testPUF/challenge_bit_ctr_60" BEL
+        "sh/testPUF/challenge_bit_ctr_61" BEL
+        "sh/testPUF/challenge_bit_ctr_62" BEL
+        "sh/testPUF/challenge_bit_ctr_63" BEL "sh/testPUF/hold_challenge_0"
+        BEL "sh/testPUF/hold_challenge_1" BEL "sh/testPUF/hold_challenge_2"
+        BEL "sh/testPUF/hold_challenge_3" BEL "sh/testPUF/hold_challenge_4"
+        BEL "sh/testPUF/hold_challenge_5" BEL "sh/testPUF/hold_challenge_6"
+        BEL "sh/testPUF/hold_challenge_7" BEL "sh/testPUF/hold_challenge_8"
+        BEL "sh/testPUF/hold_challenge_9" BEL "sh/testPUF/hold_challenge_10"
+        BEL "sh/testPUF/hold_challenge_11" BEL "sh/testPUF/hold_challenge_12"
+        BEL "sh/testPUF/hold_challenge_13" BEL "sh/testPUF/hold_challenge_14"
+        BEL "sh/testPUF/hold_challenge_15" BEL "sh/testPUF/hold_challenge_16"
+        BEL "sh/testPUF/hold_challenge_17" BEL "sh/testPUF/hold_challenge_18"
+        BEL "sh/testPUF/hold_challenge_19" BEL "sh/testPUF/hold_challenge_20"
+        BEL "sh/testPUF/hold_challenge_21" BEL "sh/testPUF/hold_challenge_22"
+        BEL "sh/testPUF/hold_challenge_23" BEL "sh/testPUF/hold_challenge_24"
+        BEL "sh/testPUF/hold_challenge_25" BEL "sh/testPUF/hold_challenge_26"
+        BEL "sh/testPUF/hold_challenge_27" BEL "sh/testPUF/hold_challenge_28"
+        BEL "sh/testPUF/hold_challenge_29" BEL "sh/testPUF/hold_challenge_30"
+        BEL "sh/testPUF/hold_challenge_31" BEL "sh/testPUF/hold_resp_bit" BEL
+        "sh/testPUF/count_resp_0" BEL "sh/testPUF/count_resp_1" BEL
+        "sh/testPUF/count_resp_2" BEL "sh/testPUF/count_resp_3" BEL
+        "sh/testPUF/count_resp_4" BEL "sh/testPUF/count_resp_5" BEL
+        "sh/testPUF/count_resp_6" BEL "sh/testPUF/count_resp_7" BEL
+        "sh/testPUF/challenge_bit_ctr_0_1" BEL
+        "sh/testPUF/challenge_bit_ctr_0_2" BEL
+        "sh/testPUF/challenge_bit_ctr_0_3" BEL
+        "sh/testPUF/challenge_bit_ctr_0_4" BEL
+        "sh/testPUF/challenge_bit_ctr_0_5" BEL
+        "sh/testPUF/challenge_bit_ctr_0_6" BEL
+        "sh/testPUF/challenge_bit_ctr_0_7" BEL
+        "sh/testPUF/challenge_bit_ctr_0_8" BEL
+        "sh/testPUF/challenge_bit_ctr_0_9" BEL
+        "sh/testPUF/challenge_bit_ctr_0_10" BEL
+        "sh/testPUF/challenge_bit_ctr_0_11" BEL
+        "sh/testPUF/challenge_bit_ctr_0_12" BEL
+        "sh/testPUF/challenge_bit_ctr_0_13" BEL
+        "sh/testPUF/challenge_bit_ctr_0_14" BEL
+        "sh/testPUF/challenge_bit_ctr_0_15" BEL
+        "sh/testPUF/challenge_bit_ctr_0_16" BEL
+        "sh/testPUF/challenge_bit_ctr_0_17" BEL
+        "sh/testPUF/challenge_bit_ctr_0_18" BEL
+        "sh/testPUF/challenge_bit_ctr_0_19" BEL
+        "sh/testPUF/challenge_bit_ctr_0_20" BEL
+        "sh/testPUF/challenge_bit_ctr_0_21" BEL
+        "sh/testPUF/challenge_bit_ctr_0_22" BEL
+        "sh/testPUF/challenge_bit_ctr_0_23" BEL
+        "sh/testPUF/challenge_bit_ctr_0_24" BEL
+        "sh/testPUF/challenge_bit_ctr_0_25" BEL
+        "sh/testPUF/challenge_bit_ctr_0_26" BEL
+        "sh/testPUF/challenge_bit_ctr_0_27" BEL
+        "sh/testPUF/challenge_bit_ctr_0_28" BEL
+        "sh/testPUF/challenge_bit_ctr_0_29" BEL
+        "sh/testPUF/challenge_bit_ctr_0_30" BEL
+        "sh/testPUF/challenge_bit_ctr_0_31" BEL
+        "sh/testPUF/challenge_bit_ctr_0_32" BEL
+        "sh/testPUF/challenge_bit_ctr_0_33" BEL
+        "sh/testPUF/challenge_bit_ctr_0_34" BEL
+        "sh/testPUF/challenge_bit_ctr_0_35" BEL
+        "sh/testPUF/challenge_bit_ctr_0_36" BEL
+        "sh/testPUF/challenge_bit_ctr_0_37" BEL
+        "sh/testPUF/challenge_bit_ctr_0_38" BEL
+        "sh/testPUF/challenge_bit_ctr_0_39" BEL
+        "sh/testPUF/challenge_bit_ctr_0_40" BEL
+        "sh/testPUF/challenge_bit_ctr_0_41" BEL
+        "sh/testPUF/challenge_bit_ctr_0_42" BEL
+        "sh/testPUF/challenge_bit_ctr_0_43" BEL
+        "sh/testPUF/challenge_bit_ctr_0_44" BEL
+        "sh/testPUF/challenge_bit_ctr_0_45" BEL
+        "sh/testPUF/challenge_bit_ctr_0_46" BEL
+        "sh/testPUF/challenge_bit_ctr_0_47" BEL
+        "sh/testPUF/challenge_bit_ctr_0_48" BEL
+        "sh/testPUF/challenge_bit_ctr_0_49" BEL
+        "sh/testPUF/challenge_bit_ctr_0_50" BEL
+        "sh/testPUF/challenge_bit_ctr_0_51" BEL
+        "sh/testPUF/challenge_bit_ctr_0_52" BEL
+        "sh/testPUF/challenge_bit_ctr_0_53" BEL
+        "sh/testPUF/challenge_bit_ctr_0_54" BEL
+        "sh/testPUF/challenge_bit_ctr_0_55" BEL
+        "sh/testPUF/challenge_bit_ctr_0_56" BEL
+        "sh/testPUF/challenge_bit_ctr_0_57" BEL
+        "sh/testPUF/challenge_bit_ctr_0_58" BEL
+        "sh/testPUF/challenge_bit_ctr_0_59" BEL
+        "sh/testPUF/challenge_bit_ctr_0_60" BEL
+        "sh/testPUF/challenge_bit_ctr_0_61" BEL
+        "sh/testPUF/challenge_bit_ctr_0_62" BEL
+        "sh/testPUF/challenge_bit_ctr_0_63" BEL "sh/testPUF/sum_resp_0" BEL
+        "sh/testPUF/sum_resp_1" BEL "sh/testPUF/sum_resp_2" BEL
+        "sh/testPUF/sum_resp_3" BEL "sh/testPUF/sum_resp_4" BEL
+        "sh/testPUF/sum_resp_5" BEL "sh/testPUF/sum_resp_6" BEL
+        "sh/testPUF/sum_resp_7" BEL "sh/testPUF/NIST/test4/v0_0" BEL
+        "sh/testPUF/NIST/test4/v0_1" BEL "sh/testPUF/NIST/test4/v0_2" BEL
+        "sh/testPUF/NIST/test4/v0_3" BEL "sh/testPUF/NIST/test4/v0_4" BEL
+        "sh/testPUF/NIST/test4/v3_0" BEL "sh/testPUF/NIST/test4/v3_1" BEL
+        "sh/testPUF/NIST/test4/v3_2" BEL "sh/testPUF/NIST/test4/v3_3" BEL
+        "sh/testPUF/NIST/test4/v3_4" BEL "sh/testPUF/NIST/test4/en1" BEL
+        "sh/testPUF/NIST/test4/count_bits1_0" BEL
+        "sh/testPUF/NIST/test4/count_bits1_1" BEL
         "sh/testPUF/NIST/test4/count_bits1_2" BEL
         "sh/testPUF/NIST/test4/count_bits1_3" BEL
         "sh/testPUF/NIST/test4/count_bits1_4" BEL
@@ -6357,6 +6510,8 @@ TIMEGRP sh_CLOCK_TRNG1_CLKOUT0_BUF = BEL "sh/testPUF/mem_we" BEL
         "sh/testPUF/NIST/test1/count_bits1_14" BEL
         "sh/testPUF/NIST/test4/calculate_chi_sqr1/Mmult_v3_sqr_mult0000" BEL
         "sh/testPUF/NIST/test4/calculate_chi_sqr1/Mmult_v0_sqr_mult0000" BEL
+        "sh/testPUF/NIST/test4/count_run_0" BEL
+        "sh/testPUF/NIST/test4/count_run_1" BEL
         "sh/testPUF/NIST/test4/count_bits0_0" BEL
         "sh/testPUF/NIST/test4/count_bits0_1" BEL
         "sh/testPUF/NIST/test4/count_bits0_2" BEL
@@ -6370,14 +6525,28 @@ TIMEGRP sh_CLOCK_TRNG1_CLKOUT0_BUF = BEL "sh/testPUF/mem_we" BEL
         "sh/testPUF/NIST/test4/count_blocks_2" BEL
         "sh/testPUF/NIST/test4/count_blocks_3" BEL
         "sh/testPUF/NIST/test4/count_blocks_4" BEL
-        "sh/testPUF/NIST/test4/count_run_0" BEL
-        "sh/testPUF/NIST/test4/count_run_1" BEL "sh/testPUF/NIST/test4/v1_0"
-        BEL "sh/testPUF/NIST/test4/v1_1" BEL "sh/testPUF/NIST/test4/v1_2" BEL
-        "sh/testPUF/NIST/test4/v1_3" BEL "sh/testPUF/NIST/test4/v1_4" BEL
-        "sh/testPUF/NIST/test4/v2_0" BEL "sh/testPUF/NIST/test4/v2_1" BEL
-        "sh/testPUF/NIST/test4/v2_2" BEL "sh/testPUF/NIST/test4/v2_3" BEL
-        "sh/testPUF/NIST/test4/v2_4" BEL "sh/testPUF/NIST/test3/count_bits0_0"
-        BEL "sh/testPUF/NIST/test3/count_bits0_1" BEL
+        "sh/testPUF/NIST/test4/v1_0" BEL "sh/testPUF/NIST/test4/v1_1" BEL
+        "sh/testPUF/NIST/test4/v1_2" BEL "sh/testPUF/NIST/test4/v1_3" BEL
+        "sh/testPUF/NIST/test4/v1_4" BEL "sh/testPUF/NIST/test4/v2_0" BEL
+        "sh/testPUF/NIST/test4/v2_1" BEL "sh/testPUF/NIST/test4/v2_2" BEL
+        "sh/testPUF/NIST/test4/v2_3" BEL "sh/testPUF/NIST/test4/v2_4" BEL
+        "sh/testPUF/NIST/test3/count_runs_0" BEL
+        "sh/testPUF/NIST/test3/count_runs_1" BEL
+        "sh/testPUF/NIST/test3/count_runs_2" BEL
+        "sh/testPUF/NIST/test3/count_runs_3" BEL
+        "sh/testPUF/NIST/test3/count_runs_6" BEL
+        "sh/testPUF/NIST/test3/count_runs_4" BEL
+        "sh/testPUF/NIST/test3/count_runs_5" BEL
+        "sh/testPUF/NIST/test3/count_runs_7" BEL
+        "sh/testPUF/NIST/test3/count_runs_8" BEL
+        "sh/testPUF/NIST/test3/count_runs_9" BEL
+        "sh/testPUF/NIST/test3/count_runs_10" BEL
+        "sh/testPUF/NIST/test3/count_runs_11" BEL
+        "sh/testPUF/NIST/test3/count_runs_12" BEL
+        "sh/testPUF/NIST/test3/count_runs_13" BEL
+        "sh/testPUF/NIST/test3/count_runs_14" BEL
+        "sh/testPUF/NIST/test3/count_bits0_0" BEL
+        "sh/testPUF/NIST/test3/count_bits0_1" BEL
         "sh/testPUF/NIST/test3/count_bits0_2" BEL
         "sh/testPUF/NIST/test3/count_bits0_3" BEL
         "sh/testPUF/NIST/test3/count_bits0_4" BEL
@@ -6406,37 +6575,6 @@ TIMEGRP sh_CLOCK_TRNG1_CLKOUT0_BUF = BEL "sh/testPUF/mem_we" BEL
         "sh/testPUF/NIST/test3/count_ones_12" BEL
         "sh/testPUF/NIST/test3/count_ones_13" BEL
         "sh/testPUF/NIST/test3/count_ones_14" BEL
-        "sh/testPUF/NIST/test3/count_runs_0" BEL
-        "sh/testPUF/NIST/test3/count_runs_1" BEL
-        "sh/testPUF/NIST/test3/count_runs_4" BEL
-        "sh/testPUF/NIST/test3/count_runs_2" BEL
-        "sh/testPUF/NIST/test3/count_runs_3" BEL
-        "sh/testPUF/NIST/test3/count_runs_5" BEL
-        "sh/testPUF/NIST/test3/count_runs_6" BEL
-        "sh/testPUF/NIST/test3/count_runs_7" BEL
-        "sh/testPUF/NIST/test3/count_runs_8" BEL
-        "sh/testPUF/NIST/test3/count_runs_11" BEL
-        "sh/testPUF/NIST/test3/count_runs_9" BEL
-        "sh/testPUF/NIST/test3/count_runs_10" BEL
-        "sh/testPUF/NIST/test3/count_runs_12" BEL
-        "sh/testPUF/NIST/test3/count_runs_13" BEL
-        "sh/testPUF/NIST/test3/count_runs_14" BEL
-        "sh/testPUF/NIST/test13/cum_sum_2" BEL
-        "sh/testPUF/NIST/test13/cum_sum_0" BEL
-        "sh/testPUF/NIST/test13/cum_sum_1" BEL
-        "sh/testPUF/NIST/test13/cum_sum_3" BEL
-        "sh/testPUF/NIST/test13/cum_sum_4" BEL
-        "sh/testPUF/NIST/test13/cum_sum_5" BEL
-        "sh/testPUF/NIST/test13/cum_sum_6" BEL
-        "sh/testPUF/NIST/test13/cum_sum_9" BEL
-        "sh/testPUF/NIST/test13/cum_sum_7" BEL
-        "sh/testPUF/NIST/test13/cum_sum_8" BEL
-        "sh/testPUF/NIST/test13/cum_sum_10" BEL
-        "sh/testPUF/NIST/test13/cum_sum_11" BEL
-        "sh/testPUF/NIST/test13/cum_sum_12" BEL
-        "sh/testPUF/NIST/test13/cum_sum_13" BEL
-        "sh/testPUF/NIST/test13/cum_sum_14" BEL
-        "sh/testPUF/NIST/test13/cum_sum_15" BEL
         "sh/testPUF/NIST/test13/count_bits0_0" BEL
         "sh/testPUF/NIST/test13/count_bits0_1" BEL
         "sh/testPUF/NIST/test13/count_bits0_2" BEL
@@ -6452,6 +6590,22 @@ TIMEGRP sh_CLOCK_TRNG1_CLKOUT0_BUF = BEL "sh/testPUF/mem_we" BEL
         "sh/testPUF/NIST/test13/count_bits0_12" BEL
         "sh/testPUF/NIST/test13/count_bits0_13" BEL
         "sh/testPUF/NIST/test13/count_bits0_14" BEL
+        "sh/testPUF/NIST/test13/cum_sum_0" BEL
+        "sh/testPUF/NIST/test13/cum_sum_1" BEL
+        "sh/testPUF/NIST/test13/cum_sum_2" BEL
+        "sh/testPUF/NIST/test13/cum_sum_3" BEL
+        "sh/testPUF/NIST/test13/cum_sum_4" BEL
+        "sh/testPUF/NIST/test13/cum_sum_5" BEL
+        "sh/testPUF/NIST/test13/cum_sum_6" BEL
+        "sh/testPUF/NIST/test13/cum_sum_7" BEL
+        "sh/testPUF/NIST/test13/cum_sum_8" BEL
+        "sh/testPUF/NIST/test13/cum_sum_9" BEL
+        "sh/testPUF/NIST/test13/cum_sum_10" BEL
+        "sh/testPUF/NIST/test13/cum_sum_11" BEL
+        "sh/testPUF/NIST/test13/cum_sum_14" BEL
+        "sh/testPUF/NIST/test13/cum_sum_12" BEL
+        "sh/testPUF/NIST/test13/cum_sum_13" BEL
+        "sh/testPUF/NIST/test13/cum_sum_15" BEL
         "sh/testPUF/NIST/test2/count_bits0_0" BEL
         "sh/testPUF/NIST/test2/count_bits0_1" BEL
         "sh/testPUF/NIST/test2/count_bits0_2" BEL
@@ -6505,12 +6659,23 @@ TIMEGRP sh_CLOCK_TRNG1_CLKOUT0_BUF = BEL "sh/testPUF/mem_we" BEL
         "sh/testPUF/NIST/test1/count_ones_12" BEL
         "sh/testPUF/NIST/test1/count_ones_13" BEL
         "sh/testPUF/NIST/test1/count_ones_14" BEL
-        "sh/testPUF/NIST/test4/count_run_2" BEL "sh/testPUF/mux_clk_test" BEL
-        "sh/testPUF/state_FSM_FFd2" BEL "sh/testPUF/state_FSM_FFd3" BEL
-        "sh/testPUF/state_FSM_FFd1" BEL "sh/testPUF/state_FSM_FFd5" BEL
-        "sh/testPUF/state_FSM_FFd6" BEL "sh/testPUF/state_FSM_FFd4" BEL
-        "sh/testPUF/NIST/test7/count_match_5" BEL
-        "sh/testPUF/NIST/test7/count_match_4" BEL
+        "sh/testPUF/NIST/test4/count_run_2" PIN
+        "sh/testPUF/SystemMonitor1/SysMon1/SYSMON_INST_pins<9>" BEL
+        "sh/testPUF/mux_clk_test" BEL "sh/testPUF/state_FSM_FFd2" BEL
+        "sh/testPUF/state_FSM_FFd3" BEL "sh/testPUF/state_FSM_FFd1" BEL
+        "sh/testPUF/state_FSM_FFd5" BEL "sh/testPUF/state_FSM_FFd6" BEL
+        "sh/testPUF/state_FSM_FFd4" BEL "sh/testPUF/state_FSM_FFd8" BEL
+        "sh/testPUF/state_FSM_FFd9" BEL "sh/testPUF/state_FSM_FFd7" BEL
+        "sh/testPUF/state_FSM_FFd10" BEL "sh/testPUF/state_FSM_FFd11" BEL
+        "sh/testPUF/state_FSM_FFd12" BEL "sh/testPUF/state_FSM_FFd13" BEL
+        "sh/testPUF/state_FSM_FFd15" BEL "sh/testPUF/state_FSM_FFd16" BEL
+        "sh/testPUF/state_FSM_FFd14" BEL "sh/testPUF/state_FSM_FFd18" BEL
+        "sh/testPUF/state_FSM_FFd19" BEL "sh/testPUF/state_FSM_FFd17" BEL
+        "sh/testPUF/state_FSM_FFd21" BEL "sh/testPUF/state_FSM_FFd22" BEL
+        "sh/testPUF/state_FSM_FFd20" BEL "sh/testPUF/state_FSM_FFd23" BEL
+        "sh/testPUF/state_FSM_FFd24" BEL "sh/testPUF/state_FSM_FFd25" BEL
+        "sh/testPUF/state_FSM_FFd26" BEL "sh/testPUF/NIST/test7/count_match_5"
+        BEL "sh/testPUF/NIST/test7/count_match_4" BEL
         "sh/testPUF/NIST/test7/count_match_3" BEL
         "sh/testPUF/NIST/test7/count_match_2" BEL
         "sh/testPUF/NIST/test7/count_match_1" BEL
@@ -6767,6 +6932,8 @@ TIMEGRP sh_CLOCK_TRNG1_CLKOUT1_BUF = BEL "sh/testPUF/NIST/test4/v0_0" BEL
         "sh/testPUF/NIST/test1/count_bits1_14" BEL
         "sh/testPUF/NIST/test4/calculate_chi_sqr1/Mmult_v3_sqr_mult0000" BEL
         "sh/testPUF/NIST/test4/calculate_chi_sqr1/Mmult_v0_sqr_mult0000" BEL
+        "sh/testPUF/NIST/test4/count_run_0" BEL
+        "sh/testPUF/NIST/test4/count_run_1" BEL
         "sh/testPUF/NIST/test4/count_bits0_0" BEL
         "sh/testPUF/NIST/test4/count_bits0_1" BEL
         "sh/testPUF/NIST/test4/count_bits0_2" BEL
@@ -6780,14 +6947,28 @@ TIMEGRP sh_CLOCK_TRNG1_CLKOUT1_BUF = BEL "sh/testPUF/NIST/test4/v0_0" BEL
         "sh/testPUF/NIST/test4/count_blocks_2" BEL
         "sh/testPUF/NIST/test4/count_blocks_3" BEL
         "sh/testPUF/NIST/test4/count_blocks_4" BEL
-        "sh/testPUF/NIST/test4/count_run_0" BEL
-        "sh/testPUF/NIST/test4/count_run_1" BEL "sh/testPUF/NIST/test4/v1_0"
-        BEL "sh/testPUF/NIST/test4/v1_1" BEL "sh/testPUF/NIST/test4/v1_2" BEL
-        "sh/testPUF/NIST/test4/v1_3" BEL "sh/testPUF/NIST/test4/v1_4" BEL
-        "sh/testPUF/NIST/test4/v2_0" BEL "sh/testPUF/NIST/test4/v2_1" BEL
-        "sh/testPUF/NIST/test4/v2_2" BEL "sh/testPUF/NIST/test4/v2_3" BEL
-        "sh/testPUF/NIST/test4/v2_4" BEL "sh/testPUF/NIST/test3/count_bits0_0"
-        BEL "sh/testPUF/NIST/test3/count_bits0_1" BEL
+        "sh/testPUF/NIST/test4/v1_0" BEL "sh/testPUF/NIST/test4/v1_1" BEL
+        "sh/testPUF/NIST/test4/v1_2" BEL "sh/testPUF/NIST/test4/v1_3" BEL
+        "sh/testPUF/NIST/test4/v1_4" BEL "sh/testPUF/NIST/test4/v2_0" BEL
+        "sh/testPUF/NIST/test4/v2_1" BEL "sh/testPUF/NIST/test4/v2_2" BEL
+        "sh/testPUF/NIST/test4/v2_3" BEL "sh/testPUF/NIST/test4/v2_4" BEL
+        "sh/testPUF/NIST/test3/count_runs_0" BEL
+        "sh/testPUF/NIST/test3/count_runs_1" BEL
+        "sh/testPUF/NIST/test3/count_runs_2" BEL
+        "sh/testPUF/NIST/test3/count_runs_3" BEL
+        "sh/testPUF/NIST/test3/count_runs_6" BEL
+        "sh/testPUF/NIST/test3/count_runs_4" BEL
+        "sh/testPUF/NIST/test3/count_runs_5" BEL
+        "sh/testPUF/NIST/test3/count_runs_7" BEL
+        "sh/testPUF/NIST/test3/count_runs_8" BEL
+        "sh/testPUF/NIST/test3/count_runs_9" BEL
+        "sh/testPUF/NIST/test3/count_runs_10" BEL
+        "sh/testPUF/NIST/test3/count_runs_11" BEL
+        "sh/testPUF/NIST/test3/count_runs_12" BEL
+        "sh/testPUF/NIST/test3/count_runs_13" BEL
+        "sh/testPUF/NIST/test3/count_runs_14" BEL
+        "sh/testPUF/NIST/test3/count_bits0_0" BEL
+        "sh/testPUF/NIST/test3/count_bits0_1" BEL
         "sh/testPUF/NIST/test3/count_bits0_2" BEL
         "sh/testPUF/NIST/test3/count_bits0_3" BEL
         "sh/testPUF/NIST/test3/count_bits0_4" BEL
@@ -6816,37 +6997,6 @@ TIMEGRP sh_CLOCK_TRNG1_CLKOUT1_BUF = BEL "sh/testPUF/NIST/test4/v0_0" BEL
         "sh/testPUF/NIST/test3/count_ones_12" BEL
         "sh/testPUF/NIST/test3/count_ones_13" BEL
         "sh/testPUF/NIST/test3/count_ones_14" BEL
-        "sh/testPUF/NIST/test3/count_runs_0" BEL
-        "sh/testPUF/NIST/test3/count_runs_1" BEL
-        "sh/testPUF/NIST/test3/count_runs_4" BEL
-        "sh/testPUF/NIST/test3/count_runs_2" BEL
-        "sh/testPUF/NIST/test3/count_runs_3" BEL
-        "sh/testPUF/NIST/test3/count_runs_5" BEL
-        "sh/testPUF/NIST/test3/count_runs_6" BEL
-        "sh/testPUF/NIST/test3/count_runs_7" BEL
-        "sh/testPUF/NIST/test3/count_runs_8" BEL
-        "sh/testPUF/NIST/test3/count_runs_11" BEL
-        "sh/testPUF/NIST/test3/count_runs_9" BEL
-        "sh/testPUF/NIST/test3/count_runs_10" BEL
-        "sh/testPUF/NIST/test3/count_runs_12" BEL
-        "sh/testPUF/NIST/test3/count_runs_13" BEL
-        "sh/testPUF/NIST/test3/count_runs_14" BEL
-        "sh/testPUF/NIST/test13/cum_sum_2" BEL
-        "sh/testPUF/NIST/test13/cum_sum_0" BEL
-        "sh/testPUF/NIST/test13/cum_sum_1" BEL
-        "sh/testPUF/NIST/test13/cum_sum_3" BEL
-        "sh/testPUF/NIST/test13/cum_sum_4" BEL
-        "sh/testPUF/NIST/test13/cum_sum_5" BEL
-        "sh/testPUF/NIST/test13/cum_sum_6" BEL
-        "sh/testPUF/NIST/test13/cum_sum_9" BEL
-        "sh/testPUF/NIST/test13/cum_sum_7" BEL
-        "sh/testPUF/NIST/test13/cum_sum_8" BEL
-        "sh/testPUF/NIST/test13/cum_sum_10" BEL
-        "sh/testPUF/NIST/test13/cum_sum_11" BEL
-        "sh/testPUF/NIST/test13/cum_sum_12" BEL
-        "sh/testPUF/NIST/test13/cum_sum_13" BEL
-        "sh/testPUF/NIST/test13/cum_sum_14" BEL
-        "sh/testPUF/NIST/test13/cum_sum_15" BEL
         "sh/testPUF/NIST/test13/count_bits0_0" BEL
         "sh/testPUF/NIST/test13/count_bits0_1" BEL
         "sh/testPUF/NIST/test13/count_bits0_2" BEL
@@ -6862,6 +7012,22 @@ TIMEGRP sh_CLOCK_TRNG1_CLKOUT1_BUF = BEL "sh/testPUF/NIST/test4/v0_0" BEL
         "sh/testPUF/NIST/test13/count_bits0_12" BEL
         "sh/testPUF/NIST/test13/count_bits0_13" BEL
         "sh/testPUF/NIST/test13/count_bits0_14" BEL
+        "sh/testPUF/NIST/test13/cum_sum_0" BEL
+        "sh/testPUF/NIST/test13/cum_sum_1" BEL
+        "sh/testPUF/NIST/test13/cum_sum_2" BEL
+        "sh/testPUF/NIST/test13/cum_sum_3" BEL
+        "sh/testPUF/NIST/test13/cum_sum_4" BEL
+        "sh/testPUF/NIST/test13/cum_sum_5" BEL
+        "sh/testPUF/NIST/test13/cum_sum_6" BEL
+        "sh/testPUF/NIST/test13/cum_sum_7" BEL
+        "sh/testPUF/NIST/test13/cum_sum_8" BEL
+        "sh/testPUF/NIST/test13/cum_sum_9" BEL
+        "sh/testPUF/NIST/test13/cum_sum_10" BEL
+        "sh/testPUF/NIST/test13/cum_sum_11" BEL
+        "sh/testPUF/NIST/test13/cum_sum_14" BEL
+        "sh/testPUF/NIST/test13/cum_sum_12" BEL
+        "sh/testPUF/NIST/test13/cum_sum_13" BEL
+        "sh/testPUF/NIST/test13/cum_sum_15" BEL
         "sh/testPUF/NIST/test2/count_bits0_0" BEL
         "sh/testPUF/NIST/test2/count_bits0_1" BEL
         "sh/testPUF/NIST/test2/count_bits0_2" BEL

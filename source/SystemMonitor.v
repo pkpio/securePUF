@@ -37,7 +37,7 @@ assign VP_IN = 1'b0;
 assign VN_IN = 1'b0;
 assign DI_IN = 16'h0000;
 
-SysMon SysMon1(
+TemperatureMonitor SysMon1(
       .DADDR_IN(DADDR_IN[6:0]),
       .DCLK_IN(clk),
       .DEN_IN(DEN_IN),
